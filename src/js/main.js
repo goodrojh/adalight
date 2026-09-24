@@ -183,8 +183,7 @@
         if (via && C.wa && !$('.wa-send', via)) {
           var wa = d.createElement('a'); wa.className = 'btn btn-dark btn-sm wa-send'; wa.target = '_blank'; wa.rel = 'noopener';
           wa.style.marginTop = '12px'; wa.textContent = 'Или отправить в WhatsApp';
-          wa.href = 'https://wa.me/' + C.wa + '?text=' + encodeURIComponent(label + '
-' + body.slice(0, 1500));
+          wa.href = 'https://wa.me/' + C.wa + '?text=' + encodeURIComponent(label + ': ' + body.split(String.fromCharCode(10)).join('; ').slice(0, 1500));
           via.appendChild(d.createElement('br')); via.appendChild(wa);
         }
       }

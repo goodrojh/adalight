@@ -351,7 +351,7 @@ from PIL import Image as _Im
 
 def _dhash(e):
     im = _Im.open(os.path.join(OUT, e['src'][len(BASE) + 1:])).convert('L').resize((9, 8))
-    px = list(im.getdata())
+    px = list(im.tobytes())
     return [px[r * 9 + c] > px[r * 9 + c + 1] for r in range(8) for c in range(8)]
 
 
@@ -458,3 +458,11 @@ open(os.path.join(OUT, '.nojekyll'), 'w').write('')
 if CFG.get('cname'):
     open(os.path.join(OUT, 'CNAME'), 'w').write(CFG['cname'])
 print('pages:', len(pages) + 1, 'sku:', TOTAL_SKU, 'series:', TOTAL_SERIES)
+
+# проверка синтаксиса JS после сборки (защита от поломки при минификации)
+import subprocess
+for f in os.listdir(os.path.join(OUT, 'assets', 'js')):
+    r = subprocess.run(['node', '--check', os.path.join(OUT, 'assets', 'js', f)], capture_output=True, text=True)
+    if r.returncode:
+        raise SystemExit('JS syntax error in ' + f + '\n' + r.stderr)
+print('js ok')
