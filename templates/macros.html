@@ -1,0 +1,137 @@
+{% macro img(m, alt='', sizes='100vw', cls='', lazy=True, fit='') -%}
+{%- if m -%}<img src="{{ m.src }}" srcset="{{ m.srcset }}" sizes="{{ sizes }}" width="{{ m.w }}" height="{{ m.h }}" alt="{{ alt }}"{% if lazy %} loading="lazy" decoding="async"{% else %} fetchpriority="high"{% endif %}{% if cls %} class="{{ cls }}"{% endif %}{% if fit %} style="object-fit:{{ fit }}"{% endif %}>{%- endif -%}
+{%- endmacro %}
+
+{% macro crumbs(items, light=False) -%}
+<nav class="crumbs{% if light %} light-crumbs{% endif %}" aria-label="Хлебные крошки">
+ {% for name, url in items %}{% if not loop.last %}<a href="{{ url }}">{{ name }}</a><span aria-hidden="true">/</span>{% else %}<span aria-current="page">{{ name }}</span>{% endif %}{% endfor %}
+</nav>
+{%- endmacro %}
+
+{% macro pcard(p, base, i=0) -%}
+{% set im = p.images[0] if p.images else (p.schemes[0] if p.schemes else None) %}
+<a class="pcard" href="{{ base }}/product/{{ p.slug }}/" data-cat="{{ p.category }}" data-line="{{ p.line }}" data-mount="{{ p.mount_key }}" data-cct="{{ p.cct_list|join(' ') }}" data-ip="{{ p.ip_list|join(' ') }}" data-pmin="{{ p.power_min or '' }}" data-pmax="{{ p.power_max or '' }}" data-price="{{ p.price_min or '' }}" data-skus="{{ p.sku_count }}" data-order="{{ i }}" data-q="{{ p.search }}">
+ <div class="ph{% if p.photo_fill %} fill{% endif %}">
+  {% if im %}<img src="{{ im.src }}" alt="{{ p.name }}" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async">{% endif %}
+  <span class="tag{% if p.line in ['CLASS A'] %} y{% endif %}">{{ p.line }}</span>
+ </div>
+ <div class="bd">
+  <h3>{{ p.name }}</h3>
+  <p class="sub">{{ p.card_sub }}</p>
+  <div class="specs">{% for s in p.chips %}<span>{{ s }}</span>{% endfor %}</div>
+  <div class="ft"><span class="price">{% if p.price_min %}<small>от</small>{{ p.price_min|rub }}{% else %}по запросу{% endif %}</span><span class="skus">{{ p.sku_count }} арт.</span></div>
+ </div>
+</a>
+{%- endmacro %}
+
+{% macro stats(S, dark=True) -%}
+<div class="stats">
+ {% for n, u, t in S %}<div class="stat"><b>{{ n }}<sup>{{ u }}</sup></b><span>{{ t }}</span></div>{% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro logos(devs, media, words) -%}
+<div class="logos">
+ {% for key, name in devs %}<div class="logo-chip">{% if media[key] %}<img src="{{ media[key].src }}" alt="{{ name }}" width="{{ media[key].w }}" height="{{ media[key].h }}" loading="lazy">{% endif %}</div>{% endfor %}
+ {% for w in words %}<div class="logo-chip word">{{ w }}</div>{% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro faq(items, dark=False) -%}
+<div class="faq">
+ {% for q, a in items %}<details{% if loop.first %} open{% endif %}><summary>{{ q }}</summary><div>{{ a|safe }}</div></details>{% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro lead_form(id='lead', title='Пришлите объект на расчёт', sub='', goal='main', role='', with_spec=False, dark=True, label='Заявка на расчёт объекта', cta='Отправить на расчёт', compact=False) -%}
+<form class="form" data-lead="{{ label }}" data-goal="{{ goal }}" novalidate {% if with_spec %}data-with-spec{% endif %}>
+ <div class="form-body">
+  {% if not compact %}
+  <div class="field"><span>Кто вы</span>
+   <div class="seg" role="radiogroup" aria-label="Кто вы">
+    {% for r in ['Девелопер', 'Генподрядчик', 'Дизайнер / архитектор', 'Ремонтная компания', 'Проектировщик', 'Частный заказчик'] %}
+    <label><input type="radio" name="role" value="{{ r }}" {% if r == role %}checked{% endif %}><span>{{ r }}</span></label>{% endfor %}
+   </div>
+  </div>
+  <div class="row2">
+   <label class="field"><span>Тип объекта</span>
+    <select name="object"><option value="">Выберите</option><option>ЖК — места общего пользования</option><option>ЖК — архитектурная подсветка</option><option>Офисное здание</option><option>ТЦ, магазин, шоурум</option><option>Ресторан, кафе, отель</option><option>Квартира, частный дом</option><option>Другое</option></select></label>
+   <label class="field"><span>Стадия</span>
+    <select name="stage"><option value="">Выберите</option><option>Концепция</option><option>Проектирование (П / Р)</option><option>Тендер / закупка</option><option>Строительство / отделка</option><option>Эксплуатация / замена</option></select></label>
+  </div>
+  {% endif %}
+  <div class="row2">
+   <label class="field"><span>Имя</span><input name="name" autocomplete="name" placeholder="Как к вам обращаться"></label>
+   <label class="field"><span>Телефон *</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required><em class="err">Укажите телефон, чтобы мы могли связаться</em></label>
+  </div>
+  {% if not compact %}
+  <label class="field"><span>Ссылка на планы / спецификацию (Яндекс Диск, Google Drive) или комментарий</span><textarea name="comment" placeholder="Площадь, сроки, что важно учесть. Файлы можно прислать на {{ 'damir@adalight.ru' }}"></textarea></label>
+  {% endif %}
+  {% if with_spec %}<textarea name="spec_text" hidden></textarea>{% endif %}
+  <label class="consent"><input type="checkbox" name="consent" required checked><span>Согласен на обработку персональных данных согласно <a href="{{ base }}/privacy/">политике конфиденциальности</a></span></label>
+  <button class="btn btn-block" type="submit">{{ cta }} <svg><use href="#i-arrow"/></svg></button>
+ </div>
+ <div class="form-ok" role="status">
+  <h3 style="margin-bottom:8px">Заявка сформирована</h3>
+  <p style="margin:0">Менеджер свяжется с вами в рабочее время. Если удобнее — позвоните: <a href="tel:+79771093910">+7 (977) 109-39-10</a>.</p>
+  <p class="via" hidden style="margin:10px 0 0;font-size:14px">Мы открыли письмо в вашем почтовом клиенте — отправьте его, чтобы заявка дошла.</p>
+ </div>
+</form>
+{%- endmacro %}
+
+{% macro lead_section(base, title='Пришлите объект на расчёт', sub='Планы, ТЗ или спецификация — подготовим подбор, аналоги, стоимость и сроки поставки. Без обязательств по объёму.', role='', goal='main', label='Заявка на расчёт объекта', S=None) -%}
+<section class="section" id="lead">
+ <div class="wrap">
+  <div class="cta-band">
+   <div>
+    <span class="eyebrow">Следующий шаг</span>
+    <h2>{{ title }}</h2>
+    <p class="lead">{{ sub }}</p>
+    <ul class="check" style="margin-top:26px;color:#d6d6da">
+     <li>Подбор оборудования и варианты замены</li>
+     <li>Светотехнический расчёт по нормам</li>
+     <li>Коммерческое предложение со сроками по каждой позиции</li>
+    </ul>
+    <div class="contact-lines">
+     <a href="tel:{{ S.phone_raw }}"><svg><use href="#i-phone"/></svg>{{ S.phone }}</a>
+     <a href="mailto:{{ S.email }}"><svg><use href="#i-mail"/></svg>{{ S.email }}</a>
+     <a href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Написать в WhatsApp</a>
+    </div>
+   </div>
+   <div class="dark" style="background:transparent">{{ lead_form(role=role, goal=goal, label=label) }}</div>
+  </div>
+ </div>
+</section>
+{%- endmacro %}
+
+{% macro beam_widget(p, v) -%}
+<div class="beam" data-beam='{"slug":"{{ p.slug }}"}'>
+ <svg viewBox="0 0 400 300" role="img" aria-label="Схема светового пятна">
+  <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc603" stop-opacity=".95"/><stop offset="1" stop-color="#ffc603" stop-opacity=".25"/></linearGradient>
+  <radialGradient id="sg"><stop offset="0" stop-color="#ffe27a"/><stop offset="1" stop-color="#ffc603" stop-opacity="0"/></radialGradient></defs>
+  <line x1="40" y1="30" x2="360" y2="30" stroke="#3a3a3e" stroke-width="2"/>
+  <rect x="186" y="18" width="28" height="14" rx="3" fill="#e9e9ea"/>
+  <path data-el="cone" fill="url(#cg)" fill-opacity=".5"/>
+  <line data-el="floor" x1="10" x2="390" stroke="#3a3a3e" stroke-width="2"/>
+  <ellipse data-el="spot" cx="200" ry="7" fill="url(#sg)"/>
+  <text data-el="lab" x="200" text-anchor="middle" fill="#a9a9ae" font-size="12" font-family="JetBrains Mono,monospace"></text>
+ </svg>
+ <div class="ctl">
+  <div><div class="res" data-o="E"></div></div>
+  <label>Высота до рабочей плоскости <output data-o="h"></output><input type="range" name="h" min="1" max="8" step="0.1" value="{{ v.h }}"></label>
+  <label>Угол луча <output data-o="a"></output><input type="range" name="a" min="8" max="120" step="1" value="{{ v.a }}"></label>
+  {% if v.angles|length > 1 %}<div class="opts">{% for a in v.angles %}<button type="button" class="chip" data-angle="{{ a }}" style="background:#1d1d20;color:#fff;border-color:#333">{{ a }}°</button>{% endfor %}</div>{% endif %}
+  <label>Световой поток <output data-o="f"></output><input type="range" name="f" min="100" max="{{ v.fmax }}" step="10" value="{{ v.f }}"></label>
+  <p class="note" style="color:#8a8a90;margin:0">Оценка по формуле точечного источника с учётом потерь 15%. Для проекта — светотехнический расчёт.</p>
+ </div>
+</div>
+{%- endmacro %}
+
+{% macro proj_card(pr, media, base) -%}
+<a class="proj" href="{{ base }}/projects/{{ pr.slug }}/">
+ {{ img(media[pr.slug ~ '-0'], pr.name, '(max-width:900px) 100vw, 50vw') }}
+ <div class="tags"><span class="tag">{{ pr.type }}</span>{% if pr.client %}<span class="tag">{{ pr.client }}</span>{% endif %}</div>
+ <h3>{{ pr.name }}</h3>
+ <p>{{ pr.lead }}</p>
+</a>
+{%- endmacro %}

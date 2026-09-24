@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /adalight/spec/
+
+Sitemap: https://goodrojh.github.io/adalight/sitemap.xml

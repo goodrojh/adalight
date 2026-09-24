@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="phero">
+ <div class="phero-bg">{{ m.img(media[a.img], '', '100vw', lazy=False) }}</div>
+ <div class="wrap">
+  {{ m.crumbs(crumbs) }}
+  <span class="eyebrow">{{ a.tag }} · {{ a.read }} мин чтения</span>
+  <h1 style="max-width:22ch;font-size:clamp(32px,4.6vw,60px)">{{ a.title }}</h1>
+  <p class="lead">{{ a.desc }}</p>
+ </div>
+</section>
+<section class="section">
+ <div class="wrap art-layout">
+  <article class="prose">{{ body|safe }}</article>
+  <aside class="aside-box">
+   <span class="eyebrow">ADALIGHT</span>
+   <h3>Подберём свет под ваш объект</h3>
+   <p class="muted" style="font-size:15px">Расчёт, аналоги и сроки поставки — по планам или спецификации.</p>
+   <a class="btn btn-block" href="#lead">Отправить объект</a>
+   <a class="btn btn-ghost btn-block" style="margin-top:10px" href="{{ base }}/catalog/">Открыть каталог</a>
+   <hr class="sep" style="margin:22px 0">
+   <h4>Ещё статьи</h4>
+   {% for o in others %}<a href="{{ base }}/journal/{{ o.slug }}/" style="display:block;padding:8px 0;font-size:15px">{{ o.title }}</a>{% endfor %}
+  </aside>
+ </div>
+</section>
+{{ m.lead_section(base, S=S, goal='article') }}
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="phero" style="min-height:70vh;display:flex;align-items:flex-end">
+ <div class="phero-bg">{{ m.img(media[pr.slug ~ '-0'], '', '100vw', lazy=False) }}</div>
+ <div class="wrap" style="width:100%">
+  {{ m.crumbs(crumbs) }}
+  <div class="flex" style="margin-bottom:16px"><span class="tag">{{ pr.type }}</span><span class="tag">{{ pr.segment }}</span></div>
+  <h1>{{ pr.name }}</h1>
+  <p class="lead">{{ pr.lead }}</p>
+ </div>
+</section>
+<section class="section-sm">
+ <div class="wrap">
+  <div class="facts">
+   <div><span>Объект</span><b>{{ pr.name }}</b></div>
+   <div><span>Заказчик</span><b>{{ pr.client or '—' }}</b></div>
+   <div><span>Работы</span><b>{{ pr.type }}</b></div>
+   <div><span>Локация</span><b>{{ pr.city or 'Москва' }}</b></div>
+  </div>
+ </div>
+</section>
+<section class="section" style="padding-top:20px">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">Решение</span><h2>Задача и подход</h2></div>
+  <div><p class="lead" style="color:var(--text)">{{ pr.text }}</p>
+   <h4 class="mt4">Зоны проекта</h4><div class="pill-list">{% for s in pr.scope %}<span class="tag">{{ s }}</span>{% endfor %}</div>
+   <h4 class="mt4">Роль ADALIGHT</h4>
+   <ul class="check"><li>Подбор оборудования и светотехническая проработка</li><li>Проектные аналоги с согласованием</li><li>Комплектация и поставка по графику объекта</li><li>Техническая поддержка монтажа</li></ul>
+  </div>
+ </div>
+</section>
+{% if gallery|length > 1 %}
+<section class="section" style="padding-top:0">
+ <div class="wrap">
+  <div class="masonry" data-lightbox>{% for im in gallery %}<a href="{{ im.lg }}" data-lg="{{ im.lg }}">{{ m.img(im, pr.name ~ ' — фото ' ~ loop.index, '(max-width:700px) 100vw, 33vw') }}</a>{% endfor %}</div>
+ </div>
+</section>
+{% endif %}
+<section class="section plaster">
+ <div class="wrap">
+  <div class="head"><div><span class="eyebrow">Ещё проекты</span><h2>Другие объекты</h2></div><a class="link" href="{{ base }}/projects/">Все проекты <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+  <div class="proj-grid">{% for o in others %}{{ m.proj_card(o, media, base) }}{% endfor %}</div>
+ </div>
+</section>
+{{ m.lead_section(base, title='Нужен такой же результат?', sub='Пришлите планы вашего объекта — подготовим подбор, стоимость и сроки поставки.', S=S, goal='project') }}
+{% endblock %}

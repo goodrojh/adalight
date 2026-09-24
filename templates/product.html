@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="section" style="padding-top:28px">
+ <div class="wrap">
+  {{ m.crumbs(crumbs, light=True) }}
+  <div class="prod">
+   <div class="gallery">
+    {% set g = p.images + p.schemes %}
+    <div class="gmain" role="button" tabindex="0" aria-label="Увеличить фото">
+     {% if g %}<img src="{{ g[0].lg }}" srcset="{{ g[0].srcset }}" sizes="(max-width:900px) 100vw, 50vw" width="{{ g[0].w }}" height="{{ g[0].h }}" alt="{{ p.name }} — {{ cat.name|lower }}" fetchpriority="high" data-lg="{{ g[0].lg }}">{% endif %}
+    </div>
+    {% if g|length > 1 %}<div class="gthumbs">
+     {% for im in g %}<button type="button" aria-label="Фото {{ loop.index }}" aria-current="{{ 'true' if loop.first else 'false' }}" data-src="{{ im.lg }}" data-srcset="{{ im.srcset }}" data-lg="{{ im.lg }}"><img src="{{ im.src }}" alt="" loading="lazy" width="76" height="76"></button>{% endfor %}
+    </div>{% endif %}
+   </div>
+   <div class="pinfo">
+    <div class="flex" style="margin-bottom:14px"><span class="tag{% if p.line=='CLASS A' %} y{% endif %}">{{ p.line }}</span><span class="tag">{{ p.mounting }}</span>{% if p.article %}<span class="tag">{{ p.article }}</span>{% endif %}</div>
+    <h1>{{ p.name }}</h1>
+    <p class="lead">{{ p.lead_text }}</p>
+    <dl class="kv">
+     {% for k, v in p.key_specs %}<div><dt>{{ k }}</dt><dd style="margin:0"><b>{{ v }}</b></dd></div>{% endfor %}
+    </dl>
+    <div class="buy">
+     <label class="field"><span>Модификация · {{ p.variants|length }} арт.</span>
+      <select class="vsel" id="vsel" aria-label="Выберите модификацию">
+       {% for v in p.variants %}<option value="{{ loop.index0 }}">{{ v.label }}</option>{% endfor %}
+      </select></label>
+     {% if p.options %}<div class="field"><span>Исполнение</span><div class="opts" role="radiogroup" aria-label="Исполнение">
+      {% for o in p.options %}<label><input type="radio" name="opt" value="{{ o.key }}" {% if loop.first %}checked{% endif %}><span>{{ o.label }}</span></label>{% endfor %}
+     </div></div>{% endif %}
+     <div class="buy-row" style="justify-content:space-between">
+      <div class="price" id="vprice">{% if p.variants[0].price %}{{ p.variants[0].price|rub }}{% else %}по запросу{% endif %}<small>РРЦ за шт. · партнёрская цена — по запросу</small></div>
+      <div class="qty"><button type="button" onclick="var i=this.nextElementSibling;i.value=Math.max(1,+i.value-1)" aria-label="Меньше">−</button><input id="vqty" type="number" min="1" value="1" aria-label="Количество"><button type="button" onclick="var i=this.previousElementSibling;i.value=+i.value+1" aria-label="Больше">+</button></div>
+     </div>
+     <div class="buy-row">
+      <button class="btn" type="button" id="vadd" data-qty-from="#vqty" data-add='{{ p.variants[0].add_json }}'>Добавить в спецификацию <svg><use href="#i-plus"/></svg></button>
+      <a class="btn btn-dark" href="#lead">Запросить КП</a>
+     </div>
+     <p class="note" style="margin:0">Спецификация соберёт позиции проекта: количество, сумма РРЦ, выгрузка в CSV и отправка на расчёт.</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section plaster" style="padding-top:56px">
+ <div class="wrap">
+  <div class="tabs" role="tablist" aria-label="Информация о серии">
+   <button role="tab" aria-selected="true" aria-controls="t-sku" id="tb-sku">Артикулы и цены</button>
+   <button role="tab" aria-selected="false" aria-controls="t-spec" id="tb-spec" tabindex="-1">Характеристики</button>
+   {% if p.schemes %}<button role="tab" aria-selected="false" aria-controls="t-draw" id="tb-draw" tabindex="-1">Чертежи</button>{% endif %}
+   <button role="tab" aria-selected="false" aria-controls="t-docs" id="tb-docs" tabindex="-1">Документы</button>
+  </div>
+  <div class="tabpanel" role="tabpanel" id="t-sku" aria-labelledby="tb-sku">
+   <div class="table-wrap">
+    <table class="t">
+     <thead><tr>{% for h in p.table_cols %}<th>{{ h[1] }}</th>{% endfor %}<th>РРЦ</th><th></th></tr></thead>
+     <tbody>
+      {% for v in p.variants %}<tr data-vi="{{ loop.index0 }}">{% for h in p.table_cols %}<td class="{{ 'm' if h[2] else '' }}">{{ v[h[0]] or '—' }}</td>{% endfor %}
+       <td class="m"><b>{% if v.price %}{{ v.price|rub }}{% else %}—{% endif %}</b>{% if v.price_dip %}<br><span class="muted">DIP 3CCT: {{ v.price_dip|rub }}</span>{% endif %}{% if v.price_zigbee %}<br><span class="muted">ZigBee: {{ v.price_zigbee|rub }}</span>{% endif %}{% if v.price_dim %}<br><span class="muted">Triac DIM: {{ v.price_dim|rub }}</span>{% endif %}</td>
+       <td class="add"><button class="btn btn-sm btn-dark" type="button" data-add='{{ v.add_json }}' aria-label="Добавить {{ v.sku }} в спецификацию">+ В список</button></td></tr>{% endfor %}
+     </tbody>
+    </table>
+   </div>
+   <p class="note" style="margin-top:10px">Цены — рекомендованные розничные 2026 г. Для проектных закупок и партнёров стоимость рассчитывается под объект.</p>
+  </div>
+  <div class="tabpanel" role="tabpanel" id="t-spec" aria-labelledby="tb-spec" hidden>
+   <dl class="specs-list">{% for k, v in p.common_specs %}<div><dt>{{ k }}</dt><dd>{{ v }}</dd></div>{% endfor %}</dl>
+  </div>
+  {% if p.schemes %}<div class="tabpanel" role="tabpanel" id="t-draw" aria-labelledby="tb-draw" hidden>
+   <div class="schemes" data-lightbox>{% for s in p.schemes %}<a href="{{ s.lg }}" data-lg="{{ s.lg }}"><img src="{{ s.src }}" alt="Габаритный чертёж {{ p.name }}" loading="lazy" width="{{ s.w }}" height="{{ s.h }}"></a>{% endfor %}</div>
+  </div>{% endif %}
+  <div class="tabpanel" role="tabpanel" id="t-docs" aria-labelledby="tb-docs" hidden>
+   <div class="grid g3">
+    {% for d in ['IES-файл фотометрии', 'Паспорт и инструкция', 'Габаритный чертёж (DWG/PDF)'] %}<div class="card"><svg width="26" height="26" style="color:var(--signal);margin-bottom:14px"><use href="#i-file"/></svg><h4>{{ d }}</h4><p style="margin-bottom:14px">Отправим для позиций вашей спецификации.</p><a class="link" href="{{ base }}/engineers/#request">Запросить</a></div>{% endfor %}
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <div class="head"><div><span class="eyebrow">Почему {{ p.line }}</span><h2>{{ line.sub }}</h2></div></div>
+  <div class="feat">{% for t, d in line.feats %}<div><b>{{ t }}</b>{% if d %}<p>{{ d }}</p>{% endif %}</div>{% endfor %}</div>
+  <div class="flex mt4"><span class="mono muted" style="font-size:13px">Где применять:</span>{% for a in p.apps %}<span class="tag">{{ a }}</span>{% endfor %}</div>
+ </div>
+</section>
+
+{% if p.beam %}
+<section class="section" style="padding-top:0">
+ <div class="wrap">
+  <div class="head"><div><span class="eyebrow">Калькулятор освещённости</span><h2>Сколько люкс даст {{ p.name }}</h2></div><p class="lead">Меняйте высоту и угол — увидите диаметр светового пятна и освещённость в центре.</p></div>
+  {{ m.beam_widget(p, p.beam) }}
+ </div>
+</section>
+{% endif %}
+
+{% if related %}
+<section class="section plaster">
+ <div class="wrap">
+  <div class="head"><div><span class="eyebrow">Смотрите также</span><h2>{{ cat.short }}: другие серии</h2></div><a class="link" href="{{ base }}/catalog/{{ cat.slug }}/">Вся категория <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+  <div class="pgrid">{% for r in related %}{{ m.pcard(r, base, loop.index) }}{% endfor %}</div>
+ </div>
+</section>
+{% endif %}
+
+{{ m.lead_section(base, title='Нужен расчёт или партнёрская цена на ' ~ p.name ~ '?', sub='Пришлите планы или количество — подготовим КП со сроками поставки. Подберём аналог, если позиция из вашего проекта недоступна.', goal='product', label='Запрос КП: ' ~ p.name, S=S) }}
+<script type="application/json" id="pdata">{{ p.variants_js|tojson }}</script>
+{% endblock %}
+{% block scripts %}
+<script>
+(function(){
+ var V=JSON.parse(document.getElementById('pdata').textContent),sel=document.getElementById('vsel'),pr=document.getElementById('vprice'),add=document.getElementById('vadd');
+ var rows=[].slice.call(document.querySelectorAll('tr[data-vi]'));
+ function opt(){var o=document.querySelector('input[name=opt]:checked');return o?o.value:'';}
+ function upd(){var v=V[+sel.value],o=opt(),price=v.price,lab='';
+  if(o&&v.opts&&v.opts[o]){price=v.opts[o].price;lab=v.opts[o].label;}
+  pr.firstChild.textContent=price?window.ADAfmt?window.ADAfmt(price):price+' ₽':'по запросу';
+  var item=JSON.parse(JSON.stringify(v.add));item.price=price||null;if(lab)item.opt=lab;add.setAttribute('data-add',JSON.stringify(item));
+  rows.forEach(function(r){r.classList.toggle('active',+r.dataset.vi===+sel.value);});
+  var b=document.querySelector('[data-beam]');if(b&&v.lm){var f=b.querySelector('[name=f]');if(f){f.value=v.lm;f.dispatchEvent(new Event('input'));}}
+ }
+ sel.addEventListener('change',upd);[].forEach.call(document.querySelectorAll('input[name=opt]'),function(i){i.addEventListener('change',upd);});
+ rows.forEach(function(r){r.addEventListener('click',function(e){if(e.target.closest('button'))return;sel.value=r.dataset.vi;upd();});});
+ document.addEventListener('DOMContentLoaded',upd);if(document.readyState!=='loading')upd();
+})();
+</script>
+{% endblock %}

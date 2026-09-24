@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="phero">
+ <div class="phero-bg">{{ m.img(hero_img, '', '100vw', lazy=False) }}</div>
+ <div class="wrap">
+  {{ m.crumbs(crumbs) }}
+  <span class="eyebrow">{% if cat %}Каталог · {{ cat_stats.n_series }} серий · {{ cat_stats.n_sku }} артикулов{% else %}Каталог ADALIGHT 2026{% endif %}</span>
+  <h1>{{ h1 }}</h1>
+  <p class="lead">{{ intro }}</p>
+  {% if not cat %}<div class="flex" style="margin-top:24px">{% for c in cats %}<a class="btn btn-ghost btn-sm" href="{{ base }}/catalog/{{ c.slug }}/">{{ c.short }} <span class="mono" style="opacity:.6">{{ c.n_series }}</span></a>{% endfor %}</div>
+  {% else %}<div class="flex" style="margin-top:24px">{% for c in cats %}{% if c.slug != cat %}<a class="btn btn-ghost btn-sm" href="{{ base }}/catalog/{{ c.slug }}/">{{ c.short }}</a>{% endif %}{% endfor %}</div>{% endif %}
+ </div>
+</section>
+
+{% if lines_here %}
+<section class="section-sm plaster">
+ <div class="wrap grid g3">
+  {% for L in lines_here %}<div class="card"><span class="tag{% if L.title=='CLASS A' %} y{% endif %}">{{ L.title }}</span><h3 style="margin:14px 0 6px">{{ L.sub }}</h3><p>Гарантия {{ L.warranty }}. {{ L.feats[0][0] }}: {{ L.feats[0][1]|lower if L.feats[0][1] else '' }}</p></div>{% endfor %}
+ </div>
+</section>
+{% endif %}
+
+<section class="section" style="padding-top:40px" data-catalog {% if preset %}data-preset="{{ preset }}"{% endif %}>
+ <div class="wrap cat-layout">
+  <aside class="filters" aria-label="Фильтры">
+   <div class="filters-top"><h3 style="margin:0">Фильтры</h3><button class="icon-btn" type="button" data-filters-toggle aria-label="Закрыть" style="background:#eee;color:#000"><svg><use href="#i-x"/></svg></button></div>
+   {% if not cat %}<div class="fgroup"><h4>Категория</h4><div class="chips">{% for c in cats %}<button type="button" class="chip" data-f="cat" data-v="{{ c.slug }}">{{ c.short }} <small></small></button>{% endfor %}</div></div>{% endif %}
+   <div class="fgroup"><h4>Линейка</h4><div class="chips">{% for l in facet_lines %}<button type="button" class="chip" data-f="line" data-v="{{ l }}">{{ l }} <small></small></button>{% endfor %}</div></div>
+   {% if facet_mounts|length > 1 %}<div class="fgroup"><h4>Монтаж</h4><div class="chips">{% for k in facet_mounts %}<button type="button" class="chip" data-f="mount" data-v="{{ k }}">{{ k }} <small></small></button>{% endfor %}</div></div>{% endif %}
+   {% if facet_cct %}<div class="fgroup"><h4>Цветовая температура</h4><div class="chips">{% for k in facet_cct %}<button type="button" class="chip" data-f="cct" data-v="{{ k }}">{{ k }} K <small></small></button>{% endfor %}</div></div>{% endif %}
+   {% if facet_ip %}<div class="fgroup"><h4>Защита IP</h4><div class="chips">{% for k in facet_ip %}<button type="button" class="chip" data-f="ip" data-v="{{ k }}">IP{{ k }} <small></small></button>{% endfor %}</div></div>{% endif %}
+   {% if has_power %}<div class="fgroup"><h4>Мощность, Вт</h4><div class="range"><input type="number" min="0" placeholder="от" data-wmin aria-label="Мощность от"><span>—</span><input type="number" min="0" placeholder="до" data-wmax aria-label="Мощность до"></div></div>{% endif %}
+   <div class="fgroup" style="border:0"><button type="button" class="link" data-reset style="background:none;border-top:0;border-left:0;border-right:0;cursor:pointer">Сбросить фильтры</button></div>
+   <div class="filters-foot"><button class="btn btn-ghost" type="button" data-reset style="color:#000">Сбросить</button><button class="btn btn-block" type="button" data-filters-toggle>Показать</button></div>
+  </aside>
+  <div>
+   <div class="search" style="margin-bottom:16px"><svg><use href="#i-search"/></svg><input id="q" type="search" data-q placeholder="Поиск: артикул, серия, «IP65», «трек», «USB»…" aria-label="Поиск по каталогу"></div>
+   <div class="toolbar">
+    <span class="count" data-count aria-live="polite"></span>
+    <div class="flex">
+     <button class="btn btn-dark btn-sm fbtn" type="button" data-filters-toggle>Фильтры <span data-fcount></span></button>
+     <label class="sr-only" for="sort">Сортировка</label>
+     <select id="sort" data-sort><option value="default">По популярности</option><option value="price">Сначала дешевле</option><option value="price-d">Сначала дороже</option><option value="power">По мощности</option></select>
+    </div>
+   </div>
+   <div class="pgrid">
+    {% for p in items %}{{ m.pcard(p, base, loop.index) }}{% endfor %}
+   </div>
+   <div class="empty" data-empty hidden><h3>Под эти параметры серий нет</h3><p>Снимите часть фильтров — или пришлите параметры: подберём аналог или изготовим по ТЗ.</p><div class="flex" style="justify-content:center;margin-top:14px"><button class="btn btn-dark" type="button" data-reset>Сбросить фильтры</button><a class="btn" href="#lead">Запросить подбор</a></div></div>
+  </div>
+ </div>
+</section>
+
+{% if seo %}
+<section class="section plaster">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">Как выбрать</span><h2>{{ h1 }}: что важно знать</h2></div>
+  <div class="prose" style="font-size:16.5px">{{ seo|safe }}</div>
+ </div>
+</section>
+{% endif %}
+
+{{ m.lead_section(base, title='Не нашли нужную позицию?', sub='Пришлите артикул, фото или параметры — подберём технический аналог из 2500+ моделей или изготовим по ТЗ.', goal='catalog', label='Подбор из каталога', S=S) }}
+{% endblock %}
+{% block scripts %}<script src="{{ base }}/assets/js/catalog.js?v={{ ver }}" defer></script>{% endblock %}

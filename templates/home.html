@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="hero" data-cct="3000" aria-label="ADALIGHT — освещение объектов">
+ <div class="hero-media" aria-hidden="true">{{ m.img(media['ilinka-5'], '', '100vw', lazy=False) }}</div>
+ <div class="hero-lit" aria-hidden="true">{{ m.img(media['ilinka-5'], '', '100vw', lazy=False) }}</div>
+ <div class="hero-temp" aria-hidden="true"></div>
+ <div class="hero-shade" aria-hidden="true"></div>
+ <span class="hint" aria-hidden="true">Ведите курсором — это ваш свет</span>
+ <div class="hero-panel">
+  <div class="cct" role="group" aria-label="Цветовая температура">
+   <button type="button" data-cct="2700" aria-pressed="false"><i style="background:#ff9d3c"></i>2700K</button>
+   <button type="button" data-cct="3000" aria-pressed="true"><i style="background:#ffc97a"></i>3000K</button>
+   <button type="button" data-cct="4000" aria-pressed="false"><i style="background:#dfe8ff"></i>4000K</button>
+  </div>
+  <button type="button" class="switch" aria-pressed="false"><span></span><b>Включить весь свет</b></button>
+ </div>
+ <div class="wrap hero-in">
+  <span class="eyebrow" style="color:#cfcfd3">Инженерно-производственный партнёр · с проекта до монтажа</span>
+  <h1>Реализуем вашу идею <em>в свете</em> — вместе</h1>
+  <p class="lead">Проектируем, поставляем и монтируем свет будущего сегодня: светотехнический расчёт, производство по ТЗ, проектные аналоги и поставка для жилых комплексов, офисов, ритейла и HoReCa.</p>
+  <div class="hero-cta">
+   <a class="btn" href="#lead">Прислать объект на расчёт <svg><use href="#i-arrow"/></svg></a>
+   <a class="btn btn-ghost" href="{{ base }}/catalog/">Каталог · {{ total_sku }} артикулов</a>
+  </div>
+  <div class="hero-cap"><span>На фото: <b>ЖК «Ильинка 3/8»</b>, Sminex</span><span>Температура: <b data-cct-out>3000 K</b></span></div>
+ </div>
+</section>
+
+<section class="dark section-sm">
+ <div class="wrap">
+  {{ m.stats(stats) }}
+  <p class="note" style="color:#6d6d73;margin-top:14px">* Гарантийный срок зависит от линейки оборудования: 3 года — ECO, 5 лет — PRM и CLASS A.</p>
+ </div>
+</section>
+
+<section class="dark section" style="padding-top:clamp(40px,5vw,72px)">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Для кого мы работаем</span><h2>Выберите свою задачу — покажем, как мы её закрываем</h2></div></div>
+  <div class="router rv">
+   <a href="{{ base }}/developers/"><span class="ic"><svg width="22" height="22"><use href="#i-build"/></svg></span><span class="who">Девелоперам и генподрядчикам</span><p>Смета, аналоги с проверкой параметров, сроки по позициям, один ответственный по объекту.</p><span class="go">Решения для объектов <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+   <a href="{{ base }}/designers/"><span class="ic"><svg width="22" height="22"><use href="#i-pen"/></svg></span><span class="who">Дизайнерам и архитекторам</span><p>Свет, который сохраняет концепцию: подбор, кастом по ТЗ, замены без разрушения идеи.</p><span class="go">Инструменты дизайнера <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+   <a href="{{ base }}/partners/"><span class="ic"><svg width="22" height="22"><use href="#i-hammer"/></svg></span><span class="who">Ремонтным компаниям и студиям</span><p>Партнёрская цена, ваша наценка, выплаты по договору. Внешний отдел освещения без найма.</p><span class="go">Партнёрская программа <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+   <a href="{{ base }}/catalog/"><span class="ic"><svg width="22" height="22"><use href="#i-home"/></svg></span><span class="who">Для дома и квартиры</span><p>Каталог с ценами и фильтрами, спецификация в один клик, консультация по подбору.</p><span class="go">Открыть каталог <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Нам доверяют</span><h2>Девелоперы, с которыми мы работаем</h2></div><p class="lead">Проектная дисциплина большого рынка — в каждом объекте: от клубных домов в центре Москвы до комплексов комфорт-класса.</p></div>
+  <div class="rv">{{ m.logos(devs, media, words) }}</div>
+ </div>
+</section>
+
+<section class="section plaster">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Где выигрывается проект по освещению</span><h2>Подключаемся до закупки — чтобы меньше переделывать на объекте</h2></div>
+   <p class="lead">Поставщики света обычно приходят на тендер, когда спецификация уже написана без них. Мы работаем на каждой стадии и отвечаем за свет от концепции до эксплуатации.</p></div>
+  <div class="stages rv">
+   {% for t, p, we in stages %}<div class="stage{% if loop.index <= 2 %} win{% endif %}"><span class="dot">{{ '%02d'|format(loop.index) }}</span><h4>{{ t }}</h4><p>{{ p }}</p><p class="we">{{ we }}</p></div>{% endfor %}
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Каталог</span><h2>{{ total_series }} серий, {{ total_sku }} артикулов с ценами</h2></div><a class="link" href="{{ base }}/catalog/">Каталог с фильтрами <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+  <div class="cats rv">
+   {% for c in cats %}<a class="cat{% if loop.index <= 2 %} wide{% endif %}" href="{{ base }}/catalog/{{ c.slug }}/">
+    {{ m.img(c.img, '', '(max-width:980px) 50vw, 33vw') }}
+    <h3>{{ c.short }}</h3>
+    <div class="meta"><span><b>{{ c.n_series }}</b> серий</span><span><b>{{ c.n_sku }}</b> арт.</span>{% if c.price_min %}<span>от {{ c.price_min|rub }}</span>{% endif %}</div>
+   </a>{% endfor %}
+  </div>
+ </div>
+</section>
+
+<section class="dark section">
+ <div class="wrap split">
+  <div class="rv">
+   <span class="eyebrow">Оптимизация сметы</span>
+   <h2>Сравниваем каждую позицию до размещения заказа</h2>
+   <p class="lead">Исходная спецификация → проверка параметров → подбор аналога → согласование с проектной командой. Экономия появляется не из-за «дешёвого света», а из-за прозрачной комплектации.</p>
+   <ul class="check" style="margin:26px 0;color:#d6d6da">
+    <li>Аналоги по ТТХ, геометрии и визуальному образу</li>
+    <li>Сроки по каждой позиции — в КП до заказа</li>
+    <li>Образец или визуализация для согласования</li>
+   </ul>
+   <a class="btn" href="{{ base }}/services/optimizaciya-smety/">Как проходит оптимизация <svg><use href="#i-arrow"/></svg></a>
+  </div>
+  <div class="rv">
+   <div class="cmp" role="table" aria-label="Пример сравнения позиций">
+    <div class="cmp-row h" role="row"><div>Параметр</div><div>Исходная позиция</div><div>Аналог ADALIGHT</div><div>Статус</div></div>
+    <div class="cmp-row" role="row"><div>Мощность / поток</div><div class="m">10 Вт · 900 лм</div><div class="m">10 Вт · 900 лм</div><div class="ok m">совпадает</div></div>
+    <div class="cmp-row" role="row"><div>Цветовая температура</div><div class="m">3000 K</div><div class="m">2700/3000/4000 K</div><div class="ok m">совпадает</div></div>
+    <div class="cmp-row" role="row"><div>Цветопередача</div><div class="m">Ra 90</div><div class="m">Ra ≥ 92</div><div class="ok m">лучше</div></div>
+    <div class="cmp-row" role="row"><div>Врезка / угол</div><div class="m">Ø75 · 24°</div><div class="m">Ø76 · 15/24/36°</div><div class="ok m">совпадает</div></div>
+    <div class="cmp-row" role="row"><div>Срок поставки</div><div class="m">уточняется</div><div class="m">фиксирован в КП</div><div class="ok m">управляемо</div></div>
+    <div class="cmp-row total" role="row"><div>Решение</div><div class="m">—</div><div class="m">согласовано</div><div class="ok m">в заказ</div></div>
+   </div>
+   <p class="note" style="color:#77777d;margin-top:10px">Иллюстрация формата сравнения. Стоимость и возможная экономия зависят от спецификации, объёма и условий поставки.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Компетенции</span><h2>Полный цикл: от расчёта до сервиса</h2></div><a class="link" href="{{ base }}/services/">Все услуги <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+  <div class="grid g3 rv">
+   {% for s in services %}<a class="card" href="{{ base }}/services/{{ s.slug }}/"{% if loop.index > 3 %} style="grid-column:span 1"{% endif %}>
+    <span class="arrow"><svg width="16" height="16"><use href="#i-arrow"/></svg></span>
+    <span class="tag" style="margin-bottom:34px">{{ '%02d'|format(loop.index) }}</span>
+    <h3>{{ s.name }}</h3><p>{{ s.short }}</p></a>{% endfor %}
+   <a class="card" href="{{ base }}/tools/" style="background:var(--signal);border-color:var(--signal)"><span class="arrow" style="border-color:rgba(0,0,0,.2)"><svg width="16" height="16"><use href="#i-arrow"/></svg></span><span class="tag" style="margin-bottom:34px;background:#000;color:var(--signal)">Онлайн</span><h3>Калькуляторы света</h3><p style="color:#3b3000">Освещённость по углу луча и количество светильников на помещение.</p></a>
+  </div>
+ </div>
+</section>
+
+<section class="section plaster">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Реализованные проекты</span><h2>Свет, который уже работает</h2></div><a class="link" href="{{ base }}/projects/">Все проекты <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+  <div class="proj-grid rv">
+   {% for pr in projects[:5] %}{{ m.proj_card(pr, media, base) }}{% endfor %}
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap split">
+  <div class="media-frame ratio rv">{{ m.img(media['prod-0'], 'Производство светильников', '(max-width:900px) 100vw, 50vw') }}</div>
+  <div class="rv">
+   <span class="eyebrow">Производство по ТЗ</span>
+   <h2>Если готового решения нет — создаём его под проект</h2>
+   <p class="lead">Корпус и габариты, мощность, CCT и оптика, цвет и отделка, тип крепления. Производственные линии в России и Китае, гарантия до 5 лет.</p>
+   <div class="steps" style="--n:4;margin:26px 0">
+    {% for t, d in [('ТЗ','Параметры света и конструкция'),('Адаптация','Корпус, оптика, отделка'),('Образец','Для согласования'),('Серия','Запуск после утверждения')] %}<div class="step"><div class="n">{{ '%02d'|format(loop.index) }}</div><h4>{{ t }}</h4><p>{{ d }}</p></div>{% endfor %}
+   </div>
+   <a class="link" href="{{ base }}/services/proizvodstvo/">Подробнее о производстве <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+  </div>
+ </div>
+</section>
+
+<section class="dark section">
+ <div class="wrap split">
+  <div class="rv">
+   <span class="eyebrow">Партнёрская программа</span>
+   <h2>Свет может приносить прибыль вашей студии</h2>
+   <p class="lead">Клиент всё равно покупает свет. Партнёрская модель оставляет часть этой экономики у вас: спеццена под объект, ваша наценка, выплаты по договору точно в срок.</p>
+   <div class="flex" style="margin-top:26px"><a class="btn" href="{{ base }}/partners/">Условия для партнёров <svg><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="{{ base }}/partners/#calc">Посчитать доход</a></div>
+  </div>
+  <div class="rv">
+   <div class="grid g2">
+    <div class="card"><span class="mono" style="color:#8a8a90;font-size:12px">Цена клиенту</span><h3 style="font-size:clamp(24px,2.6vw,34px);margin:6px 0 0;white-space:nowrap">400 000 ₽</h3></div>
+    <div class="card"><span class="mono" style="color:#8a8a90;font-size:12px">Партнёрская закупка</span><h3 style="font-size:clamp(24px,2.6vw,34px);margin:6px 0 0;white-space:nowrap">320 000 ₽</h3></div>
+    <div class="card" style="grid-column:1/-1;background:var(--signal);border-color:var(--signal);color:#000"><span class="mono" style="font-size:12px">10 объектов в месяц — дополнительная валовая прибыль</span><h3 style="font-size:clamp(40px,5vw,64px);margin:6px 0 0">≈ 800 000 ₽</h3><p style="color:#3b3000;margin-top:6px">Пример одного объекта — 80 000 ₽. Фактическая прибыль зависит от состава проекта, объёма и условий поставки.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <div class="head rv"><div><span class="eyebrow">Журнал</span><h2>Разбираемся в свете</h2></div><a class="link" href="{{ base }}/journal/">Все статьи <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+  <div class="grid g3 rv">
+   {% for a in articles[:3] %}<a class="pcard" href="{{ base }}/journal/{{ a.slug }}/"><div class="ph fill" style="aspect-ratio:16/10">{{ m.img(media[a.img], '', '(max-width:680px) 100vw, 33vw') }}</div><div class="bd"><span class="tag">{{ a.tag }} · {{ a.read }} мин</span><h3>{{ a.title }}</h3></div></a>{% endfor %}
+  </div>
+ </div>
+</section>
+
+<section class="section plaster">
+ <div class="wrap split" style="align-items:start">
+  <div class="rv"><span class="eyebrow">Вопросы</span><h2>Частые вопросы</h2><p class="lead">Не нашли ответ — позвоните <a href="tel:{{ S.phone_raw }}">{{ S.phone }}</a>, ответим сразу.</p></div>
+  <div class="rv">{{ m.faq(faq) }}</div>
+ </div>
+</section>
+
+{{ m.lead_section(base, S=S) }}
+{% endblock %}

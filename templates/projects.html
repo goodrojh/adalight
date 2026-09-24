@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="phero">
+ <div class="phero-bg">{{ m.img(media['paveletskaya-city-1'], '', '100vw', lazy=False) }}</div>
+ <div class="wrap">
+  {{ m.crumbs(crumbs) }}
+  <span class="eyebrow">Портфолио · {{ projects|length }} объектов на сайте из 100+</span>
+  <h1>Реализованные проекты</h1>
+  <p class="lead">Внутреннее освещение МОП, архитектурная подсветка фасадов и освещение благоустройства жилых комплексов в Москве и регионах.</p>
+ </div>
+</section>
+<section class="section">
+ <div class="wrap">
+  <div class="proj-grid">{% for pr in projects %}{{ m.proj_card(pr, media, base) }}{% endfor %}</div>
+ </div>
+</section>
+<section class="section-sm plaster"><div class="wrap"><div class="head" style="margin-bottom:24px"><div><span class="eyebrow">Заказчики</span><h2>Девелоперы</h2></div></div>{{ m.logos(devs, media, words) }}</div></section>
+{{ m.lead_section(base, title='Обсудим ваш объект', S=S, goal='projects') }}
+{% endblock %}

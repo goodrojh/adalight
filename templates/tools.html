@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="phero">
+ <div class="phero-bg">{{ m.img(media['dark-cones'], '', '100vw', lazy=False) }}</div>
+ <div class="wrap">
+  {{ m.crumbs(crumbs) }}
+  <span class="eyebrow">Онлайн-инструменты</span>
+  <h1>Калькуляторы света</h1>
+  <p class="lead">Быстрая оценка до проекта: сколько светильников нужно на помещение и какую освещённость даст светильник с выбранным углом луча.</p>
+ </div>
+</section>
+<section class="section">
+ <div class="wrap">
+  <div class="head"><div><span class="eyebrow">Калькулятор 1</span><h2>Сколько светильников нужно на помещение</h2></div><p class="lead">Метод коэффициента использования светового потока с коэффициентом запаса 1,25.</p></div>
+  <div class="calc" data-room-calc style="background:var(--plaster);color:var(--text)">
+   <div class="light-range">
+    <div class="row2 form" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+     <label class="field"><span>Длина, м</span><input name="L" type="number" min="1" step="0.1" value="6"></label>
+     <label class="field"><span>Ширина, м</span><input name="B" type="number" min="1" step="0.1" value="4"></label>
+     <label class="field"><span>Высота, м</span><input name="H" type="number" min="2" step="0.1" value="2.8"></label>
+    </div>
+    <label class="field mt2"><span>Назначение помещения (норма освещённости)</span>
+     <select name="E"><option value="150">Спальня, коридор — 150 лк</option><option value="200" selected>Гостиная, кухня — 200 лк</option><option value="300">Кабинет, лобби — 300 лк</option><option value="400">Офис, open-space — 400 лк</option><option value="500">Рабочие зоны, торговый зал — 500 лк</option><option value="75">Паркинг — 75 лк</option></select></label>
+    <div class="row2 form mt2" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+     <label class="field"><span>Поток светильника, лм</span><input name="F" type="number" min="100" step="10" value="1030"></label>
+     <label class="field"><span>Мощность светильника, Вт</span><input name="P" type="number" min="1" step="1" value="12"></label>
+    </div>
+    <label class="field mt2"><span>Отделка</span><select name="rf"><option value="1">Светлые стены и потолок</option><option value="0">Тёмная отделка</option></select></label>
+    <p class="note mt2">Подставьте параметры светильника из карточки каталога, например TANGO 12 Вт — 1030 лм.</p>
+   </div>
+   <div class="out" style="background:var(--ink);color:#fff">
+    <div class="row"><span>Площадь</span><b data-o="S"></b></div>
+    <div><span class="mono" style="font-size:12px;color:#a0a0a6">Нужно светильников</span><div class="big" data-o="N"></div></div>
+    <div class="row"><span>Сетка</span><b data-o="grid"></b></div>
+    <div class="row"><span>Мощность</span><b data-o="W"></b></div>
+    <svg data-o="plan" viewBox="0 0 300 200" style="width:100%;height:auto;background:#111;border-radius:10px" aria-label="Схема расстановки"></svg>
+    <a class="btn" href="#lead">Заказать точный расчёт</a>
+   </div>
+  </div>
+ </div>
+</section>
+<section class="section plaster">
+ <div class="wrap">
+  <div class="head"><div><span class="eyebrow">Калькулятор 2</span><h2>Освещённость и пятно по углу луча</h2></div><p class="lead">Узнайте, какая освещённость будет в центре светового пятна и какого оно диаметра.</p></div>
+  {{ m.beam_widget({'slug':'tool'}, {'h':2.7,'a':36,'f':1000,'fmax':6000,'angles':[15,24,36,60]}) }}
+ </div>
+</section>
+{{ m.lead_section(base, title='Нужен точный расчёт по нормам?', sub='Предварительная оценка не заменяет светотехнический расчёт. Пришлите планы — посчитаем бесплатно при комплектации объекта.', goal='tools', S=S) }}
+{% endblock %}

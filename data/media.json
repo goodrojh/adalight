@@ -1,0 +1,821 @@
+{
+ "will-towers-0": {
+  "src": "/img/projects/will-towers-0-640.webp",
+  "srcset": "/img/projects/will-towers-0-640.webp 640w, /img/projects/will-towers-0-1400.webp 1400w",
+  "w": 1400,
+  "h": 948,
+  "lg": "/img/projects/will-towers-0-1400.webp"
+ },
+ "will-towers-1": {
+  "src": "/img/projects/will-towers-1-640.webp",
+  "srcset": "/img/projects/will-towers-1-640.webp 640w, /img/projects/will-towers-1-1400.webp 1400w",
+  "w": 1400,
+  "h": 875,
+  "lg": "/img/projects/will-towers-1-1400.webp"
+ },
+ "will-towers-2": {
+  "src": "/img/projects/will-towers-2-640.webp",
+  "srcset": "/img/projects/will-towers-2-640.webp 640w, /img/projects/will-towers-2-1400.webp 1400w",
+  "w": 1400,
+  "h": 948,
+  "lg": "/img/projects/will-towers-2-1400.webp"
+ },
+ "will-towers-3": {
+  "src": "/img/projects/will-towers-3-640.webp",
+  "srcset": "/img/projects/will-towers-3-640.webp 640w, /img/projects/will-towers-3-1400.webp 1400w",
+  "w": 1400,
+  "h": 875,
+  "lg": "/img/projects/will-towers-3-1400.webp"
+ },
+ "will-towers-4": {
+  "src": "/img/projects/will-towers-4-640.webp",
+  "srcset": "/img/projects/will-towers-4-640.webp 640w, /img/projects/will-towers-4-1400.webp 1400w",
+  "w": 1400,
+  "h": 1400,
+  "lg": "/img/projects/will-towers-4-1400.webp"
+ },
+ "will-towers-5": {
+  "src": "/img/projects/will-towers-5-640.webp",
+  "srcset": "/img/projects/will-towers-5-640.webp 640w, /img/projects/will-towers-5-1400.webp 1400w",
+  "w": 1400,
+  "h": 948,
+  "lg": "/img/projects/will-towers-5-1400.webp"
+ },
+ "will-towers-6": {
+  "src": "/img/projects/will-towers-6-640.webp",
+  "srcset": "/img/projects/will-towers-6-640.webp 640w, /img/projects/will-towers-6-1400.webp 1400w",
+  "w": 1400,
+  "h": 875,
+  "lg": "/img/projects/will-towers-6-1400.webp"
+ },
+ "will-towers-7": {
+  "src": "/img/projects/will-towers-7-640.webp",
+  "srcset": "/img/projects/will-towers-7-640.webp 640w, /img/projects/will-towers-7-1400.webp 1400w",
+  "w": 1400,
+  "h": 875,
+  "lg": "/img/projects/will-towers-7-1400.webp"
+ },
+ "will-towers-8": {
+  "src": "/img/projects/will-towers-8-640.webp",
+  "srcset": "/img/projects/will-towers-8-640.webp 640w, /img/projects/will-towers-8-1400.webp 1400w",
+  "w": 1400,
+  "h": 875,
+  "lg": "/img/projects/will-towers-8-1400.webp"
+ },
+ "ciolkovsky-0": {
+  "src": "/img/projects/ciolkovsky-0-640.webp",
+  "srcset": "/img/projects/ciolkovsky-0-640.webp 640w, /img/projects/ciolkovsky-0-1400.webp 873w",
+  "w": 873,
+  "h": 873,
+  "lg": "/img/projects/ciolkovsky-0-1400.webp"
+ },
+ "ciolkovsky-1": {
+  "src": "/img/projects/ciolkovsky-1-640.webp",
+  "srcset": "/img/projects/ciolkovsky-1-640.webp 640w, /img/projects/ciolkovsky-1-1400.webp 1280w",
+  "w": 1280,
+  "h": 854,
+  "lg": "/img/projects/ciolkovsky-1-1400.webp"
+ },
+ "ciolkovsky-2": {
+  "src": "/img/projects/ciolkovsky-2-640.webp",
+  "srcset": "/img/projects/ciolkovsky-2-640.webp 640w, /img/projects/ciolkovsky-2-1400.webp 1110w",
+  "w": 1110,
+  "h": 1223,
+  "lg": "/img/projects/ciolkovsky-2-1400.webp"
+ },
+ "ciolkovsky-3": {
+  "src": "/img/projects/ciolkovsky-3-640.webp",
+  "srcset": "/img/projects/ciolkovsky-3-640.webp 640w, /img/projects/ciolkovsky-3-1400.webp 1110w",
+  "w": 1110,
+  "h": 1223,
+  "lg": "/img/projects/ciolkovsky-3-1400.webp"
+ },
+ "ciolkovsky-4": {
+  "src": "/img/projects/ciolkovsky-4-640.webp",
+  "srcset": "/img/projects/ciolkovsky-4-640.webp 640w, /img/projects/ciolkovsky-4-1400.webp 1316w",
+  "w": 1316,
+  "h": 927,
+  "lg": "/img/projects/ciolkovsky-4-1400.webp"
+ },
+ "ciolkovsky-5": {
+  "src": "/img/projects/ciolkovsky-5-640.webp",
+  "srcset": "/img/projects/ciolkovsky-5-640.webp 640w, /img/projects/ciolkovsky-5-1400.webp 1316w",
+  "w": 1316,
+  "h": 927,
+  "lg": "/img/projects/ciolkovsky-5-1400.webp"
+ },
+ "paveletskaya-city-0": {
+  "src": "/img/projects/paveletskaya-city-0-640.webp",
+  "srcset": "/img/projects/paveletskaya-city-0-640.webp 640w, /img/projects/paveletskaya-city-0-1400.webp 675w",
+  "w": 675,
+  "h": 675,
+  "lg": "/img/projects/paveletskaya-city-0-1400.webp"
+ },
+ "paveletskaya-city-1": {
+  "src": "/img/projects/paveletskaya-city-1-640.webp",
+  "srcset": "/img/projects/paveletskaya-city-1-640.webp 640w, /img/projects/paveletskaya-city-1-1400.webp 1400w",
+  "w": 1400,
+  "h": 788,
+  "lg": "/img/projects/paveletskaya-city-1-1400.webp"
+ },
+ "paveletskaya-city-2": {
+  "src": "/img/projects/paveletskaya-city-2-640.webp",
+  "srcset": "/img/projects/paveletskaya-city-2-640.webp 640w, /img/projects/paveletskaya-city-2-1400.webp 1200w",
+  "w": 1200,
+  "h": 675,
+  "lg": "/img/projects/paveletskaya-city-2-1400.webp"
+ },
+ "paveletskaya-city-3": {
+  "src": "/img/projects/paveletskaya-city-3-640.webp",
+  "srcset": "/img/projects/paveletskaya-city-3-640.webp 640w, /img/projects/paveletskaya-city-3-1400.webp 1400w",
+  "w": 1400,
+  "h": 886,
+  "lg": "/img/projects/paveletskaya-city-3-1400.webp"
+ },
+ "paveletskaya-city-4": {
+  "src": "/img/projects/paveletskaya-city-4-640.webp",
+  "srcset": "/img/projects/paveletskaya-city-4-640.webp 640w, /img/projects/paveletskaya-city-4-1400.webp 1400w",
+  "w": 1400,
+  "h": 788,
+  "lg": "/img/projects/paveletskaya-city-4-1400.webp"
+ },
+ "paveletskaya-city-5": {
+  "src": "/img/projects/paveletskaya-city-5-640.webp",
+  "srcset": "/img/projects/paveletskaya-city-5-640.webp 640w, /img/projects/paveletskaya-city-5-1400.webp 1141w",
+  "w": 1141,
+  "h": 1522,
+  "lg": "/img/projects/paveletskaya-city-5-1400.webp"
+ },
+ "ilinka-0": {
+  "src": "/img/projects/ilinka-0-640.webp",
+  "srcset": "/img/projects/ilinka-0-640.webp 640w, /img/projects/ilinka-0-1400.webp 1400w",
+  "w": 1400,
+  "h": 1050,
+  "lg": "/img/projects/ilinka-0-1400.webp"
+ },
+ "ilinka-1": {
+  "src": "/img/projects/ilinka-1-640.webp",
+  "srcset": "/img/projects/ilinka-1-640.webp 640w, /img/projects/ilinka-1-1400.webp 1400w",
+  "w": 1400,
+  "h": 1050,
+  "lg": "/img/projects/ilinka-1-1400.webp"
+ },
+ "ilinka-2": {
+  "src": "/img/projects/ilinka-2-640.webp",
+  "srcset": "/img/projects/ilinka-2-640.webp 640w, /img/projects/ilinka-2-1400.webp 1400w",
+  "w": 1400,
+  "h": 1867,
+  "lg": "/img/projects/ilinka-2-1400.webp"
+ },
+ "ilinka-3": {
+  "src": "/img/projects/ilinka-3-640.webp",
+  "srcset": "/img/projects/ilinka-3-640.webp 640w, /img/projects/ilinka-3-1400.webp 1400w",
+  "w": 1400,
+  "h": 1050,
+  "lg": "/img/projects/ilinka-3-1400.webp"
+ },
+ "ilinka-4": {
+  "src": "/img/projects/ilinka-4-640.webp",
+  "srcset": "/img/projects/ilinka-4-640.webp 640w, /img/projects/ilinka-4-1400.webp 1400w",
+  "w": 1400,
+  "h": 787,
+  "lg": "/img/projects/ilinka-4-1400.webp"
+ },
+ "ilinka-5": {
+  "src": "/img/projects/ilinka-5-640.webp",
+  "srcset": "/img/projects/ilinka-5-640.webp 640w, /img/projects/ilinka-5-1400.webp 1400w",
+  "w": 1400,
+  "h": 787,
+  "lg": "/img/projects/ilinka-5-1400.webp"
+ },
+ "ilinka-6": {
+  "src": "/img/projects/ilinka-6-640.webp",
+  "srcset": "/img/projects/ilinka-6-640.webp 640w, /img/projects/ilinka-6-1400.webp 1400w",
+  "w": 1400,
+  "h": 787,
+  "lg": "/img/projects/ilinka-6-1400.webp"
+ },
+ "ilinka-7": {
+  "src": "/img/projects/ilinka-7-640.webp",
+  "srcset": "/img/projects/ilinka-7-640.webp 640w, /img/projects/ilinka-7-1400.webp 1400w",
+  "w": 1400,
+  "h": 787,
+  "lg": "/img/projects/ilinka-7-1400.webp"
+ },
+ "ilinka-8": {
+  "src": "/img/projects/ilinka-8-640.webp",
+  "srcset": "/img/projects/ilinka-8-640.webp 640w, /img/projects/ilinka-8-1400.webp 1400w",
+  "w": 1400,
+  "h": 787,
+  "lg": "/img/projects/ilinka-8-1400.webp"
+ },
+ "ilinka-9": {
+  "src": "/img/projects/ilinka-9-640.webp",
+  "srcset": "/img/projects/ilinka-9-640.webp 640w, /img/projects/ilinka-9-1400.webp 1400w",
+  "w": 1400,
+  "h": 503,
+  "lg": "/img/projects/ilinka-9-1400.webp"
+ },
+ "ilinka-10": {
+  "src": "/img/projects/ilinka-10-640.webp",
+  "srcset": "/img/projects/ilinka-10-640.webp 640w, /img/projects/ilinka-10-1400.webp 1400w",
+  "w": 1400,
+  "h": 653,
+  "lg": "/img/projects/ilinka-10-1400.webp"
+ },
+ "ilinka-11": {
+  "src": "/img/projects/ilinka-11-640.webp",
+  "srcset": "/img/projects/ilinka-11-640.webp 640w, /img/projects/ilinka-11-1400.webp 1400w",
+  "w": 1400,
+  "h": 735,
+  "lg": "/img/projects/ilinka-11-1400.webp"
+ },
+ "primavera-0": {
+  "src": "/img/projects/primavera-0-640.webp",
+  "srcset": "/img/projects/primavera-0-640.webp 640w, /img/projects/primavera-0-1400.webp 1280w",
+  "w": 1280,
+  "h": 853,
+  "lg": "/img/projects/primavera-0-1400.webp"
+ },
+ "primavera-1": {
+  "src": "/img/projects/primavera-1-640.webp",
+  "srcset": "/img/projects/primavera-1-640.webp 640w, /img/projects/primavera-1-1400.webp 1280w",
+  "w": 1280,
+  "h": 853,
+  "lg": "/img/projects/primavera-1-1400.webp"
+ },
+ "primavera-2": {
+  "src": "/img/projects/primavera-2-640.webp",
+  "srcset": "/img/projects/primavera-2-640.webp 640w, /img/projects/primavera-2-1400.webp 1280w",
+  "w": 1280,
+  "h": 800,
+  "lg": "/img/projects/primavera-2-1400.webp"
+ },
+ "metropolia-0": {
+  "src": "/img/projects/metropolia-0-640.webp",
+  "srcset": "/img/projects/metropolia-0-640.webp 640w, /img/projects/metropolia-0-1400.webp 1280w",
+  "w": 1280,
+  "h": 768,
+  "lg": "/img/projects/metropolia-0-1400.webp"
+ },
+ "metropolia-1": {
+  "src": "/img/projects/metropolia-1-640.webp",
+  "srcset": "/img/projects/metropolia-1-640.webp 640w, /img/projects/metropolia-1-1400.webp 1280w",
+  "w": 1280,
+  "h": 768,
+  "lg": "/img/projects/metropolia-1-1400.webp"
+ },
+ "metropolia-2": {
+  "src": "/img/projects/metropolia-2-640.webp",
+  "srcset": "/img/projects/metropolia-2-640.webp 640w, /img/projects/metropolia-2-1400.webp 1280w",
+  "w": 1280,
+  "h": 790,
+  "lg": "/img/projects/metropolia-2-1400.webp"
+ },
+ "metropolia-3": {
+  "src": "/img/projects/metropolia-3-640.webp",
+  "srcset": "/img/projects/metropolia-3-640.webp 640w, /img/projects/metropolia-3-1400.webp 859w",
+  "w": 859,
+  "h": 579,
+  "lg": "/img/projects/metropolia-3-1400.webp"
+ },
+ "metropolia-4": {
+  "src": "/img/projects/metropolia-4-640.webp",
+  "srcset": "/img/projects/metropolia-4-640.webp 640w, /img/projects/metropolia-4-1400.webp 1200w",
+  "w": 1200,
+  "h": 800,
+  "lg": "/img/projects/metropolia-4-1400.webp"
+ },
+ "gorki-park-0": {
+  "src": "/img/projects/gorki-park-0-640.webp",
+  "srcset": "/img/projects/gorki-park-0-640.webp 640w, /img/projects/gorki-park-0-1400.webp 720w",
+  "w": 720,
+  "h": 420,
+  "lg": "/img/projects/gorki-park-0-1400.webp"
+ },
+ "gorki-park-1": {
+  "src": "/img/projects/gorki-park-1-640.webp",
+  "srcset": "/img/projects/gorki-park-1-640.webp 640w, /img/projects/gorki-park-1-1400.webp 720w",
+  "w": 720,
+  "h": 420,
+  "lg": "/img/projects/gorki-park-1-1400.webp"
+ },
+ "gorki-park-2": {
+  "src": "/img/projects/gorki-park-2-640.webp",
+  "srcset": "/img/projects/gorki-park-2-640.webp 640w, /img/projects/gorki-park-2-1400.webp 720w",
+  "w": 720,
+  "h": 420,
+  "lg": "/img/projects/gorki-park-2-1400.webp"
+ },
+ "gorki-park-3": {
+  "src": "/img/projects/gorki-park-3-640.webp",
+  "srcset": "/img/projects/gorki-park-3-640.webp 640w, /img/projects/gorki-park-3-1400.webp 720w",
+  "w": 720,
+  "h": 420,
+  "lg": "/img/projects/gorki-park-3-1400.webp"
+ },
+ "shagal-0": {
+  "src": "/img/projects/shagal-0-640.webp",
+  "srcset": "/img/projects/shagal-0-640.webp 640w, /img/projects/shagal-0-1400.webp 1200w",
+  "w": 1200,
+  "h": 900,
+  "lg": "/img/projects/shagal-0-1400.webp"
+ },
+ "shagal-1": {
+  "src": "/img/projects/shagal-1-640.webp",
+  "srcset": "/img/projects/shagal-1-640.webp 640w, /img/projects/shagal-1-1400.webp 1200w",
+  "w": 1200,
+  "h": 900,
+  "lg": "/img/projects/shagal-1-1400.webp"
+ },
+ "shagal-2": {
+  "src": "/img/projects/shagal-2-640.webp",
+  "srcset": "/img/projects/shagal-2-640.webp 640w, /img/projects/shagal-2-1400.webp 1200w",
+  "w": 1200,
+  "h": 900,
+  "lg": "/img/projects/shagal-2-1400.webp"
+ },
+ "shagal-3": {
+  "src": "/img/projects/shagal-3-640.webp",
+  "srcset": "/img/projects/shagal-3-640.webp 640w, /img/projects/shagal-3-1400.webp 1200w",
+  "w": 1200,
+  "h": 800,
+  "lg": "/img/projects/shagal-3-1400.webp"
+ },
+ "west-garden-0": {
+  "src": "/img/projects/west-garden-0-640.webp",
+  "srcset": "/img/projects/west-garden-0-640.webp 640w, /img/projects/west-garden-0-1400.webp 1400w",
+  "w": 1400,
+  "h": 910,
+  "lg": "/img/projects/west-garden-0-1400.webp"
+ },
+ "west-garden-1": {
+  "src": "/img/projects/west-garden-1-640.webp",
+  "srcset": "/img/projects/west-garden-1-640.webp 640w, /img/projects/west-garden-1-1400.webp 1400w",
+  "w": 1400,
+  "h": 910,
+  "lg": "/img/projects/west-garden-1-1400.webp"
+ },
+ "west-garden-2": {
+  "src": "/img/projects/west-garden-2-640.webp",
+  "srcset": "/img/projects/west-garden-2-640.webp 640w, /img/projects/west-garden-2-1400.webp 1400w",
+  "w": 1400,
+  "h": 933,
+  "lg": "/img/projects/west-garden-2-1400.webp"
+ },
+ "west-garden-3": {
+  "src": "/img/projects/west-garden-3-640.webp",
+  "srcset": "/img/projects/west-garden-3-640.webp 640w, /img/projects/west-garden-3-1400.webp 1200w",
+  "w": 1200,
+  "h": 772,
+  "lg": "/img/projects/west-garden-3-1400.webp"
+ },
+ "arhitektor-0": {
+  "src": "/img/projects/arhitektor-0-640.webp",
+  "srcset": "/img/projects/arhitektor-0-640.webp 640w, /img/projects/arhitektor-0-1400.webp 688w",
+  "w": 688,
+  "h": 419,
+  "lg": "/img/projects/arhitektor-0-1400.webp"
+ },
+ "interior-hero": {
+  "src": "/img/misc/interior-hero-800.webp",
+  "srcset": "/img/misc/interior-hero-800.webp 800w, /img/misc/interior-hero-1600.webp 1600w",
+  "w": 1600,
+  "h": 900,
+  "lg": "/img/misc/interior-hero-1600.webp"
+ },
+ "prod-0": {
+  "src": "/img/misc/prod-0-640.webp",
+  "srcset": "/img/misc/prod-0-640.webp 640w, /img/misc/prod-0-1300.webp 1280w",
+  "w": 1280,
+  "h": 960,
+  "lg": "/img/misc/prod-0-1300.webp"
+ },
+ "prod-1": {
+  "src": "/img/misc/prod-1-640.webp",
+  "srcset": "/img/misc/prod-1-640.webp 640w, /img/misc/prod-1-1300.webp 1300w",
+  "w": 1300,
+  "h": 437,
+  "lg": "/img/misc/prod-1-1300.webp"
+ },
+ "prod-2": {
+  "src": "/img/misc/prod-2-640.webp",
+  "srcset": "/img/misc/prod-2-640.webp 640w, /img/misc/prod-2-1300.webp 1000w",
+  "w": 1000,
+  "h": 1000,
+  "lg": "/img/misc/prod-2-1300.webp"
+ },
+ "prod-3": {
+  "src": "/img/misc/prod-3-640.webp",
+  "srcset": "/img/misc/prod-3-640.webp 640w, /img/misc/prod-3-1300.webp 1300w",
+  "w": 1300,
+  "h": 867,
+  "lg": "/img/misc/prod-3-1300.webp"
+ },
+ "prod-4": {
+  "src": "/img/misc/prod-4-640.webp",
+  "srcset": "/img/misc/prod-4-640.webp 640w, /img/misc/prod-4-1300.webp 1300w",
+  "w": 1300,
+  "h": 730,
+  "lg": "/img/misc/prod-4-1300.webp"
+ },
+ "prod-5": {
+  "src": "/img/misc/prod-5-640.webp",
+  "srcset": "/img/misc/prod-5-640.webp 640w, /img/misc/prod-5-1300.webp 1300w",
+  "w": 1300,
+  "h": 867,
+  "lg": "/img/misc/prod-5-1300.webp"
+ },
+ "prod-6": {
+  "src": "/img/misc/prod-6-640.webp",
+  "srcset": "/img/misc/prod-6-640.webp 640w, /img/misc/prod-6-1300.webp 1300w",
+  "w": 1300,
+  "h": 484,
+  "lg": "/img/misc/prod-6-1300.webp"
+ },
+ "prod-7": {
+  "src": "/img/misc/prod-7-640.webp",
+  "srcset": "/img/misc/prod-7-640.webp 640w, /img/misc/prod-7-1300.webp 1300w",
+  "w": 1300,
+  "h": 867,
+  "lg": "/img/misc/prod-7-1300.webp"
+ },
+ "calc-0": {
+  "src": "/img/misc/calc-0-640.webp",
+  "srcset": "/img/misc/calc-0-640.webp 640w, /img/misc/calc-0-1300.webp 888w",
+  "w": 888,
+  "h": 673,
+  "lg": "/img/misc/calc-0-1300.webp"
+ },
+ "calc-1": {
+  "src": "/img/misc/calc-1-640.webp",
+  "srcset": "/img/misc/calc-1-640.webp 640w, /img/misc/calc-1-1300.webp 1300w",
+  "w": 1300,
+  "h": 805,
+  "lg": "/img/misc/calc-1-1300.webp"
+ },
+ "calc-2": {
+  "src": "/img/misc/calc-2-640.webp",
+  "srcset": "/img/misc/calc-2-640.webp 640w, /img/misc/calc-2-1300.webp 1086w",
+  "w": 1086,
+  "h": 680,
+  "lg": "/img/misc/calc-2-1300.webp"
+ },
+ "calc-3": {
+  "src": "/img/misc/calc-3-640.webp",
+  "srcset": "/img/misc/calc-3-640.webp 640w, /img/misc/calc-3-1300.webp 1300w",
+  "w": 1300,
+  "h": 797,
+  "lg": "/img/misc/calc-3-1300.webp"
+ },
+ "calc-4": {
+  "src": "/img/misc/calc-4-640.webp",
+  "srcset": "/img/misc/calc-4-640.webp 640w, /img/misc/calc-4-1300.webp 1069w",
+  "w": 1069,
+  "h": 500,
+  "lg": "/img/misc/calc-4-1300.webp"
+ },
+ "calc-5": {
+  "src": "/img/misc/calc-5-640.webp",
+  "srcset": "/img/misc/calc-5-640.webp 640w, /img/misc/calc-5-1300.webp 1300w",
+  "w": 1300,
+  "h": 870,
+  "lg": "/img/misc/calc-5-1300.webp"
+ },
+ "calc-6": {
+  "src": "/img/misc/calc-6-640.webp",
+  "srcset": "/img/misc/calc-6-640.webp 640w, /img/misc/calc-6-1300.webp 1068w",
+  "w": 1068,
+  "h": 579,
+  "lg": "/img/misc/calc-6-1300.webp"
+ },
+ "calc-7": {
+  "src": "/img/misc/calc-7-640.webp",
+  "srcset": "/img/misc/calc-7-640.webp 640w, /img/misc/calc-7-1300.webp 1058w",
+  "w": 1058,
+  "h": 626,
+  "lg": "/img/misc/calc-7-1300.webp"
+ },
+ "calc-8": {
+  "src": "/img/misc/calc-8-640.webp",
+  "srcset": "/img/misc/calc-8-640.webp 640w, /img/misc/calc-8-1300.webp 1300w",
+  "w": 1300,
+  "h": 845,
+  "lg": "/img/misc/calc-8-1300.webp"
+ },
+ "dev-samolet": {
+  "src": "/img/logos/dev-samolet-400.webp",
+  "srcset": "/img/logos/dev-samolet-400.webp 400w",
+  "w": 400,
+  "h": 218,
+  "lg": "/img/logos/dev-samolet-400.webp"
+ },
+ "dev-etalon": {
+  "src": "/img/logos/dev-etalon-400.webp",
+  "srcset": "/img/logos/dev-etalon-400.webp 400w",
+  "w": 400,
+  "h": 218,
+  "lg": "/img/logos/dev-etalon-400.webp"
+ },
+ "dev-sminex": {
+  "src": "/img/logos/dev-sminex-400.webp",
+  "srcset": "/img/logos/dev-sminex-400.webp 400w",
+  "w": 400,
+  "h": 218,
+  "lg": "/img/logos/dev-sminex-400.webp"
+ },
+ "dev-mr": {
+  "src": "/img/logos/dev-mr-400.webp",
+  "srcset": "/img/logos/dev-mr-400.webp 400w",
+  "w": 400,
+  "h": 218,
+  "lg": "/img/logos/dev-mr-400.webp"
+ },
+ "dev-green": {
+  "src": "/img/logos/dev-green-400.webp",
+  "srcset": "/img/logos/dev-green-400.webp 400w",
+  "w": 400,
+  "h": 218,
+  "lg": "/img/logos/dev-green-400.webp"
+ },
+ "dark-cones": {
+  "src": "/img/misc/dark-cones-640.webp",
+  "srcset": "/img/misc/dark-cones-640.webp 640w, /img/misc/dark-cones-1400.webp 1400w",
+  "w": 1400,
+  "h": 933,
+  "lg": "/img/misc/dark-cones-1400.webp"
+ },
+ "dark-cones2": {
+  "src": "/img/misc/dark-cones2-640.webp",
+  "srcset": "/img/misc/dark-cones2-640.webp 640w, /img/misc/dark-cones2-1400.webp 1400w",
+  "w": 1400,
+  "h": 2467,
+  "lg": "/img/misc/dark-cones2-1400.webp"
+ },
+ "dark-hero-logo": {
+  "src": "/img/misc/dark-hero-logo-640.webp",
+  "srcset": "/img/misc/dark-hero-logo-640.webp 640w, /img/misc/dark-hero-logo-1400.webp 1400w",
+  "w": 1400,
+  "h": 933,
+  "lg": "/img/misc/dark-hero-logo-1400.webp"
+ },
+ "dark-pend": {
+  "src": "/img/misc/dark-pend-640.webp",
+  "srcset": "/img/misc/dark-pend-640.webp 540w",
+  "w": 540,
+  "h": 738,
+  "lg": "/img/misc/dark-pend-640.webp"
+ },
+ "dark-street": {
+  "src": "/img/misc/dark-street-640.webp",
+  "srcset": "/img/misc/dark-street-640.webp 640w, /img/misc/dark-street-1400.webp 1400w",
+  "w": 1400,
+  "h": 1030,
+  "lg": "/img/misc/dark-street-1400.webp"
+ },
+ "dark-wall": {
+  "src": "/img/misc/dark-wall-640.webp",
+  "srcset": "/img/misc/dark-wall-640.webp 640w, /img/misc/dark-wall-1400.webp 1400w",
+  "w": 1400,
+  "h": 960,
+  "lg": "/img/misc/dark-wall-1400.webp"
+ },
+ "bulb": {
+  "src": "/img/misc/bulb-640.webp",
+  "srcset": "/img/misc/bulb-640.webp 640w, /img/misc/bulb-1400.webp 1400w",
+  "w": 1400,
+  "h": 933,
+  "lg": "/img/misc/bulb-1400.webp"
+ },
+ "cat-recessed": {
+  "src": "/img/misc/cat-recessed-640.webp",
+  "srcset": "/img/misc/cat-recessed-640.webp 640w, /img/misc/cat-recessed-1400.webp 1205w",
+  "w": 1205,
+  "h": 1205,
+  "lg": "/img/misc/cat-recessed-1400.webp"
+ },
+ "cat-linear": {
+  "src": "/img/misc/cat-linear-640.webp",
+  "srcset": "/img/misc/cat-linear-640.webp 640w, /img/misc/cat-linear-1400.webp 1205w",
+  "w": 1205,
+  "h": 1205,
+  "lg": "/img/misc/cat-linear-1400.webp"
+ },
+ "cat-track": {
+  "src": "/img/misc/cat-track-640.webp",
+  "srcset": "/img/misc/cat-track-640.webp 640w, /img/misc/cat-track-1400.webp 1400w",
+  "w": 1400,
+  "h": 1400,
+  "lg": "/img/misc/cat-track-1400.webp"
+ },
+ "cat-recessed2": {
+  "src": "/img/misc/cat-recessed2-640.webp",
+  "srcset": "/img/misc/cat-recessed2-640.webp 640w, /img/misc/cat-recessed2-1400.webp 1205w",
+  "w": 1205,
+  "h": 1205,
+  "lg": "/img/misc/cat-recessed2-1400.webp"
+ },
+ "cat-pendant": {
+  "src": "/img/misc/cat-pendant-640.webp",
+  "srcset": "/img/misc/cat-pendant-640.webp 640w, /img/misc/cat-pendant-1400.webp 1400w",
+  "w": 1400,
+  "h": 1400,
+  "lg": "/img/misc/cat-pendant-1400.webp"
+ },
+ "cat-wall": {
+  "src": "/img/misc/cat-wall-640.webp",
+  "srcset": "/img/misc/cat-wall-640.webp 640w, /img/misc/cat-wall-1400.webp 1400w",
+  "w": 1400,
+  "h": 1400,
+  "lg": "/img/misc/cat-wall-1400.webp"
+ },
+ "cat-ring": {
+  "src": "/img/misc/cat-ring-640.webp",
+  "srcset": "/img/misc/cat-ring-640.webp 640w, /img/misc/cat-ring-1400.webp 1400w",
+  "w": 1400,
+  "h": 1400,
+  "lg": "/img/misc/cat-ring-1400.webp"
+ },
+ "dark-cones3": {
+  "src": "/img/misc/dark-cones3-640.webp",
+  "srcset": "/img/misc/dark-cones3-640.webp 640w, /img/misc/dark-cones3-1400.webp 1400w",
+  "w": 1400,
+  "h": 2467,
+  "lg": "/img/misc/dark-cones3-1400.webp"
+ },
+ "dark-cones4": {
+  "src": "/img/misc/dark-cones4-640.webp",
+  "srcset": "/img/misc/dark-cones4-640.webp 640w, /img/misc/dark-cones4-1400.webp 1400w",
+  "w": 1400,
+  "h": 2467,
+  "lg": "/img/misc/dark-cones4-1400.webp"
+ },
+ "scene-0": {
+  "src": "/img/scenes/scene-0-640.webp",
+  "srcset": "/img/scenes/scene-0-640.webp 640w, /img/scenes/scene-0-1400.webp 1400w",
+  "w": 1400,
+  "h": 1400,
+  "lg": "/img/scenes/scene-0-1400.webp"
+ },
+ "scene-1": {
+  "src": "/img/scenes/scene-1-640.webp",
+  "srcset": "/img/scenes/scene-1-640.webp 640w, /img/scenes/scene-1-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-1-1400.webp"
+ },
+ "scene-2": {
+  "src": "/img/scenes/scene-2-640.webp",
+  "srcset": "/img/scenes/scene-2-640.webp 640w, /img/scenes/scene-2-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-2-1400.webp"
+ },
+ "scene-3": {
+  "src": "/img/scenes/scene-3-640.webp",
+  "srcset": "/img/scenes/scene-3-640.webp 640w, /img/scenes/scene-3-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-3-1400.webp"
+ },
+ "scene-4": {
+  "src": "/img/scenes/scene-4-640.webp",
+  "srcset": "/img/scenes/scene-4-640.webp 640w, /img/scenes/scene-4-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-4-1400.webp"
+ },
+ "scene-5": {
+  "src": "/img/scenes/scene-5-640.webp",
+  "srcset": "/img/scenes/scene-5-640.webp 640w, /img/scenes/scene-5-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-5-1400.webp"
+ },
+ "scene-6": {
+  "src": "/img/scenes/scene-6-640.webp",
+  "srcset": "/img/scenes/scene-6-640.webp 640w, /img/scenes/scene-6-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-6-1400.webp"
+ },
+ "scene-7": {
+  "src": "/img/scenes/scene-7-640.webp",
+  "srcset": "/img/scenes/scene-7-640.webp 640w, /img/scenes/scene-7-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-7-1400.webp"
+ },
+ "scene-8": {
+  "src": "/img/scenes/scene-8-640.webp",
+  "srcset": "/img/scenes/scene-8-640.webp 640w, /img/scenes/scene-8-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-8-1400.webp"
+ },
+ "scene-9": {
+  "src": "/img/scenes/scene-9-640.webp",
+  "srcset": "/img/scenes/scene-9-640.webp 640w, /img/scenes/scene-9-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-9-1400.webp"
+ },
+ "scene-10": {
+  "src": "/img/scenes/scene-10-640.webp",
+  "srcset": "/img/scenes/scene-10-640.webp 640w, /img/scenes/scene-10-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-10-1400.webp"
+ },
+ "scene-11": {
+  "src": "/img/scenes/scene-11-640.webp",
+  "srcset": "/img/scenes/scene-11-640.webp 640w, /img/scenes/scene-11-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-11-1400.webp"
+ },
+ "scene-12": {
+  "src": "/img/scenes/scene-12-640.webp",
+  "srcset": "/img/scenes/scene-12-640.webp 640w, /img/scenes/scene-12-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-12-1400.webp"
+ },
+ "scene-13": {
+  "src": "/img/scenes/scene-13-640.webp",
+  "srcset": "/img/scenes/scene-13-640.webp 640w, /img/scenes/scene-13-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-13-1400.webp"
+ },
+ "scene-14": {
+  "src": "/img/scenes/scene-14-640.webp",
+  "srcset": "/img/scenes/scene-14-640.webp 640w, /img/scenes/scene-14-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-14-1400.webp"
+ },
+ "scene-15": {
+  "src": "/img/scenes/scene-15-640.webp",
+  "srcset": "/img/scenes/scene-15-640.webp 640w, /img/scenes/scene-15-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-15-1400.webp"
+ },
+ "scene-16": {
+  "src": "/img/scenes/scene-16-640.webp",
+  "srcset": "/img/scenes/scene-16-640.webp 640w, /img/scenes/scene-16-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-16-1400.webp"
+ },
+ "scene-17": {
+  "src": "/img/scenes/scene-17-640.webp",
+  "srcset": "/img/scenes/scene-17-640.webp 640w, /img/scenes/scene-17-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-17-1400.webp"
+ },
+ "scene-18": {
+  "src": "/img/scenes/scene-18-640.webp",
+  "srcset": "/img/scenes/scene-18-640.webp 640w, /img/scenes/scene-18-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-18-1400.webp"
+ },
+ "scene-19": {
+  "src": "/img/scenes/scene-19-640.webp",
+  "srcset": "/img/scenes/scene-19-640.webp 640w, /img/scenes/scene-19-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-19-1400.webp"
+ },
+ "scene-20": {
+  "src": "/img/scenes/scene-20-640.webp",
+  "srcset": "/img/scenes/scene-20-640.webp 640w, /img/scenes/scene-20-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-20-1400.webp"
+ },
+ "scene-21": {
+  "src": "/img/scenes/scene-21-640.webp",
+  "srcset": "/img/scenes/scene-21-640.webp 640w, /img/scenes/scene-21-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-21-1400.webp"
+ },
+ "scene-22": {
+  "src": "/img/scenes/scene-22-640.webp",
+  "srcset": "/img/scenes/scene-22-640.webp 640w, /img/scenes/scene-22-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-22-1400.webp"
+ },
+ "scene-23": {
+  "src": "/img/scenes/scene-23-640.webp",
+  "srcset": "/img/scenes/scene-23-640.webp 640w, /img/scenes/scene-23-1400.webp 1400w",
+  "w": 1400,
+  "h": 1980,
+  "lg": "/img/scenes/scene-23-1400.webp"
+ }
+}

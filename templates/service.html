@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="phero">
+ <div class="phero-bg">{{ m.img(media[s.img], '', '100vw', lazy=False) }}</div>
+ <div class="wrap">
+  {{ m.crumbs(crumbs) }}
+  <span class="eyebrow">Услуга</span>
+  <h1>{{ s.name }}</h1>
+  <p class="lead">{{ s.lead }}</p>
+  <div class="flex" style="margin-top:26px"><a class="btn" href="#lead">Отправить задачу <svg><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="tel:{{ S.phone_raw }}">{{ S.phone }}</a></div>
+ </div>
+</section>
+<section class="section">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">Что входит</span><h2>Состав работ</h2><p class="lead">{{ s.result }}</p></div>
+  <div><div class="steps" style="--n:1">{% for pt in s.points %}<div class="step" style="display:flex;gap:18px;align-items:center;padding:18px 20px"><span class="mono muted" style="font-size:13px">{{ '%02d'|format(loop.index) }}</span><h4 style="margin:0;font-size:17px;font-weight:500">{{ pt }}</h4></div>{% endfor %}</div></div>
+ </div>
+</section>
+{% if s.gallery %}
+<section class="section dark">
+ <div class="wrap">
+  <div class="head"><div><span class="eyebrow">Как это выглядит</span><h2>{% if s.slug=='proizvodstvo' %}Производство и контроль качества{% else %}Материалы расчёта{% endif %}</h2></div></div>
+  <div class="masonry" data-lightbox>{% for k in s.gallery %}{% if media[k] %}<a href="{{ media[k].lg }}" data-lg="{{ media[k].lg }}">{{ m.img(media[k], s.name, '(max-width:700px) 100vw, 33vw') }}</a>{% endif %}{% endfor %}</div>
+ </div>
+</section>
+{% endif %}
+{% if s.slug in ['svetotehnicheskiy-raschet','optimizaciya-smety'] %}
+<section class="section plaster">
+ <div class="wrap split">
+  <div><span class="eyebrow">Попробуйте сами</span><h2>Быстрая оценка онлайн</h2><p class="lead">Калькулятор количества светильников на помещение и освещённости по углу луча — для предварительной оценки до расчёта.</p><a class="btn btn-dark" href="{{ base }}/tools/">Открыть калькуляторы <svg><use href="#i-arrow"/></svg></a></div>
+  <div class="media-frame ratio">{{ m.img(media['calc-3'], 'Карта освещённости', '(max-width:900px) 100vw, 50vw') }}</div>
+ </div>
+</section>
+{% endif %}
+<section class="section">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">Вопросы</span><h2>Частые вопросы</h2></div>
+  <div>{{ m.faq(s.faq) }}</div>
+ </div>
+</section>
+<section class="section-sm plaster"><div class="wrap"><div class="head" style="margin-bottom:20px"><div><span class="eyebrow">Другие услуги</span></div></div><div class="grid g4">{% for o in services if o.slug != s.slug %}<a class="card" href="{{ base }}/services/{{ o.slug }}/"><span class="arrow"><svg width="16" height="16"><use href="#i-arrow"/></svg></span><h4 style="max-width:14ch">{{ o.name }}</h4><p style="font-size:14px">{{ o.short }}</p></a>{% endfor %}</div></div></section>
+{{ m.lead_section(base, S=S, goal='service', label='Заявка: ' ~ s.name) }}
+{% endblock %}

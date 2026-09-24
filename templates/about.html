@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="phero" style="min-height:74vh;display:flex;align-items:center">
+ <div class="phero-bg">{{ m.img(media['dark-hero-logo'], '', '100vw', lazy=False) }}</div>
+ <div class="wrap" style="width:100%">
+  {{ m.crumbs(crumbs) }}
+  <span class="eyebrow">О компании</span>
+  <h1>ADALIGHT — реализация вашей идеи в свете, вместе</h1>
+  <p class="lead">Проектируем, поставляем и монтируем свет будущего сегодня.</p>
+ </div>
+</section>
+<section class="section">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">Кто мы</span><h2>Молодая компания с командой, которой 15 лет</h2></div>
+  <div class="prose" style="font-size:17px">
+   <p>ООО «АДАЛАЙТ» — динамично развивающаяся российская компания, основанная в феврале 2024 года профессионалами с более чем 15-летним опытом работы в области светодиодного освещения.</p>
+   <p>Мы специализируемся на разработке и реализации комплексных решений в сфере профессионального освещения для объектов различного назначения:</p>
+   <ul><li>жилые комплексы — внутреннее и архитектурное освещение;</li><li>офисные здания;</li><li>торговые центры и магазины;</li><li>рестораны и кафе;</li><li>частные дома и коттеджи.</li></ul>
+   <p>Мы предлагаем клиентам не просто оборудование, а полный спектр услуг — от проектирования до монтажа и обслуживания систем освещения. Наша основная аудитория — девелоперские и строительные компании, дизайнеры интерьера и архитекторы.</p>
+  </div>
+ </div>
+</section>
+<section class="section dark"><div class="wrap">{{ m.stats(stats) }}</div></section>
+<section class="section">
+ <div class="wrap">
+  <div class="head"><div><span class="eyebrow">Принципы</span><h2>Как мы работаем</h2></div></div>
+  <div class="grid g3">{% for t, d in [('Один ответственный','У каждого объекта — один менеджер по всему свету: спецификация, замены, отгрузка, гарантия.'),('Сроки до заказа','Фиксируем сроки по каждой позиции в КП, а не после оплаты.'),('Замены только с согласованием','Ни одна замена не попадает в заказ без проверки параметров и согласия проектной команды.'),('Производство под проект','Если каталога недостаточно — изготавливаем по ТЗ в России и Китае.'),('Честная цена','РРЦ на сайте, партнёрская цена — под объект и объём.'),('Сервис после сдачи','Замена, обслуживание и ремонт света — в одном месте, гарантия до 5 лет.')] %}<div class="card"><h3>{{ t }}</h3><p>{{ d }}</p></div>{% endfor %}</div>
+ </div>
+</section>
+<section class="section plaster">
+ <div class="wrap">
+  <div class="head"><div><span class="eyebrow">Производство</span><h2>Линии в России и Китае</h2></div></div>
+  <div class="masonry" data-lightbox>{% for k in ['prod-0','prod-1','prod-2','prod-3','prod-4','prod-5'] %}<a href="{{ media[k].lg }}" data-lg="{{ media[k].lg }}">{{ m.img(media[k], 'Производство ADALIGHT', '(max-width:700px) 100vw, 33vw') }}</a>{% endfor %}</div>
+ </div>
+</section>
+<section class="section">
+ <div class="wrap"><div class="head"><div><span class="eyebrow">Реквизиты</span><h2>{{ S.legal }}</h2></div></div>
+  <div class="facts"><div><span>ИНН</span><b>{{ S.inn }}</b></div><div><span>ОГРН</span><b>{{ S.ogrn }}</b></div><div><span>КПП</span><b>{{ S.kpp }}</b></div><div><span>ОКПО</span><b>{{ S.okpo }}</b></div></div>
+  <p class="muted mt2">{{ S.address_full }}</p>
+ </div>
+</section>
+{{ m.lead_section(base, S=S, goal='about') }}
+{% endblock %}

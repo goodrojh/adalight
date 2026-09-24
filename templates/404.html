@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="phero" style="min-height:76vh;display:flex;align-items:center">
+ <div class="phero-bg">{{ m.img(media['dark-street'], '', '100vw', lazy=False) }}</div>
+ <div class="wrap" style="width:100%">
+  <span class="eyebrow">Ошибка 404</span>
+  <h1>Здесь выключен свет</h1>
+  <p class="lead">Страница переехала или никогда не существовала. Найдите нужное в каталоге или вернитесь на главную.</p>
+  <div class="flex" style="margin-top:26px"><a class="btn" href="{{ base }}/">На главную</a><a class="btn btn-ghost" href="{{ base }}/catalog/">Каталог</a><a class="btn btn-ghost" href="tel:{{ S.phone_raw }}">{{ S.phone }}</a></div>
+ </div>
+</section>
+{{ m.lead_section(base, S=S, goal="404") }}
+{% endblock %}
