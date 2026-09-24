@@ -168,6 +168,14 @@ var v = typeof data[k] === 'object' ? JSON.stringify(data[k]) : data[k]; return 
 }).join('\n');
 location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(label + ' — adalight') + '&body=' + encodeURIComponent(body);
 done(true);
+var via = $('.form-ok .via', form);
+if (via && C.wa && !$('.wa-send', via)) {
+var wa = d.createElement('a'); wa.className = 'btn btn-dark btn-sm wa-send'; wa.target = '_blank'; wa.rel = 'noopener';
+wa.style.marginTop = '12px'; wa.textContent = 'Или отправить в WhatsApp';
+wa.href = 'https://wa.me/' + C.wa + '?text=' + encodeURIComponent(label + '
+' + body.slice(0, 1500));
+via.appendChild(d.createElement('br')); via.appendChild(wa);
+}
 }
 });
 $$('input,select,textarea', form).forEach(function (el) { el.addEventListener('input', function () { var f = el.closest('.field'); f && f.classList.remove('invalid'); }); });

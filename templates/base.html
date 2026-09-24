@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="{{ base }}/assets/css/main.css?v={{ ver }}">
 {% if preload %}<link rel="preload" as="image" href="{{ preload.src }}" imagesrcset="{{ preload.srcset }}" imagesizes="100vw" fetchpriority="high">{% endif %}
-<script>document.documentElement.classList.remove('no-js');window.ADA={base:"{{ base }}",endpoint:"{{ endpoint }}",email:"{{ S.email }}",phone:"{{ S.phone }}",phoneRaw:"{{ S.phone_raw }}",metrika:"{{ metrika }}"};</script>
+<script>document.documentElement.classList.remove('no-js');window.ADA={base:"{{ base }}",endpoint:"{{ endpoint }}",email:"{{ S.email }}",phone:"{{ S.phone }}",phoneRaw:"{{ S.phone_raw }}",metrika:"{{ metrika }}",wa:"{{ S.wa }}"};</script>
 {% for ld in jsonld %}<script type="application/ld+json">{{ ld|tojson }}</script>
 {% endfor %}
 {% if metrika %}<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym({{ metrika }},"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>{% endif %}
