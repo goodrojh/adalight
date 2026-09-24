@@ -210,6 +210,11 @@ for i, p in enumerate(products):
     if beams and lms and p['category'] not in ('shinoprovod-s20', 'bra'):
         a = sorted(beams, key=lambda b: abs(b - 36))[0]
         p['beam'] = {'h': 2.7 if p['category'] != 'lineynye' else 2.2, 'a': a, 'f': lms[0], 'fmax': max(2000, int(max(lms) * 1.3 // 100 * 100)), 'angles': beams[:6]}
+    bk = []
+    if any(b <= 24 for b in beams): bk.append('narrow')
+    if any(24 < b <= 45 for b in beams): bk.append('mid')
+    if any(b > 45 for b in beams): bk.append('wide')
+    p['beam_buckets'] = bk
     p['apps'] = C.applications(p)
     kw = {'trekovye-s20': 'трек трековый магнитный 48v s20 шинопровод', 'shinoprovod-s20': 'шинопровод трек 48v s20 блок питания tuya zigbee',
           'bra': 'бра настенный', 'lineynye': 'линейный профиль ral подвесной', 'nakladnye': 'накладной цилиндр панель потолочный',
@@ -292,7 +297,8 @@ def facets(ps):
             mounts.append(p['mount_key'])
     cct = sorted({c for p in ps for c in p['cct_list']})
     ip = sorted({c for p in ps for c in p['ip_list']})
-    return dict(facet_lines=lines, facet_mounts=mounts, facet_cct=cct, facet_ip=ip, has_power=any(p['power_min'] for p in ps))
+    bm = [(k, n) for k, n in [('narrow', 'Узкий ≤24°'), ('mid', 'Средний 30–45°'), ('wide', 'Широкий ≥50°')] if any(k in p['beam_buckets'] for p in ps)]
+    return dict(facet_lines=lines, facet_mounts=mounts, facet_cct=cct, facet_ip=ip, facet_beam=bm, has_power=any(p['power_min'] for p in ps))
 
 
 render('catalog.html', '/catalog/', 0.9, title=f'Каталог светильников ADALIGHT 2026 — {TOTAL_SKU} артикулов с ценами',
@@ -340,9 +346,29 @@ render('spec.html', '/spec/', 0.3, title='Спецификация проект�
 render('projects.html', '/projects/', 0.8, title='Проекты ADALIGHT — освещение жилых комплексов и коммерческих объектов',
        desc='Реализованные проекты: внутреннее освещение МОП, архитектурная подсветка фасадов, освещение благоустройства. ЖК «Ильинка 3/8», Will Towers, «Павелецкая Сити» и другие.',
        crumbs=[H, ('Проекты', BASE + '/projects/')], section='projects')
+from PIL import Image as _Im
+
+
+def _dhash(e):
+    im = _Im.open(os.path.join(OUT, e['src'][len(BASE) + 1:])).convert('L').resize((9, 8))
+    px = list(im.getdata())
+    return [px[r * 9 + c] > px[r * 9 + c + 1] for r in range(8) for c in range(8)]
+
+
+def dedupe_imgs(lst):
+    out, hs = [], []
+    for e in lst:
+        h = _dhash(e)
+        if any(sum(a != b for a, b in zip(h, o)) <= 10 for o in hs):
+            continue
+        hs.append(h)
+        out.append(e)
+    return out
+
+
 for pr in C.PROJECTS:
     gal = [media[f"{pr['slug']}-{k}"] for k in range(pr['n'])]
-    gal = [g for g in gal if g]
+    gal = dedupe_imgs([g for g in gal if g])
     others = [o for o in C.PROJECTS if o['slug'] != pr['slug']][:3]
     render('project.html', f"/projects/{pr['slug']}/", 0.7, title=f"{pr['name']} — {pr['type'].lower()} | Проекты ADALIGHT",
            desc=pr['lead'], pr=pr, gallery=gal, others=others, og_image=gal[0]['lg'].replace(BASE, '', 1) if gal else None,

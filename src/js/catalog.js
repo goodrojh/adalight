@@ -6,12 +6,12 @@
   var $$ = function (s, r) { return Array.prototype.slice.call((r || d).querySelectorAll(s)); };
   var cards = $$('.pcard', root).map(function (el) {
     return { el: el, cat: el.dataset.cat, line: el.dataset.line, mount: el.dataset.mount, cct: (el.dataset.cct || '').split(' ').filter(Boolean),
-      ip: (el.dataset.ip || '').split(' ').filter(Boolean), pmin: +el.dataset.pmin || 0, pmax: +el.dataset.pmax || 0,
+      ip: (el.dataset.ip || '').split(' ').filter(Boolean), beam: (el.dataset.beam || '').split(' ').filter(Boolean), pmin: +el.dataset.pmin || 0, pmax: +el.dataset.pmax || 0,
       price: +el.dataset.price || 0, q: (el.dataset.q || '').toLowerCase(), order: +el.dataset.order };
   });
   var grid = d.querySelector('.pgrid', root), count = d.querySelector('[data-count]'), empty = d.querySelector('[data-empty]');
-  var state = { cat: [], line: [], mount: [], cct: [], ip: [], wmin: '', wmax: '', q: '', sort: 'default' };
-  var keys = ['cat', 'line', 'mount', 'cct', 'ip'];
+  var state = { cat: [], line: [], mount: [], cct: [], ip: [], beam: [], wmin: '', wmax: '', q: '', sort: 'default' };
+  var keys = ['cat', 'line', 'mount', 'cct', 'ip', 'beam'];
 
   function fromURL() {
     var p = new URLSearchParams(location.search);
@@ -30,6 +30,7 @@
     if (skip !== 'line' && state.line.length && state.line.indexOf(c.line) < 0) return false;
     if (skip !== 'mount' && state.mount.length && state.mount.indexOf(c.mount) < 0) return false;
     if (skip !== 'cct' && state.cct.length && !state.cct.some(function (x) { return c.cct.indexOf(x) > -1; })) return false;
+    if (skip !== 'beam' && state.beam.length && !state.beam.some(function (x) { return c.beam.indexOf(x) > -1; })) return false;
     if (skip !== 'ip' && state.ip.length && !state.ip.some(function (x) { return c.ip.indexOf(x) > -1; })) return false;
     if (state.wmin && c.pmax && c.pmax < +state.wmin) return false;
     if (state.wmax && c.pmin && c.pmin > +state.wmax) return false;
@@ -53,7 +54,7 @@
       var k = b.dataset.f, v = b.dataset.v;
       var n = cards.filter(function (c) {
         if (!match(c, k)) return false;
-        if (k === 'cct' || k === 'ip') return c[k].indexOf(v) > -1;
+        if (k === 'cct' || k === 'ip' || k === 'beam') return c[k].indexOf(v) > -1;
         return c[k] === v;
       }).length;
       var sm = b.querySelector('small'); if (sm) sm.textContent = n;

@@ -550,3 +550,7 @@ hr.sep{border:0;border-top:1px solid var(--line);margin:0}
   table.t{min-width:0}
   .section{padding:0}
 }
+.field input,.field select,.field textarea{color:var(--text)}
+.dark .field input,.dark .field select,.dark .field textarea{color:#fff}
+[data-room-calc] label{margin-bottom:0;color:var(--muted)}
+[data-room-calc] .out{color:#fff}
