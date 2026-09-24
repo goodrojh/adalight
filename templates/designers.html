@@ -5,7 +5,6 @@
  <div class="phero-bg">{{ m.img(media['ilinka-1'], '', '100vw', lazy=False) }}</div>
  <div class="wrap" style="width:100%">
   {{ m.crumbs(crumbs) }}
-  <span class="eyebrow">Дизайнерам интерьера и архитекторам</span>
   <h1>Ваша световая концепция — без компромиссов на объекте</h1>
   <p class="lead">Подбираем, производим и поставляем свет так, чтобы проект дошёл до монтажа таким, каким вы его нарисовали. Если модели нет — найдём аналог по геометрии и свету или изготовим по ТЗ.</p>
   <div class="flex" style="margin-top:28px"><a class="btn" href="#lead">Прислать дизайн-проект <svg><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="{{ base }}/partners/?for=studio">Партнёрская программа</a></div>
@@ -14,7 +13,7 @@
 
 <section class="section">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Что мы делаем для дизайнера</span><h2>Дизайнер сохраняет концепцию. Прораб сохраняет сроки.</h2></div></div>
+  <div class="head"><div><h2>Дизайнер сохраняет концепцию. Прораб сохраняет сроки.</h2></div></div>
   <div class="grid g3">
    {% for t, d in [('Подбор по референсам','По плану, референсам, мудборду или готовой спецификации — с вариантами в нескольких бюджетах.'),('Кастом по ТЗ','Корпус, длина, цвет RAL, отражатель, CCT и оптика под ваш интерьер.'),('Замены без разрушения идеи','Аналог сверяем по геометрии, свету и визуальному образу — и согласуем с вами.'),('Цветопередача Ra ≥ 90','Серии PRM и CLASS A честно передают фактуры камня, дерева и текстиля.'),('Спецификация для всех','Единый перечень для дизайнера, закупки и прораба — без пересорта.'),('Один ответственный','Менеджер ADALIGHT ведёт свет объекта от подбора до гарантии.')] %}
    <div class="card"><h3>{{ t }}</h3><p>{{ d }}</p></div>{% endfor %}
@@ -24,7 +23,7 @@
 
 <section class="section dark">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Палитра инструментов</span><h2>Линейки под разные задачи интерьера</h2></div><a class="link" href="{{ base }}/catalog/">Весь каталог <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+  <div class="head"><div><h2>Линейки под разные задачи интерьера</h2></div><a class="link" href="{{ base }}/catalog/">Весь каталог <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
   <div class="grid g3">
    {% for key, text, url in [('CLASS A','Премиальная оптика Ra ≥ 92, текстурные покрытия, trimless-варианты.', '/catalog/vstraivaemye/?line=CLASS%20A'),('PRM','Сменные отражатели: белый, чёрный, хром, золото, шампань. Углы от 10°.', '/catalog/?line=PRM'),('S20 48V','Магнитный трек: 75 модулей, фокусировка 15–55°, управление Tuya ZigBee.', '/catalog/trekovye-s20/'),('ADA-LINE','Линии и кольца в любом цвете RAL, непрерывные световые линии.', '/catalog/lineynye/'),('WALL','Бра для изголовья с USB / Type-C и скрытыми выключателями.', '/catalog/bra/'),('DESIGN','RAVOL диаметром до 1 м — центральный акцент лобби и гостиной.', '/product/ravol/')] %}
    <a class="card" href="{{ base }}{{ url }}"><span class="arrow"><svg width="16" height="16"><use href="#i-arrow"/></svg></span><span class="tag y">{{ key }}</span><p style="margin-top:18px">{{ text }}</p></a>{% endfor %}
@@ -35,7 +34,6 @@
 <section class="section">
  <div class="wrap split">
   <div>
-   <span class="eyebrow">Проектная поддержка</span>
    <h2>Техническую часть берём на себя</h2>
    <ul class="check mt2">
     <li>Мощность, цветовая температура, углы, размеры врезки и монтаж</li>
@@ -52,7 +50,7 @@
 
 <section class="section plaster">
  <div class="wrap split">
-  <div><span class="eyebrow">Партнёрская модель</span><h2>Свет может приносить прибыль вашей студии</h2><p class="lead">Партнёрская цена под объект, ваша клиентская наценка, выплаты по договору. Начнём с одного пилотного объекта.</p><a class="btn mt2" href="{{ base }}/partners/?for=studio">Условия и калькулятор дохода <svg><use href="#i-arrow"/></svg></a></div>
+  <div><h2>Свет может приносить прибыль вашей студии</h2><p class="lead">Партнёрская цена под объект, ваша клиентская наценка, выплаты по договору. Начнём с одного пилотного объекта.</p><a class="btn mt2" href="{{ base }}/partners/?for=studio">Условия и калькулятор дохода <svg><use href="#i-arrow"/></svg></a></div>
   <div class="grid g2">{% for pr in projects[:4] %}<a class="proj" href="{{ base }}/projects/{{ pr.slug }}/" style="grid-column:auto;min-height:220px">{{ m.img(media[pr.slug ~ '-0'], pr.name, '25vw') }}<h3 style="font-size:18px">{{ pr.name }}</h3></a>{% endfor %}</div>
  </div>
 </section>

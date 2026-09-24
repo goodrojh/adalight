@@ -5,10 +5,9 @@
  <div class="phero-bg">{{ m.img(hero_img, '', '100vw', lazy=False) }}</div>
  <div class="wrap">
   {{ m.crumbs(crumbs) }}
-  <span class="eyebrow">{% if cat %}Каталог · {{ cat_stats.n_series }} серий · {{ cat_stats.n_sku }} артикулов{% else %}Каталог ADALIGHT 2026{% endif %}</span>
   <h1>{{ h1 }}</h1>
   <p class="lead">{{ intro }}</p>
-  {% if not cat %}<div class="flex" style="margin-top:24px">{% for c in cats %}<a class="btn btn-ghost btn-sm" href="{{ base }}/catalog/{{ c.slug }}/">{{ c.short }} <span class="mono" style="opacity:.6">{{ c.n_series }}</span></a>{% endfor %}</div>
+  {% if not cat %}<div class="flex" style="margin-top:24px">{% for c in cats %}<a class="btn btn-ghost btn-sm" href="{{ base }}/catalog/{{ c.slug }}/">{{ c.short }}</a>{% endfor %}</div>
   {% else %}<div class="flex" style="margin-top:24px">{% for c in cats %}{% if c.slug != cat %}<a class="btn btn-ghost btn-sm" href="{{ base }}/catalog/{{ c.slug }}/">{{ c.short }}</a>{% endif %}{% endfor %}</div>{% endif %}
  </div>
 </section>
@@ -56,7 +55,7 @@
 {% if seo %}
 <section class="section plaster">
  <div class="wrap split" style="align-items:start">
-  <div><span class="eyebrow">Как выбрать</span><h2>{{ h1 }}: что важно знать</h2></div>
+  <div><h2>{{ h1 }}: что важно знать</h2></div>
   <div class="prose" style="font-size:16.5px">{{ seo|safe }}</div>
  </div>
 </section>

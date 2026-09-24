@@ -5,14 +5,13 @@
  <div class="phero-bg">{{ m.img(media['dark-cones'], '', '100vw', lazy=False) }}</div>
  <div class="wrap">
   {{ m.crumbs(crumbs) }}
-  <span class="eyebrow">Онлайн-инструменты</span>
   <h1>Калькуляторы света</h1>
   <p class="lead">Быстрая оценка до проекта: сколько светильников нужно на помещение и какую освещённость даст светильник с выбранным углом луча.</p>
  </div>
 </section>
 <section class="section">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Калькулятор 1</span><h2>Сколько светильников нужно на помещение</h2></div><p class="lead">Метод коэффициента использования светового потока с коэффициентом запаса 1,25.</p></div>
+  <div class="head"><div><h2>Сколько светильников нужно на помещение</h2></div><p class="lead">Метод коэффициента использования светового потока с коэффициентом запаса 1,25.</p></div>
   <div class="calc" data-room-calc style="background:var(--plaster);color:var(--text)">
    <div class="light-range">
     <div class="row2 form" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
@@ -42,7 +41,7 @@
 </section>
 <section class="section plaster">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Калькулятор 2</span><h2>Освещённость и пятно по углу луча</h2></div><p class="lead">Узнайте, какая освещённость будет в центре светового пятна и какого оно диаметра.</p></div>
+  <div class="head"><div><h2>Освещённость и пятно по углу луча</h2></div><p class="lead">Узнайте, какая освещённость будет в центре светового пятна и какого оно диаметра.</p></div>
   {{ m.beam_widget({'slug':'tool'}, {'h':2.7,'a':36,'f':1000,'fmax':6000,'angles':[15,24,36,60]}) }}
  </div>
 </section>

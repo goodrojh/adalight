@@ -81,7 +81,7 @@
 
 <section class="section">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Почему {{ p.line }}</span><h2>{{ line.sub }}</h2></div></div>
+  <div class="head"><div><h2>{{ line.sub }}</h2></div></div>
   <div class="feat">{% for t, d in line.feats %}<div><b>{{ t }}</b>{% if d %}<p>{{ d }}</p>{% endif %}</div>{% endfor %}</div>
   <div class="flex mt4"><span class="mono muted" style="font-size:13px">Где применять:</span>{% for a in p.apps %}<span class="tag">{{ a }}</span>{% endfor %}</div>
  </div>
@@ -90,7 +90,7 @@
 {% if p.beam %}
 <section class="section" style="padding-top:0">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Калькулятор освещённости</span><h2>Сколько люкс даст {{ p.name }}</h2></div><p class="lead">Меняйте высоту и угол — увидите диаметр светового пятна и освещённость в центре.</p></div>
+  <div class="head"><div><h2>Сколько люкс даст {{ p.name }}</h2></div><p class="lead">Меняйте высоту и угол — увидите диаметр светового пятна и освещённость в центре.</p></div>
   {{ m.beam_widget(p, p.beam) }}
  </div>
 </section>
@@ -99,7 +99,7 @@
 {% if related %}
 <section class="section plaster">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Смотрите также</span><h2>{{ cat.short }}: другие серии</h2></div><a class="link" href="{{ base }}/catalog/{{ cat.slug }}/">Вся категория <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+  <div class="head"><div><h2>{{ cat.short }}: другие серии</h2></div><a class="link" href="{{ base }}/catalog/{{ cat.slug }}/">Вся категория <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
   <div class="pgrid">{% for r in related %}{{ m.pcard(r, base, loop.index) }}{% endfor %}</div>
  </div>
 </section>

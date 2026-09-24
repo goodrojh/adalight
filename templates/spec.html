@@ -4,7 +4,7 @@
 <section class="section" style="padding-top:36px">
  <div class="wrap">
   {{ m.crumbs(crumbs, light=True) }}
-  <div class="head"><div><span class="eyebrow">Инструмент проекта</span><h1 style="font-size:clamp(34px,5vw,64px)">Спецификация</h1></div><p class="lead">Соберите позиции из каталога, укажите количество — и отправьте на расчёт. Список хранится в этом браузере.</p></div>
+  <div class="head"><div><h1 style="font-size:clamp(34px,5vw,64px)">Спецификация</h1></div><p class="lead">Соберите позиции из каталога, укажите количество — и отправьте на расчёт. Список хранится в этом браузере.</p></div>
   <div data-spec-empty hidden class="spec-empty empty">
    <h3>В спецификации пока пусто</h3>
    <p>Откройте любую серию в каталоге и нажмите «Добавить в спецификацию».</p>
@@ -20,7 +20,7 @@
      <div class="flex"><button class="btn btn-ghost btn-sm" type="button" data-csv>Скачать CSV</button><button class="btn btn-ghost btn-sm" type="button" data-print>Печать / PDF</button><button class="btn btn-ghost btn-sm" type="button" data-clear>Очистить</button></div>
     </div>
     <div class="cta-band" style="margin-top:20px" id="lead">
-     <div><span class="eyebrow">Партнёрская цена и сроки</span><h2>Отправьте спецификацию на расчёт</h2><p class="lead">Проверим совместимость, предложим аналоги и пришлём КП со сроками по каждой позиции.</p></div>
+     <div><h2>Отправьте спецификацию на расчёт</h2><p class="lead">Проверим совместимость, предложим аналоги и пришлём КП со сроками по каждой позиции.</p></div>
      <div>{{ m.lead_form(goal='spec', label='Спецификация с сайта', with_spec=True, cta='Отправить спецификацию', compact=True) }}</div>
     </div>
    </div>

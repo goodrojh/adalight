@@ -4,7 +4,6 @@
 <section class="phero" style="min-height:86vh;display:flex;align-items:center">
  <div class="phero-bg">{{ m.img(media['interior-hero'], '', '100vw', lazy=False) }}</div>
  <div class="wrap" style="width:100%">
-  <span class="eyebrow">ADALIGHT / Partner program</span>
   <div class="cct" role="group" aria-label="Для кого" style="display:inline-flex;margin-bottom:26px">
    <button type="button" data-aud="studio" aria-pressed="true">Дизайн-студиям</button>
    <button type="button" data-aud="remont" aria-pressed="false">Ремонтным компаниям</button>
@@ -19,7 +18,7 @@
 
 <section class="section">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Что получает партнёр</span><h2>Свет может быть источником дополнительной прибыли</h2></div><p class="lead">Чаще всего потери возникают не из-за цены светильника, а из-за несогласованности закупки, проекта и сроков.</p></div>
+  <div class="head"><div><h2>Свет может быть источником дополнительной прибыли</h2></div><p class="lead">Чаще всего потери возникают не из-за цены светильника, а из-за несогласованности закупки, проекта и сроков.</p></div>
   <div class="grid g4">
    {% for t, d in [('Точный срок поставки','Срок монтажа не уезжает: даты фиксируем в КП по каждой позиции.'),('Партнёрские выплаты','Выплаты партнёру — по договору, точно в срок.'),('Всё «под ключ»','Один менеджер ADALIGHT оперативно закрывает все вопросы по свету.'),('Постпродажное обслуживание','Замена, обслуживание и ремонт света в одном месте. Гарантия до 5 лет.')] %}
    <div class="card"><span class="tag y" style="margin-bottom:26px">{{ '%02d'|format(loop.index) }}</span><h3>{{ t }}</h3><p>{{ d }}</p></div>{% endfor %}
@@ -29,7 +28,7 @@
 
 <section class="section dark">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Наше преимущество</span><h2>Внешний отдел по освещению — без найма и лишней инфраструктуры</h2></div><p class="lead">Встраиваемся в ваш процесс и берём на себя коммерческую, техническую и производственную часть.</p></div>
+  <div class="head"><div><h2>Внешний отдел по освещению — без найма и лишней инфраструктуры</h2></div><p class="lead">Встраиваемся в ваш процесс и берём на себя коммерческую, техническую и производственную часть.</p></div>
   <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
    {% for t, d in [('Спеццена','Партнёрская цена под объект. Клиентскую наценку вы определяете сами.'),('Производство','Нестандарт, кастомизация и выпуск по ТЗ, когда каталога недостаточно.'),('Быстрые сроки','Срок фиксируется до запуска заказа. При изменении проекта реагируем быстро.'),('Замена импорта','Аналоги по ТТХ, геометрии и визуальному образу без разрушения концепции.'),('Проектная поддержка','Подбор, спецификация, несколько бюджетных сценариев и помощь на монтаже.')] %}
    <div class="card"><h3 style="color:var(--signal)">{{ t }}</h3><p>{{ d }}</p></div>{% endfor %}
@@ -40,7 +39,7 @@
 
 <section class="section" id="calc">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Экономика партнёрства</span><h2>Освещение добавляет выручку к уже проданному ремонту</h2></div><p class="lead">Клиент всё равно покупает свет. Посчитайте, сколько этой экономики может остаться внутри вашей компании.</p></div>
+  <div class="head"><div><h2>Освещение добавляет выручку к уже проданному ремонту</h2></div><p class="lead">Клиент всё равно покупает свет. Посчитайте, сколько этой экономики может остаться внутри вашей компании.</p></div>
   <div class="calc" data-partner-calc>
    <div>
     <label>Бюджет освещения одного объекта (цена клиенту)<span class="v" data-v="bud"></span><input type="range" name="bud" min="50000" max="2000000" step="10000" value="400000"></label>
@@ -62,7 +61,7 @@
 
 <section class="section plaster">
  <div class="wrap split" style="align-items:start">
-  <div><span class="eyebrow">Замена позиций</span><h2>Сохраняем проект, даже если нужная модель недоступна</h2><p class="lead">Вместо повторного выбора всего света — технически корректная замена, согласованная с дизайнером и клиентом.</p>
+  <div><h2>Сохраняем проект, даже если нужная модель недоступна</h2><p class="lead">Вместо повторного выбора всего света — технически корректная замена, согласованная с дизайнером и клиентом.</p>
    <blockquote class="prose" style="margin-top:22px;max-width:none"><p style="margin:0;font-size:16px">Результат: проект не ломается из-за одной позиции, а сроки ремонта остаются управляемыми.</p></blockquote></div>
   <div class="stages" style="grid-template-columns:1fr;gap:22px">
    {% for t, d in [('Исходная позиция','Артикул / фото / размеры / мощность / CCT / угол / монтаж'),('Технический аналог','Сверяем геометрию, свет, внешний вид и бюджет'),('Согласование','При необходимости — образец или визуализация'),('Поставка / производство','Фиксируем спецификацию, срок и ответственного по объекту')] %}
@@ -74,7 +73,6 @@
 <section class="section">
  <div class="wrap split">
   <div>
-   <span class="eyebrow">Сроки</span>
    <h2>Скорость начинается с управляемости</h2>
    <p class="lead">Для ремонтной компании важнее предсказуемая дата и быстрая реакция, чем обещание «самого быстрого» срока.</p>
    <div class="grid g2 mt4">
@@ -82,7 +80,7 @@
    </div>
   </div>
   <div class="card" style="background:var(--signal);border-color:var(--signal);padding:clamp(24px,3vw,40px)">
-   <span class="eyebrow" style="color:#000">Что получает прораб</span>
+   <h3 style="color:#000">Что получает прораб</h3>
    <ul class="check" style="font:500 22px/1.3 var(--f-display)">
     <li>Меньше «пожаров»</li><li>Меньше согласований</li><li>Понятная дата монтажа</li><li>Один ответственный</li>
    </ul>
@@ -93,7 +91,7 @@
 
 <section class="section dark">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Проектная поддержка</span><h2>Подключаемся до закупки — чтобы меньше переделывать на объекте</h2></div></div>
+  <div class="head"><div><h2>Подключаемся до закупки — чтобы меньше переделывать на объекте</h2></div></div>
   <div class="grid g3">
    {% for t, d in [('Подбор','По плану, референсам, ТЗ или готовой спецификации.'),('Спецификация','Единый перечень для дизайнера, закупки и прораба.'),('Бюджет','Альтернативы без разрушения светового сценария.'),('Техническая проверка','Мощность, CCT, углы, размеры, монтаж, драйверы.'),('Поддержка монтажа','Ответы на технические вопросы и замены.'),('Изменения проекта','Быстро актуализируем состав при новых решениях клиента.')] %}<div class="card"><h3>{{ t }}</h3><p>{{ d }}</p></div>{% endfor %}
   </div>
@@ -102,7 +100,7 @@
 
 <section class="section">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Как начинаем</span><h2>Пять шагов. Один пилотный объект.</h2></div><p class="lead">Без долгого внедрения, новых регламентов и обязательств по объёму.</p></div>
+  <div class="head"><div><h2>Пять шагов. Один пилотный объект.</h2></div><p class="lead">Без долгого внедрения, новых регламентов и обязательств по объёму.</p></div>
   <div class="steps">
    {% for t, d in [('Объект','План / дизайн-проект / спецификация'),('Решение','Подбор + аналоги + бюджет'),('Согласование','Дизайнер / прораб / клиент'),('Фиксация','Цена + спецификация + срок'),('Поставка','Комплектно + поддержка')] %}<div class="step"><div class="n">{{ '%02d'|format(loop.index) }}</div><h4>{{ t }}</h4><p>{{ d }}</p></div>{% endfor %}
   </div>
@@ -111,7 +109,7 @@
 
 <section class="section plaster">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Доверие</span><h2>Проектная дисциплина, подтверждённая сложными объектами</h2></div><p class="lead">Опыт большого проектного рынка переносим в квартиры и частные интерьеры.</p></div>
+  <div class="head"><div><h2>Проектная дисциплина, подтверждённая сложными объектами</h2></div><p class="lead">Опыт большого проектного рынка переносим в квартиры и частные интерьеры.</p></div>
   <div class="light">{{ m.stats(stats) }}</div>
   <div class="proj-grid mt4">{% for pr in projects[:3] %}<a class="proj" href="{{ base }}/projects/{{ pr.slug }}/" style="grid-column:span 4;min-height:320px">{{ m.img(media[pr.slug ~ '-0'], pr.name, '33vw') }}<div class="tags">{% if pr.client %}<span class="tag">Заказчик {{ pr.client }}</span>{% endif %}</div><h3>{{ pr.name }}</h3></a>{% endfor %}</div>
  </div>
@@ -119,7 +117,7 @@
 
 <section class="section">
  <div class="wrap split" style="align-items:start">
-  <div><span class="eyebrow">Вопросы партнёров</span><h2>Как устроено сотрудничество</h2>
+  <div><h2>Как устроено сотрудничество</h2>
    <div class="card mt4"><h4>Поделиться программой</h4><p style="margin-bottom:14px">Отправьте ссылку коллеге или партнёру:</p><div class="flex"><code class="kbd" style="font-size:13px;word-break:break-all">{{ site_url }}/partners/</code><button class="btn btn-sm btn-dark" type="button" data-copy="{{ site_url }}/partners/">Скопировать</button></div></div>
   </div>
   <div>{{ m.faq(partner_faq) }}</div>

@@ -21,7 +21,7 @@
 <link rel="manifest" href="{{ base }}/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Onest:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Onest:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="{{ base }}/assets/css/main.css?v={{ ver }}">
 {% if preload %}<link rel="preload" as="image" href="{{ preload.src }}" imagesrcset="{{ preload.srcset }}" imagesizes="100vw" fetchpriority="high">{% endif %}
 <script>document.documentElement.classList.remove('no-js');window.ADA={base:"{{ base }}",endpoint:"{{ endpoint }}",email:"{{ S.email }}",phone:"{{ S.phone }}",phoneRaw:"{{ S.phone_raw }}",metrika:"{{ metrika }}",wa:"{{ S.wa }}"};</script>
@@ -74,10 +74,9 @@
  <div class="mega" id="mega">
   <div class="wrap">
    <div class="mega-in">
-    {% for c in cats %}<a href="{{ base }}/catalog/{{ c.slug }}/">{% if c.img %}<img src="{{ c.img.src }}" alt="" loading="lazy" width="320" height="240">{% endif %}<b>{{ c.short }}</b><small>{{ c.n_series }} серий · {{ c.n_sku }} арт.</small></a>{% endfor %}
+    {% for c in cats %}<a href="{{ base }}/catalog/{{ c.slug }}/">{% if c.img %}<img src="{{ c.img.src }}" alt="" loading="lazy" width="320" height="240">{% endif %}<b>{{ c.short }}</b></a>{% endfor %}
    </div>
-   <div class="flex" style="padding:0 0 22px;justify-content:space-between">
-    <span class="mono" style="color:#8a8a90;font-size:12px">{{ total_sku }} артикулов · цены РРЦ 2026 · партнёрские цены — по запросу</span>
+   <div class="flex" style="padding:0 0 22px;justify-content:flex-end">
     <span class="flex"><a class="link" href="{{ base }}/catalog/">Весь каталог с фильтрами <svg width="16" height="16"><use href="#i-arrow"/></svg></a><a class="link" href="{{ base }}/engineers/">Проектировщикам</a><a class="link" href="{{ base }}/tools/">Калькуляторы</a></span>
    </div>
   </div>

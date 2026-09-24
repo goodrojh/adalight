@@ -22,7 +22,7 @@
 </section>
 <section class="section" style="padding-top:20px">
  <div class="wrap split" style="align-items:start">
-  <div><span class="eyebrow">Решение</span><h2>Задача и подход</h2></div>
+  <div><h2>Задача и подход</h2></div>
   <div><p class="lead" style="color:var(--text)">{{ pr.text }}</p>
    <h4 class="mt4">Зоны проекта</h4><div class="pill-list">{% for s in pr.scope %}<span class="tag">{{ s }}</span>{% endfor %}</div>
    <h4 class="mt4">Роль ADALIGHT</h4>
@@ -39,7 +39,7 @@
 {% endif %}
 <section class="section plaster">
  <div class="wrap">
-  <div class="head"><div><span class="eyebrow">Ещё проекты</span><h2>Другие объекты</h2></div><a class="link" href="{{ base }}/projects/">Все проекты <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+  <div class="head"><div><h2>Другие объекты</h2></div><a class="link" href="{{ base }}/projects/">Все проекты <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
   <div class="proj-grid">{% for o in others %}{{ m.proj_card(o, media, base) }}{% endfor %}</div>
  </div>
 </section>

@@ -4,7 +4,7 @@
 <section class="section" style="padding-top:36px">
  <div class="wrap">
   {{ m.crumbs(crumbs, light=True) }}
-  <div class="head"><div><span class="eyebrow">Журнал ADALIGHT</span><h1 style="font-size:clamp(36px,5vw,68px)">Разбираемся в свете</h1></div><p class="lead">Практические материалы для девелоперов, дизайнеров и проектировщиков: как выбирать, считать и экономить без потери качества.</p></div>
+  <div class="head"><div><h1 style="font-size:clamp(36px,5vw,68px)">Разбираемся в свете</h1></div><p class="lead">Практические материалы для девелоперов, дизайнеров и проектировщиков: как выбирать, считать и экономить без потери качества.</p></div>
   <div class="grid g3">
    {% for a in articles %}<a class="pcard" href="{{ base }}/journal/{{ a.slug }}/"><div class="ph fill" style="aspect-ratio:16/10">{{ m.img(media[a.img], '', '(max-width:680px) 100vw, 33vw') }}</div><div class="bd"><span class="tag">{{ a.tag }} · {{ a.read }} мин</span><h3>{{ a.title }}</h3><p class="sub">{{ a.desc }}</p></div></a>{% endfor %}
   </div>
