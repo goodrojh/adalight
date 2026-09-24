@@ -12,7 +12,7 @@
 </section>
 <section class="section">
  <div class="wrap split" style="align-items:start">
-  <div><h2>Состав работ</h2><p class="lead">{{ s.result }}</p></div>
+  <div class="stick"><h2>Состав работ</h2><p class="lead">{{ s.result }}</p></div>
   <div><div class="steps" style="--n:1">{% for pt in s.points %}<div class="step" style="display:flex;gap:18px;align-items:center;padding:18px 20px"><span class="mono muted" style="font-size:13px">{{ '%02d'|format(loop.index) }}</span><h4 style="margin:0;font-size:17px;font-weight:500">{{ pt }}</h4></div>{% endfor %}</div></div>
  </div>
 </section>
@@ -34,7 +34,7 @@
 {% endif %}
 <section class="section">
  <div class="wrap split" style="align-items:start">
-  <div><h2>Частые вопросы</h2></div>
+  <div class="stick"><h2>Частые вопросы</h2><p class="lead">Не нашли ответ? Позвоните <a href="tel:{{ S.phone_raw }}">{{ S.phone }}</a> или задайте вопрос письменно.</p><a class="btn btn-dark" href="#lead" data-modal="Задать вопрос">Задать вопрос</a></div>
   <div>{{ m.faq(s.faq) }}</div>
  </div>
 </section>

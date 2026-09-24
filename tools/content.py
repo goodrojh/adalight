@@ -212,6 +212,14 @@ PROJECTS = [
 
 DEVELOPERS = [('dev-samolet', 'Самолет'), ('dev-etalon', 'Эталон'), ('dev-sminex', 'Sminex'), ('dev-mr', 'MR Group'), ('dev-green', 'Девелопер-партнёр')]
 WORDMARKS = ['ФСК', 'ANT TEQ']
+# (файл логотипа, название, проект, ссылка) — ровно 7 ячеек + ячейка-призыв = сетка 4×2
+TRUST = [('sminex', 'Sminex', 'ЖК «Ильинка 3/8»', '/projects/ilinka/'),
+         ('', 'ANT TEQ', 'ЖК Will Towers', '/projects/will-towers/'),
+         ('', 'ФСК', 'ЖК «Архитектор»', '/projects/arhitektor/'),
+         ('samolet', 'Самолет', '', ''),
+         ('etalon', 'Эталон', '', ''),
+         ('mr', 'MR Group', '', ''),
+         ('green', 'Девелопер-партнёр', '', '')]
 
 STAGES = [
     ('Концепция', 'Работает архитектор, оборудования ещё нет.', 'Предлагаем световую концепцию и типы светильников.'),

@@ -17,11 +17,11 @@
     </div>
     <div class="spec-tot">
      <div><span class="mono muted" data-lines></span><br><span class="muted">Итого по РРЦ:</span> <b data-total></b></div>
-     <div class="flex"><button class="btn btn-ghost btn-sm" type="button" data-csv>Скачать CSV</button><button class="btn btn-ghost btn-sm" type="button" data-print>Печать / PDF</button><button class="btn btn-ghost btn-sm" type="button" data-clear>Очистить</button></div>
+     <div class="flex"><button class="btn btn-ghost btn-sm" type="button" data-xlsx>Скачать Excel</button><button class="btn btn-ghost btn-sm" type="button" data-print>Печать / PDF</button><button class="btn btn-ghost btn-sm" type="button" data-clear>Очистить</button></div>
     </div>
     <div class="cta-band" style="margin-top:20px" id="lead">
-     <div><h2>Отправьте спецификацию на расчёт</h2><p class="lead">Проверим совместимость, предложим аналоги и пришлём КП со сроками по каждой позиции.</p></div>
-     <div>{{ m.lead_form(goal='spec', label='Спецификация с сайта', with_spec=True, cta='Отправить спецификацию', compact=True) }}</div>
+     <div class="cta-copy"><h2>Отправьте спецификацию на расчёт</h2><p class="lead">Проверим совместимость, предложим аналоги и пришлём КП со сроками по каждой позиции.</p></div>
+     <div class="form-card">{{ m.lead_form(goal='spec', label='Спецификация с сайта', with_spec=True, cta='Отправить спецификацию', compact=True) }}</div>
     </div>
    </div>
   </div>

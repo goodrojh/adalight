@@ -6,22 +6,24 @@
  <div class="hero-lit" aria-hidden="true">{{ m.img(media['ilinka-5'], '', '100vw', lazy=False) }}</div>
  <div class="hero-temp" aria-hidden="true"></div>
  <div class="hero-shade" aria-hidden="true"></div>
- <span class="hint" aria-hidden="true">Ведите курсором — это ваш свет</span>
- <div class="hero-panel">
-  <div class="cct" role="group" aria-label="Цветовая температура">
-   <button type="button" data-cct="2700" aria-pressed="false"><i style="background:#ff9d3c"></i>2700K</button>
-   <button type="button" data-cct="3000" aria-pressed="true"><i style="background:#ffc97a"></i>3000K</button>
-   <button type="button" data-cct="4000" aria-pressed="false"><i style="background:#dfe8ff"></i>4000K</button>
-  </div>
-  <button type="button" class="switch" aria-pressed="false"><span></span><b>Включить весь свет</b></button>
- </div>
  <div class="wrap hero-in">
-  <h1>Реализуем вашу идею <em>в свете</em> — вместе</h1>
-  <p class="lead">Проектируем, поставляем и монтируем свет будущего сегодня: светотехнический расчёт, производство по ТЗ, проектные аналоги и поставка для жилых комплексов, офисов, ритейла и HoReCa.</p>
-  <div class="hero-cta">
-   <a class="btn" href="#lead">Прислать объект на расчёт <svg><use href="#i-arrow"/></svg></a>
-   <a class="btn btn-ghost" href="{{ base }}/catalog/">Каталог · {{ total_sku }} артикулов</a>
+  <div class="hero-copy">
+   <h1>Реализуем вашу идею <em>в свете</em> — вместе</h1>
+   <p class="lead">Проектируем, поставляем и монтируем свет для жилых комплексов, офисов, ритейла и HoReCa: светотехнический расчёт, производство по ТЗ, проектные аналоги и поставка.</p>
+   <div class="hero-cta">
+    <a class="btn" href="#lead" data-modal="Прислать объект на расчёт">Прислать объект на расчёт <svg><use href="#i-arrow"/></svg></a>
+    <a class="btn btn-ghost" href="{{ base }}/catalog/">Каталог продукции</a>
+   </div>
   </div>
+  <aside class="hero-ctl" aria-label="Попробуйте свет">
+   <p class="hero-ctl-t">Попробуйте свет: ведите курсором по фото</p>
+   <div class="cct" role="group" aria-label="Цветовая температура">
+    <button type="button" data-cct="2700" aria-pressed="false"><i style="background:#ff9d3c"></i>2700 K</button>
+    <button type="button" data-cct="3000" aria-pressed="true"><i style="background:#ffc97a"></i>3000 K</button>
+    <button type="button" data-cct="4000" aria-pressed="false"><i style="background:#dfe8ff"></i>4000 K</button>
+   </div>
+   <button type="button" class="switch" aria-pressed="false"><span></span><b>Включить весь свет</b></button>
+  </aside>
  </div>
 </section>
 
@@ -171,4 +173,5 @@
 </section>
 
 {{ m.lead_section(base, S=S) }}
+{% include 'map_block.html' %}
 {% endblock %}

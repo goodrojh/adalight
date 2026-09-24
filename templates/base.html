@@ -1,4 +1,4 @@
-<!doctype html>
+{% import "macros.html" as mm with context %}<!doctype html>
 <html lang="ru" class="no-js">
 <head>
 <meta charset="utf-8">
@@ -67,7 +67,7 @@
    <a class="hdr-phone" href="tel:{{ S.phone_raw }}">{{ S.phone }}</a>
    <a class="icon-btn" href="{{ base }}/catalog/#q" aria-label="Поиск по каталогу"><svg><use href="#i-search"/></svg></a>
    <a class="icon-btn" href="{{ base }}/spec/" aria-label="Спецификация проекта"><svg><use href="#i-list"/></svg><span class="badge" data-spec-count data-n="0">0</span></a>
-   <a class="btn btn-sm hdr-cta" href="#lead" data-scroll-lead>Расчёт объекта</a>
+   <a class="btn btn-sm hdr-cta" href="#lead" data-modal="Расчёт объекта">Расчёт объекта</a>
    <button class="icon-btn burger" type="button" data-drawer aria-expanded="false" aria-controls="drawer" aria-label="Меню"><svg><use href="#i-menu"/></svg></button>
   </div>
  </div>
@@ -129,10 +129,19 @@
  </div>
 </footer>
 
+<dialog class="modal" id="leadModal" aria-labelledby="mTitle">
+ <div class="modal-in">
+  <button class="modal-x" type="button" data-close aria-label="Закрыть"><svg><use href="#i-x"/></svg></button>
+  <h2 id="mTitle">Расчёт объекта</h2>
+  <p class="m-sub">Оставьте контакты — менеджер перезвонит, уточнит задачу и подготовит предложение.</p>
+  {{ mm.lead_form(goal='modal', label='Заявка из окна') }}
+ </div>
+</dialog>
+
 <nav class="mbar" aria-label="Быстрые действия">
  <a href="tel:{{ S.phone_raw }}"><svg><use href="#i-phone"/></svg>Звонок</a>
  <a href="{{ base }}/spec/"><svg><use href="#i-list"/></svg>Список <span class="badge" data-spec-count data-n="0" style="position:static">0</span></a>
- <a class="y" href="#lead">Расчёт объекта</a>
+ <a class="y" href="#lead" data-modal="Расчёт объекта">Расчёт объекта</a>
 </nav>
 
 <script src="{{ base }}/assets/js/main.js?v={{ ver }}" defer></script>

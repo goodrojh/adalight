@@ -257,7 +257,7 @@ def faq_ld(items):
 
 COMMON = dict(base=BASE, site_url=SITE_URL + '', S=C.SITE, cats=cats, services=C.SERVICES, total_sku=TOTAL_SKU, total_series=TOTAL_SERIES,
               media=media, year=datetime.date.today().year, ver=VER, endpoint=CFG.get('form_endpoint', ''), metrika=CFG.get('metrika', ''),
-              stats=C.STATS, devs=C.DEVELOPERS, words=C.WORDMARKS, projects=C.PROJECTS, articles=C.ARTICLES, stages=C.STAGES)
+              stats=C.STATS, trust=C.TRUST, devs=C.DEVELOPERS, words=C.WORDMARKS, projects=C.PROJECTS, articles=C.ARTICLES, stages=C.STAGES)
 
 
 def render(tpl, path, prio=0.6, **ctx):
@@ -466,3 +466,12 @@ for f in os.listdir(os.path.join(OUT, 'assets', 'js')):
     if r.returncode:
         raise SystemExit('JS syntax error in ' + f + '\n' + r.stderr)
 print('js ok')
+
+# проверка CSS: баланс скобок и отсутствие «висящих» селекторов
+_css = re.sub(r'/\*.*?\*/', '', open(os.path.join(ROOT, 'src', 'css', 'main.css'), encoding='utf-8').read(), flags=re.S)
+_d = 0
+for _i, _l in enumerate(_css.split('\n'), 1):
+    _d += _l.count('{') - _l.count('}')
+    if _d < 0 or (_d == 0 and _l.strip() and not _l.strip().endswith('}')):
+        raise SystemExit(f'CSS error near line {_i}: {_l[:80]}')
+print('css ok')

@@ -12,28 +12,32 @@
 </section>
 <section class="section-sm">
  <div class="wrap">
-  <div class="facts">
+  <div class="facts" style="--fc:{{ 4 if pr.client else 3 }}">
    <div><span>Объект</span><b>{{ pr.name }}</b></div>
-   <div><span>Заказчик</span><b>{{ pr.client or '—' }}</b></div>
+   {% if pr.client %}<div><span>Заказчик</span><b>{{ pr.client }}</b></div>{% endif %}
    <div><span>Работы</span><b>{{ pr.type }}</b></div>
    <div><span>Локация</span><b>{{ pr.city or 'Москва' }}</b></div>
   </div>
  </div>
 </section>
 <section class="section" style="padding-top:20px">
- <div class="wrap split" style="align-items:start">
-  <div><h2>Задача и подход</h2></div>
-  <div><p class="lead" style="color:var(--text)">{{ pr.text }}</p>
-   <h4 class="mt4">Зоны проекта</h4><div class="pill-list">{% for s in pr.scope %}<span class="tag">{{ s }}</span>{% endfor %}</div>
-   <h4 class="mt4">Роль ADALIGHT</h4>
-   <ul class="check"><li>Подбор оборудования и светотехническая проработка</li><li>Проектные аналоги с согласованием</li><li>Комплектация и поставка по графику объекта</li><li>Техническая поддержка монтажа</li></ul>
+ <div class="wrap proj-body">
+  <div class="proj-photo">{% set side = gallery[1] if gallery|length > 1 else gallery[0] %}{{ m.img(side, pr.name, '(max-width:900px) 100vw, 50vw') }}</div>
+  <div class="proj-text">
+   <h2>Задача и подход</h2>
+   <p class="lead" style="color:var(--text)">{{ pr.text }}</p>
+   <div class="proj-cols">
+    <div><h4>Зоны проекта</h4><ul class="check">{% for s in pr.scope %}<li>{{ s }}</li>{% endfor %}</ul></div>
+    <div><h4>Роль ADALIGHT</h4><ul class="check"><li>Подбор оборудования и светотехническая проработка</li><li>Проектные аналоги с согласованием</li><li>Комплектация и поставка по графику объекта</li><li>Техническая поддержка монтажа</li></ul></div>
+   </div>
+   <a class="btn mt4" href="#lead" data-modal="Хочу такой же результат">Обсудить похожий объект <svg><use href="#i-arrow"/></svg></a>
   </div>
  </div>
 </section>
-{% if gallery|length > 1 %}
+{% if gallery|length > 2 %}
 <section class="section" style="padding-top:0">
  <div class="wrap">
-  <div class="masonry" data-lightbox>{% for im in gallery %}<a href="{{ im.lg }}" data-lg="{{ im.lg }}">{{ m.img(im, pr.name ~ ' — фото ' ~ loop.index, '(max-width:700px) 100vw, 33vw') }}</a>{% endfor %}</div>
+  <div class="masonry" data-lightbox>{% for im in gallery[:1] + gallery[2:] %}<a href="{{ im.lg }}" data-lg="{{ im.lg }}">{{ m.img(im, pr.name ~ ' — фото ' ~ loop.index, '(max-width:700px) 100vw, 33vw') }}</a>{% endfor %}</div>
  </div>
 </section>
 {% endif %}

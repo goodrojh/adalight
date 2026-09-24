@@ -6,7 +6,7 @@
   var $$ = function (s, r) { return Array.prototype.slice.call((r || d).querySelectorAll(s)); };
   var cards = $$('.pcard', root).map(function (el) {
     return { el: el, cat: el.dataset.cat, line: el.dataset.line, mount: el.dataset.mount, cct: (el.dataset.cct || '').split(' ').filter(Boolean),
-      ip: (el.dataset.ip || '').split(' ').filter(Boolean), beam: (el.dataset.beam || '').split(' ').filter(Boolean), pmin: +el.dataset.pmin || 0, pmax: +el.dataset.pmax || 0,
+      ip: (el.dataset.ip || '').split(' ').filter(Boolean), beam: (el.dataset.beams || '').split(' ').filter(Boolean), pmin: +el.dataset.pmin || 0, pmax: +el.dataset.pmax || 0,
       price: +el.dataset.price || 0, q: (el.dataset.q || '').toLowerCase(), order: +el.dataset.order };
   });
   var grid = d.querySelector('.pgrid', root), count = d.querySelector('[data-count]'), empty = d.querySelector('[data-empty]');

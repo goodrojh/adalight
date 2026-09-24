@@ -1,22 +1,18 @@
 {% extends "base.html" %}
 {% import "macros.html" as m with context %}
 {% block main %}
-<section class="section" style="padding-top:36px">
+<section class="section" style="padding-top:36px;padding-bottom:48px">
  <div class="wrap">
   {{ m.crumbs(crumbs, light=True) }}
   <h1 style="font-size:clamp(36px,5vw,68px)">Контакты</h1>
-  <div class="split" style="align-items:start;margin-top:30px">
-   <div>
-    <div class="grid g2">
-     <div class="card"><span class="mono muted" style="font-size:12px">Проекты и партнёрство</span><h3 style="margin:8px 0"><a href="tel:{{ S.phone_raw }}" style="text-decoration:none">{{ S.phone }}</a></h3><a class="link" href="mailto:{{ S.email }}">{{ S.email }}</a></div>
-     <div class="card"><span class="mono muted" style="font-size:12px">Общие вопросы</span><h3 style="margin:8px 0"><a href="tel:{{ S.phone2_raw }}" style="text-decoration:none">{{ S.phone2 }}</a></h3><a class="link" href="mailto:{{ S.email2 }}">{{ S.email2 }}</a></div>
-     <div class="card" style="grid-column:1/-1"><span class="mono muted" style="font-size:12px">Офис</span><h3 style="margin:8px 0">{{ S.address }}</h3><div class="flex mt2"><a class="btn btn-dark btn-sm" href="https://yandex.ru/maps/?text={{ S.address_full|urlencode }}" target="_blank" rel="noopener">Открыть в Яндекс Картах</a><a class="btn btn-ghost btn-sm" href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener">WhatsApp</a></div></div>
-    </div>
-    <div class="facts mt4"><div><span>Компания</span><b>{{ S.legal }}</b></div><div><span>ИНН</span><b>{{ S.inn }}</b></div><div><span>ОГРН</span><b>{{ S.ogrn }}</b></div><div><span>КПП</span><b>{{ S.kpp }}</b></div></div>
-   </div>
-   <div class="card" id="lead" style="padding:clamp(20px,3vw,36px)"><h2 style="font-size:32px">Напишите нам</h2>{{ m.lead_form(goal='contacts', label='Сообщение со страницы контактов', dark=False) }}</div>
+  <div class="grid g4 mt4">
+   <div class="card"><span class="muted">Проекты и партнёрство</span><h3 style="margin:8px 0 6px"><a href="tel:{{ S.phone_raw }}" style="text-decoration:none">{{ S.phone }}</a></h3><a class="link" href="mailto:{{ S.email }}">{{ S.email }}</a></div>
+   <div class="card"><span class="muted">Общие вопросы</span><h3 style="margin:8px 0 6px"><a href="tel:{{ S.phone2_raw }}" style="text-decoration:none">{{ S.phone2 }}</a></h3><a class="link" href="mailto:{{ S.email2 }}">{{ S.email2 }}</a></div>
+   <div class="card"><span class="muted">Мессенджер</span><h3 style="margin:8px 0 6px">WhatsApp</h3><a class="link" href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener">Написать</a></div>
+   <div class="card"><span class="muted">Реквизиты</span><h3 style="margin:8px 0 6px">{{ S.legal }}</h3><span class="muted" style="font-size:14px">ИНН {{ S.inn }} · ОГРН {{ S.ogrn }}</span></div>
   </div>
  </div>
 </section>
-
+{% include 'map_block.html' %}
+{{ m.lead_section(base, title='Напишите нам', sub='Ответим на вопросы по оборудованию, подготовим расчёт или КП.', goal='contacts', label='Сообщение со страницы контактов', S=S) }}
 {% endblock %}

@@ -55,7 +55,7 @@
 {% if seo %}
 <section class="section plaster">
  <div class="wrap split" style="align-items:start">
-  <div><h2>{{ h1 }}: что важно знать</h2></div>
+  <div class="stick"><h2>{{ h1 }}: что важно знать</h2><div class="media-frame ratio mt2">{{ m.img(hero_img, h1, '(max-width:900px) 100vw, 45vw') }}</div></div>
   <div class="prose" style="font-size:16.5px">{{ seo|safe }}</div>
  </div>
 </section>

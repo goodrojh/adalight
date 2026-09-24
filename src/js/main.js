@@ -191,6 +191,31 @@
     $$('input,select,textarea', form).forEach(function (el) { el.addEventListener('input', function () { var f = el.closest('.field'); f && f.classList.remove('invalid'); }); });
   });
 
+  /* ---------- модальная форма: любая кнопка «заявка» открывает самостоятельную форму ---------- */
+  var modal = d.getElementById('leadModal');
+  if (modal && modal.showModal) {
+    var mForm = $('form', modal), mTitle = d.getElementById('mTitle');
+    var openModal = function (title, src) {
+      mForm.classList.remove('sent');
+      var btn = $('[type=submit]', mForm); btn.disabled = false;
+      mTitle.textContent = title || 'Расчёт объекта';
+      mForm.setAttribute('data-lead', (title || 'Заявка') + ' — ' + (d.querySelector('h1') ? d.querySelector('h1').textContent.trim() : d.title));
+      $('[name=topic]', mForm).value = (title || '') + ' | ' + location.pathname;
+      var pageRole = d.querySelector('#lead input[name=role]:checked');
+      $$('input[name=role]', mForm).forEach(function (r) { r.checked = !!pageRole && r.value === pageRole.value; });
+      modal.showModal(); goal('modal_open');
+      setTimeout(function () { var f = $('input[name=name]', mForm); f && f.focus(); }, 60);
+    };
+    d.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href="#lead"], a[href$="/#lead"], [data-modal]');
+      if (!a || a.closest('.modal')) return;
+      e.preventDefault();
+      var t = a.getAttribute('data-modal') || a.textContent.replace(/\s+/g, ' ').trim();
+      openModal(t, a);
+    });
+    modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('[data-close]')) modal.close(); });
+  }
+
   /* ---------- вкладки ---------- */
   $$('[role=tablist]').forEach(function (tl) {
     var tabs = $$('[role=tab]', tl);

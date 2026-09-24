@@ -10,7 +10,7 @@
 
 {% macro pcard(p, base, i=0) -%}
 {% set im = p.images[0] if p.images else (p.schemes[0] if p.schemes else None) %}
-<a class="pcard" href="{{ base }}/product/{{ p.slug }}/" data-cat="{{ p.category }}" data-line="{{ p.line }}" data-mount="{{ p.mount_key }}" data-cct="{{ p.cct_list|join(' ') }}" data-ip="{{ p.ip_list|join(' ') }}" data-beam="{{ p.beam_buckets|join(' ') }}" data-pmin="{{ p.power_min or '' }}" data-pmax="{{ p.power_max or '' }}" data-price="{{ p.price_min or '' }}" data-skus="{{ p.sku_count }}" data-order="{{ i }}" data-q="{{ p.search }}">
+<a class="pcard" href="{{ base }}/product/{{ p.slug }}/" data-cat="{{ p.category }}" data-line="{{ p.line }}" data-mount="{{ p.mount_key }}" data-cct="{{ p.cct_list|join(' ') }}" data-ip="{{ p.ip_list|join(' ') }}" data-beams="{{ p.beam_buckets|join(' ') }}" data-pmin="{{ p.power_min or '' }}" data-pmax="{{ p.power_max or '' }}" data-price="{{ p.price_min or '' }}" data-skus="{{ p.sku_count }}" data-order="{{ i }}" data-q="{{ p.search }}">
  <div class="ph{% if p.photo_fill %} fill{% endif %}">
   {% if im %}<img src="{{ im.src }}" alt="{{ p.name }}" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async">{% endif %}
   <span class="tag{% if p.line in ['CLASS A'] %} y{% endif %}">{{ p.line }}</span>
@@ -31,9 +31,14 @@
 {%- endmacro %}
 
 {% macro logos(devs, media, words) -%}
-<div class="logos">
- {% for key, name in devs %}<div class="logo-chip">{% if media[key] %}<img src="{{ media[key].src }}" alt="{{ name }}" width="{{ media[key].w }}" height="{{ media[key].h }}" loading="lazy">{% endif %}</div>{% endfor %}
- {% for w in words %}<div class="logo-chip word">{{ w }}</div>{% endfor %}
+<div class="trust">
+ {% for key, name, proj, url in trust %}
+ {% if url %}<a class="trust-cell" href="{{ base }}{{ url }}">{% else %}<div class="trust-cell">{% endif %}
+  {% if key %}<img src="{{ base }}/img/logos/{{ key }}-w.webp" alt="{{ name }}" loading="lazy" class="tl-{{ key }}">{% else %}<span class="trust-word">{{ name }}</span>{% endif %}
+  {% if proj %}<span class="trust-proj">{{ proj }}</span>{% endif %}
+ {% if url %}</a>{% else %}</div>{% endif %}
+ {% endfor %}
+ <a class="trust-cell trust-cta" href="#lead" data-modal="Обсудить ваш объект"><b>Ваш объект</b><span>Обсудить проект →</span></a>
 </div>
 {%- endmacro %}
 
@@ -43,61 +48,66 @@
 </div>
 {%- endmacro %}
 
-{% macro lead_form(id='lead', title='Пришлите объект на расчёт', sub='', goal='main', role='', with_spec=False, dark=True, label='Заявка на расчёт объекта', cta='Отправить на расчёт', compact=False) -%}
+{% macro lead_form(goal='main', role='', with_spec=False, label='Заявка на расчёт объекта', cta='Отправить заявку', compact=False) -%}
 <form class="form" data-lead="{{ label }}" data-goal="{{ goal }}" novalidate {% if with_spec %}data-with-spec{% endif %}>
  <div class="form-body">
+  <input type="hidden" name="topic" value="">
   {% if not compact %}
-  <div class="field"><span>Кто вы</span>
-   <div class="seg" role="radiogroup" aria-label="Кто вы">
-    {% for r in ['Девелопер', 'Генподрядчик', 'Дизайнер / архитектор', 'Ремонтная компания', 'Проектировщик', 'Частный заказчик'] %}
+  <fieldset class="fs">
+   <legend>Кто вы</legend>
+   <div class="roles" role="radiogroup">
+    {% for r in ['Девелопер', 'Генподрядчик', 'Дизайнер', 'Ремонтная компания', 'Проектировщик', 'Частный клиент'] %}
     <label><input type="radio" name="role" value="{{ r }}" {% if r == role %}checked{% endif %}><span>{{ r }}</span></label>{% endfor %}
    </div>
-  </div>
+  </fieldset>
   <div class="row2">
    <label class="field"><span>Тип объекта</span>
-    <select name="object"><option value="">Выберите</option><option>ЖК — места общего пользования</option><option>ЖК — архитектурная подсветка</option><option>Офисное здание</option><option>ТЦ, магазин, шоурум</option><option>Ресторан, кафе, отель</option><option>Квартира, частный дом</option><option>Другое</option></select></label>
-   <label class="field"><span>Стадия</span>
-    <select name="stage"><option value="">Выберите</option><option>Концепция</option><option>Проектирование (П / Р)</option><option>Тендер / закупка</option><option>Строительство / отделка</option><option>Эксплуатация / замена</option></select></label>
+    <select name="object"><option value="">Не выбран</option><option>ЖК — места общего пользования</option><option>ЖК — архитектурная подсветка</option><option>Офисное здание</option><option>ТЦ, магазин, шоурум</option><option>Ресторан, кафе, отель</option><option>Квартира, частный дом</option><option>Другое</option></select></label>
+   <label class="field"><span>Стадия проекта</span>
+    <select name="stage"><option value="">Не выбрана</option><option>Концепция</option><option>Проектирование (П / Р)</option><option>Тендер / закупка</option><option>Строительство / отделка</option><option>Эксплуатация / замена</option></select></label>
   </div>
   {% endif %}
   <div class="row2">
-   <label class="field"><span>Имя</span><input name="name" autocomplete="name" placeholder="Как к вам обращаться"></label>
-   <label class="field"><span>Телефон *</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required><em class="err">Укажите телефон, чтобы мы могли связаться</em></label>
+   <label class="field"><span>Имя</span><input name="name" autocomplete="name" placeholder="Иван Петров"></label>
+   <label class="field"><span>Телефон <i>*</i></span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required><em class="err">Укажите номер телефона</em></label>
   </div>
   {% if not compact %}
-  <label class="field"><span>Ссылка на планы / спецификацию (Яндекс Диск, Google Drive) или комментарий</span><textarea name="comment" placeholder="Площадь, сроки, что важно учесть. Файлы можно прислать на {{ 'damir@adalight.ru' }}"></textarea></label>
+  <label class="field"><span>Комментарий или ссылка на планы</span><textarea name="comment" rows="3" placeholder="Площадь, сроки, ссылка на Яндекс Диск с планами"></textarea></label>
   {% endif %}
   {% if with_spec %}<textarea name="spec_text" hidden></textarea>{% endif %}
-  <label class="consent"><input type="checkbox" name="consent" required checked><span>Согласен на обработку персональных данных согласно <a href="{{ base }}/privacy/">политике конфиденциальности</a></span></label>
-  <button class="btn btn-block" type="submit">{{ cta }} <svg><use href="#i-arrow"/></svg></button>
+  <div class="form-foot">
+   <button class="btn btn-block" type="submit">{{ cta }} <svg><use href="#i-arrow"/></svg></button>
+   <label class="consent"><input type="checkbox" name="consent" required checked><span>Согласен на обработку персональных данных по <a href="{{ base }}/privacy/">политике конфиденциальности</a></span></label>
+  </div>
  </div>
  <div class="form-ok" role="status">
-  <h3 style="margin-bottom:8px">Заявка сформирована</h3>
-  <p style="margin:0">Менеджер свяжется с вами в рабочее время. Если удобнее — позвоните: <a href="tel:+79771093910">+7 (977) 109-39-10</a>.</p>
-  <p class="via" hidden style="margin:10px 0 0;font-size:14px">Мы открыли письмо в вашем почтовом клиенте — отправьте его, чтобы заявка дошла.</p>
+  <span class="ok-ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5 9-10"/></svg></span>
+  <h3>Заявка сформирована</h3>
+  <p>Менеджер свяжется с вами в рабочее время. Можно позвонить сразу: <a href="tel:+79771093910">+7 (977) 109-39-10</a>.</p>
+  <p class="via" hidden>Мы открыли письмо в вашем почтовом клиенте — отправьте его, чтобы заявка дошла.</p>
  </div>
 </form>
 {%- endmacro %}
 
 {% macro lead_section(base, title='Пришлите объект на расчёт', sub='Планы, ТЗ или спецификация — подготовим подбор, аналоги, стоимость и сроки поставки. Без обязательств по объёму.', role='', goal='main', label='Заявка на расчёт объекта', S=None) -%}
-<section class="section" id="lead">
+<section class="section lead-sec" id="lead">
  <div class="wrap">
   <div class="cta-band">
-   <div>
+   <div class="cta-copy">
     <h2>{{ title }}</h2>
     <p class="lead">{{ sub }}</p>
-    <ul class="check" style="margin-top:26px;color:#d6d6da">
-     <li>Подбор оборудования и варианты замены</li>
-     <li>Светотехнический расчёт по нормам</li>
-     <li>Коммерческое предложение со сроками по каждой позиции</li>
-    </ul>
-    <div class="contact-lines">
-     <a href="tel:{{ S.phone_raw }}"><svg><use href="#i-phone"/></svg>{{ S.phone }}</a>
-     <a href="mailto:{{ S.email }}"><svg><use href="#i-mail"/></svg>{{ S.email }}</a>
-     <a href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Написать в WhatsApp</a>
+    <ol class="cta-steps">
+     <li><b>Заявка</b><span>Планы, ТЗ или спецификация</span></li>
+     <li><b>Подбор и расчёт</b><span>Оборудование, аналоги, нормы освещённости</span></li>
+     <li><b>КП</b><span>Цена и сроки по каждой позиции</span></li>
+    </ol>
+    <div class="cta-contacts">
+     <a href="tel:{{ S.phone_raw }}"><svg><use href="#i-phone"/></svg><span><small>Телефон</small>{{ S.phone }}</span></a>
+     <a href="mailto:{{ S.email }}"><svg><use href="#i-mail"/></svg><span><small>E-mail</small>{{ S.email }}</span></a>
+     <a href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span><small>WhatsApp</small>Написать</span></a>
     </div>
    </div>
-   <div class="dark" style="background:transparent">{{ lead_form(role=role, goal=goal, label=label) }}</div>
+   <div class="form-card">{{ lead_form(role=role, goal=goal, label=label) }}</div>
   </div>
  </div>
 </section>
