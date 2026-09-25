@@ -119,6 +119,12 @@ def is_logo(pth):
     return any(sum(a != b for a, b in zip(h, r)) <= 20 for r in _LOGO_REFS)
 
 
+# картинки из прайса, которые повторяют фото из папок той же серии (проверено сравнением изображений
+# и визуально, см. data/price_dups.json): в галерею не ставим, модификация берёт фото из папки
+_DUPS_FILE = os.path.join(ROOT, 'data', 'price_dups.json')
+PRICE_DUPS = json.load(open(_DUPS_FILE, encoding='utf-8')) if os.path.exists(_DUPS_FILE) else {}
+
+
 def md5(pth):
     return hashlib.md5(open(pth, 'rb').read()).hexdigest()
 
@@ -126,6 +132,10 @@ def md5(pth):
 def add(p):
     p.setdefault('images', [])
     p.setdefault('schemes', [])
+    for v in p['variants']:
+        if v.get('_img') and os.path.basename(v['_img']) in PRICE_DUPS:
+            v['_img'] = PRICE_DUPS[os.path.basename(v['_img'])]
+    p['images'] = [i for i in p['images'] if os.path.basename(i) not in PRICE_DUPS]
     p['images'] = dedupe([i for i in p['images'] if os.path.exists(i) and not any(x in i for x in EXCLUDE) and not is_logo(i)])
     p['schemes'] = dedupe([i for i in p['schemes'] if os.path.exists(i)])
     # фото конкретной модификации: индекс в общей галерее (для смены фото при выборе модификации)
