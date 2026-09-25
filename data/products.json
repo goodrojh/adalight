@@ -2930,14 +2930,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/a-1191-1-480.webp",
-    "srcset": "/img/p/a-1191-1-480.webp 480w, /img/p/a-1191-1-1100.webp 1100w",
+    "src": "/img/p/a-1191-1-ai0b1872-480.webp",
+    "srcset": "/img/p/a-1191-1-ai0b1872-480.webp 480w, /img/p/a-1191-1-ai0b1872-1100.webp 1100w",
     "w": 1100,
-    "h": 733,
-    "lg": "/img/p/a-1191-1-1100.webp",
-    "ow": 3360,
-    "oh": 2240,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Фото для серии A/ALDL1191\\Image_2026-09-18_101843_520.jpg"
+    "h": 738,
+    "lg": "/img/p/a-1191-1-ai0b1872-1100.webp",
+    "ow": 2528,
+    "oh": 1696,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\a-1191-1.jpg"
    },
    {
     "src": "/img/p/a-1191-2-480.webp",
