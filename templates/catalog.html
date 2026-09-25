@@ -25,17 +25,22 @@
   <aside class="filters" aria-label="Фильтры">
    <div class="filters-top"><h3 style="margin:0">Фильтры</h3><button class="icon-btn" type="button" data-filters-toggle aria-label="Закрыть" style="background:#eee;color:#000"><svg><use href="#i-x"/></svg></button></div>
    {% if not cat %}<div class="fgroup"><h4>Категория</h4><div class="chips">{% for c in cats %}<button type="button" class="chip" data-f="cat" data-v="{{ c.slug }}">{{ c.short }} <small></small></button>{% endfor %}</div></div>{% endif %}
-   <div class="fgroup"><h4>Линейка</h4><div class="chips">{% for l in facet_lines %}<button type="button" class="chip" data-f="line" data-v="{{ l }}">{{ l }} <small></small></button>{% endfor %}</div></div>
-   {% if facet_mounts|length > 1 %}<div class="fgroup"><h4>Монтаж</h4><div class="chips">{% for k in facet_mounts %}<button type="button" class="chip" data-f="mount" data-v="{{ k }}">{{ k }} <small></small></button>{% endfor %}</div></div>{% endif %}
+   {% if facet_kind %}<div class="fgroup"><h4>Тип</h4><div class="chips">{% for k in facet_kind %}<button type="button" class="chip" data-f="kind" data-v="{{ k }}">{{ k }} <small></small></button>{% endfor %}</div></div>{% endif %}
+   {% if facet_lines %}<div class="fgroup"><h4>Линейка</h4><div class="chips">{% for l in facet_lines %}<button type="button" class="chip" data-f="line" data-v="{{ l }}">{{ l }} <small></small></button>{% endfor %}</div></div>{% endif %}
+   {% if facet_shape %}<div class="fgroup"><h4>Форма</h4><div class="chips">{% for k in facet_shape %}<button type="button" class="chip" data-f="shape" data-v="{{ k }}">{{ k }} <small></small></button>{% endfor %}</div></div>{% endif %}
+   {% if facet_ctrl %}<div class="fgroup"><h4>Управление</h4><div class="chips">{% for k in facet_ctrl %}<button type="button" class="chip" data-f="ctrl" data-v="{{ k }}">{{ k }} <small></small></button>{% endfor %}</div></div>{% endif %}
+   {% if facet_mounts %}<div class="fgroup"><h4>Монтаж</h4><div class="chips">{% for k in facet_mounts %}<button type="button" class="chip" data-f="mount" data-v="{{ k }}">{{ k }} <small></small></button>{% endfor %}</div></div>{% endif %}
    {% if facet_cct %}<div class="fgroup"><h4>Цветовая температура</h4><div class="chips">{% for k in facet_cct %}<button type="button" class="chip" data-f="cct" data-v="{{ k }}">{{ k }} K <small></small></button>{% endfor %}</div></div>{% endif %}
    {% if facet_ip %}<div class="fgroup"><h4>Защита IP</h4><div class="chips">{% for k in facet_ip %}<button type="button" class="chip" data-f="ip" data-v="{{ k }}">IP{{ k }} <small></small></button>{% endfor %}</div></div>{% endif %}
-   {% if facet_beam|length > 1 %}<div class="fgroup"><h4>Угол луча</h4><div class="chips">{% for k, n in facet_beam %}<button type="button" class="chip" data-f="beam" data-v="{{ k }}">{{ n }} <small></small></button>{% endfor %}</div></div>{% endif %}
+   {% if facet_beam %}<div class="fgroup"><h4>Угол луча</h4><div class="chips">{% for k, n in facet_beam %}<button type="button" class="chip" data-f="beam" data-v="{{ k }}">{{ n }} <small></small></button>{% endfor %}</div></div>{% endif %}
    {% if has_power %}<div class="fgroup"><h4>Мощность, Вт</h4><div class="range"><input type="number" min="0" placeholder="от" data-wmin aria-label="Мощность от"><span>—</span><input type="number" min="0" placeholder="до" data-wmax aria-label="Мощность до"></div></div>{% endif %}
+   {% if has_price %}<div class="fgroup"><h4>Цена серии, ₽</h4><div class="range"><input type="number" min="0" step="100" placeholder="от" data-pmin aria-label="Цена от"><span>—</span><input type="number" min="0" step="100" placeholder="до" data-pmax aria-label="Цена до"></div></div>{% endif %}
    <div class="fgroup" style="border:0"><button type="button" class="link" data-reset style="background:none;border-top:0;border-left:0;border-right:0;cursor:pointer">Сбросить фильтры</button></div>
-   <div class="filters-foot"><button class="btn btn-ghost" type="button" data-reset style="color:#000">Сбросить</button><button class="btn btn-block" type="button" data-filters-toggle>Показать</button></div>
+   <div class="filters-foot"><button class="btn btn-ghost" type="button" data-reset style="color:#000">Сбросить</button><button class="btn btn-block" type="button" data-filters-toggle data-show>Показать</button></div>
   </aside>
   <div>
    <div class="search" style="margin-bottom:16px"><svg><use href="#i-search"/></svg><input id="q" type="search" data-q placeholder="Поиск: артикул, серия, «IP65», «трек», «USB»…" aria-label="Поиск по каталогу"></div>
+   <div class="active-f" data-active hidden></div>
    <div class="toolbar">
     <span class="count" data-count aria-live="polite"></span>
     <div class="flex">

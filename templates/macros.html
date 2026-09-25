@@ -10,7 +10,7 @@
 
 {% macro pcard(p, base, i=0) -%}
 {% set im = p.images[0] if p.images else (p.schemes[0] if p.schemes else None) %}
-<a class="pcard" href="{{ base }}/product/{{ p.slug }}/" data-cat="{{ p.category }}" data-line="{{ p.line }}" data-mount="{{ p.mount_key }}" data-cct="{{ p.cct_list|join(' ') }}" data-ip="{{ p.ip_list|join(' ') }}" data-beams="{{ p.beam_buckets|join(' ') }}" data-pmin="{{ p.power_min or '' }}" data-pmax="{{ p.power_max or '' }}" data-price="{{ p.price_min or '' }}" data-skus="{{ p.sku_count }}" data-order="{{ i }}" data-q="{{ p.search }}">
+<a class="pcard" href="{{ base }}/product/{{ p.slug }}/" data-cat="{{ p.category }}" data-line="{{ p.line }}" data-mount="{{ p.mount_key }}" data-cct="{{ p.cct_list|join(' ') }}" data-ip="{{ p.ip_list|join(' ') }}" data-beams="{{ p.beam_buckets|join(' ') }}" data-shape="{{ p.shape_list|join('|') }}" data-kind="{{ p.kind }}" data-ctrl="{{ p.options[1:]|map(attribute='label')|join('|') }}" data-pmin="{{ p.power_min or '' }}" data-pmax="{{ p.power_max or '' }}" data-price="{{ p.price_min or '' }}" data-skus="{{ p.sku_count }}" data-order="{{ i }}" data-q="{{ p.search }}">
  <div class="ph{% if p.photo_fill %} fill{% endif %}">
   {% if im %}<img src="{{ im.src }}" alt="{{ p.name }}" width="{{ im.w }}" height="{{ im.h }}" loading="lazy" decoding="async">{% endif %}
   <span class="tag{% if p.line in ['CLASS A'] %} y{% endif %}">{{ p.line }}</span>

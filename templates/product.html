@@ -26,6 +26,9 @@
       <select class="vsel" id="vsel" aria-label="Выберите модификацию">
        {% for v in p.variants %}<option value="{{ loop.index0 }}">{{ v.label }}</option>{% endfor %}
       </select></label>
+     {% if p.colors %}<div class="field"><span>Цвет корпуса</span><div class="opts" role="radiogroup" aria-label="Цвет корпуса">
+      {% for c in p.colors %}<label><input type="radio" name="color" value="{{ c.label|lower }}" data-img="{{ c.img }}" data-src="{{ p.images[c.img].src }}" {% if loop.first %}checked{% endif %}><span>{{ c.label }}</span></label>{% endfor %}
+     </div></div>{% endif %}
      {% if p.options %}<div class="field"><span>Исполнение</span><div class="opts" role="radiogroup" aria-label="Исполнение">
       {% for o in p.options %}<label><input type="radio" name="opt" value="{{ o.key }}" {% if loop.first %}checked{% endif %}><span>{{ o.label }}</span></label>{% endfor %}
      </div></div>{% endif %}
@@ -114,17 +117,27 @@
  var V=JSON.parse(document.getElementById('pdata').textContent),sel=document.getElementById('vsel'),pr=document.getElementById('vprice'),add=document.getElementById('vadd');
  var rows=[].slice.call(document.querySelectorAll('tr[data-vi]'));
  function opt(){var o=document.querySelector('input[name=opt]:checked');return o?o.value:'';}
- function upd(){var v=V[+sel.value],o=opt(),price=v.price,lab='';
-  if(o&&v.opts&&v.opts[o]){price=v.opts[o].price;lab=v.opts[o].label;}
+ function col(){var c=document.querySelector('input[name=color]:checked');return c?c:null;}
+ var th=[].slice.call(document.querySelectorAll('.gthumbs button')),tw=document.querySelector('.gthumbs');
+ function show(i){var b=th[i];if(!b)return;b.click();if(tw)tw.scrollTo({left:b.offsetLeft-tw.clientWidth/2+b.clientWidth/2,behavior:'smooth'});}
+ function upd(e){var v=V[+sel.value],o=opt(),price=v.price,lab=[],c=col();
+  if(o&&v.opts&&v.opts[o]){price=v.opts[o].price;lab.push(v.opts[o].label);}
+  if(c)lab.push('цвет: '+c.value);
   pr.firstChild.textContent=price?window.ADAfmt?window.ADAfmt(price):price+' ₽':'по запросу';
-  var item=JSON.parse(JSON.stringify(v.add));item.price=price||null;if(lab)item.opt=lab;add.setAttribute('data-add',JSON.stringify(item));
+  var item=JSON.parse(JSON.stringify(v.add));item.price=price||null;if(lab.length)item.opt=lab.join(', ');
+  if(c&&c.dataset.src)item.img=c.dataset.src;
+  add.setAttribute('data-add',JSON.stringify(item));
   rows.forEach(function(r){r.classList.toggle('active',+r.dataset.vi===+sel.value);});
-  if(v.img!=null){var th=document.querySelectorAll('.gthumbs button')[v.img];if(th){th.click();th.scrollIntoView({block:'nearest',inline:'center'});}else{var mi=document.querySelector('.gmain img');}}
+  /* фото: выбран цвет — фото цвета; иначе фото/чертёж модификации; если своего нет — главное фото */
+  if(e&&e.target&&e.target.name==='color')show(+c.dataset.img);
+  else if(e&&e.target&&e.target.name==='opt'){}
+  else show(v.img!=null?v.img:(c?+c.dataset.img:0));
   var b=document.querySelector('[data-beam]');if(b&&v.lm){var f=b.querySelector('[name=f]');if(f){f.value=v.lm;f.dispatchEvent(new Event('input'));}}
  }
+ [].forEach.call(document.querySelectorAll('input[name=color]'),function(i){i.addEventListener('change',upd);});
  sel.addEventListener('change',upd);[].forEach.call(document.querySelectorAll('input[name=opt]'),function(i){i.addEventListener('change',upd);});
  rows.forEach(function(r){r.addEventListener('click',function(e){if(e.target.closest('button'))return;sel.value=r.dataset.vi;upd();});});
- document.addEventListener('DOMContentLoaded',upd);if(document.readyState!=='loading')upd();
+ if(document.readyState!=='loading')upd();else document.addEventListener('DOMContentLoaded',function(){upd();});
 })();
 </script>
 {% endblock %}

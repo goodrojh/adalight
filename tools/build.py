@@ -83,6 +83,20 @@ SPEC_ORDER = ['power', 'flux', 'cct', 'cri', 'beam', 'ip', 'ik', 'cutout', 'size
 
 cat_names = {k: v['name'] for k, v in C.CATEGORIES.items()}
 
+def view_index(p, v):
+    """Кадр галереи (фото + чертежи) для модификации: своё фото, если оно уникально;
+    иначе — свой размерный чертёж; иначе — общее фото."""
+    ni = len(p['images'])
+    ii = v.get('img_i') if v.get('img_i') is not None and v['img_i'] < ni else None
+    si = v.get('sch_i') if v.get('sch_i') is not None and v['sch_i'] < len(p['schemes']) else None
+    shared = ii is not None and sum(1 for x in p['variants'] if x.get('img_i') == ii) > 1
+    if ii is not None and not shared:
+        return ii
+    if si is not None:
+        return ni + si
+    return ii
+
+
 for i, p in enumerate(products):
     vs = p['variants']
     p['mount_key'] = MOUNT.get(p['mounting'], p['mounting'])
@@ -191,6 +205,10 @@ for i, p in enumerate(products):
     elif any(v.get('price_dim') for v in vs):
         opts = [{'key': 'base', 'label': 'Без диммирования'}, {'key': 'dim', 'label': 'Triac DIM'}]
     p['options'] = opts
+    # цвет корпуса: только там, где цвет есть в прайсе и есть фото обоих цветов (правки 25.09)
+    COLORS = {'ravol': [('Чёрный', 0), ('Белый', 1)], 'ada-ring': [('Чёрный', 0), ('Белый', 1)],
+              'sofi-x7-ip54': [('Белый', 0), ('Чёрный', 1)], 'sofi-x7-ip20': [('Белый', 0), ('Чёрный', 1)]}
+    p['colors'] = [{'label': l, 'img': i} for l, i in COLORS.get(p['slug'], []) if i < len(p['images'])]
     img0 = p['images'][0]['src'] if p['images'] else (p['schemes'][0]['src'] if p['schemes'] else '')
     vjs = []
     for v in vs:
@@ -218,7 +236,7 @@ for i, p in enumerate(products):
             for ok, pk in (('dip', 'price_dip'), ('zigbee', 'price_zigbee'), ('dim', 'price_dim')):
                 if any(x['key'] == ok for x in opts):
                     o[ok] = {'price': v.get(pk), 'label': next(x['label'] for x in opts if x['key'] == ok)}
-        vjs.append({'price': v.get('price'), 'add': add, 'opts': o, 'lm': lumens(v), 'img': v.get('img_i') if v.get('img_i') is not None and v['img_i'] < len(p['images']) else None})
+        vjs.append({'price': v.get('price'), 'add': add, 'opts': o, 'lm': lumens(v), 'img': view_index(p, v)})
     p['variants_js'] = vjs
     # калькулятор луча
     if beams and lms and p['category'] not in ('shinoprovod-s20', 'bra'):
@@ -229,6 +247,33 @@ for i, p in enumerate(products):
     if any(24 < b <= 45 for b in beams): bk.append('mid')
     if any(b > 45 for b in beams): bk.append('wide')
     p['beam_buckets'] = bk
+    # форма
+    shp = set()
+    if p['category'] in ('vstraivaemye', 'nakladnye'):
+        for v in vs:
+            geo = (v.get('cutout') or '') + ' ' + (v.get('size') or '')
+            if re.search(r'2x|2х|2X', v.get('power', '')) or re.search(r'\d+\s*[x×*]\s*\d+', geo.replace('H', '')) and not re.search(r'[ØφD]', geo):
+                nums = [int(x) for x in re.findall(r'(\d+)\s*[x×*]\s*(\d+)', geo)[0]] if re.findall(r'(\d+)\s*[x×*]\s*(\d+)', geo) else []
+                shp.add('Квадратный' if nums and abs(nums[0] - nums[1]) <= 3 else 'Прямоугольный')
+            else:
+                shp.add('Круглый')
+    p['shape_list'] = sorted(shp)
+    # тип модуля (S20) / группа комплектующих
+    KIND = {'grill': 'Линейные модули', 'flood': 'Линейные модули', 'wallwasher': 'Линейные модули', 'stick': 'Линейные модули', 'silicone': 'Линейные модули',
+            'spot': 'Споты и акценты', 'zoom': 'Споты и акценты', 'folding-spot': 'Споты и акценты', 'convex': 'Споты и акценты', 'reading': 'Споты и акценты',
+            'wide': 'Споты и акценты', 'disc': 'Споты и акценты', 'bowl': 'Споты и акценты', 'pendant': 'Подвесные и декоративные', 'glass': 'Подвесные и декоративные',
+            'lunar': 'Подвесные и декоративные'}
+    kind = ''
+    if p['category'] == 'trekovye-s20':
+        fam = p['slug'][4:]
+        kind = next((val for key, val in KIND.items() if fam.startswith(key)), 'Споты и акценты')
+    elif p['category'] == 'shinoprovod-s20':
+        kind = 'Питание и управление' if p['slug'] in ('s20-track-power', 's20-track-smart') else ('Соединители' if p['slug'] == 's20-track-connectors' else 'Шинопровод')
+    if p['category'] == 'bra':
+        sw = ' '.join(v.get('switch', '') for v in vs).lower()
+        kind = ('С USB / Type-C' if 'usb' in sw or 'type-c' in sw else 'Для чтения' if 'чтени' in (p.get('lead') or '').lower() or 'изголов' in (p.get('lead') or '').lower()
+                else 'Линейные' if p['slug'] in ('wall-210', 'wall-211') else 'Уличное IP65' if p['slug'] == 'wall-600' else 'Декоративные')
+    p['kind'] = kind
     p['apps'] = C.applications(p)
     kw = {'trekovye-s20': 'трек трековый магнитный 48v s20 шинопровод', 'shinoprovod-s20': 'шинопровод трек 48v s20 блок питания tuya zigbee',
           'bra': 'бра настенный', 'lineynye': 'линейный профиль ral подвесной', 'nakladnye': 'накладной цилиндр панель потолочный',
@@ -304,15 +349,29 @@ for p in products:
 
 
 def facets(ps):
-    lines = [l for l in all_lines if any(p['line'] == l for p in ps)]
-    mounts = []
-    for p in ps:
-        if p['mount_key'] not in mounts:
-            mounts.append(p['mount_key'])
-    cct = sorted({c for p in ps for c in p['cct_list']})
-    ip = sorted({c for p in ps for c in p['ip_list']})
-    bm = [(k, n) for k, n in [('narrow', 'Узкий ≤24°'), ('mid', 'Средний 30–45°'), ('wide', 'Широкий ≥50°')] if any(k in p['beam_buckets'] for p in ps)]
-    return dict(facet_lines=lines, facet_mounts=mounts, facet_cct=cct, facet_ip=ip, facet_beam=bm, has_power=any(p['power_min'] for p in ps))
+    """Фасеты показываем только со значениями, которые реально отсеивают серии
+    (значение есть не у всех серий на странице). Иначе кнопка «ничего не меняет»."""
+    n = len(ps)
+
+    def useful(vals_of):
+        cnt = {}
+        for p in ps:
+            for v in set(vals_of(p)):
+                cnt[v] = cnt.get(v, 0) + 1
+        return {v for v, c in cnt.items() if c < n}
+
+    lines = [l for l in all_lines if l in useful(lambda p: [p['line']])]
+    mounts = [m for m in dict.fromkeys(p['mount_key'] for p in ps) if m in useful(lambda p: [p['mount_key']])]
+    cct = sorted(useful(lambda p: p['cct_list']))
+    ip = sorted(useful(lambda p: p['ip_list']))
+    bu = useful(lambda p: p['beam_buckets'])
+    bm = [(k, nm) for k, nm in [('narrow', 'Узкий ≤24°'), ('mid', 'Средний 30–45°'), ('wide', 'Широкий ≥50°')] if k in bu]
+    sh = [x for x in ['Круглый', 'Квадратный', 'Прямоугольный'] if x in useful(lambda p: p['shape_list'])]
+    kinds = [x for x in dict.fromkeys(p['kind'] for p in ps if p['kind']) if x in useful(lambda p: [p['kind']] if p['kind'] else [])]
+    ctrl = [x for x in ['DIM 3CCT', 'Tuya ZigBee', 'Triac DIM'] if x in useful(lambda p: [o['label'] for o in p['options'][1:]])]
+    powers = sorted({p['power_min'] for p in ps if p['power_min']} | {p['power_max'] for p in ps if p['power_max']})
+    return dict(facet_lines=lines, facet_mounts=mounts, facet_cct=cct, facet_ip=ip, facet_beam=bm, facet_shape=sh, facet_kind=kinds,
+                facet_ctrl=ctrl, has_power=len(powers) > 1, has_price=len({p['price_min'] for p in ps if p['price_min']}) > 1)
 
 
 render('catalog.html', '/catalog/', 0.9, title=f'Каталог светильников ADALIGHT 2026 — {TOTAL_SKU} артикулов с ценами',
@@ -476,7 +535,7 @@ print('pages:', len(pages) + 1, 'sku:', TOTAL_SKU, 'series:', TOTAL_SERIES)
 # проверка синтаксиса JS после сборки (защита от поломки при минификации)
 import subprocess
 for f in os.listdir(os.path.join(OUT, 'assets', 'js')):
-    r = subprocess.run(['node', '--check', os.path.join(OUT, 'assets', 'js', f)], capture_output=True, text=True)
+    r = subprocess.run(['node', '--check', os.path.join(OUT, 'assets', 'js', f)], capture_output=True, text=True, encoding='utf-8', errors='replace')
     if r.returncode:
         raise SystemExit('JS syntax error in ' + f + '\n' + r.stderr)
 print('js ok')

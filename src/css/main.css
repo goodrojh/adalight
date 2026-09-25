@@ -86,10 +86,12 @@ p{margin:0 0 1em}
 
 /* ---------- header ---------- */
 .hdr{position:sticky;top:0;z-index:50;background:rgba(13,13,14,.86);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);color:#fff;border-bottom:1px solid rgba(255,255,255,.06)}
-.hdr-in{display:flex;align-items:center;gap:20px;height:72px}
+.hdr-in{display:flex;align-items:center;gap:20px;height:80px}
 .logo{display:block;flex:none}
-.logo img{height:42px;width:auto}
-@media (max-width:760px){.logo img{height:34px}}
+/* надпись ADALIGHT занимает верхние 56% файла логотипа (ниже — лучи):
+   сдвигаем знак так, чтобы центр надписи совпал со средней линией меню */
+.logo img{height:42px;width:auto;transform:translateY(9px)}
+@media (max-width:760px){.logo img{height:34px;transform:translateY(7px)}}
 .nav{display:flex;gap:4px;margin-left:12px}
 .nav a,.nav button{padding:10px 12px;border-radius:8px;text-decoration:none;font-size:15px;color:#d9d9dc;background:none;border:0;cursor:pointer;display:flex;align-items:center;gap:6px}
 .nav a:hover,.nav button:hover,.nav a[aria-current=page]{color:#fff;background:rgba(255,255,255,.06)}
@@ -103,7 +105,7 @@ p{margin:0 0 1em}
 .badge[data-n="0"]{display:none}
 .burger{display:none}
 /* mega menu */
-.mega{position:absolute;left:0;right:0;top:72px;background:#111113;border-top:1px solid #222;border-bottom:1px solid #222;display:none;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
+.mega{position:absolute;left:0;right:0;top:80px;background:#111113;border-top:1px solid #222;border-bottom:1px solid #222;display:none;box-shadow:0 30px 60px -20px rgba(0,0,0,.6)}
 .mega.open{display:block;animation:drop .25s var(--ease)}
 @keyframes drop{from{opacity:0;transform:translateY(-8px)}}
 .mega-in{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;padding:24px 0 28px}
@@ -663,6 +665,8 @@ a.trust-cta:hover{background:var(--signal-2)}
 @media (max-width:760px){.phero-logo{flex-direction:column-reverse;align-items:flex-start}.phero-dev{height:44px;max-width:60%}}
 .proj-logo h3{font-size:clamp(20px,1.7vw,24px)}
 .proj-logo .pl-logo{height:40px}
+.active-f{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.chip.on{background:var(--signal);border-color:var(--signal);color:#000}
 /* print (спецификация / КП) */
 @media print{
   .hdr,.ftr,.mbar,.cta-band,.skip,.toast,[data-csv],[data-print],[data-clear],.rm,.qty button,#lead{display:none!important}

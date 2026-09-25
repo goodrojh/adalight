@@ -111,9 +111,12 @@ def add(p):
     p['schemes'] = dedupe([i for i in p['schemes'] if os.path.exists(i)])
     # фото конкретной модификации: индекс в общей галерее (для смены фото при выборе модификации)
     idx = {md5(x): n for n, x in enumerate(p['images'])}
+    sidx = {md5(x): n for n, x in enumerate(p['schemes'])}
     for v in p['variants']:
         src = v.pop('_img', None)
         v['img_i'] = idx.get(md5(src)) if src and os.path.exists(src) else None
+        sch = v.pop('_sch', None)
+        v['sch_i'] = sidx.get(md5(sch)) if sch and os.path.exists(sch) else None
     products.append(p)
     return p
 
@@ -181,15 +184,33 @@ def parse_eco(sheet_name, category, mounting):
                 v['cutout'] = ''
                 v['diffuser'] = 'PMMA'
             variants.append(v)
-        # фото по мощности из имени файла (CUVY/VEVO: 12.jpg, 18w.jpg …)
-        for v in variants:
-            if True:  # фото из папки (лучше качество) приоритетнее, чем картинка из прайса
-                wv = re.match(r'(\d+)', v['power'])
+        # фото модификаций по данным из имён файлов (фото из папки приоритетнее картинки из прайса)
+        def base(f):
+            return os.path.basename(f).lower()
+        for n, v in enumerate(variants):
+            wv = re.match(r'(\d+)', v['power'].replace('2x', ''))
+            wv = wv.group(1) if wv else None
+            pick = None
+            if series == 'DOTO':  # 1.jpg…5.jpg — те же 5 типоразмеров по возрастанию
+                cand = [f for f in imgs if base(f) == f'{n + 1}.jpg']
+                pick = cand[0] if cand else None
+            elif series == 'OCEAN':  # 双 — двойной, 方-单 — квадратный, 圆 — круглый
+                if '2x' in v['power'].lower():
+                    key = '双'
+                elif 'x' in v['cutout'].lower() or '×' in v['cutout']:
+                    key = '方-单'
+                else:
+                    key = '圆'
+                cand = [f for f in imgs if key in os.path.basename(f)]
+                pick = cand[0] if cand else None
+            elif wv:
                 for f in imgs:
-                    m = re.match(r'(\d+)w?\.', os.path.basename(f).lower())
-                    if wv and m and m.group(1) == wv.group(1):
-                        v['_img'] = f
+                    b = base(f)
+                    if re.match(r'%s w?\.' % wv, b.replace(wv, wv + ' ', 1)) or re.search(r'(^|[-_ ])%sw([-_ .]|$)' % wv, b):
+                        pick = f
                         break
+            if pick:
+                v['_img'] = pick
         # фикс явной опечатки в прайсе: DOTO 36W 360lm -> 3600 лм
         for v in variants:
             if v['model'].upper() == 'DOTO' and v['power'].startswith('36') and v['flux'].startswith('360 '):
@@ -309,8 +330,9 @@ def parse_prm(sheet_name, hdr_row, category, mounting, photo_col, scheme_col, sk
                 .replace('White', 'белый').replace('Black', 'чёрный').replace('Gold', 'золотой')
             pw = d.get('Мощность', '')
             ph = xl_images(sheet_name, r, photo_col)
+            sc = xl_images(sheet_name, r, scheme_col)
             variants.append({
-                '_img': ph[0] if ph else None,
+                '_img': ph[0] if ph else None, '_sch': sc[0] if sc else None,
                 'sku': sku + ('' if re.search(r'-\d+W?$|\d+W', sku) or sku.endswith(pw.upper().replace('W', '')) else '-' + pw.upper()),
                 'model': sku, 'power': pw.upper().replace('/W', '').replace('W', ' Вт'),
                 'flux': d.get('Световой поток', '').replace('lm/W', ' лм/Вт'),

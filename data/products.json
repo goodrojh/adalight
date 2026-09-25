@@ -173,7 +173,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1428,
-    "img_i": 13
+    "img_i": 13,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.TANGO-12W",
@@ -190,7 +191,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1632,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.TANGO-18W",
@@ -207,7 +209,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2295,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые ECO",
@@ -352,7 +355,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1402,
-    "img_i": 8
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.NANO-8W",
@@ -369,7 +373,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1658,
-    "img_i": null
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.NANO-12W",
@@ -386,7 +391,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2040,
-    "img_i": null
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.NANO-18W",
@@ -403,7 +409,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2805,
-    "img_i": null
+    "img_i": 5,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые ECO",
@@ -550,7 +557,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1785,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.CUVY-18W",
@@ -567,7 +575,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2984,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.CUVY-25W",
@@ -584,7 +593,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 3723,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.CUVY-35W",
@@ -601,7 +611,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 4845,
-    "img_i": 6
+    "img_i": 6,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые ECO",
@@ -766,7 +777,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1887,
-    "img_i": null
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.DOTO-18W",
@@ -783,7 +795,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 3034,
-    "img_i": 10
+    "img_i": 1,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.DOTO-25W",
@@ -800,7 +813,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 3825,
-    "img_i": null
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.DOTO-36W",
@@ -817,7 +831,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 4998,
-    "img_i": null
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.DOTO-45W",
@@ -834,7 +849,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 6018,
-    "img_i": null
+    "img_i": 4,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые ECO",
@@ -969,7 +985,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1785,
-    "img_i": 5
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.OCEAN-18W",
@@ -986,7 +1003,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2550,
-    "img_i": null
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.OCEAN-30W",
@@ -1003,7 +1021,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 4335,
-    "img_i": null
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.OCEAN-12W",
@@ -1020,7 +1039,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1989,
-    "img_i": 6
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.OCEAN-2X12W",
@@ -1037,7 +1057,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 3825,
-    "img_i": 7
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые ECO",
@@ -1133,7 +1154,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1479,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.REVO-12W",
@@ -1150,7 +1172,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1632,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.REVO-18W",
@@ -1167,7 +1190,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2346,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые ECO",
@@ -1264,7 +1288,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 1785,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.TENK-15W",
@@ -1281,7 +1306,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2244,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.TENK-20W",
@@ -1298,7 +1324,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2958,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.TENK-30W",
@@ -1315,7 +1342,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 3825,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые ECO",
@@ -1410,7 +1438,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2397,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.UKKIE-12W",
@@ -1427,7 +1456,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2550,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.UKKIE-8W",
@@ -1444,7 +1474,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2499,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.UKKIE-12W",
@@ -1461,7 +1492,8 @@
     "warranty": "3 года",
     "material": "Алюминий",
     "price": 2652,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые ECO",
@@ -1607,7 +1639,8 @@
     "material": "Алюминий",
     "price": 2346,
     "diffuser": "PMMA",
-    "img_i": 7
+    "img_i": 7,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.EMO-SQUARE-12W",
@@ -1625,7 +1658,8 @@
     "material": "Алюминий",
     "price": 2499,
     "diffuser": "PMMA",
-    "img_i": 8
+    "img_i": 8,
+    "sch_i": null
    }
   ],
   "sheet": "Накладные ECO",
@@ -1831,7 +1865,8 @@
     "material": "Алюминий",
     "price": 2907,
     "diffuser": "PMMA",
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.VEVO-18W",
@@ -1849,7 +1884,8 @@
     "material": "Алюминий",
     "price": 3468,
     "diffuser": "PMMA",
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.VEVO-25W",
@@ -1867,7 +1903,8 @@
     "material": "Алюминий",
     "price": 6120,
     "diffuser": "PMMA",
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.VEVO-35W",
@@ -1885,7 +1922,8 @@
     "material": "Алюминий",
     "price": 7344,
     "diffuser": "PMMA",
-    "img_i": 6
+    "img_i": 6,
+    "sch_i": null
    },
    {
     "sku": "ADA-ECO.VEVO-40W",
@@ -1903,7 +1941,8 @@
     "material": "Алюминий",
     "price": 9588,
     "diffuser": "PMMA",
-    "img_i": 8
+    "img_i": 8,
+    "sch_i": null
    }
   ],
   "sheet": "Накладные ECO",
@@ -1981,7 +2020,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 6094,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -2070,7 +2110,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 8591,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -2159,7 +2200,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 7934,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -2248,7 +2290,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 9411,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -2317,7 +2360,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 4477,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-IB.1518.10",
@@ -2433,7 +2477,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 6275,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -2512,7 +2557,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 4982,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -2591,7 +2637,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 7223,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -2700,7 +2747,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 8892,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -2819,7 +2867,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 9843,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -2938,7 +2987,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 6840,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -3007,7 +3057,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 9412,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -3116,7 +3167,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 10506,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -3275,7 +3327,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 9138,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -3394,7 +3447,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 11327,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -3483,7 +3537,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 9367,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -3582,7 +3637,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 9518,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -3741,7 +3797,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 7223,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -3860,7 +3917,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 8892,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -3999,7 +4057,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 4552,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -4108,7 +4167,8 @@
     "warranty": "5 лет",
     "material": "Алюминий",
     "price": 4983,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Встраиваемые Class A",
@@ -4240,7 +4300,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2308,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TH.7210A-8W",
@@ -4257,7 +4318,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2665,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TH.7210A-7W",
@@ -4274,7 +4336,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2483,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TH.7210A-12W",
@@ -4291,7 +4354,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3042,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TH.7210A-12W",
@@ -4308,7 +4372,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3504,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TH.7210A-15W",
@@ -4325,7 +4390,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3998,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TH.7210A-15W",
@@ -4342,7 +4408,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3809,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.TH.7210A-24W",
@@ -4359,7 +4426,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5148,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.TH.7210A-24W",
@@ -4376,7 +4444,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5518,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    },
    {
     "sku": "ADA-SG.TH.7210A-40W",
@@ -4393,7 +4462,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 7137,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    },
    {
     "sku": "ADA-SG.TH.7210A-50W",
@@ -4410,7 +4480,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 10153,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 5
    },
    {
     "sku": "ADA-SG.TH.7210A-60W",
@@ -4427,7 +4498,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 12500,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 5
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -4519,7 +4591,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2158,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7269-7W",
@@ -4536,7 +4609,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2483,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7269",
@@ -4553,7 +4627,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2828,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7269-10W",
@@ -4570,7 +4645,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2828,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7269-12W",
@@ -4587,7 +4663,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2828,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7269-15W",
@@ -4604,7 +4681,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3530,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TD.7269-15W",
@@ -4621,7 +4699,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3530,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -4712,7 +4791,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1878,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7267A-12W",
@@ -4729,7 +4809,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2158,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7267A-15W",
@@ -4746,7 +4827,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2788,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -4839,7 +4921,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1878,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7267B-10W",
@@ -4856,7 +4939,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2204,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7267B-12W",
@@ -4873,7 +4957,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2204,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7267B-15W",
@@ -4890,7 +4975,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2788,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -4993,7 +5079,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1788,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7272-7W",
@@ -5010,7 +5097,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1788,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7272-10W",
@@ -5027,7 +5115,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1970,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 2
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -5130,7 +5219,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1768,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7244VY-7W",
@@ -5147,7 +5237,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1768,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7244VY-10W",
@@ -5164,7 +5255,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2340,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7244VY-12W",
@@ -5181,7 +5273,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2340,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7244VY-15W",
@@ -5198,7 +5291,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2698,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TD.7244VY-20W",
@@ -5215,7 +5309,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2873,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -5348,7 +5443,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1814,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TH.7210B-7W",
@@ -5365,7 +5461,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2002,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TH.7210B-7W",
@@ -5382,7 +5479,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2093,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TH.7210B-10W",
@@ -5399,7 +5497,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2372,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TH.7210B-7W",
@@ -5416,7 +5515,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2184,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TH.7210B-10W",
@@ -5433,7 +5533,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2652,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TH.7210B-9W",
@@ -5450,7 +5551,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2834,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.TH.7210B-12W",
@@ -5467,7 +5569,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3022,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.TH.7210B-9/W",
@@ -5484,7 +5587,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2925,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    },
    {
     "sku": "ADA-SG.TH.7210B-12W",
@@ -5501,7 +5605,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3114,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    },
    {
     "sku": "ADA-SG.TH.7210B-12W",
@@ -5518,7 +5623,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3114,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 5
    },
    {
     "sku": "ADA-SG.TH.7210B-15W",
@@ -5535,7 +5641,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3510,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 5
    },
    {
     "sku": "ADA-SG.TH.7210B-15W",
@@ -5552,7 +5659,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3328,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 6
    },
    {
     "sku": "ADA-SG.TH.7210B-18W",
@@ -5569,7 +5677,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3783,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 6
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -5690,7 +5799,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2834,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TH.7210T-8W",
@@ -5707,7 +5817,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3204,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TH.7210T-7W",
@@ -5724,7 +5835,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2743,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TH.7210T-12W",
@@ -5741,7 +5853,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3302,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TH.7210T-12W",
@@ -5758,7 +5871,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4043,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TH.7210T-15W",
@@ -5775,7 +5889,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4998,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TH.7210T-15W",
@@ -5792,7 +5907,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4069,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.TH.7210T-24W",
@@ -5809,7 +5925,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5090,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.TH.7210T-24W",
@@ -5826,7 +5943,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5648,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    },
    {
     "sku": "ADA-SG.TH.7210T-40W",
@@ -5843,7 +5961,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 7579,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 4
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -5925,7 +6044,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2483,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.X.7518FT-7W/9W",
@@ -5942,7 +6062,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2665,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.X.7518FT-12W/15W",
@@ -5959,7 +6080,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2854,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.X.7518FT-12W/15W",
@@ -5976,7 +6098,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2977,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -6079,7 +6202,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1814,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7244VF-7W",
@@ -6096,7 +6220,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1814,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7244VF-10W",
@@ -6113,7 +6238,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2438,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7244VF-12W",
@@ -6130,7 +6256,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2438,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7244VF-15W",
@@ -6147,7 +6274,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2788,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TD.7244VF-20W",
@@ -6164,7 +6292,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3302,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -6267,7 +6396,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3244,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7244VF2-2X10W",
@@ -6284,7 +6414,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4310,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7244VF2-2X15W",
@@ -6301,7 +6432,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5018,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TD.7244VF2-2X20W",
@@ -6318,7 +6450,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6038,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -6439,7 +6572,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1644,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7239-10",
@@ -6456,7 +6590,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2112,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7239-15",
@@ -6473,7 +6608,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2509,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TD.7239-20",
@@ -6490,7 +6626,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3718,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.TD.7239-30",
@@ -6507,7 +6644,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5154,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -6628,7 +6766,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 1794,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.TD.7278S-15W",
@@ -6645,7 +6784,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2223,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.TD.7278S-24W",
@@ -6662,7 +6802,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3010,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.TD.7278S-30W",
@@ -6679,7 +6820,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4225,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.TD.7278S-35W",
@@ -6696,7 +6838,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5024,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    },
    {
     "sku": "ADA-SG.TD.7278S-40W",
@@ -6713,7 +6856,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5948,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 5
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -6862,7 +7006,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3438,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.GS.9002A-1",
@@ -6879,7 +7024,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3718,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.GS.9002A-2",
@@ -6896,7 +7042,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6123,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.GS.9002A-2",
@@ -6913,7 +7060,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6922,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.GS.9002A-3",
@@ -6930,7 +7078,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 9068,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": 4
    },
    {
     "sku": "ADA-SG.GS.9002A-3",
@@ -6947,7 +7096,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 10218,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": 5
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -7119,7 +7269,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6272,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.X.7529F2-75",
@@ -7136,7 +7287,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6714,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.X.7529F2-75",
@@ -7153,7 +7305,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6955,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.X.7529F2-75",
@@ -7170,7 +7323,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 7410,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.X.7529F2-95",
@@ -7187,7 +7341,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 8840,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.X.7529F2-95",
@@ -7204,7 +7359,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 9022,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.X.7529F2-95",
@@ -7221,7 +7377,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 9711,
-    "img_i": 6
+    "img_i": 6,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.X.7529F2-95",
@@ -7238,7 +7395,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 10842,
-    "img_i": 7
+    "img_i": 7,
+    "sch_i": 3
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -7372,7 +7530,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6422,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.X.7529FT2-75",
@@ -7389,7 +7548,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6864,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.X.7529FT2-75",
@@ -7406,7 +7566,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 7104,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.X.7529FT2-75",
@@ -7423,7 +7584,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 7475,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.X.7529FT2-95",
@@ -7440,7 +7602,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 8957,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.X.7529FT2-95",
@@ -7457,7 +7620,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 9139,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.X.7529FT2-95",
@@ -7474,7 +7638,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 9926,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.X.7529FT2-95",
@@ -7491,7 +7656,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 11044,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": 3
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -7645,7 +7811,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5902,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.X.7525Y2-2X10",
@@ -7662,7 +7829,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6669,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.X.7525Y2-2X12",
@@ -7679,7 +7847,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6669,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.X.7525Y2-2X20",
@@ -7696,7 +7865,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 9744,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.X.7525Y2-2X20A-2X20W",
@@ -7713,7 +7883,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 9815,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": 4
    },
    {
     "sku": "ADA-SG.X.7525Y2-2X30",
@@ -7730,7 +7901,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 13598,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": 5
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -7852,7 +8024,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6097,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-SG.X.7525YT2-2X10",
@@ -7869,7 +8042,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6864,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-SG.X.7525YT2-2X12",
@@ -7886,7 +8060,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 8541,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 2
    },
    {
     "sku": "ADA-SG.X.7525YT2-2X20",
@@ -7903,7 +8078,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 9938,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    },
    {
     "sku": "ADA-SG.X.7525YT2-2X20A-2X20W",
@@ -7920,7 +8096,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 11219,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 4
    },
    {
     "sku": "ADA-SG.X.7525YT2-2X30",
@@ -7937,7 +8114,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 13793,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 4
    }
   ],
   "sheet": "Встраиваемые PRM",
@@ -8029,7 +8207,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2782,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-OV.M1810Y-10/12",
@@ -8046,7 +8225,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3887,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-OV.M1810Y-15",
@@ -8063,7 +8243,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4842,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    }
   ],
   "sheet": "Накладные PRM",
@@ -8155,7 +8336,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2964,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-OV.M1810F-10/12",
@@ -8172,7 +8354,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3608,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-OV.M1810F-15",
@@ -8189,7 +8372,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5024,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    }
   ],
   "sheet": "Накладные PRM",
@@ -8331,7 +8515,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3790,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-OV.M1515Y-15",
@@ -8348,7 +8533,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4478,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-OV.M1520Y-20",
@@ -8365,7 +8551,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4830,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-OV.M1530Y-30",
@@ -8382,7 +8569,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6500,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 3
    },
    {
     "sku": "ADA-OV.M1540Y-40",
@@ -8399,7 +8587,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 8548,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    },
    {
     "sku": "ADA-OV.M1550Y-50",
@@ -8416,7 +8605,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 11082,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 5
    },
    {
     "sku": "ADA-OV.M1560Y-60",
@@ -8433,7 +8623,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 16302,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 6
    }
   ],
   "sheet": "Накладные PRM",
@@ -8545,7 +8736,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3140,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-OV.M1510F-12W",
@@ -8562,7 +8754,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3140,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-OV.M1520F-15W",
@@ -8579,7 +8772,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3822,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-OV.M1520F-20W",
@@ -8596,7 +8790,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4088,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 1
    },
    {
     "sku": "ADA-OV.M1530F-24W",
@@ -8613,7 +8808,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 5759,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-OV.M1530F-30W",
@@ -8630,7 +8826,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6130,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-OV.M1540F-35W",
@@ -8647,7 +8844,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 7553,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    },
    {
     "sku": "ADA-OV.M1540F-40W",
@@ -8664,7 +8862,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 7527,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 3
    }
   ],
   "sheet": "Накладные PRM",
@@ -8806,7 +9005,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2060,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-OV.M1712",
@@ -8823,7 +9023,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2464,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 1
    },
    {
     "sku": "ADA-OV.M1715",
@@ -8840,7 +9041,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2788,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": 2
    },
    {
     "sku": "ADA-OV.M1720",
@@ -8857,7 +9059,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3542,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 3
    },
    {
     "sku": "ADA-OV.M1725-24W",
@@ -8874,7 +9077,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4693,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    },
    {
     "sku": "ADA-OV.M1730",
@@ -8891,7 +9095,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6038,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 5
    }
   ],
   "sheet": "Накладные PRM",
@@ -9013,7 +9218,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2112,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 0
    },
    {
     "sku": "ADA-OV.M1015Y-10",
@@ -9030,7 +9236,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 2678,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 1
    },
    {
     "sku": "ADA-OV.M1015Y-18",
@@ -9047,7 +9254,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 3764,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 2
    },
    {
     "sku": "ADA-OV.M1015Y-24",
@@ -9064,7 +9272,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 4414,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": 3
    },
    {
     "sku": "ADA-OV.M1015Y-30",
@@ -9081,7 +9290,8 @@
     "material": "Алюминий",
     "warranty": "5 лет",
     "price": 6409,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": 4
    }
   ],
   "sheet": "Накладные PRM",
@@ -9147,7 +9357,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 1664,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-18W-Round",
@@ -9162,7 +9373,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 2286,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-24W-Round",
@@ -9177,7 +9389,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 2936,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-32W-Round",
@@ -9192,7 +9405,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 4697,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-40W-Round",
@@ -9207,7 +9421,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 6886,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-50W-Round",
@@ -9222,7 +9437,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 9656,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-65W-Round",
@@ -9237,7 +9453,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 20241,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "Накладные SOFI",
@@ -9288,7 +9505,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 2844,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-24W-Square",
@@ -9303,7 +9521,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 3722,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-32W-Square",
@@ -9318,7 +9537,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 6800,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-40W-Square",
@@ -9333,7 +9553,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 9029,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-50W-Square",
@@ -9348,7 +9569,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 13184,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "SF-G6-60W-Square",
@@ -9363,7 +9585,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 21153,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Накладные SOFI",
@@ -9424,7 +9647,8 @@
     "ip": "IP54",
     "material": "Алюминий / PMMA",
     "price": 3067,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SOFI-Ceilinglight-X7-18W",
@@ -9439,7 +9663,8 @@
     "ip": "IP54",
     "material": "Алюминий / PMMA",
     "price": 4202,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SOFI-Ceilinglight-X7-24W",
@@ -9454,7 +9679,8 @@
     "ip": "IP54",
     "material": "Алюминий / PMMA",
     "price": 5655,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SOFI-Ceilinglight-X7-32W",
@@ -9469,7 +9695,8 @@
     "ip": "IP54",
     "material": "Алюминий / PMMA",
     "price": 9273,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SOFI-Ceilinglight-X7-40W",
@@ -9484,7 +9711,8 @@
     "ip": "IP54",
     "material": "Алюминий / PMMA",
     "price": 9273,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "Накладные SOFI",
@@ -9545,7 +9773,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 2735,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SOFI-Ceilinglight-X7-18W",
@@ -9560,7 +9789,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 3744,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SOFI-Ceilinglight-X7-24W",
@@ -9575,7 +9805,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 5171,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SOFI-Ceilinglight-X7-32W",
@@ -9590,7 +9821,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 8921,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "SOFI-Ceilinglight-X7-40W",
@@ -9605,7 +9837,8 @@
     "ip": "IP20",
     "material": "Алюминий / PMMA",
     "price": 8921,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "Накладные SOFI",
@@ -9668,7 +9901,8 @@
     "price_dim": 9035,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "RAVOLC2300A-20W",
@@ -9685,7 +9919,8 @@
     "price_dim": 9235,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "RAVOLC2400A-20W",
@@ -9702,7 +9937,8 @@
     "price_dim": 13715,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "RAVOLC2400A-30W",
@@ -9719,7 +9955,8 @@
     "price_dim": 13915,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "RAVOLC2600A-40W",
@@ -9736,7 +9973,8 @@
     "price_dim": 25610,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "RAVOLC2600A-50W",
@@ -9753,7 +9991,8 @@
     "price_dim": 25810,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "RAVOLC2800A-60W",
@@ -9770,7 +10009,8 @@
     "price_dim": 44265,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "RAVOLC2800A-70W",
@@ -9787,7 +10027,8 @@
     "price_dim": 44365,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "RAVOLC21000A-80W",
@@ -9804,7 +10045,8 @@
     "price_dim": 62595,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "RAVOLC21000A-100W",
@@ -9821,7 +10063,8 @@
     "price_dim": 62795,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "RAVOL",
@@ -9885,7 +10128,8 @@
     "price_dim": 19350,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-RING-D600-55W",
@@ -9902,7 +10146,8 @@
     "price_dim": 22908,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-RING-D700-65W",
@@ -9919,7 +10164,8 @@
     "price_dim": 24967,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-RING-D800-75W",
@@ -9936,7 +10182,8 @@
     "price_dim": 30973,
     "warranty": "3 года",
     "material": "Алюминий",
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Кольца",
@@ -10020,7 +10267,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 4312,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-1500x35x35",
@@ -10036,7 +10284,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 5312,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-2000x35x35",
@@ -10052,7 +10301,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 7562,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    }
   ],
   "sheet": "Линейные",
@@ -10136,7 +10386,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 6562,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-1500x50x50",
@@ -10152,7 +10403,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 7750,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-2000x50x50",
@@ -10168,7 +10420,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 9438,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    }
   ],
   "sheet": "Линейные",
@@ -10252,7 +10505,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 6125,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-1500x40x75",
@@ -10268,7 +10522,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 7438,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-2000x40x75",
@@ -10284,7 +10539,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 8812,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    }
   ],
   "sheet": "Линейные",
@@ -10368,7 +10624,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 17850,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-1800x40x50",
@@ -10384,7 +10641,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 22525,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-2370x40x50",
@@ -10400,7 +10658,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 28475,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    }
   ],
   "sheet": "Линейные",
@@ -10484,7 +10743,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 21675,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-1840x50x80",
@@ -10500,7 +10760,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 28475,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "ADA-LINE-2450x50x80",
@@ -10516,7 +10777,8 @@
     "material": "Алюминий",
     "color": "Любой цвет по RAL",
     "price": 36125,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    }
   ],
   "sheet": "Линейные",
@@ -10602,7 +10864,8 @@
     "price": 1031,
     "price_dip": null,
     "price_zigbee": 3219,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-18TA",
@@ -10619,7 +10882,8 @@
     "price": 1438,
     "price_dip": null,
     "price_zigbee": 3625,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-24TA",
@@ -10636,7 +10900,8 @@
     "price": 1812,
     "price_dip": null,
     "price_zigbee": 4000,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -10710,7 +10975,8 @@
     "price": 1031,
     "price_dip": null,
     "price_zigbee": 3219,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-600FA",
@@ -10727,7 +10993,8 @@
     "price": 1562,
     "price_dip": null,
     "price_zigbee": 3750,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-900FA",
@@ -10744,7 +11011,8 @@
     "price": 2062,
     "price_dip": null,
     "price_zigbee": 4250,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -10918,7 +11186,8 @@
     "price": 1031,
     "price_dip": 1188,
     "price_zigbee": 3219,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-12T",
@@ -10935,7 +11204,8 @@
     "price": 1375,
     "price_dip": 1594,
     "price_zigbee": 3562,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-18T",
@@ -10952,7 +11222,8 @@
     "price": 1719,
     "price_dip": 2000,
     "price_zigbee": 3906,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-24T",
@@ -10969,7 +11240,8 @@
     "price": 2250,
     "price_dip": 2594,
     "price_zigbee": 4438,
-    "img_i": 7
+    "img_i": 7,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-30T",
@@ -10986,7 +11258,8 @@
     "price": 2750,
     "price_dip": 3156,
     "price_zigbee": 4938,
-    "img_i": 9
+    "img_i": 9,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-60T",
@@ -11003,7 +11276,8 @@
     "price": 4938,
     "price_dip": 5781,
     "price_zigbee": 9312,
-    "img_i": 11
+    "img_i": 11,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -11107,7 +11381,8 @@
     "price": 1188,
     "price_dip": 1344,
     "price_zigbee": 3375,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-12TP",
@@ -11124,7 +11399,8 @@
     "price": 1688,
     "price_dip": 1906,
     "price_zigbee": 3875,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-18TP",
@@ -11141,7 +11417,8 @@
     "price": 2156,
     "price_dip": 2438,
     "price_zigbee": 4344,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -11275,7 +11552,8 @@
     "price": 1219,
     "price_dip": 1438,
     "price_zigbee": 3406,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-600F",
@@ -11292,7 +11570,8 @@
     "price": 1844,
     "price_dip": 2188,
     "price_zigbee": 4031,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-900F",
@@ -11309,7 +11588,8 @@
     "price": 2438,
     "price_dip": 2906,
     "price_zigbee": 4625,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-1200F",
@@ -11326,7 +11606,8 @@
     "price": 3938,
     "price_dip": 4531,
     "price_zigbee": 8312,
-    "img_i": 7
+    "img_i": 7,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -11400,7 +11681,8 @@
     "price": 3062,
     "price_dip": 3406,
     "price_zigbee": 5250,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -11604,7 +11886,8 @@
     "price": 1375,
     "price_dip": 1531,
     "price_zigbee": 3562,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-12TX",
@@ -11621,7 +11904,8 @@
     "price": 1938,
     "price_dip": 2156,
     "price_zigbee": 4125,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-18TX",
@@ -11638,7 +11922,8 @@
     "price": 2438,
     "price_dip": 2719,
     "price_zigbee": 4625,
-    "img_i": 10
+    "img_i": 10,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-24TX",
@@ -11655,7 +11940,8 @@
     "price": 2938,
     "price_dip": 3281,
     "price_zigbee": 5125,
-    "img_i": 13
+    "img_i": 13,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-30TX",
@@ -11672,7 +11958,8 @@
     "price": 3375,
     "price_dip": 3781,
     "price_zigbee": 5562,
-    "img_i": 15
+    "img_i": 15,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -11786,7 +12073,8 @@
     "price": 1844,
     "price_dip": 2062,
     "price_zigbee": 4031,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-600FX",
@@ -11803,7 +12091,8 @@
     "price": 2594,
     "price_dip": 2938,
     "price_zigbee": 4781,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-900FX",
@@ -11820,7 +12109,8 @@
     "price": 3438,
     "price_dip": 3906,
     "price_zigbee": 5625,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -11944,7 +12234,8 @@
     "price": 1750,
     "price_dip": 1969,
     "price_zigbee": 3938,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-SS600F",
@@ -11961,7 +12252,8 @@
     "price": 2281,
     "price_dip": 2625,
     "price_zigbee": 4469,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-SS900F",
@@ -11978,7 +12270,8 @@
     "price": 2719,
     "price_dip": 3188,
     "price_zigbee": 4906,
-    "img_i": 6
+    "img_i": 6,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12042,7 +12335,8 @@
     "price": 2750,
     "price_dip": 3031,
     "price_zigbee": 4938,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12166,7 +12460,8 @@
     "price": 2344,
     "price_dip": 2500,
     "price_zigbee": 4531,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CX003-12T",
@@ -12183,7 +12478,8 @@
     "price": 2969,
     "price_dip": 3188,
     "price_zigbee": 5156,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12287,7 +12583,8 @@
     "price": 2344,
     "price_dip": 2500,
     "price_zigbee": 4531,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CX003-12F",
@@ -12304,7 +12601,8 @@
     "price": 2969,
     "price_dip": 3188,
     "price_zigbee": 5156,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12388,7 +12686,8 @@
     "price": 3250,
     "price_dip": 3594,
     "price_zigbee": 5438,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CX003-10T",
@@ -12405,7 +12704,8 @@
     "price": 4750,
     "price_dip": 5219,
     "price_zigbee": 6938,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12519,7 +12819,8 @@
     "price": 938,
     "price_dip": null,
     "price_zigbee": null,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-HX02",
@@ -12536,7 +12837,8 @@
     "price": 938,
     "price_dip": null,
     "price_zigbee": null,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12620,7 +12922,8 @@
     "price": 3812,
     "price_dip": 4031,
     "price_zigbee": 6000,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12734,7 +13037,8 @@
     "price": 2312,
     "price_dip": 2594,
     "price_zigbee": 4500,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CXB90",
@@ -12751,7 +13055,8 @@
     "price": 2125,
     "price_dip": 2406,
     "price_zigbee": 4312,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CXG90",
@@ -12768,7 +13073,8 @@
     "price": 2312,
     "price_dip": 2594,
     "price_zigbee": 4500,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12834,7 +13140,8 @@
     "price": 2906,
     "price_dip": 3250,
     "price_zigbee": 5094,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12898,7 +13205,8 @@
     "price": 2250,
     "price_dip": 2469,
     "price_zigbee": 4438,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -12962,7 +13270,8 @@
     "price": 2875,
     "price_dip": 3156,
     "price_zigbee": 5062,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -13036,7 +13345,8 @@
     "price": 2750,
     "price_dip": 2969,
     "price_zigbee": 4938,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-P95",
@@ -13053,7 +13363,8 @@
     "price": 2062,
     "price_dip": 2281,
     "price_zigbee": 4250,
-    "img_i": 1
+    "img_i": 1,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-BL150",
@@ -13070,7 +13381,8 @@
     "price": 4000,
     "price_dip": 4281,
     "price_zigbee": 6188,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -13255,7 +13567,8 @@
     "price": 2125,
     "price_dip": 2344,
     "price_zigbee": 4312,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CX035",
@@ -13272,7 +13585,8 @@
     "price": 1812,
     "price_dip": 2031,
     "price_zigbee": 4000,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CX045",
@@ -13289,7 +13603,8 @@
     "price": 2062,
     "price_dip": 2344,
     "price_zigbee": 4250,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CX055",
@@ -13306,7 +13621,8 @@
     "price": 2531,
     "price_dip": 2875,
     "price_zigbee": 4719,
-    "img_i": 6
+    "img_i": 6,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CX065",
@@ -13323,7 +13639,8 @@
     "price": 3156,
     "price_dip": 3562,
     "price_zigbee": 5344,
-    "img_i": 8
+    "img_i": 8,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CX060",
@@ -13340,7 +13657,8 @@
     "price": 2781,
     "price_dip": 3125,
     "price_zigbee": 4969,
-    "img_i": 10
+    "img_i": 10,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CX070",
@@ -13357,7 +13675,8 @@
     "price": 3438,
     "price_dip": 3844,
     "price_zigbee": 5625,
-    "img_i": 12
+    "img_i": 12,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -13481,7 +13800,8 @@
     "price": 2938,
     "price_dip": null,
     "price_zigbee": null,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CXT045N",
@@ -13498,7 +13818,8 @@
     "price": 3250,
     "price_dip": null,
     "price_zigbee": null,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CXT055N",
@@ -13515,7 +13836,8 @@
     "price": 3875,
     "price_dip": 4219,
     "price_zigbee": 6062,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CXT065N",
@@ -13532,7 +13854,8 @@
     "price": 4750,
     "price_dip": 6188,
     "price_zigbee": 6938,
-    "img_i": 6
+    "img_i": 6,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -13687,7 +14010,8 @@
     "price": 3812,
     "price_dip": 4838,
     "price_zigbee": 6000,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-DP95",
@@ -13704,7 +14028,8 @@
     "price": 2250,
     "price_dip": 2962,
     "price_zigbee": 4438,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-DBL150",
@@ -13721,7 +14046,8 @@
     "price": 4000,
     "price_dip": 5138,
     "price_zigbee": 6188,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CXD150-DQ",
@@ -13738,7 +14064,8 @@
     "price": 3688,
     "price_dip": 4688,
     "price_zigbee": 5875,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CXD150-YQ",
@@ -13755,7 +14082,8 @@
     "price": 3688,
     "price_dip": 4688,
     "price_zigbee": 5875,
-    "img_i": 8
+    "img_i": 8,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -13840,7 +14168,8 @@
     "price": 2500,
     "price_dip": 3338,
     "price_zigbee": 4688,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CXDSL300",
@@ -13857,7 +14186,8 @@
     "price": 3188,
     "price_dip": 4162,
     "price_zigbee": 5375,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -13941,7 +14271,8 @@
     "price": 4062,
     "price_dip": 5212,
     "price_zigbee": 6250,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-CXDYT100",
@@ -13958,7 +14289,8 @@
     "price": 5125,
     "price_dip": 6488,
     "price_zigbee": 7312,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -14074,7 +14406,8 @@
     "price": 2906,
     "price_dip": null,
     "price_zigbee": null,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-GJ1000",
@@ -14091,7 +14424,8 @@
     "price": 3812,
     "price_dip": null,
     "price_zigbee": null,
-    "img_i": 2
+    "img_i": 2,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-GJ1500",
@@ -14108,7 +14442,8 @@
     "price": 5062,
     "price_dip": null,
     "price_zigbee": null,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-GJ2000",
@@ -14125,7 +14460,8 @@
     "price": 6188,
     "price_dip": null,
     "price_zigbee": null,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-GJ3000",
@@ -14142,7 +14478,8 @@
     "price": 7938,
     "price_dip": null,
     "price_zigbee": null,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "S20",
@@ -14268,7 +14605,8 @@
     "size": "1000 × 26 × 27 мм",
     "voltage": "DC 48 В",
     "price": 1250,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-A.1500",
@@ -14277,7 +14615,8 @@
     "size": "1500 × 26 × 27 мм",
     "voltage": "DC 48 В",
     "price": 1875,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-A.2000",
@@ -14286,7 +14625,8 @@
     "size": "2000 × 26 × 27 мм",
     "voltage": "DC 48 В",
     "price": 2500,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-A.3000",
@@ -14295,7 +14635,8 @@
     "size": "3000 × 26 × 27 мм",
     "voltage": "DC 48 В",
     "price": 3750,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-A-LV",
@@ -14304,7 +14645,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-A-L",
@@ -14313,7 +14655,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 6
+    "img_i": 6,
+    "sch_i": null
    }
   ],
   "sheet": "Шинопровод",
@@ -14433,7 +14776,8 @@
     "size": "1000 × 53 × 20 мм",
     "voltage": "DC 48 В",
     "price": 1250,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-B.1500",
@@ -14442,7 +14786,8 @@
     "size": "1500 × 53 × 20 мм",
     "voltage": "DC 48 В",
     "price": 1875,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-B.2000",
@@ -14451,7 +14796,8 @@
     "size": "2000 × 53 × 20 мм",
     "voltage": "DC 48 В",
     "price": 2500,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-B.3000",
@@ -14460,7 +14806,8 @@
     "size": "3000 × 53 × 20 мм",
     "voltage": "DC 48 В",
     "price": 3750,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-B-LV",
@@ -14469,7 +14816,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-B-L",
@@ -14478,7 +14826,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 6
+    "img_i": 6,
+    "sch_i": null
    }
   ],
   "sheet": "Шинопровод",
@@ -14668,7 +15017,8 @@
     "size": "50 × 20 × 5 мм",
     "voltage": "DC 48 В",
     "price": 112,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-C.1000",
@@ -14677,7 +15027,8 @@
     "size": "1000 × 27 × 55 мм",
     "voltage": "DC 48 В",
     "price": 1656,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-C.1500",
@@ -14686,7 +15037,8 @@
     "size": "1500 × 27 × 55 мм",
     "voltage": "DC 48 В",
     "price": 2484,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-C.2000",
@@ -14695,7 +15047,8 @@
     "size": "2000 × 27 × 55 мм",
     "voltage": "DC 48 В",
     "price": 3312,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-C.3000",
@@ -14704,7 +15057,8 @@
     "size": "3000 × 27 × 55 мм",
     "voltage": "DC 48 В",
     "price": 4969,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-C-LV",
@@ -14713,7 +15067,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 10
+    "img_i": 10,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-C-L",
@@ -14722,7 +15077,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 15
+    "img_i": 15,
+    "sch_i": null
    }
   ],
   "sheet": "Шинопровод",
@@ -14912,7 +15268,8 @@
     "size": "1000 × 65 × 55 мм",
     "voltage": "DC 48 В",
     "price": 1719,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-D.1500",
@@ -14921,7 +15278,8 @@
     "size": "1500 × 65 × 55 мм",
     "voltage": "DC 48 В",
     "price": 2578,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-D.2000",
@@ -14930,7 +15288,8 @@
     "size": "2000 × 65 × 55 мм",
     "voltage": "DC 48 В",
     "price": 3438,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-D.3000",
@@ -14939,7 +15298,8 @@
     "size": "3000 × 65 × 55 мм",
     "voltage": "DC 48 В",
     "price": 5156,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-D-LV",
@@ -14948,7 +15308,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 7
+    "img_i": 7,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-D-L",
@@ -14957,7 +15318,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 12
+    "img_i": 12,
+    "sch_i": null
    }
   ],
   "sheet": "Шинопровод",
@@ -15117,7 +15479,8 @@
     "size": "1000 × 65 × 55 мм",
     "voltage": "DC 48 В",
     "price": 1781,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-E.1500",
@@ -15126,7 +15489,8 @@
     "size": "1500 × 65 × 55 мм",
     "voltage": "DC 48 В",
     "price": 2672,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-E.2000",
@@ -15135,7 +15499,8 @@
     "size": "2000 × 65 × 55 мм",
     "voltage": "DC 48 В",
     "price": 3562,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-E.3000",
@@ -15144,7 +15509,8 @@
     "size": "3000 × 65 × 55 мм",
     "voltage": "DC 48 В",
     "price": 5344,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-E-LV",
@@ -15153,7 +15519,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 5
+    "img_i": 5,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-E-L",
@@ -15162,7 +15529,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 562,
-    "img_i": 9
+    "img_i": 9,
+    "sch_i": null
    }
   ],
   "sheet": "Шинопровод",
@@ -15352,7 +15720,8 @@
     "size": "L2000 × W56 × H46 мм",
     "voltage": "DC 48 В",
     "price": 6125,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-RM-QRPC.3000",
@@ -15361,7 +15730,8 @@
     "size": "L3000 × W56 × H46 мм",
     "voltage": "DC 48 В",
     "price": 9188,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-RM-QRPC-DT",
@@ -15370,7 +15740,8 @@
     "size": "56 × 46 × 1 мм",
     "voltage": "DC 48 В",
     "price": 94,
-    "img_i": 9
+    "img_i": 9,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-RM-QRPC-L",
@@ -15379,7 +15750,8 @@
     "size": "100 × 100 × 46 мм",
     "voltage": "DC 48 В",
     "price": 938,
-    "img_i": 12
+    "img_i": 12,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-RM-MZ-C.2000",
@@ -15388,7 +15760,8 @@
     "size": "L2000 × W58 × H55 мм",
     "voltage": "DC 48 В",
     "price": 3750,
-    "img_i": 18
+    "img_i": 18,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-RM-MZ-C.3000",
@@ -15397,7 +15770,8 @@
     "size": "L3000 × W58 × H55 мм",
     "voltage": "DC 48 В",
     "price": 5625,
-    "img_i": 18
+    "img_i": 18,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-RM-MZ-C-DT",
@@ -15406,7 +15780,8 @@
     "size": "58 × 55 × 1 мм",
     "voltage": "DC 48 В",
     "price": 94,
-    "img_i": 9
+    "img_i": 9,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-RM-MZ-C-L",
@@ -15415,7 +15790,8 @@
     "size": "100 × 100 × 55 мм",
     "voltage": "DC 48 В",
     "price": 938,
-    "img_i": 29
+    "img_i": 29,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS-RM-SPJG",
@@ -15424,7 +15800,8 @@
     "size": "40 × 40 × 1.5 мм",
     "voltage": "DC 48 В",
     "price": 62,
-    "img_i": 33
+    "img_i": 33,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS-RM-CZJG",
@@ -15433,7 +15810,8 @@
     "size": "40 × 10 × 1.5 мм",
     "voltage": "DC 48 В",
     "price": 62,
-    "img_i": 37
+    "img_i": 37,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS-RM-JG",
@@ -15442,7 +15820,8 @@
     "size": "80 × 10 × 1.5 мм",
     "voltage": "DC 48 В",
     "price": 62,
-    "img_i": 40
+    "img_i": 40,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS-RM-JM",
@@ -15451,7 +15830,8 @@
     "size": "40 × 30 × 40 Thickness 3 мм",
     "voltage": "DC 48 В",
     "price": 112,
-    "img_i": 46
+    "img_i": 46,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS-RM-GJT",
@@ -15460,7 +15840,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 94,
-    "img_i": 50
+    "img_i": 50,
+    "sch_i": null
    }
   ],
   "sheet": "Шинопровод",
@@ -15650,7 +16031,8 @@
     "size": "Длина 260 мм",
     "voltage": "DC 48 В",
     "price": 375,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-I",
@@ -15659,7 +16041,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 375,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-RJ",
@@ -15668,7 +16051,8 @@
     "size": "Длина 170 мм",
     "voltage": "DC 48 В",
     "price": 500,
-    "img_i": 8
+    "img_i": 8,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS-PJ-S20",
@@ -15677,7 +16061,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 94,
-    "img_i": 12
+    "img_i": 12,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS-DX",
@@ -15686,7 +16071,8 @@
     "size": "—",
     "voltage": "DC 48 В",
     "price": 406,
-    "img_i": 16
+    "img_i": 16,
+    "sch_i": null
    }
   ],
   "sheet": "Шинопровод",
@@ -15806,7 +16192,8 @@
     "size": "L235 × W22 × H25 мм",
     "voltage": "DC 48 В",
     "price": 2500,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-200W",
@@ -15815,7 +16202,8 @@
     "size": "L300 × W22 × H25 мм",
     "voltage": "DC 48 В",
     "price": 3312,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-100W-TUYA ZigBee",
@@ -15824,7 +16212,8 @@
     "size": "L280 × W23.5 × H24.5 мм",
     "voltage": "DC 48 В",
     "price": 5188,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS26-200W-TUYA ZigBee",
@@ -15833,7 +16222,8 @@
     "size": "L300 × W23.5 × H24.5 мм",
     "voltage": "DC 48 В",
     "price": 6562,
-    "img_i": 4
+    "img_i": 4,
+    "sch_i": null
    }
   ],
   "sheet": "Шинопровод",
@@ -15933,7 +16323,8 @@
     "size": "60 × 60 × 15 мм",
     "voltage": "DC 48 В",
     "price": 7188,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "AL-TR.48.HS-RC-TUYA ZigBee",
@@ -15942,7 +16333,8 @@
     "size": "154 × 44 × 10 мм",
     "voltage": "DC 48 В",
     "price": 5500,
-    "img_i": 3
+    "img_i": 3,
+    "sch_i": null
    }
   ],
   "sheet": "Шинопровод",
@@ -15984,7 +16376,8 @@
     "power": "2.6 Вт",
     "switch": "Кнопочный выключатель",
     "price": 1110,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16026,7 +16419,8 @@
     "power": "3 Вт",
     "switch": "Кнопочный выключатель",
     "price": 3600,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-501-2",
@@ -16037,7 +16431,8 @@
     "power": "3 Вт",
     "switch": "Кнопочный выключатель",
     "price": 3750,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16079,7 +16474,8 @@
     "power": "3 Вт",
     "switch": "Скрытый кнопочный переключатель + USB",
     "price": 3675,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-504-2",
@@ -16090,7 +16486,8 @@
     "power": "3 Вт",
     "switch": "Скрытый кнопочный переключатель + USB",
     "price": 3825,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16132,7 +16529,8 @@
     "power": "3 Вт",
     "switch": "Скрытый кнопочный переключатель + USB",
     "price": 3450,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-505-2",
@@ -16143,7 +16541,8 @@
     "power": "3 Вт",
     "switch": "Скрытый кнопочный переключатель + USB",
     "price": 3600,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16185,7 +16584,8 @@
     "power": "3 Вт",
     "switch": "Скрытый кнопочный переключатель +USB—type-c",
     "price": 3150,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-547-2",
@@ -16196,7 +16596,8 @@
     "power": "3 Вт",
     "switch": "Скрытый кнопочный переключатель +USB—type-c",
     "price": 3600,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16238,7 +16639,8 @@
     "power": "3 Вт",
     "switch": "Скрытый нажимной выключатель",
     "price": 2250,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-218-2",
@@ -16249,7 +16651,8 @@
     "power": "3 Вт",
     "switch": "Скрытый нажимной выключатель",
     "price": 2400,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16291,7 +16694,8 @@
     "power": "12 Вт",
     "switch": "Цепной выключатель",
     "price": 2512,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16333,7 +16737,8 @@
     "power": "6 Вт",
     "switch": "—",
     "price": 1725,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16375,7 +16780,8 @@
     "power": "16 Вт",
     "switch": "—",
     "price": 1875,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-210-2",
@@ -16386,7 +16792,8 @@
     "power": "16 Вт",
     "switch": "—",
     "price": 2175,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-210-3",
@@ -16397,7 +16804,8 @@
     "power": "16 Вт",
     "switch": "—",
     "price": 2400,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16439,7 +16847,8 @@
     "power": "16 Вт",
     "switch": "—",
     "price": 1875,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-211-2",
@@ -16450,7 +16859,8 @@
     "power": "16 Вт",
     "switch": "—",
     "price": 2175,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-211-3",
@@ -16461,7 +16871,8 @@
     "power": "16 Вт",
     "switch": "—",
     "price": 2400,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16503,7 +16914,8 @@
     "power": "3 Вт",
     "switch": "Скрытый нажимной выключатель",
     "price": 3075,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-319-2",
@@ -16514,7 +16926,8 @@
     "power": "3 Вт",
     "switch": "Скрытый нажимной выключатель",
     "price": 3225,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16556,7 +16969,8 @@
     "power": "3 Вт",
     "switch": "Кнопочный выключатель",
     "price": 3750,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-502-2",
@@ -16567,7 +16981,8 @@
     "power": "3 Вт",
     "switch": "Кнопочный выключатель",
     "price": 3900,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16609,7 +17024,8 @@
     "power": "3 Вт",
     "switch": "Скрытый нажимной выключатель",
     "price": 5400,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    },
    {
     "sku": "ADA-WALL-518-2",
@@ -16620,7 +17036,8 @@
     "power": "3 Вт",
     "switch": "Скрытый нажимной выключатель",
     "price": 5625,
-    "img_i": null
+    "img_i": null,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
@@ -16662,7 +17079,8 @@
     "power": "20 Вт",
     "switch": "IP65",
     "price": 3150,
-    "img_i": 0
+    "img_i": 0,
+    "sch_i": null
    }
   ],
   "sheet": "Бра",
