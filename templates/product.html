@@ -8,10 +8,10 @@
    <div class="gallery">
     {% set g = p.images + p.schemes %}
     <div class="gmain" role="button" tabindex="0" aria-label="Увеличить фото">
-     {% if g %}<img src="{{ g[0].lg }}" srcset="{{ g[0].srcset }}" sizes="(max-width:900px) 100vw, 50vw" width="{{ g[0].w }}" height="{{ g[0].h }}" alt="{{ p.name }} — {{ cat.name|lower }}" fetchpriority="high" data-lg="{{ g[0].lg }}">{% endif %}
+     {% if g %}<img src="{{ g[0].lg }}" srcset="{{ g[0].srcset }}" sizes="(max-width:900px) 100vw, 50vw" width="{{ g[0].w }}" height="{{ g[0].h }}" alt="{{ p.name }} — {{ cat.name|lower }}" fetchpriority="high" data-lg="{{ g[0].lg }}" style="width:min(100%,{{ (g[0].w * 1.5)|round|int }}px);height:min(100%,{{ (g[0].h * 1.5)|round|int }}px)">{% endif %}
     </div>
     {% if g|length > 1 %}<div class="gthumbs">
-     {% for im in g %}<button type="button" aria-label="Фото {{ loop.index }}" aria-current="{{ 'true' if loop.first else 'false' }}" data-src="{{ im.lg }}" data-srcset="{{ im.srcset }}" data-lg="{{ im.lg }}"><img src="{{ im.src }}" alt="" loading="lazy" width="76" height="76"></button>{% endfor %}
+     {% for im in g %}<button type="button" aria-label="Фото {{ loop.index }}" aria-current="{{ 'true' if loop.first else 'false' }}" data-src="{{ im.lg }}" data-srcset="{{ im.srcset }}" data-lg="{{ im.lg }}" data-w="{{ im.w }}" data-h="{{ im.h }}"><img src="{{ im.src }}" alt="" loading="lazy" width="76" height="76"></button>{% endfor %}
     </div>{% endif %}
    </div>
    <div class="pinfo">
@@ -131,7 +131,7 @@
   /* фото: выбран цвет — фото цвета; иначе фото/чертёж модификации; если своего нет — главное фото */
   if(e&&e.target&&e.target.name==='color')show(+c.dataset.img);
   else if(e&&e.target&&e.target.name==='opt'){}
-  else show(v.img!=null?v.img:(c?+c.dataset.img:0));
+  else if(e)show(v.img!=null?v.img:(c?+c.dataset.img:0)); /* при открытии страницы — всегда главное фото товара */
   var b=document.querySelector('[data-beam]');if(b&&v.lm){var f=b.querySelector('[name=f]');if(f){f.value=v.lm;f.dispatchEvent(new Event('input'));}}
  }
  [].forEach.call(document.querySelectorAll('input[name=color]'),function(i){i.addEventListener('change',upd);});

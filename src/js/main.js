@@ -256,6 +256,8 @@
     thumbs.forEach(function (b, i) {
       b.addEventListener('click', function () {
         cur = i; main.src = b.getAttribute('data-src'); main.srcset = b.getAttribute('data-srcset') || '';
+        /* маленькие картинки (из прайса) не растягиваем больше чем в 1,5 раза — иначе размытость */
+        main.style.width = 'min(100%,' + Math.round(b.getAttribute('data-w') * 1.5) + 'px)'; main.style.height = 'min(100%,' + Math.round(b.getAttribute('data-h') * 1.5) + 'px)';
         thumbs.forEach(function (x) { x.setAttribute('aria-current', x === b); });
       });
     });

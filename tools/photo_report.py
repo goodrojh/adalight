@@ -47,13 +47,20 @@ def thumb(path, size=150):
         return ''
 
 
+BOX = 610  # окно главного фото на странице товара (десктоп), px
+
+
 def verdict(w, h):
-    m = max(w, h)
-    if m < 800:
-        return 'low', 'Низкое — исходник маленький'
-    if m < 1500:
-        return 'mid', 'Среднее'
-    return 'good', 'Хорошее'
+    """Оценка по тому, как фото выглядит на сайте: во сколько раз его нужно растянуть,
+    чтобы заполнить окно галереи. Больше 1,6 раза — заметно мелко/размыто."""
+    if not w or not h:
+        return 'low', 'Плохо'
+    up = min(BOX / w, BOX / h)
+    if up > 1.6:
+        return 'low', 'Плохо на сайте — мелкое/размытое'
+    if up > 1.0:
+        return 'mid', 'Приемлемо'
+    return 'good', 'Хорошо'
 
 
 RULES = [
@@ -74,7 +81,7 @@ def main():
     cats = {k: v['short'] for k, v in C.CATEGORIES.items()}
     used = set()
     rows_html, n_all, n_low, n_ser_low = [], 0, 0, 0
-    QUAL = []
+    QUAL = []; SRCS = []
     for cat in C.CAT_ORDER:
         ps = [p for p in P if p['category'] == cat]
         rows_html.append(f'<h2 id="{cat}">{html.escape(cats[cat])} <small>{len(ps)} серий</small></h2>')
@@ -91,12 +98,14 @@ def main():
                     except Exception:
                         w = h = 0
                     cls, vtxt = verdict(w, h)
-                    n_all += 1; n_low += cls == 'low'; QUAL.append(cls); ser_q.append(cls)
+                    if 'xlimg' in src and max(w, h) < 1000:  # сжатое превью, вставленное в прайс
+                        cls, vtxt = 'low', 'Плохо на сайте — сжатая картинка из прайса'
+                    n_all += 1; n_low += cls == 'low'; QUAL.append(cls); SRCS.append('xlimg' in src); ser_q.append(cls)
                     where, name = describe(src)
-                    site = (f'{wlist[i]["w"]}×{wlist[i]["h"]}' + (' (уменьшено для скорости)' if wlist[i]['w'] < w else ' (как исходник)')) if on_site else 'не показывается (лимит 16 фото на серию)'
+                    srcname = 'картинка из прайса (Excel)' if 'xlimg' in src else 'фото из папки / архива'
                     link = 'file:///' + os.path.abspath(src).replace('\\', '/') if not src.startswith(os.path.join(os.path.dirname(ROOT), '_work')) or '/_work/edits/' in src.replace('\\', '/') else ''
                     cards.append(f'<figure class="{cls}"><img src="{thumb(src)}" alt=""><figcaption><b>{kind} {i + 1}</b> · <span class="q">{vtxt}</span><br>'
-                                 f'Исходник: {w}×{h}<br>На сайте: {site}<br><span class="src">{html.escape(where)}<br><i>{html.escape(name)}</i></span>'
+                                 f'Размер: {w}×{h} px · {srcname}<br><span class="src">{html.escape(where)}<br><i>{html.escape(name)}</i></span>'
                                  + '</figcaption></figure>')
             n_ser_low += bool(ser_q) and all(q == 'low' for q in ser_q)
             vtxt = ', '.join(v['sku'] for v in p['variants'][:6]) + (' …' if len(p['variants']) > 6 else '')
@@ -135,11 +144,13 @@ def main():
     unused = [f for f in unused if not reason(f).startswith(('Точная копия', 'Заменено', 'Старое фото'))]
     un_html = ''.join(f'<figure class="low"><img src="{thumb(f, 110)}" alt=""><figcaption><b>{html.escape(reason(f))}</b><br><span class="src">{html.escape(os.path.relpath(f, SRC))}</span></figcaption></figure>' for f in unused)
     n_mid = sum(1 for x in QUAL if x == 'mid'); n_good = sum(1 for x in QUAL if x == 'good')
+    low_xls = sum(1 for q, x in zip(QUAL, SRCS) if q == 'low' and x)
     summary = (f'<div class="sum"><div><b>{n_all}</b>фото и чертежей на страницах товаров</div>'
-               f'<div class="bad"><b>{n_low}</b>низкого качества (меньше 800 px)</div>'
-               f'<div class="mid"><b>{n_mid}</b>среднего качества (800–1499 px)</div>'
-               f'<div class="ok"><b>{n_good}</b>хорошего качества (от 1500 px)</div></div>'
-               f'<p>Серий, где все фото низкого качества: <b>{n_ser_low}</b> из {len(P)}.</p>')
+               f'<div class="bad"><b>{n_low}</b>выглядят на сайте плохо — мелкие / размытые</div>'
+               f'<div class="mid"><b>{n_mid}</b>приемлемо</div>'
+               f'<div class="ok"><b>{n_good}</b>выглядят хорошо</div></div>' +
+               (f'<p>Все {n_low} фото плохого качества — картинки, вставленные в прайс (Excel): для этих серий отдельных фото в материалах не было, фото из папок выглядят хорошо. ' if low_xls == n_low else f'<p>Из {n_low} фото плохого качества {low_xls} — картинки, вставленные в прайс (Excel). ') +
+               f'Серий, где все фото плохого качества: <b>{n_ser_low}</b> из {len(P)}. Их список — ниже в каждом разделе (красная рамка).</p>')
     rules = ''.join(f'<tr><td><b>{html.escape(a)}</b></td><td>{html.escape(b)}</td></tr>' for a, b in RULES)
     page = f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Карта фото сайта ADALIGHT</title>
 <style>body{{font:14px/1.45 Segoe UI,Arial,sans-serif;margin:0;color:#141416;background:#f4f4f2}}header{{background:#0d0d0e;color:#fff;padding:28px 32px}}
@@ -149,7 +160,7 @@ h2 small{{font-size:14px;color:#777;font-weight:400}}.ser{{background:#fff;borde
 figure img{{width:100%;height:150px;object-fit:contain;background:#f7f7f5;display:block}}figcaption{{padding:8px 10px;font-size:12px}}.src{{color:#666}}
 figure.low{{border-color:#e8836f}}figure.low .q{{color:#c0392b;font-weight:600}}figure.mid .q{{color:#b7791f;font-weight:600}}figure.good .q{{color:#2f855a;font-weight:600}}
 table{{border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}}td{{padding:8px 12px;border-bottom:1px solid #eee;vertical-align:top}}nav a{{margin-right:14px}}.sum{{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 4px}}.sum div{{background:#fff;border-radius:12px;padding:14px 18px;min-width:200px}}.sum b{{display:block;font-size:30px}}.sum .bad b{{color:#c0392b}}.sum .mid b{{color:#b7791f}}.sum .ok b{{color:#2f855a}}.note{{background:#fff8dc;border-left:4px solid #ffc603;padding:12px 16px;border-radius:8px}}</style></head><body>
-<header><h1>Карта фото сайта ADALIGHT</h1><div>Каждое фото на странице товара: откуда взято, размер исходника и размер на сайте. Всего фото: {n_all} · низкого качества: {n_low}.</div></header><main>
+<header><h1>Карта фото сайта ADALIGHT</h1><div>Каждое фото на странице товара: откуда взято и как выглядит на сайте. Всего фото: {n_all} · выглядят на сайте плохо: {n_low}.</div></header><main>
 {summary}
 <nav>{"".join(f'<a href="#{c}">{html.escape(cats[c])}</a>' for c in C.CAT_ORDER)}<a href="#unused">Не использованы</a></nav>
 <h2>Правила: откуда берутся фото каждой серии</h2><table>{rules}</table>
