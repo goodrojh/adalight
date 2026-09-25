@@ -100,6 +100,25 @@ def beams(t):
 products = []
 
 
+def _dhash(pth):
+    from PIL import Image
+    im = Image.open(pth).convert('L').resize((17, 8))
+    px = list(im.tobytes())
+    return [px[r * 17 + c] > px[r * 17 + c + 1] for r in range(8) for c in range(16)]
+
+
+# логотип ADALIGHT из шапок листов прайса — не фото товара, в галереи не попадает
+_LOGO_REFS = [_dhash(os.path.join(XLIMG, f)) for f in os.listdir(XLIMG) if re.search(r'__r[01]_c', f)]
+
+
+def is_logo(pth):
+    try:
+        h = _dhash(pth)
+    except Exception:
+        return False
+    return any(sum(a != b for a, b in zip(h, r)) <= 20 for r in _LOGO_REFS)
+
+
 def md5(pth):
     return hashlib.md5(open(pth, 'rb').read()).hexdigest()
 
@@ -107,7 +126,7 @@ def md5(pth):
 def add(p):
     p.setdefault('images', [])
     p.setdefault('schemes', [])
-    p['images'] = dedupe([i for i in p['images'] if os.path.exists(i) and not any(x in i for x in EXCLUDE)])
+    p['images'] = dedupe([i for i in p['images'] if os.path.exists(i) and not any(x in i for x in EXCLUDE) and not is_logo(i)])
     p['schemes'] = dedupe([i for i in p['schemes'] if os.path.exists(i)])
     # фото конкретной модификации: индекс в общей галерее (для смены фото при выборе модификации)
     idx = {md5(x): n for n, x in enumerate(p['images'])}

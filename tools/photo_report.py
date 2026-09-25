@@ -73,13 +73,15 @@ RULES = [
 def main():
     cats = {k: v['short'] for k, v in C.CATEGORIES.items()}
     used = set()
-    rows_html, n_all, n_low = [], 0, 0
+    rows_html, n_all, n_low, n_ser_low = [], 0, 0, 0
+    QUAL = []
     for cat in C.CAT_ORDER:
         ps = [p for p in P if p['category'] == cat]
         rows_html.append(f'<h2 id="{cat}">{html.escape(cats[cat])} <small>{len(ps)} серий</small></h2>')
         for p in ps:
             wp = WB[p['slug']]
             cards = []
+            ser_q = []
             for kind, lst, wlist in (('Фото', p['images'], wp['images']), ('Чертёж', p['schemes'], wp['schemes'])):
                 for i, src in enumerate(lst):
                     used.add(os.path.normcase(os.path.abspath(src)))
@@ -89,13 +91,14 @@ def main():
                     except Exception:
                         w = h = 0
                     cls, vtxt = verdict(w, h)
-                    n_all += 1; n_low += cls == 'low'
+                    n_all += 1; n_low += cls == 'low'; QUAL.append(cls); ser_q.append(cls)
                     where, name = describe(src)
                     site = (f'{wlist[i]["w"]}×{wlist[i]["h"]}' + (' (уменьшено для скорости)' if wlist[i]['w'] < w else ' (как исходник)')) if on_site else 'не показывается (лимит 16 фото на серию)'
                     link = 'file:///' + os.path.abspath(src).replace('\\', '/') if not src.startswith(os.path.join(os.path.dirname(ROOT), '_work')) or '/_work/edits/' in src.replace('\\', '/') else ''
                     cards.append(f'<figure class="{cls}"><img src="{thumb(src)}" alt=""><figcaption><b>{kind} {i + 1}</b> · <span class="q">{vtxt}</span><br>'
                                  f'Исходник: {w}×{h}<br>На сайте: {site}<br><span class="src">{html.escape(where)}<br><i>{html.escape(name)}</i></span>'
-                                 + (f'<br><a href="{link}">открыть исходный файл</a>' if link else '') + '</figcaption></figure>')
+                                 + '</figcaption></figure>')
+            n_ser_low += bool(ser_q) and all(q == 'low' for q in ser_q)
             vtxt = ', '.join(v['sku'] for v in p['variants'][:6]) + (' …' if len(p['variants']) > 6 else '')
             rows_html.append(f'<section class="ser"><h3>{html.escape(p["name"])} <a href="{URL}/product/{p["slug"]}/" target="_blank">страница на сайте ↗</a></h3>'
                              f'<p class="sku">{len(p["variants"])} арт.: {html.escape(vtxt)}</p><div class="grid">{"".join(cards)}</div></section>')
@@ -129,7 +132,14 @@ def main():
         if re.search(r'ALDL(0789|0792|1519|1521)', g):
             return 'Заменено фото из Alpha (1).rar (правки 25.09)'
         return 'Не сопоставлено с артикулом'
+    unused = [f for f in unused if not reason(f).startswith(('Точная копия', 'Заменено', 'Старое фото'))]
     un_html = ''.join(f'<figure class="low"><img src="{thumb(f, 110)}" alt=""><figcaption><b>{html.escape(reason(f))}</b><br><span class="src">{html.escape(os.path.relpath(f, SRC))}</span></figcaption></figure>' for f in unused)
+    n_mid = sum(1 for x in QUAL if x == 'mid'); n_good = sum(1 for x in QUAL if x == 'good')
+    summary = (f'<div class="sum"><div><b>{n_all}</b>фото и чертежей на страницах товаров</div>'
+               f'<div class="bad"><b>{n_low}</b>низкого качества (меньше 800 px)</div>'
+               f'<div class="mid"><b>{n_mid}</b>среднего качества (800–1499 px)</div>'
+               f'<div class="ok"><b>{n_good}</b>хорошего качества (от 1500 px)</div></div>'
+               f'<p>Серий, где все фото низкого качества: <b>{n_ser_low}</b> из {len(P)}.</p>')
     rules = ''.join(f'<tr><td><b>{html.escape(a)}</b></td><td>{html.escape(b)}</td></tr>' for a, b in RULES)
     page = f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Карта фото сайта ADALIGHT</title>
 <style>body{{font:14px/1.45 Segoe UI,Arial,sans-serif;margin:0;color:#141416;background:#f4f4f2}}header{{background:#0d0d0e;color:#fff;padding:28px 32px}}
@@ -138,14 +148,14 @@ h2 small{{font-size:14px;color:#777;font-weight:400}}.ser{{background:#fff;borde
 .sku{{margin:0 0 10px;color:#666;font-size:12.5px}}.grid{{display:flex;flex-wrap:wrap;gap:10px}}figure{{margin:0;width:230px;border:1px solid #e3e3df;border-radius:10px;overflow:hidden;background:#fff}}
 figure img{{width:100%;height:150px;object-fit:contain;background:#f7f7f5;display:block}}figcaption{{padding:8px 10px;font-size:12px}}.src{{color:#666}}
 figure.low{{border-color:#e8836f}}figure.low .q{{color:#c0392b;font-weight:600}}figure.mid .q{{color:#b7791f;font-weight:600}}figure.good .q{{color:#2f855a;font-weight:600}}
-table{{border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}}td{{padding:8px 12px;border-bottom:1px solid #eee;vertical-align:top}}nav a{{margin-right:14px}}.note{{background:#fff8dc;border-left:4px solid #ffc603;padding:12px 16px;border-radius:8px}}</style></head><body>
-<header><h1>Карта фото сайта ADALIGHT</h1><div>Каждое фото на странице товара: откуда взято, размер исходника и размер на сайте. Всего фото: {n_all}, низкого качества: {n_low}.</div></header><main>
-<p class="note"><b>Как читать.</b> Сайт <u>не ухудшает</u> фото: большие исходники уменьшаются до 1100 px по ширине (этого достаточно для экрана и ускоряет загрузку), маленькие показываются как есть и не растягиваются. Если в карточке написано «Низкое — исходник маленький», значит таким фото пришло в материалах (обычно это картинки, вставленные в прайс). Строка «Исходник» — где лежит файл: папка на рабочем столе «Дамир сайт» или лист/строка прайса.</p>
+table{{border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}}td{{padding:8px 12px;border-bottom:1px solid #eee;vertical-align:top}}nav a{{margin-right:14px}}.sum{{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 4px}}.sum div{{background:#fff;border-radius:12px;padding:14px 18px;min-width:200px}}.sum b{{display:block;font-size:30px}}.sum .bad b{{color:#c0392b}}.sum .mid b{{color:#b7791f}}.sum .ok b{{color:#2f855a}}.note{{background:#fff8dc;border-left:4px solid #ffc603;padding:12px 16px;border-radius:8px}}</style></head><body>
+<header><h1>Карта фото сайта ADALIGHT</h1><div>Каждое фото на странице товара: откуда взято, размер исходника и размер на сайте. Всего фото: {n_all} · низкого качества: {n_low}.</div></header><main>
+{summary}
 <nav>{"".join(f'<a href="#{c}">{html.escape(cats[c])}</a>' for c in C.CAT_ORDER)}<a href="#unused">Не использованы</a></nav>
 <h2>Правила: откуда берутся фото каждой серии</h2><table>{rules}</table>
 {"".join(rows_html)}
 <h2 id="unused">Фото из материалов, которые не попали на сайт <small>{len(unused)} шт.</small></h2>
-<p>У каждого файла указана причина.</p><div class="grid">{un_html}</div>
+<p>Эти фото есть в материалах, но на сайт не поставлены — нужно решение: у каждого указана причина.</p><div class="grid">{un_html}</div>
 </main></body></html>'''
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, 'w', encoding='utf-8').write(page)
