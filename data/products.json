@@ -16394,14 +16394,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-547-1-480.webp",
-    "srcset": "/img/p/wall-547-1-480.webp 264w",
-    "w": 264,
-    "h": 197,
-    "lg": "/img/p/wall-547-1-480.webp",
-    "ow": 264,
-    "oh": 197,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r10_c1_4.jpeg"
+    "src": "/img/p/wall-547-1-aic2a11e-480.webp",
+    "srcset": "/img/p/wall-547-1-aic2a11e-480.webp 480w, /img/p/wall-547-1-aic2a11e-1100.webp 1100w",
+    "w": 1100,
+    "h": 821,
+    "lg": "/img/p/wall-547-1-aic2a11e-1100.webp",
+    "ow": 2400,
+    "oh": 1792,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-547-1.jpg"
    }
   ],
   "variants": [
