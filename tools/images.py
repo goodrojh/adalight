@@ -10,7 +10,7 @@ OUT = os.path.join(ROOT, 'docs')
 WORK = os.path.join(os.path.dirname(ROOT), '_work')
 SRC = 'C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/'
 Image.MAX_IMAGE_PIXELS = None
-MAX_PER_PRODUCT = 16
+MAX_PER_PRODUCT = 80
 
 
 def job(args):

@@ -30,6 +30,8 @@ a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
 button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
 ::selection{background:var(--signal);color:#000}
+/* атрибут hidden всегда скрывает элемент, даже если у класса задан display:flex/grid */
+[hidden]{display:none!important}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .skip{position:absolute;left:-999px;top:8px;z-index:1000;background:var(--signal);color:#000;padding:10px 16px;border-radius:8px}
 .skip:focus{left:8px}

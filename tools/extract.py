@@ -534,7 +534,7 @@ TRACK_GROUPS = [
     ('track-stretch', 'Шинопровод S20 для натяжного потолка', 'Встраивание в натяжной потолок: профиль, углы, заглушки, крепёж', r'HS26-RM|HS-RM'),
     ('track-connectors', 'Соединители и токовводы S20', 'Токовводы, прямые и угловые соединители, подвесы', r'HS26-SRMK|HS26-I$|HS26-RJ|HS-PJ|HS-DX'),
     ('track-power', 'Блоки питания S20 48V', 'Встраиваемые драйверы 100/200 Вт, в т.ч. с управлением Tuya ZigBee', r'HS26-\d+W'),
-    ('track-smart', 'Управление Tuya ZigBee', 'Шлюз и пульт для управления светом со смартфона и голосом', r'Gateway|RC-TUYA'),
+    ('track-smart', 'Шлюз и пульт Tuya ZigBee', 'Шлюз (интегратор) и пульт для управления светом со смартфона и голосом', r'Gateway|RC-TUYA'),
 ]
 TRACK_FOLDERS = {'HS26-A.': 'HS-26A', 'HS26-A-L': 'HS-26A-L', 'HS26-A-LV': 'HS-26A-LV', 'HS26-B.': 'HS-26B', 'HS26-B-L': 'HS-26B-L',
                  'HS26-B-LV': 'HS-26B-LV', 'HS26-C.': 'HS-26C', 'HS26-C-L': 'HS-26C-L', 'HS26-C-LV': 'HS-26C-LV', 'HS26-C-MZKK': 'HS26-C-MZKK',

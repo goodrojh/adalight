@@ -280,7 +280,7 @@ for i, p in enumerate(products):
           'vstraivaemye': 'встраиваемый даунлайт точечный спот downlight'}[p['category']]
     p['search'] = ' '.join([p['name'], p['slug'], p['line'], cat_names[p['category']], p['mounting'], kw, lead,
                             ' '.join('ip%d' % x for x in p['ip_list']), ' '.join('%dk' % x for x in p['cct_list']),
-                            ' '.join(v['sku'] for v in vs), ' '.join(v.get('switch', '') for v in vs)]).lower()
+                            ' '.join(v['sku'] for v in vs), ' '.join(v.get('switch', '') for v in vs), ' '.join(v.get('model', '') for v in vs)]).lower()
     p['order'] = i
 
 by_cat = {c: [p for p in products if p['category'] == c] for c in C.CAT_ORDER}
