@@ -58,7 +58,7 @@
      <thead><tr>{% for h in p.table_cols %}<th>{{ h[1] }}</th>{% endfor %}<th>РРЦ</th><th></th></tr></thead>
      <tbody>
       {% for v in p.variants %}<tr data-vi="{{ loop.index0 }}">{% for h in p.table_cols %}<td class="{{ 'm' if h[2] else '' }}">{{ v[h[0]] or '—' }}</td>{% endfor %}
-       <td class="m"><b>{% if v.price %}{{ v.price|rub }}{% else %}—{% endif %}</b>{% if v.price_dip %}<br><span class="muted">DIP 3CCT: {{ v.price_dip|rub }}</span>{% endif %}{% if v.price_zigbee %}<br><span class="muted">ZigBee: {{ v.price_zigbee|rub }}</span>{% endif %}{% if v.price_dim %}<br><span class="muted">Triac DIM: {{ v.price_dim|rub }}</span>{% endif %}</td>
+       <td class="m"><b>{% if v.price %}{{ v.price|rub }}{% else %}—{% endif %}</b>{% if v.price_dip %}<br><span class="muted">DIM 3CCT: {{ v.price_dip|rub }}</span>{% endif %}{% if v.price_zigbee %}<br><span class="muted">ZigBee: {{ v.price_zigbee|rub }}</span>{% endif %}{% if v.price_dim %}<br><span class="muted">Triac DIM: {{ v.price_dim|rub }}</span>{% endif %}</td>
        <td class="add"><button class="btn btn-sm btn-dark" type="button" data-add='{{ v.add_json }}' aria-label="Добавить {{ v.sku }} в спецификацию">+ В список</button></td></tr>{% endfor %}
      </tbody>
     </table>
@@ -119,6 +119,7 @@
   pr.firstChild.textContent=price?window.ADAfmt?window.ADAfmt(price):price+' ₽':'по запросу';
   var item=JSON.parse(JSON.stringify(v.add));item.price=price||null;if(lab)item.opt=lab;add.setAttribute('data-add',JSON.stringify(item));
   rows.forEach(function(r){r.classList.toggle('active',+r.dataset.vi===+sel.value);});
+  if(v.img!=null){var th=document.querySelectorAll('.gthumbs button')[v.img];if(th){th.click();th.scrollIntoView({block:'nearest',inline:'center'});}else{var mi=document.querySelector('.gmain img');}}
   var b=document.querySelector('[data-beam]');if(b&&v.lm){var f=b.querySelector('[name=f]');if(f){f.value=v.lm;f.dispatchEvent(new Event('input'));}}
  }
  sel.addEventListener('change',upd);[].forEach.call(document.querySelectorAll('input[name=opt]'),function(i){i.addEventListener('change',upd);});

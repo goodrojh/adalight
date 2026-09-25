@@ -144,6 +144,15 @@ for i, p in enumerate(products):
         ks.append(('Угол луча', ', '.join('%d°' % b for b in beams[:4])))
     if p['category'] in ('trekovye-s20', 'shinoprovod-s20'):
         ks.append(('Напряжение', 'DC 48 В'))
+    if p['category'] == 'shinoprovod-s20':
+        lens = sorted({int(m) for v in vs for m in re.findall(r'\.(1000|1500|2000|3000)$', v['sku'])})
+        if lens:
+            ks.append(('Длины', ' / '.join(('%g' % (x / 1000)).replace('.', ',') for x in lens) + ' м'))
+        cols = sorted({c.strip() for v in vs for c in (v.get('color') or '').split('/') if c.strip()})
+        if cols:
+            ks.append(('Цвет', ' / '.join(cols)))
+        ks.append(('Система', 'S20, магнитная'))
+        ks.append(('Позиций', str(len(vs))))
     w = vs[0].get('warranty')
     if w:
         ks.append(('Гарантия', w.replace('YEARS', 'лет').replace('5 лет', '5 лет')))
@@ -178,7 +187,7 @@ for i, p in enumerate(products):
     # опции исполнения
     opts = []
     if any(v.get('price_dip') or v.get('price_zigbee') for v in vs):
-        opts = [{'key': 'base', 'label': 'Без управления'}, {'key': 'dip', 'label': 'DIP 3CCT'}, {'key': 'zigbee', 'label': 'Tuya ZigBee'}]
+        opts = [{'key': 'base', 'label': 'Без управления'}, {'key': 'dip', 'label': 'DIM 3CCT'}, {'key': 'zigbee', 'label': 'Tuya ZigBee'}]
     elif any(v.get('price_dim') for v in vs):
         opts = [{'key': 'base', 'label': 'Без диммирования'}, {'key': 'dim', 'label': 'Triac DIM'}]
     p['options'] = opts
@@ -188,15 +197,20 @@ for i, p in enumerate(products):
         parts = [v['sku']]
         if v.get('power'):
             parts.append(v['power'])
-        if v.get('size') and p['category'] not in ('vstraivaemye',):
+        sz_ok = v.get('size') and any(ch.isdigit() for ch in v['size'])
+        if sz_ok and p['category'] not in ('vstraivaemye',):
             parts.append(v['size'])
+        elif p['category'] == 'shinoprovod-s20' and v.get('model'):
+            parts.append(v['model'][:60])
         elif v.get('cutout'):
             parts.append('врезка ' + v['cutout'])
         if p['category'] == 'bra' and v.get('color'):
             parts.append(v['color'][:40])
         v['label'] = ' · '.join(parts)
         params = ', '.join(x for x in [v.get('power'), v.get('cct'), v.get('ip') if v.get('ip') and v.get('ip') != 'IP' else '', v.get('beam')] if x)
-        add = {'sku': v['sku'], 'slug': p['slug'], 'name': p['name'], 'price': v.get('price'), 'img': img0, 'params': params}
+        vi = v.get('img_i')
+        vimg = p['images'][vi]['src'] if vi is not None and vi < len(p['images']) else img0
+        add = {'sku': v['sku'], 'slug': p['slug'], 'name': p['name'], 'price': v.get('price'), 'img': vimg, 'params': params}
         v['add_json'] = json.dumps(add, ensure_ascii=False)
         o = {}
         if opts:
@@ -204,7 +218,7 @@ for i, p in enumerate(products):
             for ok, pk in (('dip', 'price_dip'), ('zigbee', 'price_zigbee'), ('dim', 'price_dim')):
                 if any(x['key'] == ok for x in opts):
                     o[ok] = {'price': v.get(pk), 'label': next(x['label'] for x in opts if x['key'] == ok)}
-        vjs.append({'price': v.get('price'), 'add': add, 'opts': o, 'lm': lumens(v)})
+        vjs.append({'price': v.get('price'), 'add': add, 'opts': o, 'lm': lumens(v), 'img': v.get('img_i') if v.get('img_i') is not None and v['img_i'] < len(p['images']) else None})
     p['variants_js'] = vjs
     # калькулятор луча
     if beams and lms and p['category'] not in ('shinoprovod-s20', 'bra'):

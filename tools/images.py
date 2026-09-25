@@ -10,7 +10,7 @@ OUT = os.path.join(ROOT, 'docs')
 WORK = os.path.join(os.path.dirname(ROOT), '_work')
 SRC = 'C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/'
 Image.MAX_IMAGE_PIXELS = None
-MAX_PER_PRODUCT = 8
+MAX_PER_PRODUCT = 16
 
 
 def job(args):
@@ -84,7 +84,8 @@ def main():
         if not res:
             return None
         return {'src': rel(base + f'-{res[0][0]}.webp'), 'srcset': ', '.join(f"{rel(base + f'-{sz}.webp')} {tw}w" for sz, tw, th in res),
-                'w': res[-1][1], 'h': res[-1][2], 'lg': rel(base + f'-{res[-1][0]}.webp')}
+                'w': res[-1][1], 'h': res[-1][2], 'lg': rel(base + f'-{res[-1][0]}.webp'),
+                'ow': info[0], 'oh': info[1], 'orig': src}
 
     for p in products:
         for kind in ('images', 'schemes'):

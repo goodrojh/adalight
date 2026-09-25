@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% import "macros.html" as m with context %}
 {% block main %}
-<section class="phero" style="min-height:70vh;display:flex;align-items:flex-end">
- <div class="phero-bg">{{ m.img(media[pr.slug ~ '-0'], '', '100vw', lazy=False) }}</div>
- <div class="wrap" style="width:100%">
-  {{ m.crumbs(crumbs) }}
-  <div class="flex" style="margin-bottom:16px"><span class="tag">{{ pr.type }}</span><span class="tag">{{ pr.segment }}</span></div>
-  <h1>{{ pr.name }}</h1>
-  <p class="lead">{{ pr.lead }}</p>
+<section class="phero"{% if not pr.logo %} style="min-height:70vh;display:flex;align-items:flex-end"{% endif %}>
+ {% if not pr.logo %}<div class="phero-bg">{{ m.img(media[pr.slug ~ '-0'], '', '100vw', lazy=False) }}</div>{% endif %}
+ <div class="wrap{% if pr.logo %} phero-logo{% endif %}" style="width:100%">
+  <div>
+   {{ m.crumbs(crumbs) }}
+   <div class="flex" style="margin-bottom:16px"><span class="tag">{{ pr.type }}</span>{% if pr.segment %}<span class="tag">{{ pr.segment }}</span>{% endif %}</div>
+   <h1>{{ pr.name }}</h1>
+   <p class="lead">{{ pr.lead }}</p>
+  </div>
+  {% if pr.logo %}<img class="phero-dev" src="{{ base }}/img/logos/{{ pr.logo }}-w.webp" alt="{{ pr.client }}">{% endif %}
  </div>
 </section>
 <section class="section-sm">
@@ -16,20 +19,22 @@
    <div><span>Объект</span><b>{{ pr.name }}</b></div>
    {% if pr.client %}<div><span>Заказчик</span><b>{{ pr.client }}</b></div>{% endif %}
    <div><span>Работы</span><b>{{ pr.type }}</b></div>
-   <div><span>Локация</span><b>{{ pr.city or 'Москва' }}</b></div>
+   <div><span>Локация</span><b>{{ pr.address or pr.city or 'Москва' }}</b></div>
   </div>
  </div>
 </section>
 <section class="section" style="padding-top:20px">
  <div class="wrap proj-body">
-  <div class="proj-photo">{% set side = gallery[1] if gallery|length > 1 else gallery[0] %}{{ m.img(side, pr.name, '(max-width:900px) 100vw, 50vw') }}</div>
+  {% if gallery %}<div class="proj-photo">{% set side = gallery[1] if gallery|length > 1 else gallery[0] %}{{ m.img(side, pr.name, '(max-width:900px) 100vw, 50vw') }}</div>
+  {% else %}<div class="proj-photo proj-photo-logo"><img src="{{ base }}/img/logos/{{ pr.logo }}-w.webp" alt="{{ pr.client }}"><span>{{ pr.name }}<br>{{ pr.address }}</span></div>{% endif %}
   <div class="proj-text">
    <h2>Задача и подход</h2>
    <p class="lead" style="color:var(--text)">{{ pr.text }}</p>
    <div class="proj-cols">
     <div><h4>Зоны проекта</h4><ul class="check">{% for s in pr.scope %}<li>{{ s }}</li>{% endfor %}</ul></div>
-    <div><h4>Роль ADALIGHT</h4><ul class="check"><li>Подбор оборудования и светотехническая проработка</li><li>Проектные аналоги с согласованием</li><li>Комплектация и поставка по графику объекта</li><li>Техническая поддержка монтажа</li></ul></div>
+    <div><h4>Роль ADALIGHT</h4><ul class="check">{% if pr.logo %}<li>Подбор оборудования по проекту</li><li>Согласование позиций</li><li>Комплектация и поставка по графику объекта</li>{% else %}<li>Подбор оборудования и светотехническая проработка</li><li>Проектные аналоги с согласованием</li><li>Комплектация и поставка по графику объекта</li><li>Техническая поддержка монтажа</li>{% endif %}</ul></div>
    </div>
+   {% if pr.site %}<p class="mt2"><a class="link" href="{{ pr.site }}" target="_blank" rel="noopener">Страница ЖК на сайте девелопера <svg width="16" height="16"><use href="#i-arrow"/></svg></a></p>{% endif %}
    <a class="btn mt4" href="#lead" data-modal="Хочу такой же результат">Обсудить похожий объект <svg><use href="#i-arrow"/></svg></a>
   </div>
  </div>

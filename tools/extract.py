@@ -15,6 +15,11 @@ S20_LAMPS = SRC + 'Владиславу для Сайта/S20 фото для с
 S20_TRACK = SRC + 'Владиславу для Сайта/S20 фото для сайта/2-产品高清图-轨道及配件（Product pictures Track & Accessories）/'
 
 IMG_EXT = ('.png', '.jpg', '.jpeg', '.webp')
+# Правки 25.09.2026: новые фото (TENK — из папки правок, остальное — из архивов Alpha/RAVOL/Ringo)
+EDITS = SRC + 'Правки нового Сайта/Правки нового Сайта/'
+EDITS_WORK = os.path.join(os.path.dirname(ROOT), '_work', 'edits')
+# фото с логотипами поставщика — не показываем на сайте
+EXCLUDE = ('ALDL1518' + os.sep + 'Image_2026-09-18_101159_378', 'ALDL1518/Image_2026-09-18_101159_378')
 
 wb = xlrd.open_workbook(PRICE)
 
@@ -95,11 +100,20 @@ def beams(t):
 products = []
 
 
+def md5(pth):
+    return hashlib.md5(open(pth, 'rb').read()).hexdigest()
+
+
 def add(p):
     p.setdefault('images', [])
     p.setdefault('schemes', [])
-    p['images'] = dedupe([i for i in p['images'] if os.path.exists(i)])
+    p['images'] = dedupe([i for i in p['images'] if os.path.exists(i) and not any(x in i for x in EXCLUDE)])
     p['schemes'] = dedupe([i for i in p['schemes'] if os.path.exists(i)])
+    # фото конкретной модификации: индекс в общей галерее (для смены фото при выборе модификации)
+    idx = {md5(x): n for n, x in enumerate(p['images'])}
+    for v in p['variants']:
+        src = v.pop('_img', None)
+        v['img_i'] = idx.get(md5(src)) if src and os.path.exists(src) else None
     products.append(p)
     return p
 
@@ -138,6 +152,9 @@ def parse_eco(sheet_name, category, mounting):
         for r, _ in g['rows']:
             xl += xl_images(sheet_name, r)
         xl += xl_images(sheet_name, g['hdr_row'])
+        if series == 'TENK':  # правки: новые фото TENK
+            imgs = folder_images(EDITS + 'TENK')
+            xl = []
         variants = []
         for r, d in g['rows']:
             flux = d.get('Световой поток Lumen', '')
@@ -157,10 +174,22 @@ def parse_eco(sheet_name, category, mounting):
                 'material': 'Алюминий',
                 'price': price(d.get('РРЦ')),
             }
+            rowimg = xl_images(sheet_name, r)
+            if xl and rowimg:
+                v['_img'] = rowimg[0]
             if sheet_name.startswith('Накладные'):
                 v['cutout'] = ''
                 v['diffuser'] = 'PMMA'
             variants.append(v)
+        # фото по мощности из имени файла (CUVY/VEVO: 12.jpg, 18w.jpg …)
+        for v in variants:
+            if True:  # фото из папки (лучше качество) приоритетнее, чем картинка из прайса
+                wv = re.match(r'(\d+)', v['power'])
+                for f in imgs:
+                    m = re.match(r'(\d+)w?\.', os.path.basename(f).lower())
+                    if wv and m and m.group(1) == wv.group(1):
+                        v['_img'] = f
+                        break
         # фикс явной опечатки в прайсе: DOTO 36W 360lm -> 3600 лм
         for v in variants:
             if v['model'].upper() == 'DOTO' and v['power'].startswith('36') and v['flux'].startswith('360 '):
@@ -207,7 +236,7 @@ for r in range(3, sh.nrows):
         continue
     add({
         'slug': 'a-' + base, 'name': 'CLASS A ' + base, 'category': 'vstraivaemye', 'line': 'CLASS A',
-        'mounting': 'Встраиваемый', 'images': folder_images(A_DIR + 'ALDL' + base) + xl_images('Встраиваемые Class A', r),
+        'mounting': 'Встраиваемый', 'images': (folder_images(os.path.join(EDITS_WORK, 'alpha', 'CLASS A ' + base)) or folder_images(A_DIR + 'ALDL' + base)) + xl_images('Встраиваемые Class A', r),
         'variants': [v], 'sheet': 'Встраиваемые Class A',
     })
 
@@ -279,7 +308,9 @@ def parse_prm(sheet_name, hdr_row, category, mounting, photo_col, scheme_col, sk
             color = d.get('Цвет', '').replace('Trim:', 'Корпус: ').replace('Reflector:', ' Отражатель: ') \
                 .replace('White', 'белый').replace('Black', 'чёрный').replace('Gold', 'золотой')
             pw = d.get('Мощность', '')
+            ph = xl_images(sheet_name, r, photo_col)
             variants.append({
+                '_img': ph[0] if ph else None,
                 'sku': sku + ('' if re.search(r'-\d+W?$|\d+W', sku) or sku.endswith(pw.upper().replace('W', '')) else '-' + pw.upper()),
                 'model': sku, 'power': pw.upper().replace('/W', '').replace('W', ' Вт'),
                 'flux': d.get('Световой поток', '').replace('lm/W', ' лм/Вт'),
@@ -320,8 +351,9 @@ for g in sofi:
     for title, rows in parts.items():
         variants, imgs = [], []
         for r, row in rows:
-            imgs += xl_images('Накладные SOFI', r, 11)
-            variants.append({'sku': row[2].replace(' ', ''), 'model': row[2], 'power': row[5].replace('W', ' Вт'),
+            ph = xl_images('Накладные SOFI', r, 11)
+            imgs += ph
+            variants.append({'_img': ph[0] if ph else None, 'sku': row[2].replace(' ', ''), 'model': row[2], 'power': row[5].replace('W', ' Вт'),
                              'flux': row[6].replace('lm/w', ' лм/Вт').replace('LM/W', ' лм/Вт').replace('lm', ' лм'),
                              'size': row[3].replace('φ', 'Ø').replace('*', ' × ').replace('mm', '') + ' мм',
                              'color': row[4], 'cri': 'Ra ' + row[7].replace('＞', '>'), 'cct': '3000 / 4000 / 6500 K (переключатель)',
@@ -347,9 +379,9 @@ for r in range(3, sh.nrows):
         v['sku'] = 'ADA-RING-' + row[8].split('*')[0].replace('D', 'D') + '-' + row[4]
         ring.append(v); ringimgs += xl_images('Накладные RAVOL, Кольца', r, 1)
 add({'slug': 'ravol', 'name': 'RAVOL', 'category': 'nakladnye', 'line': 'DESIGN', 'mounting': 'Накладной / подвесной',
-     'images': rimgs, 'variants': rav, 'sheet': 'RAVOL'})
+     'images': folder_images(os.path.join(EDITS_WORK, 'ravol')) or rimgs, 'variants': rav, 'sheet': 'RAVOL'})
 add({'slug': 'ada-ring', 'name': 'ADA RING', 'category': 'lineynye', 'line': 'DESIGN', 'mounting': 'Подвесной',
-     'images': ringimgs, 'variants': ring, 'sheet': 'Кольца'})
+     'images': folder_images(os.path.join(EDITS_WORK, 'ring')) or ringimgs, 'variants': ring, 'sheet': 'Кольца'})
 
 # ---------------------------------------------------------------- Линейные
 sh = sheet('Линейные светильники')
@@ -379,8 +411,9 @@ for key, rows in lin_groups.items():
     nm, slug, ph = LIN_META[key]
     variants, imgs = [], [LIN_DIR + p for p in ph]
     for r, row in rows:
-        imgs += xl_images('Линейные светильники', r, 1)
-        variants.append({'sku': 'ADA-LINE-' + row[8].replace('*', 'x'), 'model': 'ADA-LINE', 'power': row[3] + ' Вт',
+        ph = xl_images('Линейные светильники', r, 1)
+        imgs += ph
+        variants.append({'_img': ph[0] if ph else None, 'sku': 'ADA-LINE-' + row[8].replace('*', 'x'), 'model': 'ADA-LINE', 'power': row[3] + ' Вт',
                          'flux': row[4] + ' лм', 'cct': row[5].replace('/', ' / ') + ' K', 'ip': 'IP' + row[6],
                          'size': row[8].replace('*', ' × ') + ' мм', 'driver': row[9], 'beam': row[11] + '°',
                          'warranty': '3 года', 'material': 'Алюминий', 'color': 'Любой цвет по RAL', 'price': price(row[15])})
@@ -440,7 +473,8 @@ for slug, nm, lead, pat in S20_FAMILIES:
     for r, row in s20rows:
         if not re.search(pat, row[2]):
             continue
-        imgs += s20_folder(row[2])
+        own = s20_folder(row[2])
+        imgs += own
         name_ru = re.sub(r'\s*\(.*?\)|\s[A-Z][A-Za-z -]+$', '', row[1]).replace('свтелиьник', 'светильник').replace('свтелиьник', 'светильник').strip()
         v = {'sku': row[2], 'model': row[1].replace('свтелиьник', 'светильник').replace('свтелиьник', 'светильник'),
              'size': row[4].replace('*', ' × ').replace('Ø', 'Ø') + ' мм', 'led': row[5].replace('ORSAM', 'OSRAM'),
@@ -450,6 +484,7 @@ for slug, nm, lead, pat in S20_FAMILIES:
              'price_dip': price(row[14]) if row[14] not in ('нет', '15') else None,
              'price_zigbee': price(row[15]) if row[15] != 'нет' else None}
         v['cct'] = ' / '.join(re.findall(r'\d{4}', row[11])) + ' K'
+        v['_img'] = own[0] if own else None
         variants.append(v)
     if not variants:
         print('!! empty family', slug)
@@ -505,8 +540,9 @@ for slug, nm, lead, pat in TRACK_GROUPS:
         if row[2] in used or not re.search(pat, row[2]):
             continue
         used.add(row[2])
-        imgs += track_imgs(row[2]) + xl_images('Шинопровод S20 48V', r, 3)
-        variants.append({'sku': row[2], 'model': name, 'color': row[4] or 'Чёрный / Белый',
+        own = track_imgs(row[2]) + xl_images('Шинопровод S20 48V', r, 3)
+        imgs += own
+        variants.append({'_img': own[0] if own else None, 'sku': row[2], 'model': name, 'color': row[4] or 'Чёрный / Белый',
                          'size': (row[5].replace('*', ' × ') + ' мм') if row[5] not in ('/', '') and 'Размер' not in row[5] else row[5].replace('Размер', 'Длина').replace('mm', ' мм').replace('/', '—'),
                          'voltage': 'DC 48 В', 'price': price(row[6])})
     add({'slug': 's20-' + slug, 'name': nm, 'lead': lead, 'category': 'shinoprovod-s20', 'line': 'S20 48V', 'mounting': 'Шинопровод',
@@ -539,8 +575,9 @@ for b in bra:
     base = dict(zip(['n', 'photo', 'model', 'material', 'size', 'color', 'power', 'switch', 'price'], b['rows'][0][1]))
     for r, row in b['rows']:
         d = dict(zip(['n', 'photo', 'model', 'material', 'size', 'color', 'power', 'switch', 'price'], row))
-        imgs += xl_images('Бра', r, 1)
-        variants.append({'sku': 'ADA-WALL-' + b['model'] + '-' + str(len(variants) + 1), 'model': nm,
+        ph = xl_images('Бра', r, 1)
+        imgs += ph
+        variants.append({'_img': ph[0] if ph else None, 'sku': 'ADA-WALL-' + b['model'] + '-' + str(len(variants) + 1), 'model': nm,
                          'material': d['material'] or base['material'], 'size': (d['size'] or base['size']).replace('*', ' × ').replace('"', ''),
                          'color': d['color'], 'power': (d['power'] or base['power']).upper().replace('W', ' Вт'),
                          'switch': (d['switch'] or base['switch']).replace('/', '—'), 'price': price(d['price'])})
