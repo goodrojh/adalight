@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Оптимизация изображений: товары, проекты, сцены -> WebP (2 размера).
 Пишет data/products.json (с веб-путями) и data/media.json."""
-import json, os, sys
+import hashlib, json, os, sys
 from concurrent.futures import ProcessPoolExecutor
 from PIL import Image, ImageOps
 
@@ -60,7 +60,9 @@ def main():
     for p in products:
         for kind in ('images', 'schemes'):
             for i, src in enumerate(p[kind][:MAX_PER_PRODUCT]):
-                base = os.path.join(OUT, 'img', 'p', f"{p['slug']}-{'s' if kind == 'schemes' else ''}{i + 1}")
+                # обработанные ИИ фото получают своё имя файла, чтобы браузер не показал старое из кэша
+                tag = '-ai' + hashlib.md5(open(src, 'rb').read()).hexdigest()[:6] if (os.sep + 'ai' + os.sep) in os.path.abspath(src) else ''
+                base = os.path.join(OUT, 'img', 'p', f"{p['slug']}-{'s' if kind == 'schemes' else ''}{i + 1}{tag}")
                 jobs.append((src, base, (480, 1100), 80, None))
                 mapping[(p['slug'], kind, i)] = base
     # проекты и сцены
