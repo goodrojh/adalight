@@ -1,0 +1,1437 @@
+{
+ "saved": "2026-09-25T15:55:52.780Z",
+ "drop": [],
+ "comments": {},
+ "photos": [
+  {
+   "slug": "tango",
+   "series": "TANGO",
+   "kind": "Фото",
+   "n": 14,
+   "file": "Встраиваемые ECO__r3_c1_2.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые ECO», строка 4, колонка «Фото»",
+   "id": "p78ffed5ab9",
+   "action": "remove"
+  },
+  {
+   "slug": "nano",
+   "series": "NANO",
+   "kind": "Фото",
+   "n": 9,
+   "file": "Встраиваемые ECO__r8_c1_0.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые ECO», строка 9, колонка «Фото»",
+   "id": "p392cf85a6d",
+   "action": "remove"
+  },
+  {
+   "slug": "cuvy",
+   "series": "CUVY",
+   "kind": "Фото",
+   "n": 9,
+   "file": "Встраиваемые ECO__r14_c1_3.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые ECO», строка 15, колонка «Фото»",
+   "id": "p2d57342dfc",
+   "action": "remove"
+  },
+  {
+   "slug": "doto",
+   "series": "DOTO",
+   "kind": "Фото",
+   "n": 11,
+   "file": "Встраиваемые ECO__r21_c1_4.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые ECO», строка 22, колонка «Фото»",
+   "id": "p3474939e55",
+   "action": "remove"
+  },
+  {
+   "slug": "ocean",
+   "series": "OCEAN",
+   "kind": "Фото",
+   "n": 7,
+   "file": "Встраиваемые ECO__r30_c1_6.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые ECO», строка 31, колонка «Фото»",
+   "id": "pe51aeedfff",
+   "action": "remove"
+  },
+  {
+   "slug": "ocean",
+   "series": "OCEAN",
+   "kind": "Фото",
+   "n": 8,
+   "file": "Встраиваемые ECO__r31_c1_5.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые ECO», строка 32, колонка «Фото»",
+   "id": "pb6f277bac0",
+   "action": "remove"
+  },
+  {
+   "slug": "revo",
+   "series": "REVO",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Встраиваемые ECO__r34_c1_1.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые ECO», строка 35, колонка «Фото»",
+   "id": "p179c2b90e9",
+   "action": "remove"
+  },
+  {
+   "slug": "ukkie",
+   "series": "UKKIE",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Встраиваемые ECO__r45_c1_9.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые ECO», строка 46, колонка «Фото»",
+   "id": "pdce7aae0f6",
+   "action": "ai"
+  },
+  {
+   "slug": "ukkie",
+   "series": "UKKIE",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Встраиваемые ECO__r47_c1_10.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые ECO», строка 48, колонка «Фото»",
+   "id": "p56c8e4c765",
+   "action": "ai"
+  },
+  {
+   "slug": "a-1519",
+   "series": "CLASS A 1519",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые Class A__r10_c1_33.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые Class A», строка 11, колонка «Фото»",
+   "id": "pe7991041d9",
+   "action": "ai"
+  },
+  {
+   "slug": "a-1521",
+   "series": "CLASS A 1521",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые Class A__r11_c1_32.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые Class A», строка 12, колонка «Фото»",
+   "id": "p0a31a39ad3",
+   "action": "ai"
+  },
+  {
+   "slug": "a-0789",
+   "series": "CLASS A 0789",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые Class A__r15_c1_34.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые Class A», строка 16, колонка «Фото»",
+   "id": "p837e4fd6dc",
+   "action": "ai"
+  },
+  {
+   "slug": "a-1580",
+   "series": "CLASS A 1580",
+   "kind": "Фото",
+   "n": 10,
+   "file": "Встраиваемые Class A__r21_c1_26.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые Class A», строка 22, колонка «Фото»",
+   "id": "p91c43f66ff",
+   "action": "remove"
+  },
+  {
+   "slug": "tube-a",
+   "series": "TUBE A",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r3_c1_0.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 4, колонка «Фото»",
+   "id": "pb8842794d2",
+   "action": "ai"
+  },
+  {
+   "slug": "tube-a",
+   "series": "TUBE A",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые PRM__r6_c1_3.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 7, колонка «Фото»",
+   "id": "pbdadfb55a9",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7269",
+   "series": "TD 7269",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r15_c1_66.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 16, колонка «Фото»",
+   "id": "p839b79fc0a",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7267a",
+   "series": "TD 7267A",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r22_c1_73.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 23, колонка «Фото»",
+   "id": "pb0308504fa",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7267b",
+   "series": "TD 7267B",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r25_c1_76.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 26, колонка «Фото»",
+   "id": "p148d7cc61e",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7272",
+   "series": "TD 7272",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r29_c1_80.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 30, колонка «Фото»",
+   "id": "pfb3f654b6e",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7272",
+   "series": "TD 7272",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые PRM__r31_c1_82.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 32, колонка «Фото»",
+   "id": "p0a952ad07e",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7244-round",
+   "series": "TD 7244 Round",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r32_c1_83.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 33, колонка «Фото»",
+   "id": "p20f590a9fd",
+   "action": "ai"
+  },
+  {
+   "slug": "tube-b",
+   "series": "TUBE B",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r38_c1_12.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 39, колонка «Фото»",
+   "id": "p9ad77dfc8c",
+   "action": "ai"
+  },
+  {
+   "slug": "tube-t",
+   "series": "TUBE T",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r52_c1_26.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 53, колонка «Фото»",
+   "id": "p5a50ec57b7",
+   "action": "ai"
+  },
+  {
+   "slug": "tube-t",
+   "series": "TUBE T",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые PRM__r54_c1_28.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 55, колонка «Фото»",
+   "id": "p65d8bdba83",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7518",
+   "series": "X 7518",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r62_c1_51.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 63, колонка «Фото»",
+   "id": "p268a364e7b",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7244-square",
+   "series": "TD 7244 Square",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r66_c1_88.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 67, колонка «Фото»",
+   "id": "p6ee773f911",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7244-double",
+   "series": "TD 7244 Double",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r72_c1_94.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 73, колонка «Фото»",
+   "id": "pd9552d3eca",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7239",
+   "series": "TD 7239",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r76_c1_98.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 77, колонка «Фото»",
+   "id": "pfefbe96153",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7239",
+   "series": "TD 7239",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые PRM__r77_c1_99.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 78, колонка «Фото»",
+   "id": "pcd3224f106",
+   "action": "ai"
+  },
+  {
+   "slug": "td-7278-slim",
+   "series": "TD 7278 Slim",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r81_c1_103.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 82, колонка «Фото»",
+   "id": "p02cd38dda9",
+   "action": "ai"
+  },
+  {
+   "slug": "grid-9002",
+   "series": "GRID 9002",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r87_c1_109.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 88, колонка «Фото»",
+   "id": "pe20f7ab724",
+   "action": "ai"
+  },
+  {
+   "slug": "grid-9002",
+   "series": "GRID 9002",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые PRM__r88_c1_110.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 89, колонка «Фото»",
+   "id": "p995703bc49",
+   "action": "ai"
+  },
+  {
+   "slug": "grid-9002",
+   "series": "GRID 9002",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Встраиваемые PRM__r89_c1_111.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 90, колонка «Фото»",
+   "id": "p05a047b9cd",
+   "action": "ai"
+  },
+  {
+   "slug": "grid-9002",
+   "series": "GRID 9002",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Встраиваемые PRM__r91_c1_113.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 92, колонка «Фото»",
+   "id": "p5e6d0c6188",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r93_c1_36.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 94, колонка «Фото»",
+   "id": "p2933bd0464",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые PRM__r94_c1_37.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 95, колонка «Фото»",
+   "id": "p7290798fb3",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Встраиваемые PRM__r95_c1_38.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 96, колонка «Фото»",
+   "id": "p82c9a1f392",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Встраиваемые PRM__r96_c1_39.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 97, колонка «Фото»",
+   "id": "p288ab3466d",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Фото",
+   "n": 5,
+   "file": "Встраиваемые PRM__r97_c1_40.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 98, колонка «Фото»",
+   "id": "p6486213fba",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Фото",
+   "n": 6,
+   "file": "Встраиваемые PRM__r98_c1_41.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 99, колонка «Фото»",
+   "id": "p5572989f79",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Фото",
+   "n": 7,
+   "file": "Встраиваемые PRM__r99_c1_42.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 100, колонка «Фото»",
+   "id": "p6fc19cb3f3",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Фото",
+   "n": 8,
+   "file": "Встраиваемые PRM__r100_c1_43.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 101, колонка «Фото»",
+   "id": "p23aedc2b6d",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Чертёж",
+   "n": 1,
+   "file": "Встраиваемые PRM__r93_c2_151.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 94, колонка «Схема»",
+   "id": "p664c84e7d5",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Чертёж",
+   "n": 2,
+   "file": "Встраиваемые PRM__r95_c2_153.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 96, колонка «Схема»",
+   "id": "p7eb7dc1807",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Чертёж",
+   "n": 3,
+   "file": "Встраиваемые PRM__r97_c2_155.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 98, колонка «Схема»",
+   "id": "p0b2411e694",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double",
+   "series": "X 7529 Double",
+   "kind": "Чертёж",
+   "n": 4,
+   "file": "Встраиваемые PRM__r99_c2_157.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 100, колонка «Схема»",
+   "id": "p33106d3e8a",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double-trimless",
+   "series": "X 7529 Double Trimless",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r101_c1_44.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 102, колонка «Фото»",
+   "id": "p449b4f2dd5",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double-trimless",
+   "series": "X 7529 Double Trimless",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые PRM__r103_c1_46.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 104, колонка «Фото»",
+   "id": "p1f21eba2ed",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double-trimless",
+   "series": "X 7529 Double Trimless",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Встраиваемые PRM__r105_c1_48.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 106, колонка «Фото»",
+   "id": "pa344db32df",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7529-double-trimless",
+   "series": "X 7529 Double Trimless",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Встраиваемые PRM__r107_c1_50.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 108, колонка «Фото»",
+   "id": "p35df9d43fb",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7525-oval",
+   "series": "X 7525 Oval",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r109_c1_55.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 110, колонка «Фото»",
+   "id": "paf5088d6c4",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7525-oval",
+   "series": "X 7525 Oval",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые PRM__r110_c1_56.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 111, колонка «Фото»",
+   "id": "p6c2be32232",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7525-oval",
+   "series": "X 7525 Oval",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Встраиваемые PRM__r111_c1_57.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 112, колонка «Фото»",
+   "id": "paf6b8faa1d",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7525-oval",
+   "series": "X 7525 Oval",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Встраиваемые PRM__r113_c1_59.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 114, колонка «Фото»",
+   "id": "p5e4d45af51",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7525-oval-trimless",
+   "series": "X 7525 Oval Trimless",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Встраиваемые PRM__r115_c1_61.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 116, колонка «Фото»",
+   "id": "pbe44d29fa2",
+   "action": "ai"
+  },
+  {
+   "slug": "x-7525-oval-trimless",
+   "series": "X 7525 Oval Trimless",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Встраиваемые PRM__r117_c1_63.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Встраиваемые PRM», строка 118, колонка «Фото»",
+   "id": "p16fa8cc0f0",
+   "action": "ai"
+  },
+  {
+   "slug": "emo-surface",
+   "series": "EMO",
+   "kind": "Фото",
+   "n": 8,
+   "file": "Накладные ECO__r3_c1_2.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные ECO», строка 4, колонка «Фото»",
+   "id": "pf98305f235",
+   "action": "ai"
+  },
+  {
+   "slug": "emo-surface",
+   "series": "EMO",
+   "kind": "Фото",
+   "n": 9,
+   "file": "Накладные ECO__r4_c1_1.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные ECO», строка 5, колонка «Фото»",
+   "id": "p0544ba7649",
+   "action": "ai"
+  },
+  {
+   "slug": "vevo-surface",
+   "series": "VEVO",
+   "kind": "Фото",
+   "n": 20,
+   "file": "Накладные ECO__r7_c1_0.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные ECO», строка 8, колонка «Фото»",
+   "id": "p7a2b387791",
+   "action": "ai"
+  },
+  {
+   "slug": "m1810-round",
+   "series": "M1810 Round",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные PRM__r2_c0_0.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 3, колонка «Изображение»",
+   "id": "p5efa1c744a",
+   "action": "ai"
+  },
+  {
+   "slug": "m1810-square",
+   "series": "M1810 Square",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные PRM__r5_c0_3.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 6, колонка «Изображение»",
+   "id": "p19bf3bb88d",
+   "action": "ai"
+  },
+  {
+   "slug": "m15-round",
+   "series": "M15 Round",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные PRM__r8_c0_6.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 9, колонка «Изображение»",
+   "id": "p5716a6ee9d",
+   "action": "ai"
+  },
+  {
+   "slug": "m15-round",
+   "series": "M15 Round",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Накладные PRM__r11_c0_9.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 12, колонка «Изображение»",
+   "id": "p214a198b8c",
+   "action": "ai"
+  },
+  {
+   "slug": "m15-square",
+   "series": "M15 Square",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные PRM__r15_c0_13.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 16, колонка «Изображение»",
+   "id": "p1fc1bc8cc8",
+   "action": "ai"
+  },
+  {
+   "slug": "m15-square",
+   "series": "M15 Square",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Накладные PRM__r22_c0_20.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 23, колонка «Изображение»",
+   "id": "p8e3cc2cc00",
+   "action": "ai"
+  },
+  {
+   "slug": "m17-disc",
+   "series": "M17 Disc",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные PRM__r23_c0_21.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 24, колонка «Изображение»",
+   "id": "pb6357840b3",
+   "action": "ai"
+  },
+  {
+   "slug": "m17-disc",
+   "series": "M17 Disc",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Накладные PRM__r24_c0_22.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 25, колонка «Изображение»",
+   "id": "p93185a9dea",
+   "action": "ai"
+  },
+  {
+   "slug": "m17-disc",
+   "series": "M17 Disc",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Накладные PRM__r25_c0_23.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 26, колонка «Изображение»",
+   "id": "pdacbad878f",
+   "action": "ai"
+  },
+  {
+   "slug": "m1015-tube",
+   "series": "M1015 Tube",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные PRM__r29_c0_27.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 30, колонка «Изображение»",
+   "id": "p1eb859921d",
+   "action": "ai"
+  },
+  {
+   "slug": "m1015-tube",
+   "series": "M1015 Tube",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Накладные PRM__r30_c0_28.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные PRM», строка 31, колонка «Изображение»",
+   "id": "p0fb4016162",
+   "action": "ai"
+  },
+  {
+   "slug": "sofi-g6-round",
+   "series": "SOFI G6 Round",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные SOFI__r3_c11_1.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные SOFI», строка 4, колонка «Изображение»",
+   "id": "p0cf5da7a1d",
+   "action": "ai"
+  },
+  {
+   "slug": "sofi-g6-round",
+   "series": "SOFI G6 Round",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Накладные SOFI__r3_c11_2.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные SOFI», строка 4, колонка «Изображение»",
+   "id": "p4ac0024a7b",
+   "action": "ai"
+  },
+  {
+   "slug": "sofi-g6-square",
+   "series": "SOFI G6 Square",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные SOFI__r11_c11_0.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные SOFI», строка 12, колонка «Изображение»",
+   "id": "p2fd9092b44",
+   "action": "ai"
+  },
+  {
+   "slug": "sofi-x7-ip54",
+   "series": "SOFI X7 IP54",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные SOFI__r18_c11_3.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные SOFI», строка 19, колонка «Изображение»",
+   "id": "pb4d6c13826",
+   "action": "ai"
+  },
+  {
+   "slug": "sofi-x7-ip54",
+   "series": "SOFI X7 IP54",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Накладные SOFI__r18_c11_4.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные SOFI», строка 19, колонка «Изображение»",
+   "id": "pf465032b4c",
+   "action": "ai"
+  },
+  {
+   "slug": "sofi-x7-ip20",
+   "series": "SOFI X7 IP20",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Накладные SOFI__r23_c11_28.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные SOFI», строка 24, колонка «Изображение»",
+   "id": "pcf23106acd",
+   "action": "ai"
+  },
+  {
+   "slug": "sofi-x7-ip20",
+   "series": "SOFI X7 IP20",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Накладные SOFI__r23_c11_29.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Накладные SOFI», строка 24, колонка «Изображение»",
+   "id": "pcf2c89adf7",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-35",
+   "series": "ADA-LINE 35",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Линейные светильники__r3_c1_0.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Линейные светильники», строка 4, колонка «Фото»",
+   "id": "p49a700c68c",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-35",
+   "series": "ADA-LINE 35",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Линейные светильники__r3_c1_14.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Линейные светильники», строка 4, колонка «Фото»",
+   "id": "p32137bb582",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-50",
+   "series": "ADA-LINE 50",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Линейные светильники__r6_c1_15.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Линейные светильники», строка 7, колонка «Фото»",
+   "id": "p4f5b6cb3fb",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-50",
+   "series": "ADA-LINE 50",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Линейные светильники__r6_c1_20.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Линейные светильники», строка 7, колонка «Фото»",
+   "id": "p5ed237a25b",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-4075",
+   "series": "ADA-LINE 40×75",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Линейные светильники__r9_c1_7.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Линейные светильники», строка 10, колонка «Фото»",
+   "id": "p7c935778e7",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-ip54",
+   "series": "ADA-LINE IP54",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Линейные светильники__r13_c1_1.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Линейные светильники», строка 14, колонка «Фото»",
+   "id": "p564a7fd3d3",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-ip54",
+   "series": "ADA-LINE IP54",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Линейные светильники__r14_c1_2.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Линейные светильники», строка 15, колонка «Фото»",
+   "id": "pc5d86a2943",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-ip65",
+   "series": "ADA-LINE IP65",
+   "kind": "Фото",
+   "n": 2,
+   "file": "5080_2.jpg",
+   "where": "Фото для линейных/Фото для линейных / 5080_2.jpg",
+   "id": "paa61f7ea53",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-ip65",
+   "series": "ADA-LINE IP65",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Линейные светильники__r16_c1_5.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Линейные светильники», строка 17, колонка «Фото»",
+   "id": "pd7d22a1b07",
+   "action": "ai"
+  },
+  {
+   "slug": "ada-line-ip65",
+   "series": "ADA-LINE IP65",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Линейные светильники__r18_c1_6.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Линейные светильники», строка 19, колонка «Фото»",
+   "id": "p4f704187c4",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-a",
+   "series": "Шинопровод S20 A — накладной / подвесной",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Шинопровод S20 48V__r4_c3_1.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 5, колонка «Фото»",
+   "id": "p15f19fb077",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-a",
+   "series": "Шинопровод S20 A — накладной / подвесной",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Шинопровод S20 48V__r7_c3_13.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 8, колонка «Фото»",
+   "id": "p00d5a3d1fc",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-a",
+   "series": "Шинопровод S20 A — накладной / подвесной",
+   "kind": "Фото",
+   "n": 6,
+   "file": "Шинопровод S20 48V__r8_c3_15.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 9, колонка «Фото»",
+   "id": "p5e3878d52c",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-b",
+   "series": "Шинопровод S20 B — встраиваемый",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Шинопровод S20 48V__r10_c3_3.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 11, колонка «Фото»",
+   "id": "p51dfb54576",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-b",
+   "series": "Шинопровод S20 B — встраиваемый",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Шинопровод S20 48V__r13_c3_17.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 14, колонка «Фото»",
+   "id": "p6e3b0e3e5b",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-b",
+   "series": "Шинопровод S20 B — встраиваемый",
+   "kind": "Фото",
+   "n": 6,
+   "file": "Шинопровод S20 48V__r14_c3_19.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 15, колонка «Фото»",
+   "id": "p3d67f9d179",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-c",
+   "series": "Шинопровод S20 C — накладной / подвесной",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Шинопровод S20 48V__r15_c3_5.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 16, колонка «Фото»",
+   "id": "p2f4fcf1b3e",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-c",
+   "series": "Шинопровод S20 C — накладной / подвесной",
+   "kind": "Фото",
+   "n": 8,
+   "file": "Шинопровод S20 48V__r16_c3_6.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 17, колонка «Фото»",
+   "id": "p069bf9b303",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-c",
+   "series": "Шинопровод S20 C — накладной / подвесной",
+   "kind": "Фото",
+   "n": 9,
+   "file": "Шинопровод S20 48V__r17_c3_7.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 18, колонка «Фото»",
+   "id": "pe0f5701322",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-c",
+   "series": "Шинопровод S20 C — накладной / подвесной",
+   "kind": "Фото",
+   "n": 13,
+   "file": "Шинопровод S20 48V__r20_c3_20.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 21, колонка «Фото»",
+   "id": "p3dcb940ad7",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-c",
+   "series": "Шинопровод S20 C — накладной / подвесной",
+   "kind": "Фото",
+   "n": 14,
+   "file": "Шинопровод S20 48V__r20_c3_70.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 21, колонка «Фото»",
+   "id": "p83198abf44",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-c",
+   "series": "Шинопровод S20 C — накладной / подвесной",
+   "kind": "Фото",
+   "n": 18,
+   "file": "Шинопровод S20 48V__r21_c3_21.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 22, колонка «Фото»",
+   "id": "p804cd82c46",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-c",
+   "series": "Шинопровод S20 C — накладной / подвесной",
+   "kind": "Фото",
+   "n": 19,
+   "file": "Шинопровод S20 48V__r21_c3_71.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 22, колонка «Фото»",
+   "id": "p7a09930dbb",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-d",
+   "series": "Шинопровод S20 D — встраиваемый",
+   "kind": "Фото",
+   "n": 6,
+   "file": "Шинопровод S20 48V__r24_c3_9.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 25, колонка «Фото»",
+   "id": "pce84ce8f89",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-d",
+   "series": "Шинопровод S20 D — встраиваемый",
+   "kind": "Фото",
+   "n": 10,
+   "file": "Шинопровод S20 48V__r26_c3_22.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 27, колонка «Фото»",
+   "id": "p806c893fd2",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-d",
+   "series": "Шинопровод S20 D — встраиваемый",
+   "kind": "Фото",
+   "n": 11,
+   "file": "Шинопровод S20 48V__r26_c3_72.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 27, колонка «Фото»",
+   "id": "p0704afc948",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-d",
+   "series": "Шинопровод S20 D — встраиваемый",
+   "kind": "Фото",
+   "n": 15,
+   "file": "Шинопровод S20 48V__r27_c3_23.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 28, колонка «Фото»",
+   "id": "p5d438966fb",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-e",
+   "series": "Шинопровод S20 E — встраиваемый",
+   "kind": "Фото",
+   "n": 4,
+   "file": "Шинопровод S20 48V__r30_c3_11.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 31, колонка «Фото»",
+   "id": "p371442224d",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-e",
+   "series": "Шинопровод S20 E — встраиваемый",
+   "kind": "Фото",
+   "n": 7,
+   "file": "Шинопровод S20 48V__r32_c3_24.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 33, колонка «Фото»",
+   "id": "p0dffe1e62b",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-e",
+   "series": "Шинопровод S20 E — встраиваемый",
+   "kind": "Фото",
+   "n": 11,
+   "file": "Шинопровод S20 48V__r33_c3_25.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 34, колонка «Фото»",
+   "id": "pcb24a92e24",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 9,
+   "file": "Шинопровод S20 48V__r47_c3_48.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 48, колонка «Фото»",
+   "id": "p36205cf277",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 14,
+   "file": "Шинопровод S20 48V__r48_c3_50.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 49, колонка «Фото»",
+   "id": "pd7f51381b1",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 29,
+   "file": "Шинопровод S20 48V__r53_c3_57.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 54, колонка «Фото»",
+   "id": "p5bec8d1ef2",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 30,
+   "file": "Шинопровод S20 48V__r53_c3_58.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 54, колонка «Фото»",
+   "id": "p73a84dd98f",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 32,
+   "file": "Шинопровод S20 48V__r54_c3_60.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 55, колонка «Фото»",
+   "id": "pd6a0f238fa",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 37,
+   "file": "Шинопровод S20 48V__r55_c3_61.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 56, колонка «Фото»",
+   "id": "pfcf5829e56",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 38,
+   "file": "Шинопровод S20 48V__r55_c3_62.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 56, колонка «Фото»",
+   "id": "pc705a01f03",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 41,
+   "file": "Шинопровод S20 48V__r56_c3_63.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 57, колонка «Фото»",
+   "id": "pbda6040738",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 42,
+   "file": "Шинопровод S20 48V__r56_c3_64.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 57, колонка «Фото»",
+   "id": "p7e88b184b8",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-stretch",
+   "series": "Шинопровод S20 для натяжного потолка",
+   "kind": "Фото",
+   "n": 46,
+   "file": "Шинопровод S20 48V__r57_c3_66.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 58, колонка «Фото»",
+   "id": "pfae2de05b1",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-connectors",
+   "series": "Соединители и токовводы S20",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Шинопровод S20 48V__r34_c3_27.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 35, колонка «Фото»",
+   "id": "p61c4c1a36e",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-connectors",
+   "series": "Соединители и токовводы S20",
+   "kind": "Фото",
+   "n": 6,
+   "file": "Шинопровод S20 48V__r35_c3_29.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 36, колонка «Фото»",
+   "id": "p24fb3e9315",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-connectors",
+   "series": "Соединители и токовводы S20",
+   "kind": "Фото",
+   "n": 9,
+   "file": "Шинопровод S20 48V__r36_c3_31.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 37, колонка «Фото»",
+   "id": "p09394dfbae",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-connectors",
+   "series": "Соединители и токовводы S20",
+   "kind": "Фото",
+   "n": 12,
+   "file": "Шинопровод S20 48V__r37_c3_33.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 38, колонка «Фото»",
+   "id": "p08eefa8d05",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-connectors",
+   "series": "Соединители и токовводы S20",
+   "kind": "Фото",
+   "n": 15,
+   "file": "Шинопровод S20 48V__r38_c3_35.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 39, колонка «Фото»",
+   "id": "p11ea6e0a63",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-power",
+   "series": "Блоки питания S20 48V",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Шинопровод S20 48V__r39_c3_37.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 40, колонка «Фото»",
+   "id": "p63b36dc261",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-power",
+   "series": "Блоки питания S20 48V",
+   "kind": "Фото",
+   "n": 6,
+   "file": "Шинопровод S20 48V__r40_c3_39.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 41, колонка «Фото»",
+   "id": "p698b4c7c6e",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-power",
+   "series": "Блоки питания S20 48V",
+   "kind": "Фото",
+   "n": 7,
+   "file": "Шинопровод S20 48V__r41_c3_42.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 42, колонка «Фото»",
+   "id": "pafcd77e2ab",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-power",
+   "series": "Блоки питания S20 48V",
+   "kind": "Фото",
+   "n": 8,
+   "file": "Шинопровод S20 48V__r42_c3_40.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 43, колонка «Фото»",
+   "id": "p7295ef4823",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-smart",
+   "series": "Шлюз и пульт Tuya ZigBee",
+   "kind": "Фото",
+   "n": 2,
+   "file": "Шинопровод S20 48V__r43_c3_67.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 44, колонка «Фото»",
+   "id": "pe828f0fc25",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-smart",
+   "series": "Шлюз и пульт Tuya ZigBee",
+   "kind": "Фото",
+   "n": 3,
+   "file": "Шинопровод S20 48V__r43_c3_68.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 44, колонка «Фото»",
+   "id": "p222b03abc2",
+   "action": "ai"
+  },
+  {
+   "slug": "s20-track-smart",
+   "series": "Шлюз и пульт Tuya ZigBee",
+   "kind": "Фото",
+   "n": 7,
+   "file": "Шинопровод S20 48V__r44_c3_44.png",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Шинопровод S20 48V», строка 45, колонка «Фото»",
+   "id": "p8d1c0647a3",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-1",
+   "series": "WALL 01",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r3_c1_0.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 4, колонка «Фото»",
+   "id": "p03dcbbdd3b",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-501",
+   "series": "WALL 501",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r4_c1_1.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 5, колонка «Фото»",
+   "id": "p01504c41fc",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-504",
+   "series": "WALL 504",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r6_c1_2.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 7, колонка «Фото»",
+   "id": "p138e042792",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-505",
+   "series": "WALL 505",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r8_c1_3.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 9, колонка «Фото»",
+   "id": "pf11238ec93",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-547",
+   "series": "WALL 547",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r10_c1_4.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 11, колонка «Фото»",
+   "id": "p96bcd44b03",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-218",
+   "series": "WALL 218",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r12_c1_5.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 13, колонка «Фото»",
+   "id": "p4336c71968",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-252",
+   "series": "WALL 252",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r14_c1_6.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 15, колонка «Фото»",
+   "id": "p225b329fb8",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-253",
+   "series": "WALL 253",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r15_c1_7.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 16, колонка «Фото»",
+   "id": "p36d0e17734",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-210",
+   "series": "WALL 210",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r16_c1_8.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 17, колонка «Фото»",
+   "id": "p5f50e1316b",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-211",
+   "series": "WALL 211",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r19_c1_9.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 20, колонка «Фото»",
+   "id": "p4d2c0b1302",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-319",
+   "series": "WALL 319",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r22_c1_10.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 23, колонка «Фото»",
+   "id": "p3c86f82c2d",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-502",
+   "series": "WALL 502",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r24_c1_11.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 25, колонка «Фото»",
+   "id": "p5ce5e1a90b",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-518",
+   "series": "WALL 518",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r26_c1_12.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 27, колонка «Фото»",
+   "id": "p2cddfe5961",
+   "action": "ai"
+  },
+  {
+   "slug": "wall-600",
+   "series": "WALL 600",
+   "kind": "Фото",
+   "n": 1,
+   "file": "Бра__r28_c1_13.jpeg",
+   "where": "Прайс 2026 ADALight — РРЦ.xls / лист «Бра», строка 29, колонка «Фото»",
+   "id": "p61204a1715",
+   "action": "ai"
+  }
+ ]
+}

@@ -1,0 +1,947 @@
+[
+ {
+  "slug": "ukkie",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые ECO__r45_c1_9.png",
+  "md5": "52467d67e90836cc6396e4a759b69330"
+ },
+ {
+  "slug": "ukkie",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые ECO__r47_c1_10.png",
+  "md5": "dbca97767626f978ed9833cc9a967b70"
+ },
+ {
+  "slug": "emo-surface",
+  "kind": "images",
+  "n": 8,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные ECO__r3_c1_2.png",
+  "md5": "699db539793d3833e9e1c23dbaf18875"
+ },
+ {
+  "slug": "emo-surface",
+  "kind": "images",
+  "n": 9,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные ECO__r4_c1_1.png",
+  "md5": "89cdfd931b24d45bef5fdb4c37c0a192"
+ },
+ {
+  "slug": "vevo-surface",
+  "kind": "images",
+  "n": 20,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные ECO__r7_c1_0.png",
+  "md5": "455ee47f546bca77b28a614fe0186664"
+ },
+ {
+  "slug": "a-1519",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые Class A__r10_c1_33.png",
+  "md5": "ea91fdcd5e975cc08fc378021037da2b"
+ },
+ {
+  "slug": "a-1521",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые Class A__r11_c1_32.png",
+  "md5": "24a6b53846ea1b77b695e4d178d4095a"
+ },
+ {
+  "slug": "a-0789",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые Class A__r15_c1_34.png",
+  "md5": "dbb941ee1776d123b554748c91ee6e45"
+ },
+ {
+  "slug": "tube-a",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r3_c1_0.png",
+  "md5": "3df95359106780f0934cbfca6911cd7c"
+ },
+ {
+  "slug": "tube-a",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r6_c1_3.png",
+  "md5": "c5838f63305f330eb157efa47c276b60"
+ },
+ {
+  "slug": "td-7269",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r15_c1_66.png",
+  "md5": "94434c7014c8d2b719ea983fe09f9bea"
+ },
+ {
+  "slug": "td-7267a",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r22_c1_73.png",
+  "md5": "b3e6c9adfafcff361a9d1e1390f8671e"
+ },
+ {
+  "slug": "td-7267b",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r25_c1_76.png",
+  "md5": "f197dd3e70c156f843c623fe4ee9c51a"
+ },
+ {
+  "slug": "td-7272",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r29_c1_80.jpeg",
+  "md5": "b27f2c696cb84ab13b9c58df8d19bdac"
+ },
+ {
+  "slug": "td-7272",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r31_c1_82.jpeg",
+  "md5": "d793436412c28353214fb4b3be4351d3"
+ },
+ {
+  "slug": "td-7244-round",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r32_c1_83.png",
+  "md5": "1b43c413b1bbcac9281ab5bb27400335"
+ },
+ {
+  "slug": "tube-b",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r38_c1_12.png",
+  "md5": "7a252f728b62ad145173a13fb9d622a0"
+ },
+ {
+  "slug": "tube-t",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r52_c1_26.png",
+  "md5": "7f90b42aea328671a14c36b82b102b47"
+ },
+ {
+  "slug": "tube-t",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r54_c1_28.png",
+  "md5": "23bc7a2935a009553e15510013cc6052"
+ },
+ {
+  "slug": "x-7518",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r62_c1_51.png",
+  "md5": "5e6e71a0cada3db39ea02a04fea37ba8"
+ },
+ {
+  "slug": "td-7244-square",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r66_c1_88.png",
+  "md5": "e7dfae86098d9cc5d8022c59e17a9d03"
+ },
+ {
+  "slug": "td-7244-double",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r72_c1_94.png",
+  "md5": "b2ef652972262b4303c7ec7fe58d2125"
+ },
+ {
+  "slug": "td-7239",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r76_c1_98.png",
+  "md5": "9df8470676bda6a9f46304909a4bc1a8"
+ },
+ {
+  "slug": "td-7239",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r77_c1_99.png",
+  "md5": "b370db55df08189f4355457c862ce69d"
+ },
+ {
+  "slug": "td-7278-slim",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r81_c1_103.png",
+  "md5": "c9f58f2f94a628636111d2e8531f745d"
+ },
+ {
+  "slug": "grid-9002",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r87_c1_109.png",
+  "md5": "bc2434818433c9abd9009db593d368cc"
+ },
+ {
+  "slug": "grid-9002",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r88_c1_110.png",
+  "md5": "927406e84955a2829fc91903eb71b41d"
+ },
+ {
+  "slug": "grid-9002",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r89_c1_111.png",
+  "md5": "aab4881dfb7a5840c863fb47e2373f2c"
+ },
+ {
+  "slug": "grid-9002",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r91_c1_113.png",
+  "md5": "17ded970bedef32797770502b4017258"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r93_c1_36.png",
+  "md5": "e5208330ce0aeaa49a5bdd765aa9e200"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r94_c1_37.png",
+  "md5": "7c4427fd772193f554c4806cb0e2644d"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r95_c1_38.png",
+  "md5": "d2673c67ae3cd4238837ab9915e7df0c"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r96_c1_39.png",
+  "md5": "9ed5451a884c3791b7740e9489b04224"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "images",
+  "n": 5,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r97_c1_40.jpeg",
+  "md5": "d1d7c69dd89282246b1a3e9914a641b9"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "images",
+  "n": 6,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r98_c1_41.jpeg",
+  "md5": "4a02d6de94a4ae0ebc43ba19ff3424ec"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "images",
+  "n": 7,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r99_c1_42.jpeg",
+  "md5": "a77beec9ba50ce26b02343742aecabc8"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "images",
+  "n": 8,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r100_c1_43.jpeg",
+  "md5": "e3584886d552ddff6d25227f09841957"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "schemes",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r93_c2_151.png",
+  "md5": "cff306fda9c24b934db940f85cd68ad5"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "schemes",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r95_c2_153.png",
+  "md5": "0f0c77e877b1239eca8d4e63c1635208"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "schemes",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r97_c2_155.png",
+  "md5": "81b1962f2b89ae3fd1b52a8d2a1dc154"
+ },
+ {
+  "slug": "x-7529-double",
+  "kind": "schemes",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r99_c2_157.png",
+  "md5": "e52ef06745b8dbe7214b57782565dc52"
+ },
+ {
+  "slug": "x-7529-double-trimless",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r101_c1_44.png",
+  "md5": "38b5eef17b1ef75ef1e9139402acc78f"
+ },
+ {
+  "slug": "x-7529-double-trimless",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r103_c1_46.png",
+  "md5": "c8960e8ade4c8d40bebf92f662ce9c1c"
+ },
+ {
+  "slug": "x-7529-double-trimless",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r105_c1_48.png",
+  "md5": "f52383589424c6186edb2b0f15e1bb7e"
+ },
+ {
+  "slug": "x-7529-double-trimless",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r107_c1_50.jpeg",
+  "md5": "a9f4b62a05554e90c9ac1c71f9246ce7"
+ },
+ {
+  "slug": "x-7525-oval",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r109_c1_55.png",
+  "md5": "2053d1a21f795c243dcb92493e48de48"
+ },
+ {
+  "slug": "x-7525-oval",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r110_c1_56.png",
+  "md5": "f429f03d0210e44be30b58c05614db4e"
+ },
+ {
+  "slug": "x-7525-oval",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r111_c1_57.png",
+  "md5": "7f9a62cfc2e7fd3e5fadb3bb0e2170ec"
+ },
+ {
+  "slug": "x-7525-oval",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r113_c1_59.png",
+  "md5": "fa78978cbe187f995de17734a6eaf802"
+ },
+ {
+  "slug": "x-7525-oval-trimless",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r115_c1_61.png",
+  "md5": "df2aae831ba257d68a8fd267794a74e1"
+ },
+ {
+  "slug": "x-7525-oval-trimless",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r117_c1_63.png",
+  "md5": "93b98626eba7a0a4f9361861074a52aa"
+ },
+ {
+  "slug": "m1810-round",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r2_c0_0.png",
+  "md5": "41fca660bb143696bcd9d3596167f105"
+ },
+ {
+  "slug": "m1810-square",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r5_c0_3.png",
+  "md5": "47e5dadb09fd5d5a17864cf5171fa94c"
+ },
+ {
+  "slug": "m15-round",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r8_c0_6.png",
+  "md5": "d0d583c449ea61a7bd1983b27cad63fe"
+ },
+ {
+  "slug": "m15-round",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r11_c0_9.png",
+  "md5": "af3a3b5bb846770d7b09145cc2c37a55"
+ },
+ {
+  "slug": "m15-square",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r15_c0_13.png",
+  "md5": "63fd8382a6303589d536f9a318e1c3c5"
+ },
+ {
+  "slug": "m15-square",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r22_c0_20.png",
+  "md5": "2f8716a0773c84bf481b05a2da24855a"
+ },
+ {
+  "slug": "m17-disc",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r23_c0_21.png",
+  "md5": "137eab583f4cc8eed2102da4cbc02c33"
+ },
+ {
+  "slug": "m17-disc",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r24_c0_22.png",
+  "md5": "e9b23d757db2aab3a4279ad17a2aa9d1"
+ },
+ {
+  "slug": "m17-disc",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r25_c0_23.png",
+  "md5": "a0d621017ebcf675bb09d9dc19e2e4ea"
+ },
+ {
+  "slug": "m1015-tube",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r29_c0_27.png",
+  "md5": "827335111242c0150328db4053d48278"
+ },
+ {
+  "slug": "m1015-tube",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные PRM__r30_c0_28.png",
+  "md5": "b6d1f6b0cf5c1478bc970e55b7e411eb"
+ },
+ {
+  "slug": "sofi-g6-round",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные SOFI__r3_c11_1.png",
+  "md5": "5bdd982480fd19bda80e56b267a72ce9"
+ },
+ {
+  "slug": "sofi-g6-round",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные SOFI__r3_c11_2.png",
+  "md5": "be8a9744f21d9a9f4a992f89def96ff9"
+ },
+ {
+  "slug": "sofi-g6-square",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные SOFI__r11_c11_0.png",
+  "md5": "9e136a0b77f7f6b8a92c4c62d33c7acc"
+ },
+ {
+  "slug": "sofi-x7-ip54",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные SOFI__r18_c11_3.png",
+  "md5": "672ee48a499ab5ad55bafc968c817a26"
+ },
+ {
+  "slug": "sofi-x7-ip54",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные SOFI__r18_c11_4.jpeg",
+  "md5": "9d83fe39150389dd109423323d1934fa"
+ },
+ {
+  "slug": "sofi-x7-ip20",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные SOFI__r23_c11_28.png",
+  "md5": "672ee48a499ab5ad55bafc968c817a26"
+ },
+ {
+  "slug": "sofi-x7-ip20",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Накладные SOFI__r23_c11_29.jpeg",
+  "md5": "9d83fe39150389dd109423323d1934fa"
+ },
+ {
+  "slug": "ada-line-35",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Линейные светильники__r3_c1_0.png",
+  "md5": "b8c93eec81dc29af132d04b775907289"
+ },
+ {
+  "slug": "ada-line-35",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Линейные светильники__r3_c1_14.png",
+  "md5": "1856f3d8e924a65dbf13a9f735f12a64"
+ },
+ {
+  "slug": "ada-line-50",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Линейные светильники__r6_c1_15.png",
+  "md5": "b6335f755073bfbf4c2cc41f073a88ca"
+ },
+ {
+  "slug": "ada-line-50",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Линейные светильники__r6_c1_20.png",
+  "md5": "b8c93eec81dc29af132d04b775907289"
+ },
+ {
+  "slug": "ada-line-4075",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Линейные светильники__r9_c1_7.png",
+  "md5": "b8c93eec81dc29af132d04b775907289"
+ },
+ {
+  "slug": "ada-line-ip54",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Линейные светильники__r13_c1_1.png",
+  "md5": "3a14699903774d483d8fc3d9d017c46b"
+ },
+ {
+  "slug": "ada-line-ip54",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Линейные светильники__r14_c1_2.png",
+  "md5": "8e2a459325f222c6aa6db35e61af61da"
+ },
+ {
+  "slug": "ada-line-ip65",
+  "kind": "images",
+  "n": 2,
+  "src": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Фото для линейных/Фото для линейных/5080_2.jpg",
+  "md5": "ccb81cc7f450a699652c7118e5049801"
+ },
+ {
+  "slug": "ada-line-ip65",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Линейные светильники__r16_c1_5.png",
+  "md5": "dd88c8bf79cd78eebb2cfe6f741dd36f"
+ },
+ {
+  "slug": "ada-line-ip65",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Линейные светильники__r18_c1_6.png",
+  "md5": "0b7b343df96253918e64836bcd2072ca"
+ },
+ {
+  "slug": "s20-track-a",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r4_c3_1.png",
+  "md5": "3ddf870f09324a5294e4b6a7c51e80e4"
+ },
+ {
+  "slug": "s20-track-a",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r7_c3_13.png",
+  "md5": "ff77008a1bde31a05e56cf7a21d5d4d6"
+ },
+ {
+  "slug": "s20-track-a",
+  "kind": "images",
+  "n": 6,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r8_c3_15.png",
+  "md5": "f92fde5fbe97a80c2c9a6f41a8ec8208"
+ },
+ {
+  "slug": "s20-track-b",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r10_c3_3.png",
+  "md5": "3e9ab3852bc110208409e202c0c935c9"
+ },
+ {
+  "slug": "s20-track-b",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r13_c3_17.png",
+  "md5": "ff77008a1bde31a05e56cf7a21d5d4d6"
+ },
+ {
+  "slug": "s20-track-b",
+  "kind": "images",
+  "n": 6,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r14_c3_19.png",
+  "md5": "f92fde5fbe97a80c2c9a6f41a8ec8208"
+ },
+ {
+  "slug": "s20-track-c",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r15_c3_5.png",
+  "md5": "98a86ccce6a837f71f835fbd0ccd5729"
+ },
+ {
+  "slug": "s20-track-c",
+  "kind": "images",
+  "n": 8,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r16_c3_6.png",
+  "md5": "3218a2d3dd31228be4c8cff76655ea21"
+ },
+ {
+  "slug": "s20-track-c",
+  "kind": "images",
+  "n": 9,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r17_c3_7.png",
+  "md5": "3adbcd0acf53139d36f9cfa2733804a0"
+ },
+ {
+  "slug": "s20-track-c",
+  "kind": "images",
+  "n": 13,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r20_c3_20.png",
+  "md5": "ff77008a1bde31a05e56cf7a21d5d4d6"
+ },
+ {
+  "slug": "s20-track-c",
+  "kind": "images",
+  "n": 14,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r20_c3_70.png",
+  "md5": "3f79d0a585598276e3193011e51906b3"
+ },
+ {
+  "slug": "s20-track-c",
+  "kind": "images",
+  "n": 18,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r21_c3_21.png",
+  "md5": "f92fde5fbe97a80c2c9a6f41a8ec8208"
+ },
+ {
+  "slug": "s20-track-c",
+  "kind": "images",
+  "n": 19,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r21_c3_71.png",
+  "md5": "03fd1fa5fa6edd5d70bd5b065909fdf8"
+ },
+ {
+  "slug": "s20-track-d",
+  "kind": "images",
+  "n": 6,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r24_c3_9.png",
+  "md5": "20a25f7a18dfb8d6737910c15e8193cf"
+ },
+ {
+  "slug": "s20-track-d",
+  "kind": "images",
+  "n": 10,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r26_c3_22.png",
+  "md5": "7bd161ebcb8270f00cf428a06fec9297"
+ },
+ {
+  "slug": "s20-track-d",
+  "kind": "images",
+  "n": 11,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r26_c3_72.png",
+  "md5": "c84d803f4f88fedcb1b2845b1c835d18"
+ },
+ {
+  "slug": "s20-track-d",
+  "kind": "images",
+  "n": 15,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r27_c3_23.png",
+  "md5": "f92fde5fbe97a80c2c9a6f41a8ec8208"
+ },
+ {
+  "slug": "s20-track-e",
+  "kind": "images",
+  "n": 4,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r30_c3_11.png",
+  "md5": "1f50e69db4c4a53c31a0bf68bd88aae6"
+ },
+ {
+  "slug": "s20-track-e",
+  "kind": "images",
+  "n": 7,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r32_c3_24.png",
+  "md5": "ff77008a1bde31a05e56cf7a21d5d4d6"
+ },
+ {
+  "slug": "s20-track-e",
+  "kind": "images",
+  "n": 11,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r33_c3_25.png",
+  "md5": "f92fde5fbe97a80c2c9a6f41a8ec8208"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 9,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r47_c3_48.png",
+  "md5": "23eadf4fe999359aa6af8f05d1522e9b"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 14,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r48_c3_50.png",
+  "md5": "f92fde5fbe97a80c2c9a6f41a8ec8208"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 29,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r53_c3_57.png",
+  "md5": "49a2ee6463b4162e3b8c075657f16fdd"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 30,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r53_c3_58.png",
+  "md5": "f442a5e54979a851d5adb95ea32cd79a"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 32,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r54_c3_60.png",
+  "md5": "e22f8035ed4a2a7cc61c2f7c9c7160f3"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 37,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r55_c3_61.png",
+  "md5": "5a5b8701e4f7d11ad29a31d637427fa1"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 38,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r55_c3_62.png",
+  "md5": "9143dea643abc4ff884b366c8d7131de"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 41,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r56_c3_63.png",
+  "md5": "cb83e2d2fcf0ecefa06e00ac4639f7e2"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 42,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r56_c3_64.png",
+  "md5": "860184df573309fbc2b5a916e3712471"
+ },
+ {
+  "slug": "s20-track-stretch",
+  "kind": "images",
+  "n": 46,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r57_c3_66.png",
+  "md5": "d88b6025ea94d310c3c18976f5e52515"
+ },
+ {
+  "slug": "s20-track-connectors",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r34_c3_27.png",
+  "md5": "dd36d7ede79ce74aba600c5f60999bbd"
+ },
+ {
+  "slug": "s20-track-connectors",
+  "kind": "images",
+  "n": 6,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r35_c3_29.png",
+  "md5": "e41a9d866b34c76176d5c2eb82d93475"
+ },
+ {
+  "slug": "s20-track-connectors",
+  "kind": "images",
+  "n": 9,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r36_c3_31.png",
+  "md5": "0862580dede43d760e3615cd8690a4d1"
+ },
+ {
+  "slug": "s20-track-connectors",
+  "kind": "images",
+  "n": 12,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r37_c3_33.png",
+  "md5": "da03c2d02dd14e0d8d015779352cfe4c"
+ },
+ {
+  "slug": "s20-track-connectors",
+  "kind": "images",
+  "n": 15,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r38_c3_35.png",
+  "md5": "0b9ebe9617963db75596387013e0d1e6"
+ },
+ {
+  "slug": "s20-track-power",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r39_c3_37.png",
+  "md5": "7149af9195e518c28bd0e665b97c74dc"
+ },
+ {
+  "slug": "s20-track-power",
+  "kind": "images",
+  "n": 6,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r40_c3_39.png",
+  "md5": "9e525e94bd187fd2639fb2e85a4ac54d"
+ },
+ {
+  "slug": "s20-track-power",
+  "kind": "images",
+  "n": 7,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r41_c3_42.png",
+  "md5": "7f2d34a210409340921c2efb95ee7126"
+ },
+ {
+  "slug": "s20-track-power",
+  "kind": "images",
+  "n": 8,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r42_c3_40.png",
+  "md5": "81a969c2ff26f3f8eb8e305ba9f6b4eb"
+ },
+ {
+  "slug": "s20-track-smart",
+  "kind": "images",
+  "n": 2,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r43_c3_67.png",
+  "md5": "60bee10e9af3c6c0a3755cb39b8b5d91"
+ },
+ {
+  "slug": "s20-track-smart",
+  "kind": "images",
+  "n": 3,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r43_c3_68.png",
+  "md5": "dd20d7e1c988aa5d35169411a8fc8e15"
+ },
+ {
+  "slug": "s20-track-smart",
+  "kind": "images",
+  "n": 7,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Шинопровод S20 48V__r44_c3_44.png",
+  "md5": "233fadb66857fb5ed6a7f2619dd34871"
+ },
+ {
+  "slug": "wall-1",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r3_c1_0.jpeg",
+  "md5": "496ca03a5be14ffb00a957127644ade1"
+ },
+ {
+  "slug": "wall-501",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r4_c1_1.jpeg",
+  "md5": "39e1801a1c73f3c6418c4ae7a308dd54"
+ },
+ {
+  "slug": "wall-504",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r6_c1_2.jpeg",
+  "md5": "f3a3c1250d68af668651b9c2523a3d99"
+ },
+ {
+  "slug": "wall-505",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r8_c1_3.jpeg",
+  "md5": "95728c55f3c215ab1c3725ba6d69c9c9"
+ },
+ {
+  "slug": "wall-547",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r10_c1_4.jpeg",
+  "md5": "e8b84aa2f557964acc1e10020d2819dd"
+ },
+ {
+  "slug": "wall-218",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r12_c1_5.jpeg",
+  "md5": "8f0b2cc2f2009f88391f9ff3767618e1"
+ },
+ {
+  "slug": "wall-252",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r14_c1_6.jpeg",
+  "md5": "7b1f475f2dcbc41c0b7d654433664b4a"
+ },
+ {
+  "slug": "wall-253",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r15_c1_7.jpeg",
+  "md5": "8e158571ce33e836c70141736b05814d"
+ },
+ {
+  "slug": "wall-210",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r16_c1_8.jpeg",
+  "md5": "fd93811b707d292ee843c16209a7dafc"
+ },
+ {
+  "slug": "wall-211",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r19_c1_9.jpeg",
+  "md5": "29d6a7182b9e09838f12b28c9b917945"
+ },
+ {
+  "slug": "wall-319",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r22_c1_10.jpeg",
+  "md5": "26fb75b8832f8b63bad5b879d141b248"
+ },
+ {
+  "slug": "wall-502",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r24_c1_11.jpeg",
+  "md5": "adfc4225e0a6f85d69ac78f638a16b5f"
+ },
+ {
+  "slug": "wall-518",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r26_c1_12.jpeg",
+  "md5": "fd68f09b32f3627d4882b8f9423de0d8"
+ },
+ {
+  "slug": "wall-600",
+  "kind": "images",
+  "n": 1,
+  "src": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r28_c1_13.jpeg",
+  "md5": "85bafd699811456210c0486c4a713eb1"
+ }
+]

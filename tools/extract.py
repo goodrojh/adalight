@@ -125,6 +125,11 @@ _DUPS_FILE = os.path.join(ROOT, 'data', 'price_dups.json')
 PRICE_DUPS = json.load(open(_DUPS_FILE, encoding='utf-8')) if os.path.exists(_DUPS_FILE) else {}
 
 
+# фото, которые заказчик отметил «Убрать» в карте фото (сверка по содержимому файла)
+_RM_FILE = os.path.join(ROOT, 'data', 'client_remove.json')
+CLIENT_RM = {x['md5'] for x in json.load(open(_RM_FILE, encoding='utf-8'))} if os.path.exists(_RM_FILE) else set()
+
+
 def md5(pth):
     return hashlib.md5(open(pth, 'rb').read()).hexdigest()
 
@@ -138,6 +143,8 @@ def add(p):
     p['images'] = [i for i in p['images'] if os.path.basename(i) not in PRICE_DUPS]
     p['images'] = dedupe([i for i in p['images'] if os.path.exists(i) and not any(x in i for x in EXCLUDE) and not is_logo(i)])
     p['schemes'] = dedupe([i for i in p['schemes'] if os.path.exists(i)])
+    p['images'] = [i for i in p['images'] if md5(i) not in CLIENT_RM]
+    p['schemes'] = [i for i in p['schemes'] if md5(i) not in CLIENT_RM]
     # фото конкретной модификации: индекс в общей галерее (для смены фото при выборе модификации)
     idx = {md5(x): n for n, x in enumerate(p['images'])}
     sidx = {md5(x): n for n, x in enumerate(p['schemes'])}

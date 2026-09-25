@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Карта фото: какое исходное фото на какой странице сайта, в каком разрешении, откуда взято.
 Результат: Отчёты/Карта фото сайта.html (открывается в браузере, превью встроены)."""
-import json, os, re, io, base64, glob, html
+import json, os, re, io, base64, glob, html, hashlib, datetime
 from PIL import Image, ImageOps
 import content as C
 
@@ -77,11 +77,74 @@ RULES = [
 ]
 
 
+
+JS = r"""
+(function(){
+var KEY='adalight-photo-map-2';
+function collect(){
+  var d={photos:{},drop:[],comments:{},saved:new Date().toISOString()};
+  document.querySelectorAll('.ch input:checked').forEach(function(r){d.photos[r.name]=r.value;});
+  document.querySelectorAll('[data-drop]').forEach(function(c){if(c.checked)d.drop.push(c.dataset.drop);});
+  document.querySelectorAll('[data-cmt]').forEach(function(t){if(t.value.trim())d.comments[t.dataset.cmt]=t.value.trim();});
+  return d;
+}
+function apply(d){
+  if(!d)return;
+  Object.keys(d.photos||{}).forEach(function(k){var r=document.querySelector('input[name="'+k+'"][value="'+d.photos[k]+'"]');if(r)r.checked=true;});
+  (d.drop||[]).forEach(function(s){var c=document.querySelector('[data-drop="'+s+'"]');if(c)c.checked=true;});
+  Object.keys(d.comments||{}).forEach(function(s){var t=document.querySelector('[data-cmt="'+s+'"]');if(t)t.value=d.comments[s];});
+}
+function paint(){
+  var c={remove:0,ai:0,drop:0,add:0};
+  document.querySelectorAll('figure[data-id]').forEach(function(f){
+    var r=f.querySelector('.ch input:checked'),v=r?r.value:'';
+    f.className=f.className.replace(/\s?is-\S+/g,'')+(v?' is-'+v:'');
+    if(v==='remove')c.remove++;else if(v==='ai')c.ai++;else if(v==='add'||v==='add_ai')c.add++;
+  });
+  document.querySelectorAll('[data-drop]').forEach(function(x){x.closest('.ser').classList.toggle('dropped',x.checked);if(x.checked)c.drop++;});
+  Object.keys(c).forEach(function(k){var b=document.querySelector('[data-c="'+k+'"]');if(b)b.textContent=c[k];});
+}
+function store(){try{localStorage.setItem(KEY,JSON.stringify(collect()));}catch(e){}}
+var emb={};try{emb=JSON.parse(document.getElementById('decisions').textContent||'{}');}catch(e){}
+var loc=null;try{loc=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+apply(emb.saved?emb:null);
+if(loc&&(!emb.saved||loc.saved>emb.saved))apply(loc);
+paint();
+document.addEventListener('change',function(e){var t=e.target;if(t.checked&&t.closest('.ch'))t.closest('.ch').querySelectorAll('input').forEach(function(o){if(o!==t)o.checked=false;});paint();store();});
+document.addEventListener('input',function(e){if(e.target.matches('textarea'))store();});
+document.addEventListener('click',function(e){
+  var b=e.target.closest('[data-bulk]');
+  if(b){var v=b.dataset.bulk;b.closest('.ser').querySelectorAll('.ch input').forEach(function(r){r.checked=!!v&&r.value===v;});paint();store();}
+});
+document.getElementById('allbad').addEventListener('click',function(){
+  document.querySelectorAll('.ser figure.low .ch').forEach(function(c){c.querySelectorAll('input').forEach(function(r){r.checked=r.value==='ai';});});paint();store();
+});
+document.getElementById('save').addEventListener('click',function(){
+  var d=collect();
+  document.querySelectorAll('input').forEach(function(i){if(i.checked)i.setAttribute('checked','');else i.removeAttribute('checked');});
+  document.querySelectorAll('textarea').forEach(function(t){t.textContent=t.value;});
+  document.getElementById('decisions').textContent=JSON.stringify(d);
+  var h='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([h],{type:'text/html'}));
+  var dt=new Date();a.download='ADALIGHT — карта фото, отметки '+dt.getDate()+'.'+(dt.getMonth()+1)+'.html';
+  document.body.appendChild(a);a.click();a.remove();
+  store();
+  alert('Файл сохранён в «Загрузки». Отправьте его нам — мессенджером или почтой.');
+});
+})();
+"""
+
+
+def CHOICE(fid, opts):
+    return '<div class="ch">' + ''.join(f'<label class="o-{v}"><input type="checkbox" name="{fid}" value="{v}"><span>{t}</span></label>' for k, (v, t) in enumerate(opts)) + '</div>'
+
+
 def main():
     cats = {k: v['short'] for k, v in C.CATEGORIES.items()}
     used = set()
     rows_html, n_all, n_low, n_ser_low = [], 0, 0, 0
-    QUAL = []; SRCS = []
+    QUAL = []; SRCS = []; META = {}
     for cat in C.CAT_ORDER:
         ps = [p for p in P if p['category'] == cat]
         rows_html.append(f'<h2 id="{cat}">{html.escape(cats[cat])} <small>{len(ps)} серий</small></h2>')
@@ -104,13 +167,19 @@ def main():
                     where, name = describe(src)
                     srcname = 'картинка из прайса (Excel)' if 'xlimg' in src else 'фото из папки / архива'
                     link = 'file:///' + os.path.abspath(src).replace('\\', '/') if not src.startswith(os.path.join(os.path.dirname(ROOT), '_work')) or '/_work/edits/' in src.replace('\\', '/') else ''
-                    cards.append(f'<figure class="{cls}"><img src="{thumb(src)}" alt=""><figcaption><b>{kind} {i + 1}</b> · <span class="q">{vtxt}</span><br>'
+                    fid = 'p' + hashlib.md5((p['slug'] + '|' + os.path.abspath(src)).encode('utf-8')).hexdigest()[:10]
+                    META[fid] = {'slug': p['slug'], 'series': p['name'], 'kind': kind, 'n': i + 1, 'file': os.path.basename(src), 'where': where + ' / ' + name}
+                    cards.append(f'<figure class="{cls}" data-id="{fid}"><img src="{thumb(src)}" alt=""><figcaption><b>{kind} {i + 1}</b> · <span class="q">{vtxt}</span><br>'
                                  f'Размер: {w}×{h} px · {srcname}<br><span class="src">{html.escape(where)}<br><i>{html.escape(name)}</i></span>'
-                                 + '</figcaption></figure>')
+                                 + CHOICE(fid, [('remove', 'Убрать'), ('ai', 'Улучшить ИИ')]) + '</figcaption></figure>')
             n_ser_low += bool(ser_q) and all(q == 'low' for q in ser_q)
             vtxt = ', '.join(v['sku'] for v in p['variants'][:6]) + (' …' if len(p['variants']) > 6 else '')
-            rows_html.append(f'<section class="ser"><h3>{html.escape(p["name"])} <a href="{URL}/product/{p["slug"]}/" target="_blank">страница на сайте ↗</a></h3>'
-                             f'<p class="sku">{len(p["variants"])} арт.: {html.escape(vtxt)}</p><div class="grid">{"".join(cards)}</div></section>')
+            rows_html.append(f'<section class="ser" data-slug="{p["slug"]}"><h3>{html.escape(p["name"])} <a href="{URL}/product/{p["slug"]}/" target="_blank">страница на сайте ↗</a></h3>'
+                             f'<p class="sku">{len(p["variants"])} арт.: {html.escape(vtxt)}</p>'
+                             f'<div class="ser-ctl"><label class="drop"><input type="checkbox" data-drop="{p["slug"]}"> Убрать этот товар с сайта полностью</label>'
+                             f'<span class="bulk">Всем фото серии: <button type="button" data-bulk="remove">Убрать</button><button type="button" data-bulk="ai">Улучшить ИИ</button><button type="button" data-bulk="">Сбросить</button></span></div>'
+                             f'<div class="grid">{"".join(cards)}</div>'
+                             f'<textarea class="cmt" data-cmt="{p["slug"]}" placeholder="Комментарий по серии (необязательно)"></textarea></section>')
     # неиспользованные фото из материалов
     def eligible(f):
         g = f.replace(os.sep, '/')
@@ -121,7 +190,6 @@ def main():
         return True
     all_src = [f for f in glob.glob(SRC + '**/*', recursive=True) if eligible(f)]
     unused = [f for f in all_src if os.path.normcase(os.path.abspath(f)) not in used]
-    import hashlib
     usedh = {hashlib.md5(open(x, 'rb').read()).hexdigest() for p in P for x in p['images'] + p['schemes'] if os.path.exists(x)}
 
     def reason(f):
@@ -142,7 +210,13 @@ def main():
             return 'Заменено фото из Alpha (1).rar (правки 25.09)'
         return 'Не сопоставлено с артикулом'
     unused = [f for f in unused if not reason(f).startswith(('Точная копия', 'Заменено', 'Старое фото'))]
-    un_html = ''.join(f'<figure class="low"><img src="{thumb(f, 110)}" alt=""><figcaption><b>{html.escape(reason(f))}</b><br><span class="src">{html.escape(os.path.relpath(f, SRC))}</span></figcaption></figure>' for f in unused)
+    un_parts = []
+    for f in unused:
+        uid = 'u' + hashlib.md5(os.path.abspath(f).encode('utf-8')).hexdigest()[:10]
+        META[uid] = {'unused': True, 'file': os.path.basename(f), 'reason': reason(f), 'where': os.path.relpath(f, SRC)}
+        un_parts.append(f'<figure class="low" data-id="{uid}"><img src="{thumb(f, 110)}" alt=""><figcaption><b>{html.escape(reason(f))}</b><br><span class="src">{html.escape(os.path.relpath(f, SRC))}</span>'
+                        + CHOICE(uid, [('add', 'Добавить на сайт'), ('add_ai', 'Добавить + улучшить ИИ')]) + '</figcaption></figure>')
+    un_html = ''.join(un_parts)
     n_mid = sum(1 for x in QUAL if x == 'mid'); n_good = sum(1 for x in QUAL if x == 'good')
     low_xls = sum(1 for q, x in zip(QUAL, SRCS) if q == 'low' and x)
     summary = (f'<div class="sum"><div><b>{n_all}</b>фото и чертежей на страницах товаров</div>'
@@ -159,15 +233,35 @@ h2 small{{font-size:14px;color:#777;font-weight:400}}.ser{{background:#fff;borde
 .sku{{margin:0 0 10px;color:#666;font-size:12.5px}}.grid{{display:flex;flex-wrap:wrap;gap:10px}}figure{{margin:0;width:230px;border:1px solid #e3e3df;border-radius:10px;overflow:hidden;background:#fff}}
 figure img{{width:100%;height:150px;object-fit:contain;background:#f7f7f5;display:block}}figcaption{{padding:8px 10px;font-size:12px}}.src{{color:#666}}
 figure.low{{border-color:#e8836f}}figure.low .q{{color:#c0392b;font-weight:600}}figure.mid .q{{color:#b7791f;font-weight:600}}figure.good .q{{color:#2f855a;font-weight:600}}
-table{{border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}}td{{padding:8px 12px;border-bottom:1px solid #eee;vertical-align:top}}nav a{{margin-right:14px}}.sum{{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 4px}}.sum div{{background:#fff;border-radius:12px;padding:14px 18px;min-width:200px}}.sum b{{display:block;font-size:30px}}.sum .bad b{{color:#c0392b}}.sum .mid b{{color:#b7791f}}.sum .ok b{{color:#2f855a}}.note{{background:#fff8dc;border-left:4px solid #ffc603;padding:12px 16px;border-radius:8px}}</style></head><body>
+table{{border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}}td{{padding:8px 12px;border-bottom:1px solid #eee;vertical-align:top}}nav a{{margin-right:14px}}.sum{{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 4px}}.sum div{{background:#fff;border-radius:12px;padding:14px 18px;min-width:200px}}.sum b{{display:block;font-size:30px}}.sum .bad b{{color:#c0392b}}.sum .mid b{{color:#b7791f}}.sum .ok b{{color:#2f855a}}.howto{{background:#fff;border-radius:12px;padding:18px 22px;margin:4px 0 14px;border-left:4px solid #ffc603}}.howto ol{{margin:6px 0;padding-left:20px}}.small{{color:#666;font-size:12.5px;margin:6px 0 0}}
+.bar{{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;background:#0d0d0e;color:#fff;padding:12px 18px;border-radius:12px;margin:0 0 14px}}.bar b{{color:#ffc603;font-size:16px}}
+.bar button,.bulk button{{border:0;border-radius:999px;padding:9px 14px;font:600 13px Segoe UI,Arial;cursor:pointer}}.bar .main{{background:#ffc603;color:#000;margin-left:auto}}.bar .ghost{{background:#2a2a2d;color:#fff}}
+.ch{{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}}.ch label{{cursor:pointer}}.ch input{{display:none}}.ch span{{display:inline-block;padding:5px 8px;border:1px solid #d6d6d0;border-radius:999px;font-size:11.5px;background:#fafaf8}}
+.ch input:checked+span{{background:#0d0d0e;color:#fff;border-color:#0d0d0e}}.o-remove input:checked+span{{background:#c0392b;border-color:#c0392b}}.o-ai input:checked+span,.o-add_ai input:checked+span{{background:#2563eb;border-color:#2563eb}}.o-add input:checked+span{{background:#2f855a;border-color:#2f855a}}
+figure.is-remove{{opacity:.45}}figure.is-ai{{box-shadow:0 0 0 3px #2563eb}}figure.is-add,figure.is-add_ai{{box-shadow:0 0 0 3px #2f855a}}
+.ser-ctl{{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;margin:0 0 10px}}.drop{{font-weight:600;color:#c0392b;cursor:pointer}}.bulk{{font-size:12.5px;color:#666}}.bulk button{{background:#f0f0ec;margin-left:4px;padding:6px 10px}}
+.ser.dropped{{background:#fdecea}}.ser.dropped .grid{{opacity:.35}}.cmt{{width:100%;margin-top:10px;min-height:38px;border:1px solid #e3e3df;border-radius:8px;padding:8px;font:13px Segoe UI,Arial}}
+.note{{background:#fff8dc;border-left:4px solid #ffc603;padding:12px 16px;border-radius:8px}}</style></head><body>
 <header><h1>Карта фото сайта ADALIGHT</h1><div>Каждое фото на странице товара: откуда взято и как выглядит на сайте. Всего фото: {n_all} · выглядят на сайте плохо: {n_low}.</div></header><main>
+<section class="howto"><h2 style="margin-top:0;border:0">Как заполнить</h2>
+<ol><li>Если фото устраивает — <b>ничего не нажимайте</b>, оно остаётся на сайте как есть.</li>
+<li>Отмечайте только то, что нужно изменить: <b>«Убрать»</b> — фото удалим с сайта, <b>«Улучшить ИИ»</b> — улучшим качество. Повторное нажатие снимает отметку.</li>
+<li>В разделе «Фото, которые не попали на сайт» отметьте то, что нужно <b>добавить</b>; без отметки фото не добавляется.</li>
+<li>Если товар не нужен на сайте — поставьте галочку <b>«Убрать этот товар с сайта полностью»</b> у серии.</li>
+<li>Когда закончите, нажмите <b>«Сохранить файл с отметками»</b> (кнопка вверху) и отправьте скачанный файл.</li></ol>
+<p class="small">Отметки сохраняются в браузере автоматически — можно закрыть файл и продолжить позже на этом же компьютере.</p></section>
+<div class="bar" id="bar"><span>Фото убрать: <b data-c="remove">0</b></span><span>Улучшить ИИ: <b data-c="ai">0</b></span><span>Товаров убрать: <b data-c="drop">0</b></span><span>Добавить из неиспользованных: <b data-c="add">0</b></span>
+<button type="button" class="ghost" id="allbad">Все фото плохого качества → Улучшить ИИ</button><button type="button" class="main" id="save">Сохранить файл с отметками</button></div>
 {summary}
 <nav>{"".join(f'<a href="#{c}">{html.escape(cats[c])}</a>' for c in C.CAT_ORDER)}<a href="#unused">Не использованы</a></nav>
 <h2>Правила: откуда берутся фото каждой серии</h2><table>{rules}</table>
 {"".join(rows_html)}
 <h2 id="unused">Фото из материалов, которые не попали на сайт <small>{len(unused)} шт.</small></h2>
 <p>Эти фото есть в материалах, но на сайт не поставлены — нужно решение: у каждого указана причина.</p><div class="grid">{un_html}</div>
-</main></body></html>'''
+</main>
+<script id="decisions" type="application/json">{{}}</script>
+<script id="meta" type="application/json">{json.dumps(META, ensure_ascii=False)}</script>
+<script>{JS}</script></body></html>'''
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     open(OUT, 'w', encoding='utf-8').write(page)
     print('photos', n_all, 'low', n_low, 'unused', len(unused), 'size MB', round(os.path.getsize(OUT) / 1e6, 1))
