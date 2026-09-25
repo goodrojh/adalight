@@ -130,6 +130,11 @@ _RM_FILE = os.path.join(ROOT, 'data', 'client_remove.json')
 CLIENT_RM = {x['md5'] for x in json.load(open(_RM_FILE, encoding='utf-8'))} if os.path.exists(_RM_FILE) else set()
 
 
+# фото, обработанные ИИ по заказу (качество / белый фон): md5 оригинала -> файл в _work/ai
+_AI_FILE = os.path.join(ROOT, 'data', 'ai_replace.json')
+AI_REPLACE = json.load(open(_AI_FILE, encoding='utf-8')) if os.path.exists(_AI_FILE) else {}
+
+
 def md5(pth):
     return hashlib.md5(open(pth, 'rb').read()).hexdigest()
 
@@ -144,12 +149,15 @@ def add(p):
     p['images'] = dedupe([i for i in p['images'] if os.path.exists(i) and not any(x in i for x in EXCLUDE) and not is_logo(i)])
     p['schemes'] = dedupe([i for i in p['schemes'] if os.path.exists(i)])
     p['images'] = [i for i in p['images'] if md5(i) not in CLIENT_RM]
+    p['images'] = [AI_REPLACE.get(md5(i), i) for i in p['images']]
     p['schemes'] = [i for i in p['schemes'] if md5(i) not in CLIENT_RM]
     # фото конкретной модификации: индекс в общей галерее (для смены фото при выборе модификации)
     idx = {md5(x): n for n, x in enumerate(p['images'])}
     sidx = {md5(x): n for n, x in enumerate(p['schemes'])}
     for v in p['variants']:
         src = v.pop('_img', None)
+        if src and os.path.exists(src):
+            src = AI_REPLACE.get(md5(src), src)
         v['img_i'] = idx.get(md5(src)) if src and os.path.exists(src) else None
         sch = v.pop('_sch', None)
         v['sch_i'] = sidx.get(md5(sch)) if sch and os.path.exists(sch) else None
