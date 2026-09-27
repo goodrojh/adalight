@@ -340,7 +340,7 @@ table.t{width:100%;border-collapse:collapse;font-size:14px;min-width:720px}
 .tabs button[aria-selected=true]{color:var(--text);border-color:var(--signal)}
 .tabpanel[hidden]{display:none}
 .schemes{display:flex;gap:12px;flex-wrap:wrap}
-.schemes img{background:#fff;border:1px solid var(--line);border-radius:10px;max-height:220px;width:auto}
+.schemes img{background:#f3f3f1;border:1px solid var(--line);border-radius:10px;max-height:220px;width:auto}
 
 /* beam visualiser */
 .beam{background:var(--ink);color:#fff;border-radius:var(--r);padding:clamp(18px,2.5vw,28px);display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:24px;align-items:center}
