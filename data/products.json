@@ -849,14 +849,14 @@
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\ocean-5.jpg"
    },
    {
-    "src": "/img/p/ocean-6-480.webp",
-    "srcset": "/img/p/ocean-6-480.webp 388w",
-    "w": 388,
-    "h": 349,
-    "lg": "/img/p/ocean-6-480.webp",
-    "ow": 388,
-    "oh": 349,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые ECO__r27_c1_7.png"
+    "src": "/img/p/ocean-6-ai5fa7e5-480.webp",
+    "srcset": "/img/p/ocean-6-ai5fa7e5-480.webp 480w, /img/p/ocean-6-ai5fa7e5-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/ocean-6-ai5fa7e5-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\ocean-6.jpg"
    }
   ],
   "variants": [
@@ -1262,24 +1262,24 @@
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\ukkie-2.jpg"
    },
    {
-    "src": "/img/p/ukkie-3-480.webp",
-    "srcset": "/img/p/ukkie-3-480.webp 394w",
-    "w": 394,
-    "h": 315,
-    "lg": "/img/p/ukkie-3-480.webp",
-    "ow": 394,
-    "oh": 315,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые ECO__r45_c1_9.png"
+    "src": "/img/p/ukkie-3-aib1c43c-480.webp",
+    "srcset": "/img/p/ukkie-3-aib1c43c-480.webp 480w, /img/p/ukkie-3-aib1c43c-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/ukkie-3-aib1c43c-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\ukkie-3.jpg"
    },
    {
-    "src": "/img/p/ukkie-4-480.webp",
-    "srcset": "/img/p/ukkie-4-480.webp 433w",
-    "w": 433,
-    "h": 353,
-    "lg": "/img/p/ukkie-4-480.webp",
-    "ow": 433,
-    "oh": 353,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые ECO__r47_c1_10.png"
+    "src": "/img/p/ukkie-4-ai50ec9b-480.webp",
+    "srcset": "/img/p/ukkie-4-ai50ec9b-480.webp 480w, /img/p/ukkie-4-ai50ec9b-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/ukkie-4-ai50ec9b-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\ukkie-4.jpg"
    }
   ],
   "variants": [
@@ -1462,11 +1462,11 @@
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\emo-surface-8.jpg"
    },
    {
-    "src": "/img/p/emo-surface-9-ai497ae3-480.webp",
-    "srcset": "/img/p/emo-surface-9-ai497ae3-480.webp 480w, /img/p/emo-surface-9-ai497ae3-1100.webp 1100w",
+    "src": "/img/p/emo-surface-9-ai2ef39e-480.webp",
+    "srcset": "/img/p/emo-surface-9-ai2ef39e-480.webp 480w, /img/p/emo-surface-9-ai2ef39e-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/emo-surface-9-ai497ae3-1100.webp",
+    "lg": "/img/p/emo-surface-9-ai2ef39e-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\emo-surface-9.jpg"
@@ -1638,94 +1638,94 @@
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-10.jpg"
    },
    {
-    "src": "/img/p/vevo-surface-11-480.webp",
-    "srcset": "/img/p/vevo-surface-11-480.webp 480w, /img/p/vevo-surface-11-1100.webp 1100w",
+    "src": "/img/p/vevo-surface-11-ai5a1b86-480.webp",
+    "srcset": "/img/p/vevo-surface-11-ai5a1b86-480.webp 480w, /img/p/vevo-surface-11-ai5a1b86-1100.webp 1100w",
     "w": 1100,
-    "h": 825,
-    "lg": "/img/p/vevo-surface-11-1100.webp",
-    "ow": 1448,
-    "oh": 1086,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/Фото для серии ECO _TANGO  EMO  NANO  Cuvey  Doto  Ocean  Revo  Tenk  Vevo  Ukkie/VEVO/Белый\\12.png"
+    "h": 1100,
+    "lg": "/img/p/vevo-surface-11-ai5a1b86-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-11.jpg"
    },
    {
-    "src": "/img/p/vevo-surface-12-480.webp",
-    "srcset": "/img/p/vevo-surface-12-480.webp 480w, /img/p/vevo-surface-12-1100.webp 1100w",
+    "src": "/img/p/vevo-surface-12-ai82f5e9-480.webp",
+    "srcset": "/img/p/vevo-surface-12-ai82f5e9-480.webp 480w, /img/p/vevo-surface-12-ai82f5e9-1100.webp 1100w",
     "w": 1100,
-    "h": 825,
-    "lg": "/img/p/vevo-surface-12-1100.webp",
-    "ow": 1448,
-    "oh": 1086,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/Фото для серии ECO _TANGO  EMO  NANO  Cuvey  Doto  Ocean  Revo  Tenk  Vevo  Ukkie/VEVO/Белый\\12w.png"
+    "h": 1100,
+    "lg": "/img/p/vevo-surface-12-ai82f5e9-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-12.jpg"
    },
    {
-    "src": "/img/p/vevo-surface-13-480.webp",
-    "srcset": "/img/p/vevo-surface-13-480.webp 480w, /img/p/vevo-surface-13-1100.webp 1100w",
+    "src": "/img/p/vevo-surface-13-ai879039-480.webp",
+    "srcset": "/img/p/vevo-surface-13-ai879039-480.webp 480w, /img/p/vevo-surface-13-ai879039-1100.webp 1100w",
     "w": 1100,
-    "h": 825,
-    "lg": "/img/p/vevo-surface-13-1100.webp",
-    "ow": 1448,
-    "oh": 1086,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/Фото для серии ECO _TANGO  EMO  NANO  Cuvey  Doto  Ocean  Revo  Tenk  Vevo  Ukkie/VEVO/Белый\\18.png"
+    "h": 1100,
+    "lg": "/img/p/vevo-surface-13-ai879039-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-13.jpg"
    },
    {
-    "src": "/img/p/vevo-surface-14-480.webp",
-    "srcset": "/img/p/vevo-surface-14-480.webp 480w, /img/p/vevo-surface-14-1100.webp 1100w",
+    "src": "/img/p/vevo-surface-14-aid3d768-480.webp",
+    "srcset": "/img/p/vevo-surface-14-aid3d768-480.webp 480w, /img/p/vevo-surface-14-aid3d768-1100.webp 1100w",
     "w": 1100,
-    "h": 825,
-    "lg": "/img/p/vevo-surface-14-1100.webp",
-    "ow": 1448,
-    "oh": 1086,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/Фото для серии ECO _TANGO  EMO  NANO  Cuvey  Doto  Ocean  Revo  Tenk  Vevo  Ukkie/VEVO/Белый\\18w.png"
+    "h": 1100,
+    "lg": "/img/p/vevo-surface-14-aid3d768-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-14.jpg"
    },
    {
-    "src": "/img/p/vevo-surface-15-480.webp",
-    "srcset": "/img/p/vevo-surface-15-480.webp 480w, /img/p/vevo-surface-15-1100.webp 1100w",
+    "src": "/img/p/vevo-surface-15-ai1e5834-480.webp",
+    "srcset": "/img/p/vevo-surface-15-ai1e5834-480.webp 480w, /img/p/vevo-surface-15-ai1e5834-1100.webp 1100w",
     "w": 1100,
-    "h": 825,
-    "lg": "/img/p/vevo-surface-15-1100.webp",
-    "ow": 1448,
-    "oh": 1086,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/Фото для серии ECO _TANGO  EMO  NANO  Cuvey  Doto  Ocean  Revo  Tenk  Vevo  Ukkie/VEVO/Белый\\25.png"
+    "h": 1100,
+    "lg": "/img/p/vevo-surface-15-ai1e5834-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-15.jpg"
    },
    {
-    "src": "/img/p/vevo-surface-16-480.webp",
-    "srcset": "/img/p/vevo-surface-16-480.webp 480w, /img/p/vevo-surface-16-1100.webp 1100w",
+    "src": "/img/p/vevo-surface-16-ai32fa44-480.webp",
+    "srcset": "/img/p/vevo-surface-16-ai32fa44-480.webp 480w, /img/p/vevo-surface-16-ai32fa44-1100.webp 1100w",
     "w": 1100,
-    "h": 825,
-    "lg": "/img/p/vevo-surface-16-1100.webp",
-    "ow": 1448,
-    "oh": 1086,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/Фото для серии ECO _TANGO  EMO  NANO  Cuvey  Doto  Ocean  Revo  Tenk  Vevo  Ukkie/VEVO/Белый\\35.png"
+    "h": 1100,
+    "lg": "/img/p/vevo-surface-16-ai32fa44-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-16.jpg"
    },
    {
-    "src": "/img/p/vevo-surface-17-480.webp",
-    "srcset": "/img/p/vevo-surface-17-480.webp 480w, /img/p/vevo-surface-17-1100.webp 1100w",
+    "src": "/img/p/vevo-surface-17-aie1fd89-480.webp",
+    "srcset": "/img/p/vevo-surface-17-aie1fd89-480.webp 480w, /img/p/vevo-surface-17-aie1fd89-1100.webp 1100w",
     "w": 1100,
-    "h": 825,
-    "lg": "/img/p/vevo-surface-17-1100.webp",
-    "ow": 1448,
-    "oh": 1086,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/Фото для серии ECO _TANGO  EMO  NANO  Cuvey  Doto  Ocean  Revo  Tenk  Vevo  Ukkie/VEVO/Белый\\35w.png"
+    "h": 1100,
+    "lg": "/img/p/vevo-surface-17-aie1fd89-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-17.jpg"
    },
    {
-    "src": "/img/p/vevo-surface-18-480.webp",
-    "srcset": "/img/p/vevo-surface-18-480.webp 480w, /img/p/vevo-surface-18-1100.webp 1100w",
+    "src": "/img/p/vevo-surface-18-aib1c8e8-480.webp",
+    "srcset": "/img/p/vevo-surface-18-aib1c8e8-480.webp 480w, /img/p/vevo-surface-18-aib1c8e8-1100.webp 1100w",
     "w": 1100,
-    "h": 825,
-    "lg": "/img/p/vevo-surface-18-1100.webp",
-    "ow": 1448,
-    "oh": 1086,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/Фото для серии ECO _TANGO  EMO  NANO  Cuvey  Doto  Ocean  Revo  Tenk  Vevo  Ukkie/VEVO/Белый\\40.png"
+    "h": 1100,
+    "lg": "/img/p/vevo-surface-18-aib1c8e8-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-18.jpg"
    },
    {
-    "src": "/img/p/vevo-surface-19-480.webp",
-    "srcset": "/img/p/vevo-surface-19-480.webp 480w, /img/p/vevo-surface-19-1100.webp 1100w",
+    "src": "/img/p/vevo-surface-19-ai975545-480.webp",
+    "srcset": "/img/p/vevo-surface-19-ai975545-480.webp 480w, /img/p/vevo-surface-19-ai975545-1100.webp 1100w",
     "w": 1100,
-    "h": 825,
-    "lg": "/img/p/vevo-surface-19-1100.webp",
-    "ow": 1448,
-    "oh": 1086,
-    "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/Фото для серии ECO _TANGO  EMO  NANO  Cuvey  Doto  Ocean  Revo  Tenk  Vevo  Ukkie/VEVO/Белый\\40w.png"
+    "h": 1100,
+    "lg": "/img/p/vevo-surface-19-ai975545-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\vevo-surface-19.jpg"
    },
    {
     "src": "/img/p/vevo-surface-20-480.webp",
@@ -3802,24 +3802,24 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/tube-a-1-480.webp",
-    "srcset": "/img/p/tube-a-1-480.webp 332w",
-    "w": 332,
-    "h": 392,
-    "lg": "/img/p/tube-a-1-480.webp",
-    "ow": 332,
-    "oh": 392,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r3_c1_0.png"
+    "src": "/img/p/tube-a-1-ai640889-480.webp",
+    "srcset": "/img/p/tube-a-1-ai640889-480.webp 480w, /img/p/tube-a-1-ai640889-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/tube-a-1-ai640889-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\tube-a-1.jpg"
    },
    {
-    "src": "/img/p/tube-a-2-480.webp",
-    "srcset": "/img/p/tube-a-2-480.webp 332w",
-    "w": 332,
-    "h": 394,
-    "lg": "/img/p/tube-a-2-480.webp",
-    "ow": 332,
-    "oh": 394,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r6_c1_3.png"
+    "src": "/img/p/tube-a-2-aibe720f-480.webp",
+    "srcset": "/img/p/tube-a-2-aibe720f-480.webp 480w, /img/p/tube-a-2-aibe720f-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/tube-a-2-aibe720f-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\tube-a-2.jpg"
    }
   ],
   "schemes": [
@@ -4133,14 +4133,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/td-7269-1-480.webp",
-    "srcset": "/img/p/td-7269-1-480.webp 234w",
-    "w": 234,
-    "h": 230,
-    "lg": "/img/p/td-7269-1-480.webp",
-    "ow": 234,
-    "oh": 230,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r15_c1_66.png"
+    "src": "/img/p/td-7269-1-ai9df33d-480.webp",
+    "srcset": "/img/p/td-7269-1-ai9df33d-480.webp 480w, /img/p/td-7269-1-ai9df33d-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7269-1-ai9df33d-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7269-1.jpg"
    }
   ],
   "schemes": [
@@ -4333,14 +4333,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/td-7267a-1-480.webp",
-    "srcset": "/img/p/td-7267a-1-480.webp 312w",
-    "w": 312,
-    "h": 284,
-    "lg": "/img/p/td-7267a-1-480.webp",
-    "ow": 312,
-    "oh": 284,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r22_c1_73.png"
+    "src": "/img/p/td-7267a-1-ai3a7147-480.webp",
+    "srcset": "/img/p/td-7267a-1-ai3a7147-480.webp 480w, /img/p/td-7267a-1-ai3a7147-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7267a-1-ai3a7147-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7267a-1.jpg"
    }
   ],
   "schemes": [
@@ -4463,14 +4463,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/td-7267b-1-480.webp",
-    "srcset": "/img/p/td-7267b-1-480.webp 278w",
-    "w": 278,
-    "h": 235,
-    "lg": "/img/p/td-7267b-1-480.webp",
-    "ow": 278,
-    "oh": 235,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r25_c1_76.png"
+    "src": "/img/p/td-7267b-1-ai85fab2-480.webp",
+    "srcset": "/img/p/td-7267b-1-ai85fab2-480.webp 480w, /img/p/td-7267b-1-ai85fab2-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7267b-1-ai85fab2-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7267b-1.jpg"
    }
   ],
   "schemes": [
@@ -4611,24 +4611,24 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/td-7272-1-480.webp",
-    "srcset": "/img/p/td-7272-1-480.webp 216w",
-    "w": 216,
-    "h": 275,
-    "lg": "/img/p/td-7272-1-480.webp",
-    "ow": 216,
-    "oh": 275,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r29_c1_80.jpeg"
+    "src": "/img/p/td-7272-1-aic714a9-480.webp",
+    "srcset": "/img/p/td-7272-1-aic714a9-480.webp 480w, /img/p/td-7272-1-aic714a9-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7272-1-aic714a9-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7272-1.jpg"
    },
    {
-    "src": "/img/p/td-7272-2-480.webp",
-    "srcset": "/img/p/td-7272-2-480.webp 216w",
-    "w": 216,
-    "h": 277,
-    "lg": "/img/p/td-7272-2-480.webp",
-    "ow": 216,
-    "oh": 277,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r31_c1_82.jpeg"
+    "src": "/img/p/td-7272-2-ai5c76e2-480.webp",
+    "srcset": "/img/p/td-7272-2-ai5c76e2-480.webp 480w, /img/p/td-7272-2-ai5c76e2-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7272-2-ai5c76e2-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7272-2.jpg"
    }
   ],
   "schemes": [
@@ -4751,14 +4751,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/td-7244-round-1-480.webp",
-    "srcset": "/img/p/td-7244-round-1-480.webp 298w",
-    "w": 298,
-    "h": 286,
-    "lg": "/img/p/td-7244-round-1-480.webp",
-    "ow": 298,
-    "oh": 286,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r32_c1_83.png"
+    "src": "/img/p/td-7244-round-1-ai7e0b53-480.webp",
+    "srcset": "/img/p/td-7244-round-1-ai7e0b53-480.webp 480w, /img/p/td-7244-round-1-ai7e0b53-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7244-round-1-ai7e0b53-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7244-round-1.jpg"
    }
   ],
   "schemes": [
@@ -4945,14 +4945,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/tube-b-1-480.webp",
-    "srcset": "/img/p/tube-b-1-480.webp 180w",
-    "w": 180,
-    "h": 330,
-    "lg": "/img/p/tube-b-1-480.webp",
-    "ow": 180,
-    "oh": 330,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r38_c1_12.png"
+    "src": "/img/p/tube-b-1-aifd30df-480.webp",
+    "srcset": "/img/p/tube-b-1-aifd30df-480.webp 480w, /img/p/tube-b-1-aifd30df-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/tube-b-1-aifd30df-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\tube-b-1.jpg"
    }
   ],
   "schemes": [
@@ -5311,24 +5311,24 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/tube-t-1-480.webp",
-    "srcset": "/img/p/tube-t-1-480.webp 194w",
-    "w": 194,
-    "h": 312,
-    "lg": "/img/p/tube-t-1-480.webp",
-    "ow": 194,
-    "oh": 312,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r52_c1_26.png"
+    "src": "/img/p/tube-t-1-aicf34a2-480.webp",
+    "srcset": "/img/p/tube-t-1-aicf34a2-480.webp 480w, /img/p/tube-t-1-aicf34a2-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/tube-t-1-aicf34a2-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\tube-t-1.jpg"
    },
    {
-    "src": "/img/p/tube-t-2-480.webp",
-    "srcset": "/img/p/tube-t-2-480.webp 194w",
-    "w": 194,
-    "h": 310,
-    "lg": "/img/p/tube-t-2-480.webp",
-    "ow": 194,
-    "oh": 310,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r54_c1_28.png"
+    "src": "/img/p/tube-t-2-ai412558-480.webp",
+    "srcset": "/img/p/tube-t-2-ai412558-480.webp 480w, /img/p/tube-t-2-ai412558-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/tube-t-2-ai412558-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\tube-t-2.jpg"
    }
   ],
   "schemes": [
@@ -5596,14 +5596,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/x-7518-1-480.webp",
-    "srcset": "/img/p/x-7518-1-480.webp 323w",
-    "w": 323,
-    "h": 255,
-    "lg": "/img/p/x-7518-1-480.webp",
-    "ow": 323,
-    "oh": 255,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r62_c1_51.png"
+    "src": "/img/p/x-7518-1-ai0c89df-480.webp",
+    "srcset": "/img/p/x-7518-1-ai0c89df-480.webp 480w, /img/p/x-7518-1-ai0c89df-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/x-7518-1-ai0c89df-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\x-7518-1.jpg"
    }
   ],
   "schemes": [
@@ -5734,14 +5734,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/td-7244-square-1-480.webp",
-    "srcset": "/img/p/td-7244-square-1-480.webp 279w",
-    "w": 279,
-    "h": 304,
-    "lg": "/img/p/td-7244-square-1-480.webp",
-    "ow": 279,
-    "oh": 304,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r66_c1_88.png"
+    "src": "/img/p/td-7244-square-1-ai39f9b2-480.webp",
+    "srcset": "/img/p/td-7244-square-1-ai39f9b2-480.webp 480w, /img/p/td-7244-square-1-ai39f9b2-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7244-square-1-ai39f9b2-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7244-square-1.jpg"
    }
   ],
   "schemes": [
@@ -5928,14 +5928,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/td-7244-double-1-480.webp",
-    "srcset": "/img/p/td-7244-double-1-480.webp 310w",
-    "w": 310,
-    "h": 260,
-    "lg": "/img/p/td-7244-double-1-480.webp",
-    "ow": 310,
-    "oh": 260,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r72_c1_94.png"
+    "src": "/img/p/td-7244-double-1-ai546f5c-480.webp",
+    "srcset": "/img/p/td-7244-double-1-ai546f5c-480.webp 480w, /img/p/td-7244-double-1-ai546f5c-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7244-double-1-ai546f5c-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7244-double-1.jpg"
    }
   ],
   "schemes": [
@@ -6084,24 +6084,24 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/td-7239-1-480.webp",
-    "srcset": "/img/p/td-7239-1-480.webp 299w",
-    "w": 299,
-    "h": 248,
-    "lg": "/img/p/td-7239-1-480.webp",
-    "ow": 299,
-    "oh": 248,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r76_c1_98.png"
+    "src": "/img/p/td-7239-1-ai3f5a09-480.webp",
+    "srcset": "/img/p/td-7239-1-ai3f5a09-480.webp 480w, /img/p/td-7239-1-ai3f5a09-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7239-1-ai3f5a09-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7239-1.jpg"
    },
    {
-    "src": "/img/p/td-7239-2-480.webp",
-    "srcset": "/img/p/td-7239-2-480.webp 299w",
-    "w": 299,
-    "h": 249,
-    "lg": "/img/p/td-7239-2-480.webp",
-    "ow": 299,
-    "oh": 249,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r77_c1_99.png"
+    "src": "/img/p/td-7239-2-ai15d378-480.webp",
+    "srcset": "/img/p/td-7239-2-ai15d378-480.webp 480w, /img/p/td-7239-2-ai15d378-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7239-2-ai15d378-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7239-2.jpg"
    }
   ],
   "schemes": [
@@ -6278,14 +6278,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/td-7278-slim-1-480.webp",
-    "srcset": "/img/p/td-7278-slim-1-480.webp 273w",
-    "w": 273,
-    "h": 275,
-    "lg": "/img/p/td-7278-slim-1-480.webp",
-    "ow": 273,
-    "oh": 275,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r81_c1_103.png"
+    "src": "/img/p/td-7278-slim-1-ai9b86ac-480.webp",
+    "srcset": "/img/p/td-7278-slim-1-ai9b86ac-480.webp 480w, /img/p/td-7278-slim-1-ai9b86ac-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/td-7278-slim-1-ai9b86ac-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\td-7278-slim-1.jpg"
    }
   ],
   "schemes": [
@@ -6488,44 +6488,44 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/grid-9002-1-480.webp",
-    "srcset": "/img/p/grid-9002-1-480.webp 248w",
-    "w": 248,
-    "h": 271,
-    "lg": "/img/p/grid-9002-1-480.webp",
-    "ow": 248,
-    "oh": 271,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r87_c1_109.png"
+    "src": "/img/p/grid-9002-1-ai57fa17-480.webp",
+    "srcset": "/img/p/grid-9002-1-ai57fa17-480.webp 480w, /img/p/grid-9002-1-ai57fa17-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/grid-9002-1-ai57fa17-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\grid-9002-1.jpg"
    },
    {
-    "src": "/img/p/grid-9002-2-480.webp",
-    "srcset": "/img/p/grid-9002-2-480.webp 248w",
-    "w": 248,
-    "h": 273,
-    "lg": "/img/p/grid-9002-2-480.webp",
-    "ow": 248,
-    "oh": 273,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r88_c1_110.png"
+    "src": "/img/p/grid-9002-2-ai249b6a-480.webp",
+    "srcset": "/img/p/grid-9002-2-ai249b6a-480.webp 480w, /img/p/grid-9002-2-ai249b6a-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/grid-9002-2-ai249b6a-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\grid-9002-2.jpg"
    },
    {
-    "src": "/img/p/grid-9002-3-480.webp",
-    "srcset": "/img/p/grid-9002-3-480.webp 247w",
-    "w": 247,
-    "h": 271,
-    "lg": "/img/p/grid-9002-3-480.webp",
-    "ow": 247,
-    "oh": 271,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r89_c1_111.png"
+    "src": "/img/p/grid-9002-3-ai134a08-480.webp",
+    "srcset": "/img/p/grid-9002-3-ai134a08-480.webp 480w, /img/p/grid-9002-3-ai134a08-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/grid-9002-3-ai134a08-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\grid-9002-3.jpg"
    },
    {
-    "src": "/img/p/grid-9002-4-480.webp",
-    "srcset": "/img/p/grid-9002-4-480.webp 248w",
-    "w": 248,
-    "h": 273,
-    "lg": "/img/p/grid-9002-4-480.webp",
-    "ow": 248,
-    "oh": 273,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r91_c1_113.png"
+    "src": "/img/p/grid-9002-4-ai706413-480.webp",
+    "srcset": "/img/p/grid-9002-4-ai706413-480.webp 480w, /img/p/grid-9002-4-ai706413-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/grid-9002-4-ai706413-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\grid-9002-4.jpg"
    }
   ],
   "schemes": [
@@ -6731,14 +6731,14 @@
   "mounting": "Встраиваемый",
   "images": [
    {
-    "src": "/img/p/x-7529-double-1-480.webp",
-    "srcset": "/img/p/x-7529-double-1-480.webp 249w",
-    "w": 249,
-    "h": 196,
-    "lg": "/img/p/x-7529-double-1-480.webp",
-    "ow": 249,
-    "oh": 196,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Встраиваемые PRM__r93_c1_36.png"
+    "src": "/img/p/x-7529-double-1-ai76275b-480.webp",
+    "srcset": "/img/p/x-7529-double-1-ai76275b-480.webp 480w, /img/p/x-7529-double-1-ai76275b-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/x-7529-double-1-ai76275b-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\x-7529-double-1.jpg"
    },
    {
     "src": "/img/p/x-7529-double-2-480.webp",
@@ -14469,11 +14469,11 @@
     "orig": "C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/Владиславу для Сайта/S20 фото для сайта/2-产品高清图-轨道及配件（Product pictures Track & Accessories）/HS-26C\\HS-26C-白.png"
    },
    {
-    "src": "/img/p/s20-track-c-8-aica690a-480.webp",
-    "srcset": "/img/p/s20-track-c-8-aica690a-480.webp 480w, /img/p/s20-track-c-8-aica690a-1100.webp 1100w",
+    "src": "/img/p/s20-track-c-8-aif7960f-480.webp",
+    "srcset": "/img/p/s20-track-c-8-aif7960f-480.webp 480w, /img/p/s20-track-c-8-aif7960f-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/s20-track-c-8-aica690a-1100.webp",
+    "lg": "/img/p/s20-track-c-8-aif7960f-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\s20-track-c-8.jpg"
@@ -16186,14 +16186,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-1-1-480.webp",
-    "srcset": "/img/p/wall-1-1-480.webp 236w",
-    "w": 236,
-    "h": 134,
-    "lg": "/img/p/wall-1-1-480.webp",
-    "ow": 236,
-    "oh": 134,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r3_c1_0.jpeg"
+    "src": "/img/p/wall-1-1-ai20836c-480.webp",
+    "srcset": "/img/p/wall-1-1-ai20836c-480.webp 480w, /img/p/wall-1-1-ai20836c-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-1-1-ai20836c-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-1-1.jpg"
    }
   ],
   "variants": [
@@ -16229,14 +16229,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-501-1-480.webp",
-    "srcset": "/img/p/wall-501-1-480.webp 182w",
-    "w": 182,
-    "h": 184,
-    "lg": "/img/p/wall-501-1-480.webp",
-    "ow": 182,
-    "oh": 184,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r4_c1_1.jpeg"
+    "src": "/img/p/wall-501-1-ai31e924-480.webp",
+    "srcset": "/img/p/wall-501-1-ai31e924-480.webp 480w, /img/p/wall-501-1-ai31e924-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-501-1-ai31e924-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-501-1.jpg"
    }
   ],
   "variants": [
@@ -16284,14 +16284,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-504-1-480.webp",
-    "srcset": "/img/p/wall-504-1-480.webp 174w",
-    "w": 174,
-    "h": 196,
-    "lg": "/img/p/wall-504-1-480.webp",
-    "ow": 174,
-    "oh": 196,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r6_c1_2.jpeg"
+    "src": "/img/p/wall-504-1-ai486910-480.webp",
+    "srcset": "/img/p/wall-504-1-ai486910-480.webp 480w, /img/p/wall-504-1-ai486910-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-504-1-ai486910-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-504-1.jpg"
    }
   ],
   "variants": [
@@ -16339,14 +16339,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-505-1-480.webp",
-    "srcset": "/img/p/wall-505-1-480.webp 236w",
-    "w": 236,
-    "h": 230,
-    "lg": "/img/p/wall-505-1-480.webp",
-    "ow": 236,
-    "oh": 230,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r8_c1_3.jpeg"
+    "src": "/img/p/wall-505-1-aif14de8-480.webp",
+    "srcset": "/img/p/wall-505-1-aif14de8-480.webp 480w, /img/p/wall-505-1-aif14de8-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-505-1-aif14de8-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-505-1.jpg"
    }
   ],
   "variants": [
@@ -16449,14 +16449,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-218-1-480.webp",
-    "srcset": "/img/p/wall-218-1-480.webp 262w",
-    "w": 262,
-    "h": 192,
-    "lg": "/img/p/wall-218-1-480.webp",
-    "ow": 262,
-    "oh": 192,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r12_c1_5.jpeg"
+    "src": "/img/p/wall-218-1-ai401015-480.webp",
+    "srcset": "/img/p/wall-218-1-ai401015-480.webp 480w, /img/p/wall-218-1-ai401015-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-218-1-ai401015-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-218-1.jpg"
    }
   ],
   "variants": [
@@ -16504,14 +16504,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-252-1-480.webp",
-    "srcset": "/img/p/wall-252-1-480.webp 233w",
-    "w": 233,
-    "h": 248,
-    "lg": "/img/p/wall-252-1-480.webp",
-    "ow": 233,
-    "oh": 248,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r14_c1_6.jpeg"
+    "src": "/img/p/wall-252-1-ai465b13-480.webp",
+    "srcset": "/img/p/wall-252-1-ai465b13-480.webp 480w, /img/p/wall-252-1-ai465b13-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-252-1-ai465b13-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-252-1.jpg"
    }
   ],
   "variants": [
@@ -16547,14 +16547,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-253-1-480.webp",
-    "srcset": "/img/p/wall-253-1-480.webp 196w",
-    "w": 196,
-    "h": 211,
-    "lg": "/img/p/wall-253-1-480.webp",
-    "ow": 196,
-    "oh": 211,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r15_c1_7.jpeg"
+    "src": "/img/p/wall-253-1-ai550864-480.webp",
+    "srcset": "/img/p/wall-253-1-ai550864-480.webp 480w, /img/p/wall-253-1-ai550864-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-253-1-ai550864-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-253-1.jpg"
    }
   ],
   "variants": [
@@ -16590,14 +16590,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-210-1-480.webp",
-    "srcset": "/img/p/wall-210-1-480.webp 264w",
-    "w": 264,
-    "h": 295,
-    "lg": "/img/p/wall-210-1-480.webp",
-    "ow": 264,
-    "oh": 295,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r16_c1_8.jpeg"
+    "src": "/img/p/wall-210-1-ai336435-480.webp",
+    "srcset": "/img/p/wall-210-1-ai336435-480.webp 480w, /img/p/wall-210-1-ai336435-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-210-1-ai336435-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-210-1.jpg"
    }
   ],
   "variants": [
@@ -16657,14 +16657,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-211-1-480.webp",
-    "srcset": "/img/p/wall-211-1-480.webp 237w",
-    "w": 237,
-    "h": 260,
-    "lg": "/img/p/wall-211-1-480.webp",
-    "ow": 237,
-    "oh": 260,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r19_c1_9.jpeg"
+    "src": "/img/p/wall-211-1-aibc91a6-480.webp",
+    "srcset": "/img/p/wall-211-1-aibc91a6-480.webp 480w, /img/p/wall-211-1-aibc91a6-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-211-1-aibc91a6-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-211-1.jpg"
    }
   ],
   "variants": [
@@ -16724,14 +16724,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-319-1-480.webp",
-    "srcset": "/img/p/wall-319-1-480.webp 231w",
-    "w": 231,
-    "h": 224,
-    "lg": "/img/p/wall-319-1-480.webp",
-    "ow": 231,
-    "oh": 224,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r22_c1_10.jpeg"
+    "src": "/img/p/wall-319-1-ai84d8ce-480.webp",
+    "srcset": "/img/p/wall-319-1-ai84d8ce-480.webp 480w, /img/p/wall-319-1-ai84d8ce-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-319-1-ai84d8ce-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-319-1.jpg"
    }
   ],
   "variants": [
@@ -16779,14 +16779,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-502-1-480.webp",
-    "srcset": "/img/p/wall-502-1-480.webp 237w",
-    "w": 237,
-    "h": 223,
-    "lg": "/img/p/wall-502-1-480.webp",
-    "ow": 237,
-    "oh": 223,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r24_c1_11.jpeg"
+    "src": "/img/p/wall-502-1-ai612de8-480.webp",
+    "srcset": "/img/p/wall-502-1-ai612de8-480.webp 480w, /img/p/wall-502-1-ai612de8-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-502-1-ai612de8-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-502-1.jpg"
    }
   ],
   "variants": [
@@ -16834,14 +16834,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-518-1-480.webp",
-    "srcset": "/img/p/wall-518-1-480.webp 223w",
-    "w": 223,
-    "h": 210,
-    "lg": "/img/p/wall-518-1-480.webp",
-    "ow": 223,
-    "oh": 210,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r26_c1_12.jpeg"
+    "src": "/img/p/wall-518-1-aieb54aa-480.webp",
+    "srcset": "/img/p/wall-518-1-aieb54aa-480.webp 480w, /img/p/wall-518-1-aieb54aa-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-518-1-aieb54aa-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-518-1.jpg"
    }
   ],
   "variants": [
@@ -16889,14 +16889,14 @@
   "mounting": "Настенный",
   "images": [
    {
-    "src": "/img/p/wall-600-1-480.webp",
-    "srcset": "/img/p/wall-600-1-480.webp 231w",
-    "w": 231,
-    "h": 249,
-    "lg": "/img/p/wall-600-1-480.webp",
-    "ow": 231,
-    "oh": 249,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\xlimg\\Бра__r28_c1_13.jpeg"
+    "src": "/img/p/wall-600-1-aia36c82-480.webp",
+    "srcset": "/img/p/wall-600-1-aia36c82-480.webp 480w, /img/p/wall-600-1-aia36c82-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/wall-600-1-aia36c82-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\site\\wall-600-1.jpg"
    }
   ],
   "variants": [
