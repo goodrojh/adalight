@@ -153,7 +153,8 @@ def add(p):
     p['schemes'] = [i for i in p['schemes'] if md5(i) not in CLIENT_RM]
     # фото конкретной модификации: индекс в общей галерее (для смены фото при выборе модификации)
     idx = {md5(x): n for n, x in enumerate(p['images'])}
-    sidx = {md5(x): n for n, x in enumerate(p['schemes'])}
+    sidx = {md5(x): n for n, x in enumerate(p['schemes'])}          # по md5 оригинала — до замены на улучшенные
+    p['schemes'] = [AI_REPLACE.get(md5(i), i) for i in p['schemes']]
     for v in p['variants']:
         src = v.pop('_img', None)
         if src and os.path.exists(src):

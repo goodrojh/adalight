@@ -284,9 +284,9 @@ a.card:hover .arrow{background:var(--signal);border-color:var(--signal);color:#0
 
 /* ---------- product page ---------- */
 .prod{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:start}
-@media (max-width:900px){.prod{grid-template-columns:minmax(0,1fr)}.gallery{position:static}}
 .gallery{position:sticky;top:92px}
-.gmain{aspect-ratio:1;background:#f3f3f1;border-radius:var(--r);overflow:hidden;position:relative;cursor:zoom-in;display:flex;align-items:center;justify-content:center}
+@media (max-width:900px){.prod{grid-template-columns:minmax(0,1fr)}.gallery{position:static}}
+.gmain{touch-action:pan-y;aspect-ratio:1;background:#f3f3f1;border-radius:var(--r);overflow:hidden;position:relative;cursor:zoom-in;display:flex;align-items:center;justify-content:center}
 .gmain img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
 .gthumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
 .gthumbs button{flex:none;width:76px;height:76px;border-radius:10px;border:1.5px solid transparent;background:#f3f3f1;padding:4px;cursor:pointer}
@@ -683,3 +683,7 @@ a.trust-cta:hover{background:var(--signal-2)}
 .dark .field input,.dark .field select,.dark .field textarea{color:#fff}
 [data-room-calc] label{margin-bottom:0;color:var(--muted)}
 [data-room-calc] .out{color:#fff}
+
+/* кнопка «Вернуться к каталогу» в карточке */
+.back-link{display:inline-flex;align-items:center;gap:8px;margin:-8px 0 18px;padding:9px 14px;border-radius:999px;border:1.5px solid #d9d9d4;font-weight:600;font-size:14px;text-decoration:none;color:var(--ink);background:#fff}
+.back-link:hover{border-color:var(--ink)}

@@ -4,6 +4,7 @@
 <section class="section" style="padding-top:28px">
  <div class="wrap">
   {{ m.crumbs(crumbs, light=True) }}
+  <a class="back-link" href="{{ base }}/catalog/{{ cat.slug }}/" data-back><svg width="16" height="16" style="transform:rotate(180deg)"><use href="#i-arrow"/></svg> Вернуться к каталогу</a>
   <div class="prod">
    <div class="gallery">
     {% set g = p.images + p.schemes %}
@@ -118,8 +119,16 @@
  var rows=[].slice.call(document.querySelectorAll('tr[data-vi]'));
  function opt(){var o=document.querySelector('input[name=opt]:checked');return o?o.value:'';}
  function col(){var c=document.querySelector('input[name=color]:checked');return c?c:null;}
- var th=[].slice.call(document.querySelectorAll('.gthumbs button')),tw=document.querySelector('.gthumbs');
- function show(i){var b=th[i];if(!b)return;b.click();if(tw)tw.scrollTo({left:b.offsetLeft-tw.clientWidth/2+b.clientWidth/2,behavior:'smooth'});}
+ var th=[].slice.call(document.querySelectorAll('.gthumbs button')),tw=document.querySelector('.gthumbs'),auto=false;
+ function show(i){var b=th[i];if(!b)return;auto=true;b.click();auto=false;if(tw)tw.scrollTo({left:b.offsetLeft-tw.clientWidth/2+b.clientWidth/2,behavior:'smooth'});}
+ /* выбрали фото вручную — подтягиваем модификацию (и цвет), к которой это фото относится */
+ th.forEach(function(b,i){b.addEventListener('click',function(){if(auto)return;
+  var cs=[].slice.call(document.querySelectorAll('input[name=color]')),cm=cs.filter(function(c){return +c.dataset.img===i;})[0];
+  if(cm&&!cm.checked){cm.checked=true;}
+  var cur=V[+sel.value];if(cur&&cur.img===i){upd({target:{name:'photo'}});return;}
+  for(var j=0;j<V.length;j++){if(V[j].img===i){sel.value=j;break;}}
+  upd({target:{name:'photo'}});
+ });});
  function upd(e){var v=V[+sel.value],o=opt(),price=v.price,lab=[],c=col();
   if(o&&v.opts&&v.opts[o]){price=v.opts[o].price;lab.push(v.opts[o].label);}
   if(c)lab.push('цвет: '+c.value);
@@ -130,7 +139,7 @@
   rows.forEach(function(r){r.classList.toggle('active',+r.dataset.vi===+sel.value);});
   /* фото: выбран цвет — фото цвета; иначе фото/чертёж модификации; если своего нет — главное фото */
   if(e&&e.target&&e.target.name==='color')show(+c.dataset.img);
-  else if(e&&e.target&&e.target.name==='opt'){}
+  else if(e&&e.target&&(e.target.name==='opt'||e.target.name==='photo')){}
   else if(e)show(v.img!=null?v.img:(c?+c.dataset.img:0)); /* при открытии страницы — всегда главное фото товара */
   var b=document.querySelector('[data-beam]');if(b&&v.lm){var f=b.querySelector('[name=f]');if(f){f.value=v.lm;f.dispatchEvent(new Event('input'));}}
  }

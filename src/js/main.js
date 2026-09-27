@@ -216,6 +216,15 @@
     modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('[data-close]')) modal.close(); });
   }
 
+  /* ---------- «Вернуться к каталогу»: назад на ту же страницу и то же место ---------- */
+  $$('[data-back]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var ref = d.referrer; if (!ref || history.length < 2) return;
+      try { if (new URL(ref).origin !== location.origin) return; } catch (x) { return; }
+      e.preventDefault(); history.back();
+    });
+  });
+
   /* ---------- вкладки ---------- */
   $$('[role=tablist]').forEach(function (tl) {
     var tabs = $$('[role=tab]', tl);
@@ -239,6 +248,7 @@
       d.body.appendChild(lb);
       lb.addEventListener('click', function (e) { if (e.target === lb || e.target.classList.contains('x')) lbClose(); });
       $('.pv', lb).onclick = function () { lbGo(-1); }; $('.nx', lb).onclick = function () { lbGo(1); };
+      swipe(lb, function (dir) { lbGo(dir); });
       d.addEventListener('keydown', function (e) { if (!lb.classList.contains('open')) return; if (e.key === 'Escape') lbClose(); if (e.key === 'ArrowLeft') lbGo(-1); if (e.key === 'ArrowRight') lbGo(1); });
     }
     lbImgs = list; lbI = i; lbGo(0); lb.classList.add('open'); d.body.style.overflow = 'hidden'; $('.x', lb).focus();
@@ -261,7 +271,19 @@
         thumbs.forEach(function (x) { x.setAttribute('aria-current', x === b); });
       });
     });
-    $('.gmain', gal).addEventListener('click', function () { lbShow(list, cur); });
+    var gm = $('.gmain', gal), swiped = false;
+    gm.addEventListener('click', function () { if (swiped) { swiped = false; return; } lbShow(list, cur); });
+    /* телефон: листаем фото свайпом по большому фото */
+    swipe(gm, function (dir) { if (thumbs.length < 2) return; swiped = true; setTimeout(function () { swiped = false; }, 400); thumbs[(cur + dir + thumbs.length) % thumbs.length].click(); });
+  }
+  /* свайп влево/вправо; вертикальная прокрутка страницы не блокируется */
+  function swipe(el, cb) {
+    var x0, y0;
+    el.addEventListener('touchstart', function (e) { var t = e.touches[0]; x0 = t.clientX; y0 = t.clientY; }, { passive: true });
+    el.addEventListener('touchend', function (e) {
+      if (x0 == null) return; var t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0; x0 = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) cb(dx < 0 ? 1 : -1);
+    }, { passive: true });
   }
 
   /* ---------- калькулятор освещённости по углу луча ---------- */

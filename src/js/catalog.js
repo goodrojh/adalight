@@ -125,4 +125,14 @@
   if (root.dataset.preset) { var pr = root.dataset.preset.split(':'); if (!state[pr[0]].length) state[pr[0]] = [pr[1]]; }
   if (q) q.value = state.q; if (prmin) prmin.value = state.prmin; if (prmax) prmax.value = state.prmax; if (wmin) wmin.value = state.wmin; if (wmax) wmax.value = state.wmax; if (sort) sort.value = state.sort;
   apply();
+  /* запоминаем место в списке, чтобы вернуться из карточки туда же */
+  var SK = 'adaScroll:' + location.pathname;
+  try { history.scrollRestoration = 'manual'; } catch (x) {}
+  var saveY = function () { try { sessionStorage.setItem(SK, JSON.stringify({ y: window.scrollY, s: location.search })); } catch (x) {} };
+  d.addEventListener('click', function (e) { if (e.target.closest('.pcard a, a.pcard')) saveY(); });
+  window.addEventListener('pagehide', saveY);
+  try {
+    var st = JSON.parse(sessionStorage.getItem(SK) || 'null');
+    if (st && st.s === location.search) { var go = function () { window.scrollTo(0, st.y); }; go(); window.addEventListener('load', go); setTimeout(go, 300); }
+  } catch (x) {}
 })();
