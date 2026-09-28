@@ -269,9 +269,27 @@
         /* маленькие картинки (из прайса) не растягиваем больше чем в 1,5 раза — иначе размытость */
         main.style.width = 'min(100%,' + Math.round(b.getAttribute('data-w') * 1.5) + 'px)'; main.style.height = 'min(100%,' + Math.round(b.getAttribute('data-h') * 1.5) + 'px)';
         thumbs.forEach(function (x) { x.setAttribute('aria-current', x === b); });
+        /* выбранная миниатюра — по центру ленты (если есть куда листать) */
+        if (strip) { var sr = strip.getBoundingClientRect(), br = b.getBoundingClientRect(); strip.scrollTo({ left: strip.scrollLeft + br.left - sr.left - (sr.width - br.width) / 2, behavior: 'smooth' }); }
       });
     });
+    var strip = $('.gthumbs', gal);
+    /* колесо мыши над лентой листает её вбок, пока есть куда */
+    if (strip) strip.addEventListener('wheel', function (e) {
+      var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY, max = strip.scrollWidth - strip.clientWidth;
+      if (max <= 0 || (d < 0 && strip.scrollLeft <= 0) || (d > 0 && strip.scrollLeft >= max - 1)) return;
+      e.preventDefault(); strip.scrollLeft += d * (e.deltaMode === 1 ? 30 : 1);
+    }, { passive: false });
     var gm = $('.gmain', gal), swiped = false;
+    /* стрелки на большом фото — листают без открытия на весь экран */
+    if (thumbs.length > 1) ['prev', 'next'].forEach(function (k) {
+      var a = document.createElement('button'); a.type = 'button'; a.className = 'garr garr-' + k;
+      a.setAttribute('aria-label', k === 'prev' ? 'Предыдущее фото' : 'Следующее фото');
+      a.innerHTML = '<svg width="18" height="18"' + (k === 'prev' ? ' style="transform:rotate(180deg)"' : '') + '><use href="#i-arrow"/></svg>';
+      a.addEventListener('click', function (e) { e.stopPropagation(); var n = thumbs.length; thumbs[(cur + (k === 'prev' ? -1 : 1) + n) % n].click(); });
+      a.addEventListener('keydown', function (e) { e.stopPropagation(); });
+      gm.appendChild(a);
+    });
     gm.addEventListener('click', function () { if (swiped) { swiped = false; return; } lbShow(list, cur); });
     /* телефон: листаем фото свайпом по большому фото */
     swipe(gm, function (dir) { if (thumbs.length < 2) return; swiped = true; setTimeout(function () { swiped = false; }, 400); thumbs[(cur + dir + thumbs.length) % thumbs.length].click(); });
@@ -375,3 +393,11 @@
     if (h.indexOf('tel:') === 0) goal('click_phone'); else if (h.indexOf('mailto:') === 0) goal('click_email'); else if (h.indexOf('wa.me') > -1) goal('click_whatsapp');
   });
 })();
+
+/* карта: колесо и жесты — только после нажатия, чтобы прокрутка страницы не «залипала» */
+document.querySelectorAll('.map-frame').forEach(function(f){
+  var b=f.querySelector('.map-lock');if(!b)return;
+  b.addEventListener('click',function(){f.classList.add('on');});
+  f.addEventListener('mouseleave',function(){f.classList.remove('on');});
+  document.addEventListener('touchstart',function(e){if(!f.contains(e.target))f.classList.remove('on');},{passive:true});
+});

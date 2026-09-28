@@ -120,7 +120,7 @@
  function opt(){var o=document.querySelector('input[name=opt]:checked');return o?o.value:'';}
  function col(){var c=document.querySelector('input[name=color]:checked');return c?c:null;}
  var th=[].slice.call(document.querySelectorAll('.gthumbs button')),tw=document.querySelector('.gthumbs'),auto=false;
- function show(i){var b=th[i];if(!b)return;auto=true;b.click();auto=false;if(tw)tw.scrollTo({left:b.offsetLeft-tw.clientWidth/2+b.clientWidth/2,behavior:'smooth'});}
+ function show(i){var b=th[i];if(!b)return;auto=true;b.click();auto=false;}
  /* выбрали фото вручную — подтягиваем модификацию (и цвет), к которой это фото относится */
  th.forEach(function(b,i){b.addEventListener('click',function(){if(auto)return;
   var cs=[].slice.call(document.querySelectorAll('input[name=color]')),cm=cs.filter(function(c){return +c.dataset.img===i;})[0];

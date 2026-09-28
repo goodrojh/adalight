@@ -4,12 +4,7 @@
 <section class="phero" style="min-height:86vh;display:flex;align-items:center">
  <div class="phero-bg">{{ m.img(media['interior-hero'], '', '100vw', lazy=False) }}</div>
  <div class="wrap" style="width:100%">
-  <div class="cct" role="group" aria-label="Для кого" style="display:inline-flex;margin-bottom:26px">
-   <button type="button" data-aud="studio" aria-pressed="true">Дизайн-студиям</button>
-   <button type="button" data-aud="remont" aria-pressed="false">Ремонтным компаниям</button>
-   <button type="button" data-aud="arch" aria-pressed="false">Архитекторам</button>
-  </div>
-  <h1>Освещение, которое увеличивает прибыль <span class="hl" data-aud-text="who">дизайн-студии</span></h1>
+  <h1>Освещение, которое увеличивает прибыль партнёров</h1>
   <p class="lead">Вы ведёте клиента и ремонт. ADALIGHT закрывает свет: подбор, импортозамещение, производство, спецификацию и поставку. Вы сохраняете контроль над клиентом и прибылью проекта.</p>
   <div class="flex" style="margin-top:28px"><a class="btn" href="#lead">Передать объект на расчёт <svg><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="#calc">Посчитать доход</a></div>
   <div class="flex" style="margin-top:26px;gap:8px">{% for t in ['Спеццена','Производство','Сроки','Замена импорта','Поддержка'] %}<span class="tag" style="background:rgba(255,255,255,.1);color:#fff">{{ t }}</span>{% endfor %}</div>
@@ -29,9 +24,9 @@
 <section class="section dark">
  <div class="wrap">
   <div class="head"><div><h2>Внешний отдел по освещению — без найма и лишней инфраструктуры</h2></div><p class="lead">Встраиваемся в ваш процесс и берём на себя коммерческую, техническую и производственную часть.</p></div>
-  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+  <div class="grid feat5">
    {% for t, d in [('Спеццена','Партнёрская цена под объект. Клиентскую наценку вы определяете сами.'),('Производство','Нестандарт, кастомизация и выпуск по ТЗ, когда каталога недостаточно.'),('Быстрые сроки','Срок фиксируется до запуска заказа. При изменении проекта реагируем быстро.'),('Замена импорта','Аналоги по ТТХ, геометрии и визуальному образу без разрушения концепции.'),('Проектная поддержка','Подбор, спецификация, несколько бюджетных сценариев и помощь на монтаже.')] %}
-   <div class="card"><h3 style="color:var(--signal)">{{ t }}</h3><p>{{ d }}</p></div>{% endfor %}
+   <div class="card"><h3>{{ t }}</h3><p>{{ d }}</p></div>{% endfor %}
   </div>
   <p class="mono" style="margin-top:28px;color:#fff;font-size:15px">Один партнёр. Одна спецификация. Один ответственный.</p>
  </div>
@@ -63,9 +58,9 @@
  <div class="wrap split" style="align-items:start">
   <div><h2>Сохраняем проект, даже если нужная модель недоступна</h2><p class="lead">Вместо повторного выбора всего света — технически корректная замена, согласованная с дизайнером и клиентом.</p>
    <blockquote class="prose" style="margin-top:22px;max-width:none"><p style="margin:0;font-size:16px">Результат: проект не ломается из-за одной позиции, а сроки ремонта остаются управляемыми.</p></blockquote></div>
-  <div class="stages" style="grid-template-columns:1fr;gap:22px">
+  <div class="vsteps">
    {% for t, d in [('Исходная позиция','Артикул / фото / размеры / мощность / CCT / угол / монтаж'),('Технический аналог','Сверяем геометрию, свет, внешний вид и бюджет'),('Согласование','При необходимости — образец или визуализация'),('Поставка / производство','Фиксируем спецификацию, срок и ответственного по объекту')] %}
-   <div class="stage{% if loop.last %} win{% endif %}" style="display:grid;grid-template-columns:48px 1fr;column-gap:18px"><span class="dot" style="grid-row:1/span 2">{{ '%02d'|format(loop.index) }}</span><h4 style="margin:10px 0 4px;grid-column:2">{{ t }}</h4><p style="grid-column:2">{{ d }}</p></div>{% endfor %}
+   <div class="vstep{% if loop.last %} win{% endif %}"><span class="dot">{{ '%02d'|format(loop.index) }}</span><div><h4>{{ t }}</h4><p>{{ d }}</p></div></div>{% endfor %}
   </div>
  </div>
 </section>
@@ -126,15 +121,4 @@
 
 {{ m.lead_section(base, title='Начнём с одного объекта', sub='Без обязательств по объёму. Передайте текущий объект — подготовим световое решение, аналоги и партнёрскую цену.', role='Дизайнер / архитектор', goal='partner', label='Партнёрская программа — пилотный объект', S=S) }}
 {% endblock %}
-{% block scripts %}
-<script>
-(function(){
- var W={studio:'дизайн-студии',remont:'ремонтной компании',arch:'архитектурного бюро'},R={studio:'Дизайнер / архитектор',remont:'Ремонтная компания',arch:'Дизайнер / архитектор'};
- var bs=[].slice.call(document.querySelectorAll('[data-aud]')),t=document.querySelector('[data-aud-text]');
- function set(k){if(!W[k])return;t.textContent=W[k];bs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.aud===k);});
-  var r=document.querySelector('#lead input[name=role][value="'+R[k]+'"]');if(r)r.checked=true;}
- bs.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.aud);try{history.replaceState(null,'','?for='+b.dataset.aud+location.hash)}catch(e){}});});
- var q=new URLSearchParams(location.search).get('for');if(q)set(q);
-})();
-</script>
-{% endblock %}
+

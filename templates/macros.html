@@ -34,11 +34,11 @@
 <div class="trust">
  {% for key, name, proj, url in trust %}
  {% if url %}<a class="trust-cell" href="{{ base }}{{ url }}">{% else %}<div class="trust-cell">{% endif %}
-  {% if key %}<img src="{{ base }}/img/logos/{{ key }}-w.webp" alt="{{ name }}" loading="lazy" class="tl-{{ key }}">{% else %}<span class="trust-word">{{ name }}</span>{% endif %}
-  {% if proj %}<span class="trust-proj">{{ proj }}</span>{% endif %}
+  <span class="trust-logo">{% if key %}<img src="{{ base }}/img/logos/{{ key }}-d.webp" alt="{{ name }}" loading="lazy" class="tl-{{ key }}">{% else %}<span class="trust-word">{{ name }}</span>{% endif %}</span>
+  <span class="trust-foot"><span><b>{{ name }}</b>{% if proj %}<i class="sep"> · </i>{{ proj }}{% endif %}</span>{% if url %}<svg width="16" height="16"><use href="#i-arrow"/></svg>{% endif %}</span>
  {% if url %}</a>{% else %}</div>{% endif %}
  {% endfor %}
- <a class="trust-cell trust-cta" href="#lead" data-modal="Обсудить ваш объект"><b>Ваш объект</b><span>Обсудить проект →</span></a>
+ <a class="trust-cell trust-cta" href="#lead" data-modal="Обсудить ваш объект"><b>Ваш объект<small>Подберём свет и спецификацию под проект</small></b><span>Обсудить проект <svg width="16" height="16"><use href="#i-arrow"/></svg></span></a>
 </div>
 {%- endmacro %}
 
