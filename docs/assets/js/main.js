@@ -184,7 +184,7 @@ viaMail();
 });
 } else viaMail();
 });
-$$('input,select,textarea', form).forEach(function (el) { el.addEventListener('input', function () { var f = el.closest('.field'); f && f.classList.remove('invalid'); }); });
+$$('input,select,textarea', form).forEach(function (el) { el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', function () { var f = el.closest('.field') || (el.type === 'checkbox' && el.parentNode); f && f.classList.remove('invalid'); }); });
 });
 /* ---------- модальная форма: любая кнопка «заявка» открывает самостоятельную форму ---------- */
 var modal = d.getElementById('leadModal');

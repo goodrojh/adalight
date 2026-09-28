@@ -776,3 +776,5 @@ html,body,.filters,.gthumbs,.table-wrap,.tabs,.modal-in,.drawer,.lb,*{scrollbar-
 .cta-msg svg,.cta-msg img{width:22px;height:22px;flex:none;display:block}
 .cta-msg img{border-radius:6px}
 @media (max-width:400px){.cta-msg a{flex-basis:100%}}
+.consent.invalid,.dark .consent.invalid{color:#d93025}
+.consent.invalid input{outline:2px solid #d93025;outline-offset:1px}

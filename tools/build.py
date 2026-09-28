@@ -543,6 +543,8 @@ render('contacts.html', '/contacts/', 0.7, title='Контакты ADALIGHT — 
        crumbs=[H, ('Контакты', BASE + '/contacts/')], jsonld=[ORG], section='contacts')
 render('privacy.html', '/privacy/', 0.1, title='Политика конфиденциальности — ADALIGHT', desc='Политика обработки персональных данных ООО «АДАЛАЙТ».',
        crumbs=[H, ('Политика конфиденциальности', BASE + '/privacy/')])
+render('consent.html', '/consent/', 0.1, title='Согласие на обработку персональных данных — ADALIGHT', desc='Согласие на обработку персональных данных ООО «АДАЛАЙТ».',
+       crumbs=[H, ('Согласие на обработку персональных данных', BASE + '/consent/')])
 render('404.html', '/404.html', 0, title='Страница не найдена — ADALIGHT', desc='Страница не найдена.')
 
 # ---------------------------------------------------------------- статика

@@ -115,7 +115,7 @@
    <div><h4>Каталог</h4>{% for c in cats %}<a href="{{ base }}/catalog/{{ c.slug }}/">{{ c.short }}</a>{% endfor %}<a href="{{ base }}/spec/">Моя спецификация</a></div>
    <div><h4>Услуги</h4>{% for s in services %}<a href="{{ base }}/services/{{ s.slug }}/">{{ s.name }}</a>{% endfor %}</div>
    <div><h4>Клиентам</h4><a href="{{ base }}/developers/">Девелоперам</a><a href="{{ base }}/designers/">Дизайнерам</a><a href="{{ base }}/partners/">Партнёрам</a><a href="{{ base }}/engineers/">Проектировщикам</a><a href="{{ base }}/tools/">Калькуляторы</a><a href="{{ base }}/journal/">Журнал</a></div>
-   <div><h4>Компания</h4><a href="{{ base }}/about/">О компании</a><a href="{{ base }}/projects/">Проекты</a><a href="{{ base }}/contacts/">Контакты</a><a href="{{ base }}/privacy/">Политика конфиденциальности</a>
+   <div><h4>Компания</h4><a href="{{ base }}/about/">О компании</a><a href="{{ base }}/projects/">Проекты</a><a href="{{ base }}/contacts/">Контакты</a><a href="{{ base }}/privacy/">Политика конфиденциальности</a><a href="{{ base }}/consent/">Согласие на обработку данных</a>
     <p class="req" style="margin-top:14px">{{ S.legal }}<br>ИНН {{ S.inn }} · КПП {{ S.kpp }}<br>ОГРН {{ S.ogrn }}</p></div>
   </div>
   <div class="ftr-bottom"><span>© {{ year }} {{ S.legal }}. {{ S.address }}</span><span>Цены на сайте — рекомендованные розничные (РРЦ) и не являются публичной офертой.</span></div>
