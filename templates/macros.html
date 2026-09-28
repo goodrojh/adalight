@@ -52,6 +52,7 @@
 <form class="form" data-lead="{{ label }}" data-goal="{{ goal }}" novalidate {% if with_spec %}data-with-spec{% endif %}>
  <div class="form-body">
   <input type="hidden" name="topic" value="">
+  <input type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
   {% if not compact %}
   <fieldset class="fs">
    <legend>Кто вы</legend>

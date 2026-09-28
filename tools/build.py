@@ -584,6 +584,9 @@ print('pages:', len(pages) + 1, 'sku:', TOTAL_SKU, 'series:', TOTAL_SERIES)
 
 # проверка синтаксиса JS после сборки (защита от поломки при минификации)
 import subprocess
+# приём заявок на хостинге (PHP): lead.php + образец настроек; сам lead-config.php с ключом CRM сюда не попадает
+for f in ('lead.php', 'lead-config.example.php'):
+    shutil.copy2(os.path.join(ROOT, 'server', f), os.path.join(OUT, f))
 for f in os.listdir(os.path.join(OUT, 'assets', 'js')):
     r = subprocess.run(['node', '--check', os.path.join(OUT, 'assets', 'js', f)], capture_output=True, text=True, encoding='utf-8', errors='replace')
     if r.returncode:

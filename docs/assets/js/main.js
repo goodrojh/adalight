@@ -157,13 +157,9 @@ var done = function (viaMail) {
 form.classList.add('sent'); goal('lead'); goal('lead_' + (form.getAttribute('data-goal') || 'form'));
 var m = $('.form-ok .via', form); if (m) m.hidden = !viaMail;
 };
-if (C.endpoint) {
-btn.disabled = true; btn.textContent = 'Отправляем…';
-fetch(C.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ form: label, data: data }) })
-.then(function (r) { if (!r.ok) throw 0; done(false); })
-.catch(function () { btn.disabled = false; btn.textContent = 'Отправить ещё раз'; toast('Не удалось отправить. Позвоните: <a href="tel:' + C.phoneRaw + '">' + C.phone + '</a>'); });
-} else {
-var body = Object.keys(data).filter(function (k) { return data[k] && k !== 'consent'; }).map(function (k) {
+/* запасной путь: письмо и WhatsApp (если приёмник заявок не настроен или недоступен) */
+var viaMail = function () {
+var body = Object.keys(data).filter(function (k) { return data[k] && k !== 'consent' && k !== 'website'; }).map(function (k) {
 var v = typeof data[k] === 'object' ? JSON.stringify(data[k]) : data[k]; return k + ': ' + v;
 }).join('\n');
 location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(label + ' — adalight') + '&body=' + encodeURIComponent(body);
@@ -175,7 +171,18 @@ wa.style.marginTop = '12px'; wa.textContent = 'Или отправить в What
 wa.href = 'https://wa.me/' + C.wa + '?text=' + encodeURIComponent(label + ': ' + body.split(String.fromCharCode(10)).join('; ').slice(0, 1500));
 via.appendChild(d.createElement('br')); via.appendChild(wa);
 }
-}
+};
+if (C.endpoint) {
+/* заявка сразу уходит в CRM через lead.php на хостинге */
+btn.disabled = true; var btnText = btn.innerHTML; btn.textContent = 'Отправляем…';
+fetch(C.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ form: label, data: data }) })
+.then(function (r) { if (r.status === 400) return r.json().then(function (j) { throw j.message || 0; }); if (!r.ok) throw 0; btn.disabled = false; btn.innerHTML = btnText; done(false); })
+.catch(function (m) {
+btn.disabled = false; btn.innerHTML = btnText;
+if (typeof m === 'string') { toast(m); return; }
+viaMail();
+});
+} else viaMail();
 });
 $$('input,select,textarea', form).forEach(function (el) { el.addEventListener('input', function () { var f = el.closest('.field'); f && f.classList.remove('invalid'); }); });
 });
