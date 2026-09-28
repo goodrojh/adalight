@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 data/products_raw.json
+server/lead-config.php
+docs/lead-config.php
+lead-config.php

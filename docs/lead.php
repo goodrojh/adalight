@@ -61,7 +61,7 @@ $lead = [
     'TITLE' => $form . ($name ? ' — ' . $name : ''),
     'NAME' => $name,
     'PHONE' => [['VALUE' => '+' . $phoneDigits, 'VALUE_TYPE' => 'WORK']],
-    'COMMENTS' => nl2br(htmlspecialchars(implode("\n", $lines), ENT_QUOTES, 'UTF-8')),
+    'COMMENTS' => implode('<br>', array_map(function ($l) { return htmlspecialchars($l, ENT_QUOTES, 'UTF-8'); }, $lines)),
     'SOURCE_ID' => $cfg['source_id'] ?? 'WEB',
     'SOURCE_DESCRIPTION' => 'Сайт ADALIGHT: ' . $form,
     'OPENED' => 'Y',
