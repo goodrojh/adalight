@@ -401,3 +401,13 @@ document.querySelectorAll('.map-frame').forEach(function(f){
   f.addEventListener('mouseleave',function(){f.classList.remove('on');});
   document.addEventListener('touchstart',function(e){if(!f.contains(e.target))f.classList.remove('on');},{passive:true});
 });
+
+/* кнопка мессенджеров: открыть/закрыть, закрытие по клику мимо и Esc */
+(function () {
+  var c = document.querySelector('[data-chat]'); if (!c) return;
+  var b = c.querySelector('.chat-btn');
+  function set(o) { c.classList.toggle('open', o); b.setAttribute('aria-expanded', o); }
+  b.addEventListener('click', function (e) { e.stopPropagation(); set(!c.classList.contains('open')); });
+  document.addEventListener('click', function (e) { if (!c.contains(e.target)) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && c.classList.contains('open')) { set(false); b.focus(); } });
+})();

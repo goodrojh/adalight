@@ -729,3 +729,43 @@ html,body,.filters,.gthumbs,.table-wrap,.tabs,.modal-in,.drawer,.lb,*{scrollbar-
 .vstep.win .dot{background:var(--signal);border-color:var(--signal);color:#000}
 .vstep h4{margin:11px 0 4px;font-size:17px}
 .vstep p{font-size:14px;color:var(--muted);margin:0}
+
+/* кнопка мессенджеров в правом нижнем углу */
+.chat{position:fixed;right:24px;bottom:24px;z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none}
+.chat-btn{pointer-events:auto;width:60px;height:60px;border-radius:50%;border:0;background:var(--signal);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 14px 30px -10px rgba(13,13,14,.45);transition:transform .25s var(--ease),background .25s;animation:chatPulse 2.8s 2s 3}
+.chat-btn:hover{transform:scale(1.06);background:var(--signal-2)}
+.chat-btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.chat-btn svg{grid-area:1/1;transition:opacity .2s,transform .3s var(--ease)}
+.chat-x{opacity:0;transform:rotate(-90deg) scale(.6)}
+.chat.open .chat-o{opacity:0;transform:rotate(90deg) scale(.6)}
+.chat.open .chat-x{opacity:1;transform:none}
+.chat.open .chat-btn{animation:none}
+@keyframes chatPulse{0%{box-shadow:0 14px 30px -10px rgba(13,13,14,.45),0 0 0 0 rgba(255,198,3,.55)}70%{box-shadow:0 14px 30px -10px rgba(13,13,14,.45),0 0 0 16px rgba(255,198,3,0)}100%{box-shadow:0 14px 30px -10px rgba(13,13,14,.45),0 0 0 0 rgba(255,198,3,0)}}
+.chat-pop{width:280px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 30px 60px -24px rgba(13,13,14,.4);transform-origin:bottom right;opacity:0;transform:translateY(10px) scale(.96);visibility:hidden;transition:opacity .22s,transform .28s var(--ease),visibility 0s .28s}
+.chat.open .chat-pop{pointer-events:auto;opacity:1;transform:none;visibility:visible;transition:opacity .22s,transform .28s var(--ease),visibility 0s}
+.chat-h{margin:4px 8px 8px;font-size:13px;color:var(--muted);line-height:1.35}
+.chat-i{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:12px;text-decoration:none;color:var(--ink);transition:background .2s}
+.chat-i:hover,.chat-i:focus-visible{background:#f3f3f1;outline:none}
+.chat-ic{width:40px;height:40px;flex:none;display:grid;place-items:center}
+.chat-ic svg,.chat-ic img{width:40px;height:40px;display:block}
+.chat-ic img{border-radius:11px}
+.chat-i b{display:block;font-size:15px;font-weight:600;line-height:1.2}
+.chat-i small{display:block;font-size:12.5px;color:var(--muted)}
+.chat.open .chat-i{animation:chatIn .35s var(--ease) both}
+.chat.open .chat-i:nth-of-type(2){animation-delay:.04s}.chat.open .chat-i:nth-of-type(3){animation-delay:.08s}
+@keyframes chatIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.chat-ch{display:flex;align-items:center;gap:8px;margin-top:6px;padding:10px 10px 6px;border-top:1px solid #ececea;font-size:13px;font-weight:600;color:var(--ink);text-decoration:none}
+.chat-ch svg:first-child{width:18px;height:18px}
+.chat-ch .chat-arr{margin-left:auto;transition:transform .2s}
+.chat-ch:hover .chat-arr{transform:translateX(3px)}
+@media (max-width:760px){.chat{right:14px;bottom:calc(84px + env(safe-area-inset-bottom))}.chat-btn{width:54px;height:54px}.chat-pop{width:min(280px,calc(100vw - 28px))}}
+@media (prefers-reduced-motion:reduce){.chat-btn{animation:none}.chat.open .chat-i{animation:none}}
+@media print{.chat{display:none!important}}
+.ftr-msg{display:flex;align-items:center;gap:10px;margin-top:18px;flex-wrap:wrap}
+.ftr-msg a{display:block;line-height:0}
+.ftr-msg svg,.ftr-msg img{width:32px;height:32px;display:block}
+.ftr-msg img{border-radius:9px}
+.ftr-msg a.ftr-ch{line-height:1.4;font-size:14px;color:inherit;flex-basis:100%}
+.msg-links{display:flex;flex-wrap:wrap;gap:8px}
+.msg-links a{padding:7px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:14px;font-weight:600;color:var(--ink)}
+.msg-links a:hover{border-color:var(--ink)}

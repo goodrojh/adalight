@@ -13,6 +13,9 @@ SITE = {
     'inn': '9718249142', 'ogrn': '1247700171762', 'kpp': '775101001', 'okpo': '53833071',
     'slogan': 'Реализуем вашу дизайнерскую идею вместе. Проектируем, поставляем и монтируем свет будущего — сегодня.',
         'wa': '79771093910',
+    'max': 'https://max.ru/u/f9LHodD0cOJ5RzuLEG2Uw0h--uvGygACL2jgk0Tq8mXCcdXrnpS91p_lO-4',
+    'tg': 'https://t.me/+79771093910',            # написать в Telegram по номеру WhatsApp
+    'tg_channel': 'https://t.me/Adalight_Moscow',
 }
 
 STATS = [
