@@ -104,7 +104,11 @@
     <div class="cta-contacts">
      <a href="tel:{{ S.phone_raw }}"><svg><use href="#i-phone"/></svg><span><small>Телефон</small>{{ S.phone }}</span></a>
      <a href="mailto:{{ S.email }}"><svg><use href="#i-mail"/></svg><span><small>E-mail</small>{{ S.email }}</span></a>
-     <a href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span><small>WhatsApp</small>Написать</span></a>
+    </div>
+    <div class="cta-msg"><span>Или напишите в мессенджер</span>
+     <a href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener"><svg><use href="#i-wa-c"/></svg>WhatsApp</a>
+     <a href="{{ S.tg }}" target="_blank" rel="noopener"><svg><use href="#i-tg-c"/></svg>Telegram</a>
+     <a href="{{ S.max }}" target="_blank" rel="noopener"><img src="{{ base }}/img/max-96.webp" alt="" width="22" height="22">MAX</a>
     </div>
    </div>
    <div class="form-card">{{ lead_form(role=role, goal=goal, label=label) }}</div>

@@ -111,6 +111,9 @@ PHOTO_OWNERS = {
     'ocean': {5: ['ADA-ECO.OCEAN-12W|Ø85x60', 'ADA-ECO.OCEAN-18W', 'ADA-ECO.OCEAN-30W'],
               6: ['ADA-ECO.OCEAN-12W|Ø85x60', 'ADA-ECO.OCEAN-18W', 'ADA-ECO.OCEAN-30W']},
     's20-track-power': {7: [], 8: []},
+    # UKKIE: с рамкой — Ø53/Ø60, под шпаклёвку — Ø70/Ø85 (врезка одинаковая)
+    'ukkie': {1: ['ADA-ECO.UKKIE-8W|Ø70x67', 'ADA-ECO.UKKIE-12W|Ø85x67'], 4: ['ADA-ECO.UKKIE-8W|Ø70x67', 'ADA-ECO.UKKIE-12W|Ø85x67'],
+              2: ['ADA-ECO.UKKIE-8W|Ø53x67', 'ADA-ECO.UKKIE-12W|Ø60x67'], 3: ['ADA-ECO.UKKIE-8W|Ø53x67', 'ADA-ECO.UKKIE-12W|Ø60x67']},
 }
 
 
@@ -280,6 +283,11 @@ for i, p in enumerate(products):
                     o[ok] = {'price': v.get(pk), 'label': next(x['label'] for x in opts if x['key'] == ok)}
         vjs.append({'price': v.get('price'), 'add': add, 'opts': o, 'lm': lumens(v), 'img': view_index(p, v), 'also': photo_owners(p, v)})
     p['variants_js'] = vjs
+    # одинаковые подписи (один артикул в двух исполнениях) различаем габаритом, чтобы было видно, что выбрано
+    labs = [v['label'] for v in vs]
+    for v in vs:
+        if labs.count(v['label']) > 1 and v.get('size') and v['size'] not in v['label']:
+            v['label'] += ' · ' + v['size']
     # калькулятор луча
     if beams and lms and p['category'] not in ('shinoprovod-s20', 'bra'):
         a = sorted(beams, key=lambda b: abs(b - 36))[0]

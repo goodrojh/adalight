@@ -139,6 +139,9 @@ def md5(pth):
     return hashlib.md5(open(pth, 'rb').read()).hexdigest()
 
 
+PHOTO_ORDER = {'s20-lunar': [2, 3]}
+
+
 def add(p):
     p.setdefault('images', [])
     p.setdefault('schemes', [])
@@ -150,6 +153,10 @@ def add(p):
     p['schemes'] = dedupe([i for i in p['schemes'] if os.path.exists(i)])
     p['images'] = [i for i in p['images'] if md5(i) not in CLIENT_RM]
     p['images'] = [AI_REPLACE.get(md5(i), i) for i in p['images']]
+    # главным ставим студийное фото, интерьерные — после (чтобы карточка в каталоге не выбивалась из ряда)
+    if p['slug'] in PHOTO_ORDER:
+        o = PHOTO_ORDER[p['slug']]
+        p['images'] = [p['images'][k] for k in o if k < len(p['images'])] + [x for k, x in enumerate(p['images']) if k not in o]
     p['schemes'] = [i for i in p['schemes'] if md5(i) not in CLIENT_RM]
     # фото конкретной модификации: индекс в общей галерее (для смены фото при выборе модификации)
     idx = {md5(x): n for n, x in enumerate(p['images'])}

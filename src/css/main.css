@@ -595,7 +595,6 @@ a.trust-cta:hover span{background:var(--signal-2)}
 .cta-steps b{font-weight:600}
 .cta-steps span{color:#9d9da3;font-size:14px}
 .cta-contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:28px}
-.cta-contacts a:first-child{grid-column:1/-1}
 .cta-contacts a{display:flex;gap:10px;align-items:center;padding:12px;border-radius:12px;background:#18181a;text-decoration:none;font-weight:600;font-size:14px;min-width:0}
 .cta-contacts a:hover{background:#222225}
 .cta-contacts svg{width:18px;height:18px;color:var(--signal);flex:none}
@@ -769,3 +768,11 @@ html,body,.filters,.gthumbs,.table-wrap,.tabs,.modal-in,.drawer,.lb,*{scrollbar-
 .msg-links{display:flex;flex-wrap:wrap;gap:8px}
 .msg-links a{padding:7px 12px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:14px;font-weight:600;color:var(--ink)}
 .msg-links a:hover{border-color:var(--ink)}
+
+.cta-msg{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px}
+.cta-msg>span{flex-basis:100%;font-size:13px;color:#8e8e94;margin-bottom:2px}
+.cta-msg a{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 10px;border-radius:12px;background:#18181a;text-decoration:none;font-weight:600;font-size:14px;color:#fff;transition:background .2s}
+.cta-msg a:hover{background:#222225}
+.cta-msg svg,.cta-msg img{width:22px;height:22px;flex:none;display:block}
+.cta-msg img{border-radius:6px}
+@media (max-width:400px){.cta-msg a{flex-basis:100%}}
