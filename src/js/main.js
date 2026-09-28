@@ -363,10 +363,19 @@
       var S = L * B; if (!S) return;
       var hc = Math.max(H - 0.8, 0.5), i = S / (hc * (L + B)); // индекс помещения
       var u = Math.min(0.95, (refl ? 0.42 : 0.34) + 0.19 * Math.log(1 + i)); // аппроксимация КИ
-      var k = 1.25, N = Math.ceil(E * S * k / (F * u));
-      var cols = Math.max(1, Math.round(Math.sqrt(N * L / B))), rows = Math.max(1, Math.ceil(N / cols));
+      var k = 1.25, Nmin = Math.ceil(E * S * k / (F * u));
+      /* светильники ставим полной равномерной сеткой: подбираем ряды × столбцы с шагом, близким к квадратному,
+         и минимальным запасом над расчётом; итоговое количество = вся сетка (без пустых мест) */
+      var cols = 1, rows = Nmin, best = 1e9;
+      for (var cc = 1; cc <= Nmin; cc++) {
+        var rw = Math.ceil(Nmin / cc), extra = rw * cc - Nmin;
+        var score = extra / Nmin * 3 + Math.abs(Math.log((L / cc) / (B / rw)));
+        if (score < best) { best = score; cols = cc; rows = rw; }
+      }
+      var N = rows * cols;
       $('[data-o=S]', rc).textContent = S.toFixed(1) + ' м²';
       $('[data-o=N]', rc).textContent = N;
+      var nm = $('[data-o=Nmin]', rc); if (nm) nm.textContent = N > Nmin ? 'по расчёту минимум ' + Nmin + ', для равномерной сетки ' + rows + ' × ' + cols + ' — ' + N : '';
       $('[data-o=grid]', rc).textContent = rows + ' × ' + cols + ' (шаг ~' + (L / cols).toFixed(2) + ' × ' + (B / rows).toFixed(2) + ' м)';
       $('[data-o=W]', rc).textContent = Math.round(N * (+$('[name=P]', rc).value || 0)) + ' Вт · ' + (N * (+$('[name=P]', rc).value || 0) / S).toFixed(1) + ' Вт/м²';
       var g = $('[data-o=plan]', rc);

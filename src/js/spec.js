@@ -56,7 +56,7 @@
       '.tot td{border:0;background:#fff!important;padding-top:12px}.tot .lab{text-align:right;color:#5d5d63}.tot .val{font:600 16px Geologica,Arial,sans-serif;text-align:right;white-space:nowrap}.tot .val span{background:#ffc603;padding:4px 10px;border-radius:4px}' +
       '.note{margin-top:18px;padding:12px 14px;border-left:3px solid #ffc603;background:#f7f7f5;font-size:11px;color:#3b3b40}.foot{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-between;font-size:9.5px;color:#8a8a90;border-top:1px solid #e3e3df;padding-top:6px}' +
       'thead{display:table-header-group}tr{page-break-inside:avoid}</style></head><body>' +
-      '<div class="top"><img src="' + abs(base + '/assets/logo-dark.svg') + '" alt="ADALIGHT"><div class="co"><b>ООО «АДАЛАЙТ»</b><br>ИНН 9718249142 · ОГРН 1247700171762<br>Москва, Щербинка, ул. 40 лет Октября, д. 3А, офис 410<br>+7 (977) 109-39-10 · damir@adalight.ru · adalight.ru</div></div>' +
+      '<div class="top"><img src="' + abs(base + '/assets/logo-dark.svg') + '" alt="ADALIGHT"><div class="co"><b>ООО «АДАЛАЙТ»</b><br>ИНН 9718249142 · ОГРН 1247700171762<br>Москва, Щербинка, ул. 40 лет Октября, д. 3А, офис 410<br>+7 (977) 109-39-10 · info@adalight.ru · adalight.ru</div></div>' +
       '<h1>Спецификация оборудования</h1><div class="meta"><span>№ <b>' + no + '</b></span><span>Дата: <b>' + today() + '</b></span><span>Позиций: <b>' + a.length + '</b> · штук: <b>' + S.count() + '</b></span></div>' +
       '<table><thead><tr><th class="c">№</th><th></th><th>Наименование и артикул</th><th class="c">Кол-во</th><th class="r">Цена РРЦ</th><th class="r">Сумма</th></tr></thead><tbody>' + rows + '</tbody>' +
       '<tbody class="tot"><tr><td colspan="5" class="lab">Итого по РРЦ:</td><td class="val"><span>' + fmt(sum) + '</span></td></tr></tbody></table>' +
@@ -103,7 +103,7 @@
       return '<c r="' + ref + '" s="' + st + '" t="inlineStr"><is><t xml:space="preserve">' + xesc(v) + '</t></is></c>';
     }
     R.push('<row r="1" ht="30" customHeight="1">' + cell('A', 1, 'ADALIGHT — спецификация оборудования', 1) + '</row>');
-    R.push('<row r="2">' + cell('A', 2, '№ ' + no + ' от ' + today() + ' · ООО «АДАЛАЙТ», ИНН 9718249142 · +7 (977) 109-39-10 · damir@adalight.ru', 2) + '</row>');
+    R.push('<row r="2">' + cell('A', 2, '№ ' + no + ' от ' + today() + ' · ООО «АДАЛАЙТ», ИНН 9718249142 · +7 (977) 109-39-10 · info@adalight.ru', 2) + '</row>');
     R.push('<row r="4" ht="24" customHeight="1">' + ['№', 'Артикул', 'Наименование', 'Параметры', 'Исполнение', 'Кол-во, шт.', 'Цена РРЦ, ₽', 'Сумма, ₽'].map(function (h, i) { return cell('ABCDEFGH'[i], 4, h, 3); }).join('') + '</row>');
     a.forEach(function (x, i) {
       r = 5 + i; var z = i % 2 ? 1 : 0;

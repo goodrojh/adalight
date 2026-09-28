@@ -15,7 +15,7 @@ return [
     'source_id' => 'WEB',
 
     // Почта: запасной путь, если CRM недоступна. email_copy = true — присылать копию каждой заявки.
-    'email' => 'damir@adalight.ru',
+    'email' => 'info@adalight.ru',
     'email_copy' => false,
     'email_from' => 'noreply@adalight.ru',
 
