@@ -125,8 +125,12 @@
  th.forEach(function(b,i){b.addEventListener('click',function(){if(auto)return;
   var cs=[].slice.call(document.querySelectorAll('input[name=color]')),cm=cs.filter(function(c){return +c.dataset.img===i;})[0];
   if(cm&&!cm.checked){cm.checked=true;}
-  var cur=V[+sel.value];if(cur&&cur.img===i){upd({target:{name:'photo'}});return;}
-  for(var j=0;j<V.length;j++){if(V[j].img===i){sel.value=j;break;}}
+  /* чьё это фото: главный кадр модификации или один из её кадров; общее фото артикул не меняет */
+  function own(v){return v.img===i||(v.also||[]).indexOf(i)>=0;}
+  var cur=V[+sel.value];if(cur&&own(cur)){upd({target:{name:'photo'}});return;}
+  var jj=-1;for(var j=0;j<V.length;j++){if(V[j].img===i){jj=j;break;}}
+  if(jj<0)for(j=0;j<V.length;j++){if(own(V[j])){jj=j;break;}}
+  if(jj>=0)sel.value=jj;
   upd({target:{name:'photo'}});
  });});
  function upd(e){var v=V[+sel.value],o=opt(),price=v.price,lab=[],c=col();

@@ -97,6 +97,48 @@ def view_index(p, v):
     return ii
 
 
+# Фото, на которых видна именно эта модификация (кроме её главного кадра).
+# Нужны сериям, где модификации выглядят по-разному (круглый/квадратный, шинопровод/угол):
+# листаешь фото — артикул переключается на тот, что на фото. Общие кадры артикул не меняют.
+PHOTO_BLOCKS = {'s20-disc', 's20-pendant-sphere', 's20-pendant-tube', 's20-pendant-ring', 's20-convex',
+                's20-track-a', 's20-track-b', 's20-track-c', 's20-track-d', 's20-track-e', 's20-track-stretch',
+                's20-track-connectors', 's20-track-power', 's20-track-smart'}
+# ручная привязка: номер фото (с 1) -> артикулы; [] — общее фото
+PHOTO_OWNERS = {
+    'emo-surface': {1: ['ADA-ECO.EMO-CIRCLE-12W'], 2: ['ADA-ECO.EMO-CIRCLE-12W'], 3: ['ADA-ECO.EMO-CIRCLE-12W'],
+                    4: ['ADA-ECO.EMO-SQUARE-12W'], 5: ['ADA-ECO.EMO-SQUARE-12W'], 6: ['ADA-ECO.EMO-CIRCLE-12W'],
+                    7: ['ADA-ECO.EMO-CIRCLE-12W'], 8: ['ADA-ECO.EMO-CIRCLE-12W'], 9: ['ADA-ECO.EMO-SQUARE-12W']},
+    'ocean': {5: ['ADA-ECO.OCEAN-12W|Ø85x60', 'ADA-ECO.OCEAN-18W', 'ADA-ECO.OCEAN-30W'],
+              6: ['ADA-ECO.OCEAN-12W|Ø85x60', 'ADA-ECO.OCEAN-18W', 'ADA-ECO.OCEAN-30W']},
+    's20-track-power': {7: [], 8: []},
+}
+
+
+def photo_owners(p, v):
+    ni = len(p['images']); out = []
+    man = PHOTO_OWNERS.get(p['slug'], {})
+    def mine(keys):
+        return any(k == v['sku'] or k == v['sku'] + '|' + (v.get('size') or '') for k in keys)
+    if p['slug'] in PHOTO_BLOCKS:
+        starts = sorted({x['img_i'] for x in p['variants'] if x.get('img_i') is not None and x['img_i'] < ni})
+        vi = v.get('img_i')
+        for i in range(ni):
+            st = max([s for s in starts if s <= i], default=None)
+            if st is not None and st == vi and i != vi:
+                out.append(i)
+    for n, keys in man.items():
+        i = n - 1
+        if i in out and not mine(keys):
+            out.remove(i)
+        elif mine(keys) and i not in out and i != v.get('img_i'):
+            out.append(i)
+    if v.get('sch_i') is not None and v['sch_i'] < len(p['schemes']):
+        out.append(ni + v['sch_i'])          # свой чертёж
+    if v.get('img_i') is not None and v['img_i'] < ni and view_index(p, v) != v['img_i']:
+        out.append(v['img_i'])               # своё фото, если по умолчанию показывается чертёж
+    return sorted(set(out))
+
+
 for i, p in enumerate(products):
     vs = p['variants']
     p['mount_key'] = MOUNT.get(p['mounting'], p['mounting'])
@@ -236,7 +278,7 @@ for i, p in enumerate(products):
             for ok, pk in (('dip', 'price_dip'), ('zigbee', 'price_zigbee'), ('dim', 'price_dim')):
                 if any(x['key'] == ok for x in opts):
                     o[ok] = {'price': v.get(pk), 'label': next(x['label'] for x in opts if x['key'] == ok)}
-        vjs.append({'price': v.get('price'), 'add': add, 'opts': o, 'lm': lumens(v), 'img': view_index(p, v)})
+        vjs.append({'price': v.get('price'), 'add': add, 'opts': o, 'lm': lumens(v), 'img': view_index(p, v), 'also': photo_owners(p, v)})
     p['variants_js'] = vjs
     # калькулятор луча
     if beams and lms and p['category'] not in ('shinoprovod-s20', 'bra'):
