@@ -682,8 +682,10 @@ a.trust-cta:hover span{background:var(--signal-2)}
 .proj-cols .check{font-size:15px}
 @media (max-width:900px){.proj-body{grid-template-columns:minmax(0,1fr)}.proj-photo{position:static;aspect-ratio:4/3}.proj-cols{grid-template-columns:1fr}}
 
-.proj.proj-logo{grid-column:span 3;min-height:300px}
-@media (max-width:900px){.proj.proj-logo{grid-column:span 12;min-height:220px}}
+.proj.proj-logo,.proj.proj-sm{grid-column:span 3;min-height:300px}
+@media (max-width:900px){.proj.proj-logo,.proj.proj-sm{grid-column:span 12;min-height:220px}}
+.proj .pl-badge{position:absolute;top:22px;left:24px;z-index:2;height:30px;width:auto;max-width:55%;object-fit:contain;opacity:.95;filter:drop-shadow(0 1px 6px rgba(0,0,0,.45))}
+.photo-credit{font-size:12.5px;color:var(--muted);margin-top:14px}
 .proj-logo{background:radial-gradient(120% 90% at 70% 20%,#26262a,var(--ink) 70%);justify-content:space-between}
 .proj-logo::after{background:none}
 .proj-logo .pl-logo{position:static;width:auto;height:48px;max-width:60%;object-fit:contain;opacity:.85;z-index:1;margin-bottom:auto;transform:none!important}
@@ -784,3 +786,5 @@ html,body,.filters,.gthumbs,.table-wrap,.tabs,.modal-in,.drawer,.lb,*{scrollbar-
 @media (max-width:400px){.cta-msg a{flex-basis:100%}}
 .consent.invalid,.dark .consent.invalid{color:#d93025}
 .consent.invalid input{outline:2px solid #d93025;outline-offset:1px}
+.proj.proj-sm:not(.proj-logo)::before{content:"";position:absolute;left:0;right:0;top:0;height:110px;background:linear-gradient(rgba(0,0,0,.6),transparent);z-index:1;pointer-events:none}
+.proj .pl-badge{height:26px!important;width:auto!important;inset:auto!important;top:22px!important;left:24px!important}

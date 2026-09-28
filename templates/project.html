@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% import "macros.html" as m with context %}
 {% block main %}
-<section class="phero"{% if not pr.logo %} style="min-height:70vh;display:flex;align-items:flex-end"{% endif %}>
- {% if not pr.logo %}<div class="phero-bg">{{ m.img(media[pr.slug ~ '-0'], '', '100vw', lazy=False) }}</div>{% endif %}
+{% set ph = gallery[0] if gallery else None %}
+<section class="phero"{% if ph %} style="min-height:70vh;display:flex;align-items:flex-end"{% endif %}>
+ {% if ph %}<div class="phero-bg">{{ m.img(ph, '', '100vw', lazy=False) }}</div>{% endif %}
  <div class="wrap{% if pr.logo %} phero-logo{% endif %}" style="width:100%">
   <div>
    {{ m.crumbs(crumbs) }}
@@ -43,6 +44,7 @@
 <section class="section" style="padding-top:0">
  <div class="wrap">
   <div class="masonry" data-lightbox>{% for im in gallery[:1] + gallery[2:] %}<a href="{{ im.lg }}" data-lg="{{ im.lg }}">{{ m.img(im, pr.name ~ ' — фото ' ~ loop.index, '(max-width:700px) 100vw, 33vw') }}</a>{% endfor %}</div>
+  {% if pr.credit %}<p class="photo-credit">Фото и визуализации: {{ pr.credit }}{% if pr.site %}, <a href="{{ pr.site }}" target="_blank" rel="noopener">страница ЖК</a>{% endif %}.</p>{% endif %}
  </div>
 </section>
 {% endif %}

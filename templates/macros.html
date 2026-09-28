@@ -142,8 +142,10 @@
 {%- endmacro %}
 
 {% macro proj_card(pr, media, base) -%}
-<a class="proj{% if pr.logo %} proj-logo{% endif %}" href="{{ base }}/projects/{{ pr.slug }}/">
- {% if pr.logo %}<img class="pl-logo" src="{{ base }}/img/logos/{{ pr.logo }}-w.webp" alt="{{ pr.client }}" loading="lazy">{% else %}{{ img(media[pr.slug ~ '-0'], pr.name, '(max-width:900px) 100vw, 50vw') }}{% endif %}
+{% set ph = media[pr.slug ~ '-0'] if pr.n else None %}
+<a class="proj{% if pr.logo %} proj-sm{% endif %}{% if pr.logo and not ph %} proj-logo{% endif %}" href="{{ base }}/projects/{{ pr.slug }}/">
+ {% if ph %}{{ img(ph, pr.name, '(max-width:900px) 100vw, 50vw') }}{% if pr.logo %}<img class="pl-badge" src="{{ base }}/img/logos/{{ pr.logo }}-w.webp" alt="{{ pr.client }}" loading="lazy">{% endif %}
+ {% else %}<img class="pl-logo" src="{{ base }}/img/logos/{{ pr.logo }}-w.webp" alt="{{ pr.client }}" loading="lazy">{% endif %}
  <div class="tags"><span class="tag">{{ pr.type }}</span>{% if pr.client %}<span class="tag">{{ pr.client }}</span>{% endif %}</div>
  <h3>{{ pr.name }}</h3>
  <p>{{ pr.lead }}</p>
