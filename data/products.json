@@ -22343,11 +22343,11 @@
   "kind_src": "Грунтовые",
   "images": [
    {
-    "src": "/img/p/arch-gr-m30l-12m-1-ai6f6598-480.webp",
-    "srcset": "/img/p/arch-gr-m30l-12m-1-ai6f6598-480.webp 480w, /img/p/arch-gr-m30l-12m-1-ai6f6598-1100.webp 1100w",
+    "src": "/img/p/arch-gr-m30l-12m-1-ai8251f3-480.webp",
+    "srcset": "/img/p/arch-gr-m30l-12m-1-ai8251f3-480.webp 480w, /img/p/arch-gr-m30l-12m-1-ai8251f3-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-gr-m30l-12m-1-ai6f6598-1100.webp",
+    "lg": "/img/p/arch-gr-m30l-12m-1-ai8251f3-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\1-064-1-12.jpg"
@@ -22449,11 +22449,11 @@
   "kind_src": "Грунтовые",
   "images": [
    {
-    "src": "/img/p/arch-gr-m66l-18m-1-aied1aa2-480.webp",
-    "srcset": "/img/p/arch-gr-m66l-18m-1-aied1aa2-480.webp 480w, /img/p/arch-gr-m66l-18m-1-aied1aa2-1100.webp 1100w",
+    "src": "/img/p/arch-gr-m66l-18m-1-aid17370-480.webp",
+    "srcset": "/img/p/arch-gr-m66l-18m-1-aid17370-480.webp 480w, /img/p/arch-gr-m66l-18m-1-aid17370-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-gr-m66l-18m-1-aied1aa2-1100.webp",
+    "lg": "/img/p/arch-gr-m66l-18m-1-aid17370-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\1-073-1-14.jpg"
@@ -22461,14 +22461,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-gr-m66l-18m-s1-480.webp",
-    "srcset": "/img/p/arch-gr-m66l-18m-s1-480.webp 182w",
-    "w": 182,
-    "h": 239,
-    "lg": "/img/p/arch-gr-m66l-18m-s1-480.webp",
-    "ow": 182,
-    "oh": 239,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\1-073-1-15.png"
+    "src": "/img/p/arch-gr-m66l-18m-s1-aiae240b-480.webp",
+    "srcset": "/img/p/arch-gr-m66l-18m-s1-aiae240b-480.webp 480w, /img/p/arch-gr-m66l-18m-s1-aiae240b-1100.webp 1100w",
+    "w": 1100,
+    "h": 1407,
+    "lg": "/img/p/arch-gr-m66l-18m-s1-aiae240b-1100.webp",
+    "ow": 2176,
+    "oh": 2784,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\1-073-1-15.jpg"
    }
   ],
   "variants": [
@@ -22593,14 +22593,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-tc60c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-tc60c-s1-480.webp 377w",
-    "w": 377,
-    "h": 262,
-    "lg": "/img/p/arch-wl-r-tc60c-s1-480.webp",
-    "ow": 377,
-    "oh": 262,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-010-1-5.png"
+    "src": "/img/p/arch-wl-r-tc60c-s1-ai3d951c-480.webp",
+    "srcset": "/img/p/arch-wl-r-tc60c-s1-ai3d951c-480.webp 480w, /img/p/arch-wl-r-tc60c-s1-ai3d951c-1100.webp 1100w",
+    "w": 1100,
+    "h": 788,
+    "lg": "/img/p/arch-wl-r-tc60c-s1-ai3d951c-1100.webp",
+    "ow": 2932,
+    "oh": 2100,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-010-1-5.jpg"
    }
   ],
   "variants": [
@@ -22711,11 +22711,11 @@
   "kind_src": "Прожекторы",
   "images": [
    {
-    "src": "/img/p/arch-wl-r-tc80c-1-ai5ad312-480.webp",
-    "srcset": "/img/p/arch-wl-r-tc80c-1-ai5ad312-480.webp 480w, /img/p/arch-wl-r-tc80c-1-ai5ad312-1100.webp 1100w",
+    "src": "/img/p/arch-wl-r-tc80c-1-ai3c4d57-480.webp",
+    "srcset": "/img/p/arch-wl-r-tc80c-1-ai3c4d57-480.webp 480w, /img/p/arch-wl-r-tc80c-1-ai3c4d57-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-r-tc80c-1-ai5ad312-1100.webp",
+    "lg": "/img/p/arch-wl-r-tc80c-1-ai3c4d57-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-019-1-6.jpg"
@@ -22723,14 +22723,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-tc80c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-tc80c-s1-480.webp 419w",
-    "w": 419,
-    "h": 300,
-    "lg": "/img/p/arch-wl-r-tc80c-s1-480.webp",
-    "ow": 419,
-    "oh": 300,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-019-1-7.png"
+    "src": "/img/p/arch-wl-r-tc80c-s1-aif4c80b-480.webp",
+    "srcset": "/img/p/arch-wl-r-tc80c-s1-aif4c80b-480.webp 480w, /img/p/arch-wl-r-tc80c-s1-aif4c80b-1100.webp 1100w",
+    "w": 1100,
+    "h": 860,
+    "lg": "/img/p/arch-wl-r-tc80c-s1-aif4c80b-1100.webp",
+    "ow": 2784,
+    "oh": 2176,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-019-1-7.jpg"
    }
   ],
   "variants": [
@@ -22841,11 +22841,11 @@
   "kind_src": "Прожекторы",
   "images": [
    {
-    "src": "/img/p/arch-wl-r-tc100c-1-aif6decf-480.webp",
-    "srcset": "/img/p/arch-wl-r-tc100c-1-aif6decf-480.webp 480w, /img/p/arch-wl-r-tc100c-1-aif6decf-1100.webp 1100w",
+    "src": "/img/p/arch-wl-r-tc100c-1-ai56e2c2-480.webp",
+    "srcset": "/img/p/arch-wl-r-tc100c-1-ai56e2c2-480.webp 480w, /img/p/arch-wl-r-tc100c-1-ai56e2c2-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-r-tc100c-1-aif6decf-1100.webp",
+    "lg": "/img/p/arch-wl-r-tc100c-1-ai56e2c2-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-028-1-9.jpg"
@@ -22853,14 +22853,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-tc100c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-tc100c-s1-480.webp 480w, /img/p/arch-wl-r-tc100c-s1-1100.webp 598w",
-    "w": 598,
-    "h": 410,
-    "lg": "/img/p/arch-wl-r-tc100c-s1-1100.webp",
-    "ow": 598,
-    "oh": 410,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-028-1-10.png"
+    "src": "/img/p/arch-wl-r-tc100c-s1-aibca45b-480.webp",
+    "srcset": "/img/p/arch-wl-r-tc100c-s1-aibca45b-480.webp 480w, /img/p/arch-wl-r-tc100c-s1-aibca45b-1100.webp 1100w",
+    "w": 1100,
+    "h": 788,
+    "lg": "/img/p/arch-wl-r-tc100c-s1-aibca45b-1100.webp",
+    "ow": 2932,
+    "oh": 2100,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-028-1-10.jpg"
    }
   ],
   "variants": [
@@ -22945,11 +22945,11 @@
   "kind_src": "Прожекторы",
   "images": [
    {
-    "src": "/img/p/arch-wl-r-tc120c-1-aif6decf-480.webp",
-    "srcset": "/img/p/arch-wl-r-tc120c-1-aif6decf-480.webp 480w, /img/p/arch-wl-r-tc120c-1-aif6decf-1100.webp 1100w",
+    "src": "/img/p/arch-wl-r-tc120c-1-ai765980-480.webp",
+    "srcset": "/img/p/arch-wl-r-tc120c-1-ai765980-480.webp 480w, /img/p/arch-wl-r-tc120c-1-ai765980-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-r-tc120c-1-aif6decf-1100.webp",
+    "lg": "/img/p/arch-wl-r-tc120c-1-ai765980-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-037-1-11.jpg"
@@ -22957,14 +22957,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-tc120c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-tc120c-s1-480.webp 480w, /img/p/arch-wl-r-tc120c-s1-1100.webp 563w",
-    "w": 563,
-    "h": 384,
-    "lg": "/img/p/arch-wl-r-tc120c-s1-1100.webp",
-    "ow": 563,
-    "oh": 384,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-037-1-12.png"
+    "src": "/img/p/arch-wl-r-tc120c-s1-aifa17d1-480.webp",
+    "srcset": "/img/p/arch-wl-r-tc120c-s1-aifa17d1-480.webp 480w, /img/p/arch-wl-r-tc120c-s1-aifa17d1-1100.webp 1100w",
+    "w": 1100,
+    "h": 788,
+    "lg": "/img/p/arch-wl-r-tc120c-s1-aifa17d1-1100.webp",
+    "ow": 2932,
+    "oh": 2100,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-037-1-12.jpg"
    }
   ],
   "variants": [
@@ -23087,14 +23087,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-c-tc80l-s1-480.webp",
-    "srcset": "/img/p/arch-wl-c-tc80l-s1-480.webp 480w, /img/p/arch-wl-c-tc80l-s1-1100.webp 647w",
-    "w": 647,
-    "h": 461,
-    "lg": "/img/p/arch-wl-c-tc80l-s1-1100.webp",
-    "ow": 647,
-    "oh": 461,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-046-1-14.png"
+    "src": "/img/p/arch-wl-c-tc80l-s1-ai96f530-480.webp",
+    "srcset": "/img/p/arch-wl-c-tc80l-s1-ai96f530-480.webp 480w, /img/p/arch-wl-c-tc80l-s1-ai96f530-1100.webp 1100w",
+    "w": 1100,
+    "h": 860,
+    "lg": "/img/p/arch-wl-c-tc80l-s1-ai96f530-1100.webp",
+    "ow": 2784,
+    "oh": 2176,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-046-1-14.jpg"
    }
   ],
   "variants": [
@@ -23205,11 +23205,11 @@
   "kind_src": "Прожекторы",
   "images": [
    {
-    "src": "/img/p/arch-wl-c-tc130l-1-ai17439e-480.webp",
-    "srcset": "/img/p/arch-wl-c-tc130l-1-ai17439e-480.webp 480w, /img/p/arch-wl-c-tc130l-1-ai17439e-1100.webp 1100w",
+    "src": "/img/p/arch-wl-c-tc130l-1-ai17b582-480.webp",
+    "srcset": "/img/p/arch-wl-c-tc130l-1-ai17b582-480.webp 480w, /img/p/arch-wl-c-tc130l-1-ai17b582-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-c-tc130l-1-ai17439e-1100.webp",
+    "lg": "/img/p/arch-wl-c-tc130l-1-ai17b582-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-055-1-15.jpg"
@@ -23217,14 +23217,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-c-tc130l-s1-480.webp",
-    "srcset": "/img/p/arch-wl-c-tc130l-s1-480.webp 480w, /img/p/arch-wl-c-tc130l-s1-1100.webp 907w",
-    "w": 907,
-    "h": 670,
-    "lg": "/img/p/arch-wl-c-tc130l-s1-1100.webp",
-    "ow": 907,
-    "oh": 670,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-055-1-16.png"
+    "src": "/img/p/arch-wl-c-tc130l-s1-aia75ed1-480.webp",
+    "srcset": "/img/p/arch-wl-c-tc130l-s1-aia75ed1-480.webp 480w, /img/p/arch-wl-c-tc130l-s1-aia75ed1-1100.webp 1100w",
+    "w": 1100,
+    "h": 860,
+    "lg": "/img/p/arch-wl-c-tc130l-s1-aia75ed1-1100.webp",
+    "ow": 2784,
+    "oh": 2176,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-055-1-16.jpg"
    }
   ],
   "variants": [
@@ -23335,11 +23335,11 @@
   "kind_src": "Прожекторы",
   "images": [
    {
-    "src": "/img/p/arch-wl-c-tc165l-1-ai29806c-480.webp",
-    "srcset": "/img/p/arch-wl-c-tc165l-1-ai29806c-480.webp 480w, /img/p/arch-wl-c-tc165l-1-ai29806c-1100.webp 1100w",
+    "src": "/img/p/arch-wl-c-tc165l-1-ai3bb30c-480.webp",
+    "srcset": "/img/p/arch-wl-c-tc165l-1-ai3bb30c-480.webp 480w, /img/p/arch-wl-c-tc165l-1-ai3bb30c-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-c-tc165l-1-ai29806c-1100.webp",
+    "lg": "/img/p/arch-wl-c-tc165l-1-ai3bb30c-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-064-1-17.jpg"
@@ -23347,14 +23347,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-c-tc165l-s1-480.webp",
-    "srcset": "/img/p/arch-wl-c-tc165l-s1-480.webp 480w, /img/p/arch-wl-c-tc165l-s1-1100.webp 943w",
-    "w": 943,
-    "h": 589,
-    "lg": "/img/p/arch-wl-c-tc165l-s1-1100.webp",
-    "ow": 943,
-    "oh": 589,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-064-1-18.png"
+    "src": "/img/p/arch-wl-c-tc165l-s1-ai1fd276-480.webp",
+    "srcset": "/img/p/arch-wl-c-tc165l-s1-ai1fd276-480.webp 480w, /img/p/arch-wl-c-tc165l-s1-ai1fd276-1100.webp 1100w",
+    "w": 1100,
+    "h": 788,
+    "lg": "/img/p/arch-wl-c-tc165l-s1-ai1fd276-1100.webp",
+    "ow": 2932,
+    "oh": 2100,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-064-1-18.jpg"
    }
   ],
   "variants": [
@@ -23477,14 +23477,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-c-tc120l-s1-480.webp",
-    "srcset": "/img/p/arch-wl-c-tc120l-s1-480.webp 365w",
-    "w": 365,
-    "h": 286,
-    "lg": "/img/p/arch-wl-c-tc120l-s1-480.webp",
-    "ow": 365,
-    "oh": 286,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-073-1-19.png"
+    "src": "/img/p/arch-wl-c-tc120l-s1-ai6a1e0e-480.webp",
+    "srcset": "/img/p/arch-wl-c-tc120l-s1-ai6a1e0e-480.webp 480w, /img/p/arch-wl-c-tc120l-s1-ai6a1e0e-1100.webp 1100w",
+    "w": 1100,
+    "h": 916,
+    "lg": "/img/p/arch-wl-c-tc120l-s1-ai6a1e0e-1100.webp",
+    "ow": 2672,
+    "oh": 2224,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-073-1-19.jpg"
    }
   ],
   "variants": [
@@ -23595,11 +23595,11 @@
   "kind_src": "Прожекторы",
   "images": [
    {
-    "src": "/img/p/arch-wl-c-tc155l-1-aib5d9c2-480.webp",
-    "srcset": "/img/p/arch-wl-c-tc155l-1-aib5d9c2-480.webp 480w, /img/p/arch-wl-c-tc155l-1-aib5d9c2-1100.webp 1100w",
+    "src": "/img/p/arch-wl-c-tc155l-1-ai722f1c-480.webp",
+    "srcset": "/img/p/arch-wl-c-tc155l-1-ai722f1c-480.webp 480w, /img/p/arch-wl-c-tc155l-1-ai722f1c-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-c-tc155l-1-aib5d9c2-1100.webp",
+    "lg": "/img/p/arch-wl-c-tc155l-1-ai722f1c-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-082-1-21.jpg"
@@ -23607,14 +23607,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-c-tc155l-s1-480.webp",
-    "srcset": "/img/p/arch-wl-c-tc155l-s1-480.webp 480w, /img/p/arch-wl-c-tc155l-s1-1100.webp 606w",
-    "w": 606,
-    "h": 460,
-    "lg": "/img/p/arch-wl-c-tc155l-s1-1100.webp",
-    "ow": 606,
-    "oh": 460,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-082-1-22.png"
+    "src": "/img/p/arch-wl-c-tc155l-s1-ai177699-480.webp",
+    "srcset": "/img/p/arch-wl-c-tc155l-s1-ai177699-480.webp 480w, /img/p/arch-wl-c-tc155l-s1-ai177699-1100.webp 1100w",
+    "w": 1100,
+    "h": 860,
+    "lg": "/img/p/arch-wl-c-tc155l-s1-ai177699-1100.webp",
+    "ow": 2784,
+    "oh": 2176,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-082-1-22.jpg"
    }
   ],
   "variants": [
@@ -23725,11 +23725,11 @@
   "kind_src": "Прожекторы",
   "images": [
    {
-    "src": "/img/p/arch-wl-r-t220c-1-ai3c4d0e-480.webp",
-    "srcset": "/img/p/arch-wl-r-t220c-1-ai3c4d0e-480.webp 480w, /img/p/arch-wl-r-t220c-1-ai3c4d0e-1100.webp 1100w",
+    "src": "/img/p/arch-wl-r-t220c-1-ai4fc027-480.webp",
+    "srcset": "/img/p/arch-wl-r-t220c-1-ai4fc027-480.webp 480w, /img/p/arch-wl-r-t220c-1-ai4fc027-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-r-t220c-1-ai3c4d0e-1100.webp",
+    "lg": "/img/p/arch-wl-r-t220c-1-ai4fc027-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-091-1-2.jpg"
@@ -23737,24 +23737,24 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-t220c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-t220c-s1-480.webp 480w, /img/p/arch-wl-r-t220c-s1-1100.webp 519w",
-    "w": 519,
-    "h": 657,
-    "lg": "/img/p/arch-wl-r-t220c-s1-1100.webp",
-    "ow": 519,
-    "oh": 657,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-091-1-3.png"
+    "src": "/img/p/arch-wl-r-t220c-s1-ai963ff7-480.webp",
+    "srcset": "/img/p/arch-wl-r-t220c-s1-ai963ff7-480.webp 480w, /img/p/arch-wl-r-t220c-s1-ai963ff7-1100.webp 1100w",
+    "w": 1100,
+    "h": 1322,
+    "lg": "/img/p/arch-wl-r-t220c-s1-ai963ff7-1100.webp",
+    "ow": 2224,
+    "oh": 2672,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-091-1-3.jpg"
    },
    {
-    "src": "/img/p/arch-wl-r-t220c-s2-480.webp",
-    "srcset": "/img/p/arch-wl-r-t220c-s2-480.webp 264w",
-    "w": 264,
-    "h": 325,
-    "lg": "/img/p/arch-wl-r-t220c-s2-480.webp",
-    "ow": 264,
-    "oh": 325,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-091-1-4.png"
+    "src": "/img/p/arch-wl-r-t220c-s2-ai933d72-480.webp",
+    "srcset": "/img/p/arch-wl-r-t220c-s2-ai933d72-480.webp 480w, /img/p/arch-wl-r-t220c-s2-ai933d72-1100.webp 1100w",
+    "w": 1100,
+    "h": 1322,
+    "lg": "/img/p/arch-wl-r-t220c-s2-ai933d72-1100.webp",
+    "ow": 2224,
+    "oh": 2672,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-091-1-4.jpg"
    }
   ],
   "variants": [
@@ -23865,11 +23865,11 @@
   "kind_src": "Настенные фасадные",
   "images": [
    {
-    "src": "/img/p/arch-wl-r-cd100c-1-aibb2947-480.webp",
-    "srcset": "/img/p/arch-wl-r-cd100c-1-aibb2947-480.webp 480w, /img/p/arch-wl-r-cd100c-1-aibb2947-1100.webp 1100w",
+    "src": "/img/p/arch-wl-r-cd100c-1-aic7b529-480.webp",
+    "srcset": "/img/p/arch-wl-r-cd100c-1-aic7b529-480.webp 480w, /img/p/arch-wl-r-cd100c-1-aic7b529-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-r-cd100c-1-aibb2947-1100.webp",
+    "lg": "/img/p/arch-wl-r-cd100c-1-aic7b529-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-100-1-23.jpg"
@@ -23877,14 +23877,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-cd100c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-cd100c-s1-480.webp 354w",
-    "w": 354,
-    "h": 595,
-    "lg": "/img/p/arch-wl-r-cd100c-s1-480.webp",
-    "ow": 354,
-    "oh": 595,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-100-1-24.png"
+    "src": "/img/p/arch-wl-r-cd100c-s1-aicf1dc2-480.webp",
+    "srcset": "/img/p/arch-wl-r-cd100c-s1-aicf1dc2-480.webp 480w, /img/p/arch-wl-r-cd100c-s1-aicf1dc2-1100.webp 1100w",
+    "w": 1100,
+    "h": 1777,
+    "lg": "/img/p/arch-wl-r-cd100c-s1-aicf1dc2-1100.webp",
+    "ow": 1976,
+    "oh": 3192,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-100-1-24.jpg"
    }
   ],
   "variants": [
@@ -23956,11 +23956,11 @@
   "kind_src": "Настенные фасадные",
   "images": [
    {
-    "src": "/img/p/arch-wl-r-b86c-1-aie08151-480.webp",
-    "srcset": "/img/p/arch-wl-r-b86c-1-aie08151-480.webp 480w, /img/p/arch-wl-r-b86c-1-aie08151-1100.webp 1100w",
+    "src": "/img/p/arch-wl-r-b86c-1-aicd475a-480.webp",
+    "srcset": "/img/p/arch-wl-r-b86c-1-aicd475a-480.webp 480w, /img/p/arch-wl-r-b86c-1-aicd475a-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-r-b86c-1-aie08151-1100.webp",
+    "lg": "/img/p/arch-wl-r-b86c-1-aicd475a-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-109-1-25.jpg"
@@ -23968,24 +23968,24 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-b86c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-b86c-s1-480.webp 298w",
-    "w": 298,
-    "h": 310,
-    "lg": "/img/p/arch-wl-r-b86c-s1-480.webp",
-    "ow": 298,
-    "oh": 310,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-109-1-26.png"
+    "src": "/img/p/arch-wl-r-b86c-s1-ai907192-480.webp",
+    "srcset": "/img/p/arch-wl-r-b86c-s1-ai907192-480.webp 480w, /img/p/arch-wl-r-b86c-s1-ai907192-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/arch-wl-r-b86c-s1-ai907192-1100.webp",
+    "ow": 2376,
+    "oh": 2376,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-109-1-26.jpg"
    },
    {
-    "src": "/img/p/arch-wl-r-b86c-s2-480.webp",
-    "srcset": "/img/p/arch-wl-r-b86c-s2-480.webp 284w",
-    "w": 284,
-    "h": 279,
-    "lg": "/img/p/arch-wl-r-b86c-s2-480.webp",
-    "ow": 284,
-    "oh": 279,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-109-1-27.png"
+    "src": "/img/p/arch-wl-r-b86c-s2-ai8c919e-480.webp",
+    "srcset": "/img/p/arch-wl-r-b86c-s2-ai8c919e-480.webp 480w, /img/p/arch-wl-r-b86c-s2-ai8c919e-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/arch-wl-r-b86c-s2-ai8c919e-1100.webp",
+    "ow": 2376,
+    "oh": 2376,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-109-1-27.jpg"
    }
   ],
   "variants": [
@@ -24096,11 +24096,11 @@
   "kind_src": "Настенные фасадные",
   "images": [
    {
-    "src": "/img/p/arch-wl-r-b132c-1-aieb7277-480.webp",
-    "srcset": "/img/p/arch-wl-r-b132c-1-aieb7277-480.webp 480w, /img/p/arch-wl-r-b132c-1-aieb7277-1100.webp 1100w",
+    "src": "/img/p/arch-wl-r-b132c-1-ai07b9eb-480.webp",
+    "srcset": "/img/p/arch-wl-r-b132c-1-ai07b9eb-480.webp 480w, /img/p/arch-wl-r-b132c-1-ai07b9eb-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-r-b132c-1-aieb7277-1100.webp",
+    "lg": "/img/p/arch-wl-r-b132c-1-ai07b9eb-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-118-1-28.jpg"
@@ -24108,24 +24108,24 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-b132c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-b132c-s1-480.webp 350w",
-    "w": 350,
-    "h": 365,
-    "lg": "/img/p/arch-wl-r-b132c-s1-480.webp",
-    "ow": 350,
-    "oh": 365,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-118-1-29.png"
+    "src": "/img/p/arch-wl-r-b132c-s1-ai98ba9b-480.webp",
+    "srcset": "/img/p/arch-wl-r-b132c-s1-ai98ba9b-480.webp 480w, /img/p/arch-wl-r-b132c-s1-ai98ba9b-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/arch-wl-r-b132c-s1-ai98ba9b-1100.webp",
+    "ow": 2376,
+    "oh": 2376,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-118-1-29.jpg"
    },
    {
-    "src": "/img/p/arch-wl-r-b132c-s2-480.webp",
-    "srcset": "/img/p/arch-wl-r-b132c-s2-480.webp 381w",
-    "w": 381,
-    "h": 547,
-    "lg": "/img/p/arch-wl-r-b132c-s2-480.webp",
-    "ow": 381,
-    "oh": 547,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-118-1-30.png"
+    "src": "/img/p/arch-wl-r-b132c-s2-ai258218-480.webp",
+    "srcset": "/img/p/arch-wl-r-b132c-s2-ai258218-480.webp 480w, /img/p/arch-wl-r-b132c-s2-ai258218-1100.webp 1100w",
+    "w": 1100,
+    "h": 1536,
+    "lg": "/img/p/arch-wl-r-b132c-s2-ai258218-1100.webp",
+    "ow": 2100,
+    "oh": 2932,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-118-1-30.jpg"
    }
   ],
   "variants": [
@@ -24236,11 +24236,11 @@
   "kind_src": "Настенные фасадные",
   "images": [
    {
-    "src": "/img/p/arch-wl-r-b132bc-1-ai5ce3ee-480.webp",
-    "srcset": "/img/p/arch-wl-r-b132bc-1-ai5ce3ee-480.webp 480w, /img/p/arch-wl-r-b132bc-1-ai5ce3ee-1100.webp 1100w",
+    "src": "/img/p/arch-wl-r-b132bc-1-ai57359a-480.webp",
+    "srcset": "/img/p/arch-wl-r-b132bc-1-ai57359a-480.webp 480w, /img/p/arch-wl-r-b132bc-1-ai57359a-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-r-b132bc-1-ai5ce3ee-1100.webp",
+    "lg": "/img/p/arch-wl-r-b132bc-1-ai57359a-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-127-1-31.jpg"
@@ -24248,24 +24248,24 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-b132bc-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-b132bc-s1-480.webp 480w, /img/p/arch-wl-r-b132bc-s1-1100.webp 499w",
-    "w": 499,
-    "h": 534,
-    "lg": "/img/p/arch-wl-r-b132bc-s1-1100.webp",
-    "ow": 499,
-    "oh": 534,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-127-1-32.png"
+    "src": "/img/p/arch-wl-r-b132bc-s1-ai190b83-480.webp",
+    "srcset": "/img/p/arch-wl-r-b132bc-s1-ai190b83-480.webp 480w, /img/p/arch-wl-r-b132bc-s1-ai190b83-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/arch-wl-r-b132bc-s1-ai190b83-1100.webp",
+    "ow": 2376,
+    "oh": 2376,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-127-1-32.jpg"
    },
    {
-    "src": "/img/p/arch-wl-r-b132bc-s2-480.webp",
-    "srcset": "/img/p/arch-wl-r-b132bc-s2-480.webp 215w",
-    "w": 215,
-    "h": 282,
-    "lg": "/img/p/arch-wl-r-b132bc-s2-480.webp",
-    "ow": 215,
-    "oh": 282,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-127-1-33.png"
+    "src": "/img/p/arch-wl-r-b132bc-s2-ai94f234-480.webp",
+    "srcset": "/img/p/arch-wl-r-b132bc-s2-ai94f234-480.webp 480w, /img/p/arch-wl-r-b132bc-s2-ai94f234-1100.webp 1100w",
+    "w": 1100,
+    "h": 1407,
+    "lg": "/img/p/arch-wl-r-b132bc-s2-ai94f234-1100.webp",
+    "ow": 2176,
+    "oh": 2784,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-127-1-33.jpg"
    }
   ],
   "variants": [
@@ -24414,14 +24414,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-b167c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-b167c-s1-480.webp 180w",
-    "w": 180,
-    "h": 293,
-    "lg": "/img/p/arch-wl-r-b167c-s1-480.webp",
-    "ow": 180,
-    "oh": 293,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-136-1-35.png"
+    "src": "/img/p/arch-wl-r-b167c-s1-aic0583e-480.webp",
+    "srcset": "/img/p/arch-wl-r-b167c-s1-aic0583e-480.webp 480w, /img/p/arch-wl-r-b167c-s1-aic0583e-1100.webp 1100w",
+    "w": 1100,
+    "h": 1777,
+    "lg": "/img/p/arch-wl-r-b167c-s1-aic0583e-1100.webp",
+    "ow": 1976,
+    "oh": 3192,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-136-1-35.jpg"
    }
   ],
   "variants": [
@@ -24570,14 +24570,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-b167bc-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-b167bc-s1-480.webp 180w",
-    "w": 180,
-    "h": 293,
-    "lg": "/img/p/arch-wl-r-b167bc-s1-480.webp",
-    "ow": 180,
-    "oh": 293,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-145-1-1.png"
+    "src": "/img/p/arch-wl-r-b167bc-s1-aica7edf-480.webp",
+    "srcset": "/img/p/arch-wl-r-b167bc-s1-aica7edf-480.webp 480w, /img/p/arch-wl-r-b167bc-s1-aica7edf-1100.webp 1100w",
+    "w": 1100,
+    "h": 1777,
+    "lg": "/img/p/arch-wl-r-b167bc-s1-aica7edf-1100.webp",
+    "ow": 1976,
+    "oh": 3192,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-145-1-1.jpg"
    }
   ],
   "variants": [
@@ -24714,11 +24714,11 @@
   "kind_src": "Настенные фасадные",
   "images": [
    {
-    "src": "/img/p/arch-wl-r-bc100c-1-ai96a421-480.webp",
-    "srcset": "/img/p/arch-wl-r-bc100c-1-ai96a421-480.webp 480w, /img/p/arch-wl-r-bc100c-1-ai96a421-1100.webp 1100w",
+    "src": "/img/p/arch-wl-r-bc100c-1-aida926b-480.webp",
+    "srcset": "/img/p/arch-wl-r-bc100c-1-aida926b-480.webp 480w, /img/p/arch-wl-r-bc100c-1-aida926b-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-wl-r-bc100c-1-ai96a421-1100.webp",
+    "lg": "/img/p/arch-wl-r-bc100c-1-aida926b-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-154-1-36.jpg"
@@ -24726,24 +24726,24 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-wl-r-bc100c-s1-480.webp",
-    "srcset": "/img/p/arch-wl-r-bc100c-s1-480.webp 366w",
-    "w": 366,
-    "h": 324,
-    "lg": "/img/p/arch-wl-r-bc100c-s1-480.webp",
-    "ow": 366,
-    "oh": 324,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-154-1-37.png"
+    "src": "/img/p/arch-wl-r-bc100c-s1-ai7ecfe7-480.webp",
+    "srcset": "/img/p/arch-wl-r-bc100c-s1-ai7ecfe7-480.webp 480w, /img/p/arch-wl-r-bc100c-s1-ai7ecfe7-1100.webp 1100w",
+    "w": 1100,
+    "h": 916,
+    "lg": "/img/p/arch-wl-r-bc100c-s1-ai7ecfe7-1100.webp",
+    "ow": 2672,
+    "oh": 2224,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-154-1-37.jpg"
    },
    {
-    "src": "/img/p/arch-wl-r-bc100c-s2-480.webp",
-    "srcset": "/img/p/arch-wl-r-bc100c-s2-480.webp 384w",
-    "w": 384,
-    "h": 258,
-    "lg": "/img/p/arch-wl-r-bc100c-s2-480.webp",
-    "ow": 384,
-    "oh": 258,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\2-154-1-38.png"
+    "src": "/img/p/arch-wl-r-bc100c-s2-ai4fdfaf-480.webp",
+    "srcset": "/img/p/arch-wl-r-bc100c-s2-ai4fdfaf-480.webp 480w, /img/p/arch-wl-r-bc100c-s2-ai4fdfaf-1100.webp 1100w",
+    "w": 1100,
+    "h": 788,
+    "lg": "/img/p/arch-wl-r-bc100c-s2-ai4fdfaf-1100.webp",
+    "ow": 2932,
+    "oh": 2100,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\2-154-1-38.jpg"
    }
   ],
   "variants": [
@@ -24892,14 +24892,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-ada-wl-c120-s1-480.webp",
-    "srcset": "/img/p/arch-ada-wl-c120-s1-480.webp 480w, /img/p/arch-ada-wl-c120-s1-1100.webp 634w",
-    "w": 634,
-    "h": 553,
-    "lg": "/img/p/arch-ada-wl-c120-s1-1100.webp",
-    "ow": 634,
-    "oh": 553,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\3-010-1-0.png"
+    "src": "/img/p/arch-ada-wl-c120-s1-ai9132b7-480.webp",
+    "srcset": "/img/p/arch-ada-wl-c120-s1-ai9132b7-480.webp 480w, /img/p/arch-ada-wl-c120-s1-ai9132b7-1100.webp 1100w",
+    "w": 1100,
+    "h": 916,
+    "lg": "/img/p/arch-ada-wl-c120-s1-ai9132b7-1100.webp",
+    "ow": 2672,
+    "oh": 2224,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\3-010-1-0.jpg"
    }
   ],
   "variants": [
@@ -25006,11 +25006,11 @@
   "kind_src": "Для оконных проёмов",
   "images": [
    {
-    "src": "/img/p/arch-ada-wl-c8525l-1-ai4d663d-480.webp",
-    "srcset": "/img/p/arch-ada-wl-c8525l-1-ai4d663d-480.webp 480w, /img/p/arch-ada-wl-c8525l-1-ai4d663d-1100.webp 1100w",
+    "src": "/img/p/arch-ada-wl-c8525l-1-ai11c06d-480.webp",
+    "srcset": "/img/p/arch-ada-wl-c8525l-1-ai11c06d-480.webp 480w, /img/p/arch-ada-wl-c8525l-1-ai11c06d-1100.webp 1100w",
     "w": 1100,
     "h": 1100,
-    "lg": "/img/p/arch-ada-wl-c8525l-1-ai4d663d-1100.webp",
+    "lg": "/img/p/arch-ada-wl-c8525l-1-ai11c06d-1100.webp",
     "ow": 2048,
     "oh": 2048,
     "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\3-019-1-2.jpg"
@@ -25018,14 +25018,14 @@
   ],
   "schemes": [
    {
-    "src": "/img/p/arch-ada-wl-c8525l-s1-480.webp",
-    "srcset": "/img/p/arch-ada-wl-c8525l-s1-480.webp 480w, /img/p/arch-ada-wl-c8525l-s1-1100.webp 648w",
-    "w": 648,
-    "h": 269,
-    "lg": "/img/p/arch-ada-wl-c8525l-s1-1100.webp",
-    "ow": 648,
-    "oh": 269,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\3-019-1-3.png"
+    "src": "/img/p/arch-ada-wl-c8525l-s1-aib0be86-480.webp",
+    "srcset": "/img/p/arch-ada-wl-c8525l-s1-aib0be86-480.webp 480w, /img/p/arch-ada-wl-c8525l-s1-aib0be86-1100.webp 1100w",
+    "w": 1100,
+    "h": 554,
+    "lg": "/img/p/arch-ada-wl-c8525l-s1-aib0be86-1100.webp",
+    "ow": 3674,
+    "oh": 1850,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\3-019-1-3.jpg"
    }
   ],
   "variants": [
@@ -25132,14 +25132,14 @@
   "kind_src": "Аксессуары",
   "images": [
    {
-    "src": "/img/p/arch-plr-p100c-1-480.webp",
-    "srcset": "/img/p/arch-plr-p100c-1-480.webp 480w, /img/p/arch-plr-p100c-1-1100.webp 732w",
-    "w": 732,
-    "h": 771,
-    "lg": "/img/p/arch-plr-p100c-1-1100.webp",
-    "ow": 732,
-    "oh": 771,
-    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\arch\\img\\4-003-1-0.png"
+    "src": "/img/p/arch-plr-p100c-1-ai66c891-480.webp",
+    "srcset": "/img/p/arch-plr-p100c-1-ai66c891-480.webp 480w, /img/p/arch-plr-p100c-1-ai66c891-1100.webp 1100w",
+    "w": 1100,
+    "h": 1100,
+    "lg": "/img/p/arch-plr-p100c-1-ai66c891-1100.webp",
+    "ow": 2048,
+    "oh": 2048,
+    "orig": "D:\\games\\Cloude\\Дамир освещение\\_work\\ai\\arch\\4-003-1-0.jpg"
    }
   ],
   "schemes": [],
