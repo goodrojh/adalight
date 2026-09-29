@@ -67,7 +67,7 @@
  <div class="wrap">
   <div class="head rv"><div><h2>{{ total_series }} серий, {{ total_sku }} артикулов с ценами</h2></div><a class="link" href="{{ base }}/catalog/">Каталог с фильтрами <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
   <div class="cats rv">
-   {% for c in cats %}<a class="cat{% if loop.index <= 2 %} wide{% endif %}" href="{{ base }}/catalog/{{ c.slug }}/">
+   {% for c in cats %}<a class="cat{% if cats|length == 7 and loop.index <= 3 %} third{% elif cats|length != 7 and loop.index <= 2 %} wide{% endif %}" href="{{ base }}/catalog/{{ c.slug }}/">
     {{ m.img(c.img, '', '(max-width:980px) 50vw, 33vw') }}
     <h3>{{ c.short }}</h3>
     {% if c.price_min %}<div class="meta"><span>от {{ c.price_min|rub }}</span></div>{% endif %}
@@ -107,11 +107,11 @@
  <div class="wrap">
   <div class="head rv"><div><h2>Полный цикл: от расчёта до сервиса</h2></div><a class="link" href="{{ base }}/services/">Все услуги <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
   <div class="grid g3 rv">
-   {% for s in services %}<a class="card" href="{{ base }}/services/{{ s.slug }}/"{% if loop.index > 3 %} style="grid-column:span 1"{% endif %}>
+   {% for s in services %}<a class="card" href="{{ base }}/services/{{ s.slug }}/">
     <span class="arrow"><svg width="16" height="16"><use href="#i-arrow"/></svg></span>
     <span class="tag" style="margin-bottom:34px">{{ '%02d'|format(loop.index) }}</span>
     <h3>{{ s.name }}</h3><p>{{ s.short }}</p></a>{% endfor %}
-   <a class="card" href="{{ base }}/tools/" style="background:var(--signal);border-color:var(--signal)"><span class="arrow" style="border-color:rgba(0,0,0,.2)"><svg width="16" height="16"><use href="#i-arrow"/></svg></span><span class="tag" style="margin-bottom:34px;background:#000;color:var(--signal)">Онлайн</span><h3>Калькуляторы света</h3><p style="color:#3b3000">Освещённость по углу луча и количество светильников на помещение.</p></a>
+   <a class="card card-wide" href="{{ base }}/tools/" style="background:var(--signal);border-color:var(--signal)"><span class="arrow" style="border-color:rgba(0,0,0,.2)"><svg width="16" height="16"><use href="#i-arrow"/></svg></span><span class="tag" style="margin-bottom:34px;background:#000;color:var(--signal)">Онлайн</span><h3>Калькуляторы света</h3><p style="color:#3b3000">Освещённость по углу луча и количество светильников на помещение.</p></a>
   </div>
  </div>
 </section>

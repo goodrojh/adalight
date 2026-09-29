@@ -1057,5 +1057,21 @@
    640,
    1400
   ]
+ },
+ "eom-0": {
+  "src": "D:/games/Cloude/Дамир освещение/_work/eom/image1.jpg",
+  "dir": "misc",
+  "sizes": [
+   640,
+   1400
+  ]
+ },
+ "eom-1": {
+  "src": "D:/games/Cloude/Дамир освещение/_work/eom/image2.jpg",
+  "dir": "misc",
+  "sizes": [
+   640,
+   1400
+  ]
  }
 }

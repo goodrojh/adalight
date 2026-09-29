@@ -65,7 +65,8 @@ def lumens(v):
         return int(num(f)[0] * watts)
     if 'лм' in f and num(f):
         return int(num(f)[0])
-    if watts and v.get('led') or (watts and v.get('voltage')):
+    # оценка 90 лм/Вт — только для S20 (48 В); для архитектурных поток в прайсе не указан, не выдумываем
+    if watts and v.get('led') or (watts and '48' in (v.get('voltage') or '')):
         return int(watts * 90)
     return None
 
@@ -74,7 +75,7 @@ MOUNT = {'Встраиваемый': 'Встраиваемый', 'Накладн
          'Трековый магнитный': 'Трековый', 'Шинопровод': 'Шинопровод', 'Настенный': 'Настенный'}
 COLS = [('sku', 'Артикул', True), ('model', 'Наименование', False), ('power', 'Мощность', True), ('flux', 'Поток', True),
         ('cutout', 'Врезка', True), ('size', 'Размер', True), ('beam', 'Угол', True), ('ip', 'IP', True), ('cct', 'CCT', True),
-        ('color', 'Цвет', False), ('switch', 'Выключатель', False), ('led', 'Светодиоды', True), ('driver', 'Драйвер', False)]
+        ('voltage', 'Питание', True), ('color', 'Цвет', False), ('switch', 'Выключатель', False), ('led', 'Светодиоды', True), ('driver', 'Драйвер', False)]
 SPEC_NAMES = {'power': 'Мощность', 'flux': 'Световой поток / эффективность', 'cutout': 'Монтажное отверстие', 'size': 'Габариты',
               'cct': 'Цветовая температура', 'ip': 'Степень защиты', 'ik': 'Ударопрочность', 'beam': 'Угол луча', 'cri': 'Цветопередача',
               'driver': 'Драйвер', 'color': 'Цвет', 'material': 'Материал корпуса', 'warranty': 'Гарантия', 'voltage': 'Напряжение',
@@ -184,6 +185,9 @@ for i, p in enumerate(products):
         chips.append(cri)
     if p['category'] in ('trekovye-s20', 'shinoprovod-s20'):
         chips.append('48 В')
+    volts = list(dict.fromkeys(v['voltage'] for v in vs if v.get('voltage')))
+    if volts:
+        chips.append(' / '.join(x.replace(' В', '') for x in volts) + ' В')
     p['chips'] = chips[:4]
     # ключевые характеристики
     ks = []
@@ -215,6 +219,8 @@ for i, p in enumerate(products):
     w = vs[0].get('warranty')
     if w:
         ks.append(('Гарантия', w.replace('YEARS', 'лет').replace('5 лет', '5 лет')))
+    if volts:
+        ks.append(('Питание', ' / '.join(volts)))
     if p['category'] == 'bra':
         ks.append(('Выключатель', vs[0].get('switch', '—')[:28]))
         ks.append(('Материал', vs[0].get('material', '—')))
@@ -269,6 +275,8 @@ for i, p in enumerate(products):
             parts.append('врезка ' + v['cutout'])
         if p['category'] == 'bra' and v.get('color'):
             parts.append(v['color'][:40])
+        if v.get('voltage'):
+            parts.append(v['voltage'])
         v['label'] = ' · '.join(parts)
         params = ', '.join(x for x in [v.get('power'), v.get('cct'), v.get('ip') if v.get('ip') and v.get('ip') != 'IP' else '', v.get('beam')] if x)
         vi = v.get('img_i')
@@ -323,11 +331,14 @@ for i, p in enumerate(products):
         sw = ' '.join(v.get('switch', '') for v in vs).lower()
         kind = ('С USB / Type-C' if 'usb' in sw or 'type-c' in sw else 'Для чтения' if 'чтени' in (p.get('lead') or '').lower() or 'изголов' in (p.get('lead') or '').lower()
                 else 'Линейные' if p['slug'] in ('wall-210', 'wall-211') else 'Уличное IP65' if p['slug'] == 'wall-600' else 'Декоративные')
+    if p.get('kind_src'):
+        kind = p['kind_src']
     p['kind'] = kind
     p['apps'] = C.applications(p)
     kw = {'trekovye-s20': 'трек трековый магнитный 48v s20 шинопровод', 'shinoprovod-s20': 'шинопровод трек 48v s20 блок питания tuya zigbee',
           'bra': 'бра настенный', 'lineynye': 'линейный профиль ral подвесной', 'nakladnye': 'накладной цилиндр панель потолочный',
-          'vstraivaemye': 'встраиваемый даунлайт точечный спот downlight'}[p['category']]
+          'vstraivaemye': 'встраиваемый даунлайт точечный спот downlight',
+          'arhitekturnye': 'архитектурный уличный фасадный грунтовый прожектор подсветка фасада ip67 rgb rgbw ландшафтный'}[p['category']]
     p['search'] = ' '.join([p['name'], p['slug'], p['line'], cat_names[p['category']], p['mounting'], kw, lead,
                             ' '.join('ip%d' % x for x in p['ip_list']), ' '.join('%dk' % x for x in p['cct_list']),
                             ' '.join(v['sku'] for v in vs), ' '.join(v.get('switch', '') for v in vs), ' '.join(v.get('model', '') for v in vs)]).lower()
@@ -452,6 +463,8 @@ for p in products:
         title = f"{p['name']} — купить, цены | ADALIGHT"
     elif cc['slug'] == 'bra':
         title = f"Бра {p['name']} — цены, характеристики | ADALIGHT"
+    elif cc['slug'] == 'arhitekturnye':
+        title = f"{p['name']} — {p['lead'].split(' IP')[0].lower()}, цены | ADALIGHT"
     else:
         ln = '' if p['line'].split()[0] in p['name'] else ' ' + p['line']
         title = f"{p['name']}{ln} — {cc['short'].lower()} светильник, цены | ADALIGHT".replace('трековые s20 48v светильник', 'трековый светильник 48V').replace('встраиваемые светильник', 'встраиваемый светильник').replace('накладные светильник', 'накладной светильник').replace('линейные светильник', 'линейный светильник')

@@ -1328,5 +1328,25 @@
   "ow": 2600,
   "oh": 1462,
   "orig": "D:/games/Cloude/Дамир освещение/_work/refproj/sel/mod-4.jpg"
+ },
+ "eom-0": {
+  "src": "/img/misc/eom-0-640.webp",
+  "srcset": "/img/misc/eom-0-640.webp 640w, /img/misc/eom-0-1400.webp 1200w",
+  "w": 1200,
+  "h": 900,
+  "lg": "/img/misc/eom-0-1400.webp",
+  "ow": 1200,
+  "oh": 900,
+  "orig": "D:/games/Cloude/Дамир освещение/_work/eom/image1.jpg"
+ },
+ "eom-1": {
+  "src": "/img/misc/eom-1-640.webp",
+  "srcset": "/img/misc/eom-1-640.webp 640w, /img/misc/eom-1-1400.webp 1254w",
+  "w": 1254,
+  "h": 1254,
+  "lg": "/img/misc/eom-1-1400.webp",
+  "ow": 1254,
+  "oh": 1254,
+  "orig": "D:/games/Cloude/Дамир освещение/_work/eom/image2.jpg"
  }
 }

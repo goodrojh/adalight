@@ -5,7 +5,7 @@
  <div class="phero-bg">{{ m.img(media[s.img], '', '100vw', lazy=False) }}</div>
  <div class="wrap">
   {{ m.crumbs(crumbs) }}
-  <h1>{{ s.name }}</h1>
+  <h1>{{ s.full or s.name }}</h1>
   <p class="lead">{{ s.lead }}</p>
   <div class="flex" style="margin-top:26px"><a class="btn" href="#lead">Отправить задачу <svg><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="tel:{{ S.phone_raw }}">{{ S.phone }}</a></div>
  </div>
@@ -16,10 +16,18 @@
   <div><div class="steps" style="--n:1">{% for pt in s.points %}<div class="step" style="display:flex;gap:18px;align-items:center;padding:18px 20px"><span class="mono muted" style="font-size:13px">{{ '%02d'|format(loop.index) }}</span><h4 style="margin:0;font-size:17px;font-weight:500">{{ pt }}</h4></div>{% endfor %}</div></div>
  </div>
 </section>
+{% if s.stages %}
+<section class="section plaster">
+ <div class="wrap">
+  <div class="head"><div><h2>Этапы работы</h2></div><p class="lead">Можно заказать весь цикл или отдельную стадию — например, только рабочую документацию по готовому проекту.</p></div>
+  <div class="stagesx">{% for code, t, d in s.stages %}<div class="stx"><span class="stx-code">{{ code }}</span><span class="stx-n mono">{{ '%02d'|format(loop.index) }}</span><h4>{{ t }}</h4><p>{{ d }}</p></div>{% endfor %}</div>
+ </div>
+</section>
+{% endif %}
 {% if s.gallery %}
 <section class="section dark">
  <div class="wrap">
-  <div class="head"><div><h2>{% if s.slug=='proizvodstvo' %}Производство и контроль качества{% else %}Материалы расчёта{% endif %}</h2></div></div>
+  <div class="head"><div><h2>{% if s.slug=='proizvodstvo' %}Производство и контроль качества{% elif s.stages %}Примеры документации{% else %}Материалы расчёта{% endif %}</h2></div></div>
   <div class="masonry" data-lightbox>{% for k in s.gallery %}{% if media[k] %}<a href="{{ media[k].lg }}" data-lg="{{ media[k].lg }}">{{ m.img(media[k], s.name, '(max-width:700px) 100vw, 33vw') }}</a>{% endif %}{% endfor %}</div>
  </div>
 </section>

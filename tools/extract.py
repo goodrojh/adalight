@@ -3,6 +3,7 @@
 Каждый товар = серия (страница), внутри — артикулы-варианты."""
 import json, os, re, glob, hashlib
 import xlrd
+from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = 'C:/Users/Владос/OneDrive/Рабочий стол/Дамир сайт/'
@@ -86,6 +87,7 @@ def norm_ip(t):
 
 def watt(t):
     t = s(t).lower().replace('вт', 'w')
+    t = re.sub(r'(\d),(\d)', r'.', t)
     m = re.findall(r'(\d+)\s*x\s*(\d+)', t)
     if m:
         return int(m[-1][0]) * int(m[-1][1])
@@ -94,7 +96,8 @@ def watt(t):
 
 
 def beams(t):
-    return sorted(set(int(x) for x in re.findall(r'(\d+)\s*°?', s(t).replace('°', ' ')) if int(x) <= 360))
+    t = re.sub(r'эллипс\s*\d+\s*×\s*\d+°?', '', s(t))          # эллиптическая оптика 10×60° — не угол для фильтра
+    return sorted(set(int(x) for x in re.findall(r'(\d+)\s*°?', t.replace('°', ' ')) if int(x) <= 360))
 
 
 products = []
@@ -657,6 +660,76 @@ for b in bra:
                          'switch': (d['switch'] or base['switch']).replace('/', '—'), 'price': price(d['price'])})
     add({'slug': 'wall-' + b['model'], 'name': nm, 'lead': lead, 'category': 'bra', 'line': 'WALL', 'mounting': 'Настенный',
          'images': imgs, 'variants': variants, 'sheet': 'Бра'})
+
+# ---------------------------------------------------------------- Архитектурные и уличные (отдельный прайс «Прайс для сайта.xlsx», 29.09)
+# разбор прайса и картинки: _work/arch/parse.py -> _work/arch/arch.json + _work/arch/img/
+ARCH_DIR = os.path.join(os.path.dirname(ROOT), '_work', 'arch')
+ARCH_KIND = {'Линейные': 'Фасадные линейные', 'Грунтовые': 'Грунтовые', 'Прожекторы': 'Прожекторы',
+             'для оконных проемов': 'Для оконных проёмов', 'Акксесуар': 'Аксессуары'}
+ARCH_MOUNT = {'Фасадные линейные': 'Накладной', 'Грунтовые': 'Встраиваемый в грунт', 'Прожекторы': 'На кронштейне',
+              'Настенные фасадные': 'Настенный', 'Для оконных проёмов': 'Накладной', 'Аксессуары': 'Аксессуар'}
+ARCH_LEAD = {'Фасадные линейные': 'Фасадный линейный светильник', 'Грунтовые': 'Грунтовый светильник для подсветки фасадов и благоустройства',
+             'Прожекторы': 'Архитектурный прожектор', 'Настенные фасадные': 'Фасадный настенный светильник',
+             'Для оконных проёмов': 'Светильник для подсветки оконных проёмов', 'Аксессуары': 'Аксессуар для архитектурных светильников'}
+
+
+# чертежи в прайсе (сверено по контактному листу)
+ARCH_DRAW = set('0-010-2-4 0-019-2-6 0-028-2-8 0-037-3-10 0-046-3-11 0-055-3-15 0-064-3-13 0-073-1-16 0-082-1-17 0-091-3-19 0-100-3-21 0-110-3-23 '
+                '1-010-1-1 1-019-1-3 1-028-1-5 1-037-1-7 1-046-1-9 1-055-1-11 1-064-1-13 1-073-1-15 '
+                '2-010-1-5 2-019-1-7 2-028-1-10 2-037-1-12 2-046-1-14 2-055-1-16 2-064-1-18 2-073-1-19 2-082-1-22 2-091-1-3 2-091-1-4 '
+                '2-100-1-24 2-109-1-26 2-109-1-27 2-118-1-29 2-118-1-30 2-127-1-32 2-127-1-33 2-136-1-35 2-145-1-1 2-154-1-37 2-154-1-38 '
+                '3-010-1-0 3-019-1-3'.split())
+
+
+def _arch_is_drawing(pth):
+    return os.path.basename(pth)[:-4] in ARCH_DRAW
+
+
+def _arch_size(t):
+    t = (t or '').replace('х', '×').replace('x', '×').replace('Х', '×').replace('B', 'В')
+    return re.sub(r'\s*×\s*', ' × ', t).strip() + ' мм' if t else ''
+
+
+def _arch_beam(t):
+    parts = [x for x in re.split(r'[/,]', t or '') if x.strip()]
+    return ' / '.join((x.strip() + '°') if not re.search(r'[xх×]', x) else ('эллипс ' + re.sub(r'\s*[xх×]\s*', '×', x.strip()) + '°') for x in parts)
+
+
+def _arch_cct(t):
+    t = t or ''
+    nums = re.findall(r'\d{4}', t)
+    extra = [x for x in ('RGB', 'RGBW') if re.search(r'\b' + x + r'\b', t)]
+    return ' / '.join(nums) + (' K' if nums else '') + ((', ' + ', '.join(extra)) if extra else '')
+
+
+if os.path.exists(os.path.join(ARCH_DIR, 'arch.json')):
+    for it in json.load(open(os.path.join(ARCH_DIR, 'arch.json'), encoding='utf-8')):
+        art = it['sku'].replace('М', 'M').replace('С', 'C').replace(',', '.')        # в прайсе встречается кириллица в артикуле
+        kind = ARCH_KIND.get(it['sheet'].strip(), it['sheet'].strip())
+        if kind == 'Прожекторы' and re.match(r'ADA-WL\.R-(B|CD|BC)', art):
+            kind = 'Настенные фасадные'
+        paths = [os.path.join(ARCH_DIR, 'img', x['file']) for x in sorted(it['imgs'], key=lambda x: x['col'])]
+        photos = [x for x in paths if not _arch_is_drawing(x)]
+        draws = [x for x in paths if x not in photos]
+        variants = []
+        for v in it['variants']:
+            if kind == 'Аксессуары':
+                variants.append({'sku': art, 'model': it.get('desc') or art, 'price': price(str(v['price']))})
+                continue
+            pw = v['power'].replace(',', '.')
+            ln = re.match(r'Д(\d+)', v.get('size') or '')
+            sku = '-'.join(x for x in [art, ln.group(1) if ln and kind == 'Фасадные линейные' else '', pw + 'W', v['volt'] + 'V'] if x)
+            variants.append({'sku': sku, 'model': art, 'power': ('%g' % float(pw)) + ' Вт', 'voltage': v['volt'] + ' В',
+                             'size': _arch_size(v.get('size')), 'cct': _arch_cct(v.get('cct')), 'beam': _arch_beam(v.get('beam')),
+                             'ip': 'IP' + str(v.get('ip') or '').strip(), 'price': price(str(v['price']))})
+            # явная опечатка в прайсе (108 Вт / 24 В = 3388 ₽ при 29 900–31 930 ₽ у соседних) — «по запросу», пока заказчик не уточнит
+            if sku == 'ADA-WL.R-T220C-108W-24V' and variants[-1]['price'] and variants[-1]['price'] < 10000:
+                variants[-1]['price'] = None
+        slug = 'arch-' + re.sub(r'[^a-z0-9]+', '-', art.lower().replace('ada-', '')).strip('-')
+        name = art.replace('ADA-', 'ADA ').replace('-', ' ') if kind != 'Аксессуары' else (it.get('desc') or art)
+        lead = ARCH_LEAD[kind] + (' IP67' if kind != 'Аксессуары' else '')
+        add({'slug': slug, 'name': art if kind != 'Аксессуары' else name, 'lead': lead, 'category': 'arhitekturnye', 'line': 'ARCH',
+             'mounting': ARCH_MOUNT[kind], 'kind_src': kind, 'images': photos, 'schemes': draws, 'variants': variants, 'sheet': it['sheet'].strip()})
 
 # ---------------------------------------------------------------- фильтровые атрибуты
 for p in products:
