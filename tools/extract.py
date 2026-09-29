@@ -711,6 +711,9 @@ if os.path.exists(os.path.join(ARCH_DIR, 'arch.json')):
         paths = [os.path.join(ARCH_DIR, 'img', x['file']) for x in sorted(it['imgs'], key=lambda x: x['col'])]
         photos = [x for x in paths if not _arch_is_drawing(x)]
         draws = [x for x in paths if x not in photos]
+        # обработанные версии (чёткие фото на фоне сайта и перерисованные чертежи) — _work/ai/arch/<имя>.jpg
+        _ai = lambda x: (lambda q: q if os.path.exists(q) else x)(os.path.join(os.path.dirname(ARCH_DIR), 'ai', 'arch', os.path.basename(x)[:-4] + '.jpg'))
+        photos = [_ai(x) for x in photos]; draws = [_ai(x) for x in draws]
         variants = []
         for v in it['variants']:
             if kind == 'Аксессуары':
