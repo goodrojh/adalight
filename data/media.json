@@ -1348,5 +1348,55 @@
   "ow": 1254,
   "oh": 1254,
   "orig": "D:/games/Cloude/Дамир освещение/_work/eom/image2.jpg"
+ },
+ "frunzenskaya-0": {
+  "src": "/img/projects/frunzenskaya-0-640.webp",
+  "srcset": "/img/projects/frunzenskaya-0-640.webp 640w, /img/projects/frunzenskaya-0-1400.webp 1400w",
+  "w": 1400,
+  "h": 782,
+  "lg": "/img/projects/frunzenskaya-0-1400.webp",
+  "ow": 2048,
+  "oh": 1144,
+  "orig": "D:/games/Cloude/Дамир освещение/_work/refproj/sel/frunzenskaya-0.jpg"
+ },
+ "frunzenskaya-1": {
+  "src": "/img/projects/frunzenskaya-1-640.webp",
+  "srcset": "/img/projects/frunzenskaya-1-640.webp 640w, /img/projects/frunzenskaya-1-1400.webp 977w",
+  "w": 977,
+  "h": 1536,
+  "lg": "/img/projects/frunzenskaya-1-1400.webp",
+  "ow": 977,
+  "oh": 1536,
+  "orig": "D:/games/Cloude/Дамир освещение/_work/refproj/sel/frunzenskaya-1.jpg"
+ },
+ "frunzenskaya-2": {
+  "src": "/img/projects/frunzenskaya-2-640.webp",
+  "srcset": "/img/projects/frunzenskaya-2-640.webp 640w, /img/projects/frunzenskaya-2-1400.webp 976w",
+  "w": 976,
+  "h": 1536,
+  "lg": "/img/projects/frunzenskaya-2-1400.webp",
+  "ow": 976,
+  "oh": 1536,
+  "orig": "D:/games/Cloude/Дамир освещение/_work/refproj/sel/frunzenskaya-2.jpg"
+ },
+ "frunzenskaya-3": {
+  "src": "/img/projects/frunzenskaya-3-640.webp",
+  "srcset": "/img/projects/frunzenskaya-3-640.webp 640w, /img/projects/frunzenskaya-3-1400.webp 976w",
+  "w": 976,
+  "h": 1536,
+  "lg": "/img/projects/frunzenskaya-3-1400.webp",
+  "ow": 976,
+  "oh": 1536,
+  "orig": "D:/games/Cloude/Дамир освещение/_work/refproj/sel/frunzenskaya-3.jpg"
+ },
+ "frunzenskaya-4": {
+  "src": "/img/projects/frunzenskaya-4-640.webp",
+  "srcset": "/img/projects/frunzenskaya-4-640.webp 640w, /img/projects/frunzenskaya-4-1400.webp 1071w",
+  "w": 1071,
+  "h": 1112,
+  "lg": "/img/projects/frunzenskaya-4-1400.webp",
+  "ow": 1071,
+  "oh": 1112,
+  "orig": "D:/games/Cloude/Дамир освещение/_work/refproj/sel/frunzenskaya-4.jpg"
  }
 }

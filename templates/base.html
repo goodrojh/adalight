@@ -66,6 +66,7 @@
    <a href="{{ base }}/contacts/" {% if section=='contacts' %}aria-current="page"{% endif %}>Контакты</a>
   </nav>
   <div class="hdr-tools">
+   <span class="hdr-msg"><a href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" title="WhatsApp"><svg><use href="#i-wa-c"/></svg></a><a href="{{ S.tg }}" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><svg><use href="#i-tg-c"/></svg></a><a href="{{ S.max }}" target="_blank" rel="noopener" aria-label="Написать в MAX" title="MAX"><img src="{{ base }}/img/max-96.webp" alt="" width="30" height="30"></a></span>
    <a class="hdr-phone" href="tel:{{ S.phone_raw }}">{{ S.phone }}</a>
    <a class="icon-btn" href="{{ base }}/catalog/#q" aria-label="Поиск по каталогу"><svg><use href="#i-search"/></svg></a>
    <a class="icon-btn" href="{{ base }}/spec/" aria-label="Спецификация проекта"><svg><use href="#i-list"/></svg><span class="badge" data-spec-count data-n="0">0</span></a>
@@ -89,6 +90,7 @@
  <a href="{{ base }}/journal/">Журнал</a>
  <a href="{{ base }}/about/">О компании</a>
  <a href="{{ base }}/contacts/">Контакты</a>
+ <div class="drawer-msg"><a href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" title="WhatsApp"><svg><use href="#i-wa-c"/></svg></a><a href="{{ S.tg }}" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><svg><use href="#i-tg-c"/></svg></a><a href="{{ S.max }}" target="_blank" rel="noopener" aria-label="Написать в MAX" title="MAX"><img src="{{ base }}/img/max-96.webp" alt="" width="30" height="30"></a><span>Написать в мессенджер</span></div>
  <div class="contact-lines">
   <a href="tel:{{ S.phone_raw }}"><svg><use href="#i-phone"/></svg>{{ S.phone }}</a>
   <a href="mailto:{{ S.email }}"><svg><use href="#i-mail"/></svg>{{ S.email }}</a>
