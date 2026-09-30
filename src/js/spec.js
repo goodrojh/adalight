@@ -38,9 +38,9 @@
   d.querySelector('[data-clear]').addEventListener('click', function () { if (confirm('Очистить спецификацию?')) { S.save([]); render(); } });
 
   /* ---------- фирменный документ: печать / сохранить в PDF ---------- */
-  function printDoc() {
-    var a = S.all(); if (!a.length) return;
-    var sum = a.reduce(function (s, x) { return s + (x.price || 0) * x.qty; }, 0), no = docNo();
+  function docHtml(no, withPrint) {
+    var a = S.all();
+    var sum = a.reduce(function (s, x) { return s + (x.price || 0) * x.qty; }, 0);
     var rows = a.map(function (x, i) {
       return '<tr><td class="c">' + (i + 1) + '</td><td class="ph">' + (x.img ? '<img src="' + esc(abs(x.img)) + '" alt="">' : '') + '</td>' +
         '<td><b>' + esc(x.name) + '</b><div class="sku">' + esc(x.sku) + (x.opt ? ' · ' + esc(x.opt) : '') + '</div>' + (x.params ? '<div class="par">' + esc(x.params) + '</div>' : '') + '</td>' +
@@ -62,7 +62,12 @@
       '<tbody class="tot"><tr><td colspan="5" class="lab">Итого по РРЦ:</td><td class="val"><span>' + fmt(sum) + '</span></td></tr></tbody></table>' +
       '<div class="note">Цены указаны по рекомендованному розничному прайсу ADALIGHT 2026. Для проектных закупок и партнёров стоимость и сроки поставки рассчитываются под объект — отправьте спецификацию менеджеру.</div>' +
       '<div class="foot"><span>ADALIGHT — проектируем, поставляем и монтируем свет</span><span>' + no + '</span></div>' +
-      '<script>window.onload=function(){setTimeout(function(){window.print()},400)}<\/script></body></html>';
+      (withPrint ? '<script>window.onload=function(){setTimeout(function(){window.print()},400)}<\/script>' : '') + '</body></html>';
+    return html;
+  }
+  function printDoc() {
+    if (!S.all().length) return;
+    var html = docHtml(docNo(), true);
     var w = window.open('', '_blank');
     if (!w) { window.print(); return; }
     w.document.open(); w.document.write(html); w.document.close();
@@ -93,9 +98,8 @@
     return new Blob(parts.concat(central, [new Uint8Array(e.buffer)]), { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
   }
   function xesc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-  function xlsx() {
-    var a = S.all(); if (!a.length) return;
-    var no = docNo(), R = [], r = 0;
+  function xlsxBlob(no) {
+    var a = S.all(), R = [], r = 0;
     function cell(col, row, v, st, f) {
       var ref = col + row;
       if (f) return '<c r="' + ref + '" s="' + st + '"><f>' + f + '</f><v>' + (v || 0) + '</v></c>';
@@ -144,12 +148,43 @@
       { name: 'xl/styles.xml', data: styles },
       { name: 'xl/worksheets/sheet1.xml', data: sheet }
     ]);
+    return blob;
+  }
+  function xlsx() {
+    if (!S.all().length) return;
+    var no = docNo(), blob = xlsxBlob(no);
     var url = URL.createObjectURL(blob), l = d.createElement('a');
     l.href = url; l.download = 'ADALIGHT-specifikaciya-' + no + '.xlsx'; d.body.appendChild(l); l.click(); l.remove();
     setTimeout(function () { URL.revokeObjectURL(url); }, 1500);
     window.ADAgoal && window.ADAgoal('spec_xlsx');
   }
   window.ADAxlsx = xlsx;
+  /* файлы для письма менеджеру: Excel и фирменный документ для печати (HTML, открывается в браузере → печать/PDF) */
+  window.ADASpecFiles = function () {
+    if (!S.all().length) return Promise.resolve([]);
+    var no = docNo();
+    var b64 = function (blob) { return new Promise(function (ok) { var r = new FileReader(); r.onload = function () { ok(String(r.result).split(',')[1]); }; r.readAsDataURL(blob); }); };
+    var html = new Blob([docHtml(no, false)], { type: 'text/html' });
+    return Promise.all([b64(xlsxBlob(no)), b64(html)]).then(function (x) {
+      return [{ name: 'ADALIGHT-specifikaciya-' + no + '.xlsx', type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', b64: x[0] },
+              { name: 'ADALIGHT-specifikaciya-' + no + '.html', type: 'text/html', b64: x[1] }];
+    });
+  };
+  /* ссылка на спецификацию: открывает у менеджера тот же список (?s=...) */
+  window.ADASpecLink = function () {
+    var a = S.all().map(function (x) { return [x.sku, x.slug, x.name, x.price || 0, x.qty, x.opt || '', x.params || '']; });
+    var json = JSON.stringify(a), bin = Array.prototype.map.call(new TextEncoder().encode(json), function (c) { return String.fromCharCode(c); }).join('');
+    return location.origin + location.pathname + '?s=' + encodeURIComponent(btoa(bin));
+  };
+  (function importLink() {
+    var q = new URLSearchParams(location.search).get('s'); if (!q) return;
+    try {
+      var bin = atob(q), u8 = new Uint8Array(bin.length); for (var i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i);
+      var a = JSON.parse(new TextDecoder().decode(u8)).map(function (x) { return { sku: x[0], slug: x[1], name: x[2], price: x[3] || null, qty: x[4], opt: x[5], params: x[6], img: x[7] }; });
+      if (a.length) S.save(a);
+      history.replaceState(null, '', location.pathname);
+    } catch (e) {}
+  })();
   d.querySelector('[data-xlsx]').addEventListener('click', xlsx);
   render();
 })();

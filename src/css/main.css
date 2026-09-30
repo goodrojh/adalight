@@ -802,3 +802,7 @@ html,body,.filters,.gthumbs,.table-wrap,.tabs,.modal-in,.drawer,.lb,*{scrollbar-
 .grid.g3 .card-wide{grid-column:1/-1}
 .cat.third{grid-column:span 4;min-height:360px}
 @media (max-width:980px){.cat.third{grid-column:span 1;min-height:240px}}
+/* мобильные: без двойного тапа-зума, без увеличения при фокусе на полях (iOS), без горизонтального сдвига */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;touch-action:manipulation}
+html,body{overflow-x:clip;overscroll-behavior-x:none}
+@media (max-width:760px){input,select,textarea{font-size:16px!important}}

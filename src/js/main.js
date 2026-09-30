@@ -135,7 +135,15 @@
     var data = {}, fd = new FormData(form);
     fd.forEach(function (v, k) { if (v instanceof File) return; data[k] = data[k] ? data[k] + ', ' + v : v; });
     data.page = location.href; data.utm = store.get('ada-utm', null); data.referrer = store.get('ada-ref', '');
-    if (form.hasAttribute('data-with-spec')) data.spec = Spec.all().map(function (x) { return x.sku + (x.opt ? ' [' + x.opt + ']' : '') + ' × ' + x.qty; }).join('; ');
+    if (form.hasAttribute('data-with-spec')) {
+      var a = Spec.all(), tot = 0, money = function (v) { return String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽'; };
+      data.spec = a.map(function (x, i) {
+        var sum = (x.price || 0) * x.qty; tot += sum;
+        return (i + 1) + '. ' + x.sku + (x.opt ? ' [' + x.opt + ']' : '') + ' — ' + x.qty + ' шт. × ' + (x.price ? money(x.price) + ' = ' + money(sum) : 'цена по запросу');
+      }).join('\n') + (a.length ? '\nИтого по РРЦ: ' + money(tot) : '');
+      delete data.spec_text;
+      if (window.ADASpecLink && a.length) data.spec_link = window.ADASpecLink();
+    }
     return data;
   }
   function validate(form) {
@@ -168,32 +176,26 @@
         form.classList.add('sent'); goal('lead'); goal('lead_' + (form.getAttribute('data-goal') || 'form'));
         var m = $('.form-ok .via', form); if (m) m.hidden = !viaMail;
       };
-      /* запасной путь: письмо и WhatsApp (если приёмник заявок не настроен или недоступен) */
-      var viaMail = function () {
-        var body = Object.keys(data).filter(function (k) { return data[k] && k !== 'consent' && k !== 'website'; }).map(function (k) {
-          var v = typeof data[k] === 'object' ? JSON.stringify(data[k]) : data[k]; return k + ': ' + v;
-        }).join('\n');
-        location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(label + ' — adalight') + '&body=' + encodeURIComponent(body);
-        done(true);
-        var via = $('.form-ok .via', form);
-        if (via && C.wa && !$('.wa-send', via)) {
-          var wa = d.createElement('a'); wa.className = 'btn btn-dark btn-sm wa-send'; wa.target = '_blank'; wa.rel = 'noopener';
-          wa.style.marginTop = '12px'; wa.textContent = 'Или отправить в WhatsApp';
-          wa.href = 'https://wa.me/' + C.wa + '?text=' + encodeURIComponent(label + ': ' + body.split(String.fromCharCode(10)).join('; ').slice(0, 1500));
-          via.appendChild(d.createElement('br')); via.appendChild(wa);
-        }
+      /* не удалось отправить: без открытия почтовой программы — телефон и WhatsApp */
+      var failed = function () {
+        var txt = label + ': ' + (data.name || '') + ', ' + (data.phone || '') + (data.comment ? ', ' + data.comment : '');
+        toast('Не удалось отправить заявку. Позвоните <a href="tel:' + C.phoneRaw + '">' + C.phone + '</a>' +
+          (C.wa ? ' или <a href="https://wa.me/' + C.wa + '?text=' + encodeURIComponent(txt.slice(0, 1500)) + '" target="_blank" rel="noopener">напишите в WhatsApp</a>' : ''));
       };
-      if (C.endpoint) {
-        /* заявка сразу уходит в CRM через lead.php на хостинге */
-        btn.disabled = true; var btnText = btn.innerHTML; btn.textContent = 'Отправляем…';
-        fetch(C.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ form: label, data: data }) })
-          .then(function (r) { if (r.status === 400) return r.json().then(function (j) { throw j.message || 0; }); if (!r.ok) throw 0; btn.disabled = false; btn.innerHTML = btnText; done(false); })
-          .catch(function (m) {
-            btn.disabled = false; btn.innerHTML = btnText;
-            if (typeof m === 'string') { toast(m); return; }
-            viaMail();
-          });
-      } else viaMail();
+      if (!C.endpoint) { failed(); return; }
+      /* заявка сразу уходит в CRM через lead.php на хостинге; спецификация — ещё и файлами на почту */
+      btn.disabled = true; var btnText = btn.innerHTML; btn.textContent = 'Отправляем…';
+      var files = form.hasAttribute('data-with-spec') && window.ADASpecFiles ? window.ADASpecFiles().catch(function () { return []; }) : Promise.resolve([]);
+      files.then(function (f) {
+        if (f.length) data.files = f;
+        return fetch(C.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ form: label, data: data }) });
+      })
+        .then(function (r) { if (r.status === 400) return r.json().then(function (j) { throw j.message || 0; }); if (!r.ok) throw 0; btn.disabled = false; btn.innerHTML = btnText; done(false); })
+        .catch(function (m) {
+          btn.disabled = false; btn.innerHTML = btnText;
+          if (typeof m === 'string') { toast(m); return; }
+          failed();
+        });
     });
     $$('input,select,textarea', form).forEach(function (el) { el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', function () { var f = el.closest('.field') || (el.type === 'checkbox' && el.parentNode); f && f.classList.remove('invalid'); }); });
   });
