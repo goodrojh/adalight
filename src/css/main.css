@@ -808,7 +808,7 @@ html,body{overflow-x:clip;overscroll-behavior-x:none}
 @media (max-width:760px){input,select,textarea{font-size:16px!important}}
 
 /* мессенджеры в шапке */
-.hdr-msg{display:flex;align-items:center;gap:6px;margin-right:4px}
+.hdr-msg{display:flex;align-items:center;gap:6px;margin-left:4px}
 .hdr-msg a{display:block;line-height:0;border-radius:50%;transition:transform .2s,opacity .2s;opacity:.92}
 .hdr-msg a:hover{transform:translateY(-2px);opacity:1}
 .hdr-msg svg,.hdr-msg img{width:30px;height:30px;display:block}
@@ -825,3 +825,4 @@ html,body{overflow-x:clip;overscroll-behavior-x:none}
 .hdr-tools>*{flex:none}
 @media (max-width:1560px){.hdr-phone{display:none}}
 @media (max-width:1320px){.nav a.opt{display:none}}
+@media (max-width:1100px) and (min-width:981px){.nav a:last-child{display:none}}
