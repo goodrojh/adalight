@@ -67,10 +67,20 @@
   }
   function printDoc() {
     if (!S.all().length) return;
-    var html = docHtml(docNo(), true);
-    var w = window.open('', '_blank');
-    if (!w) { window.print(); return; }
-    w.document.open(); w.document.write(html); w.document.close();
+    /* печать через скрытый фрейм на этой же странице: без новой вкладки, которая
+       держала окно печати и замораживала сайт, пока её не закроют */
+    var old = d.getElementById('specPrintFrame'); if (old) old.remove();
+    var f = d.createElement('iframe'); f.id = 'specPrintFrame'; f.setAttribute('aria-hidden', 'true');
+    f.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0;visibility:hidden';
+    d.body.appendChild(f);
+    var fd = f.contentWindow.document; fd.open(); fd.write(docHtml(docNo(), false)); fd.close();
+    var go = function () {
+      var imgs = Array.prototype.slice.call(fd.images);
+      Promise.all(imgs.map(function (im) { return im.complete ? 1 : new Promise(function (ok) { im.onload = im.onerror = ok; }); }))
+        .then(function () { return fd.fonts ? fd.fonts.ready : 1; })
+        .then(function () { f.contentWindow.focus(); f.contentWindow.print(); setTimeout(function () { f.remove(); }, 60000); });
+    };
+    if (fd.readyState === 'complete') go(); else f.onload = go;
     window.ADAgoal && window.ADAgoal('spec_print');
   }
   d.querySelector('[data-print]').addEventListener('click', printDoc);
