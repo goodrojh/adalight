@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block main %}
+<section class="phero thx">
+ <div class="phero-bg">{{ m.img(media['dark-street'], '', '100vw', lazy=False) }}</div>
+ <div class="wrap">
+  <span class="thx-ic" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5 9-10"/></svg></span>
+  <h1 data-thx-title>Спасибо, заявка отправлена</h1>
+  <p class="lead">Менеджер ADALIGHT свяжется с вами в рабочее время. Если вопрос срочный, позвоните или напишите в мессенджер.</p>
+  <div class="thx-act">
+   <a class="btn" href="tel:{{ S.phone_raw }}"><svg><use href="#i-phone"/></svg>{{ S.phone }}</a>
+   <a class="thx-msg" href="https://wa.me/{{ S.wa }}" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg><use href="#i-wa-c"/></svg></a>
+   <a class="thx-msg" href="{{ S.tg }}" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg><use href="#i-tg-c"/></svg></a>
+   <a class="thx-msg" href="{{ S.max }}" target="_blank" rel="noopener" aria-label="MAX" title="MAX"><img src="{{ base }}/img/max-96.webp" alt="" width="44" height="44"></a>
+  </div>
+ </div>
+</section>
+<section class="section">
+ <div class="wrap">
+  <h2 class="thx-h">Что будет дальше</h2>
+  <ol class="thx-steps">
+   <li><b>Звонок менеджера</b><span>Уточним объект, сроки и что нужно: поставка, расчёт, проект или монтаж.</span></li>
+   <li><b>Расчёт</b><span>Подберём светильники и посчитаем стоимость. Для спецификации — проверим позиции и предложим аналоги, если они выгоднее.</span></li>
+   <li><b>Коммерческое предложение</b><span>Пришлём КП с ценами и сроками поставки на почту или в мессенджер.</span></li>
+  </ol>
+  <div class="thx-more">
+   <a class="btn btn-dark" href="{{ base }}/catalog/">Смотреть каталог</a>
+   <a class="btn btn-ghost" href="{{ base }}/projects/">Наши проекты</a>
+   <a class="btn btn-ghost" href="{{ S.tg_channel }}" target="_blank" rel="noopener">Telegram-канал ADALIGHT</a>
+  </div>
+ </div>
+</section>
+{% endblock %}

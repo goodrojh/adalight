@@ -27,9 +27,36 @@
 <script>document.documentElement.classList.remove('no-js');window.ADA={base:"{{ base }}",endpoint:"{{ endpoint }}",email:"{{ S.email }}",phone:"{{ S.phone }}",phoneRaw:"{{ S.phone_raw }}",metrika:"{{ metrika }}",wa:"{{ S.wa }}"};</script>
 {% for ld in jsonld %}<script type="application/ld+json">{{ ld|tojson }}</script>
 {% endfor %}
-{% if metrika %}<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym({{ metrika }},"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>{% endif %}
+{% if metrika %}<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id={{ metrika }}', 'ym');
+    ym({{ metrika }}, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<!-- /Yandex.Metrika counter -->{% endif %}
+{% if avito %}<!-- Avito pixel -->
+<script type="text/javascript">
+var _apxl = window._apxl || (window._apxl = []);
+_apxl.push({ id: {{ avito }}, start: (new Date()).getTime() });
+_apxl.q = _apxl.q || [];
+_apxl.sendEvent = _apxl.sendEvent || function (args) { _apxl.q.push([args, location.href, (new Date()).getTime()]); };
+(function (d, w, id) {
+    if (d.getElementById(id)) return;
+    var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id; ts.src = "https://ac.avito.ru/tag.js";
+    var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+    if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "apxl-code");
+</script>
+<!-- /Avito pixel -->{% endif %}
+{% if noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 </head>
 <body class="{{ body_class|default('') }}">
+{% if metrika %}<noscript><div><img src="https://mc.yandex.ru/watch/{{ metrika }}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>{% endif %}
+{% if avito %}<noscript><div><img src="https://www.avito.st/static/ims/235e1f90-308c-4bf5-91a3-07239fde0f2f_ai_icon_common_12x16.png" style="position:absolute;left:-9999px;" alt="Avito Pixel" /></div></noscript>{% endif %}
 <a class="skip" href="#main">К содержимому</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>

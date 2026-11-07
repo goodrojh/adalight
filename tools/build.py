@@ -376,7 +376,7 @@ def faq_ld(items):
 
 
 COMMON = dict(base=BASE, site_url=SITE_URL + '', S=C.SITE, cats=cats, services=C.SERVICES, total_sku=TOTAL_SKU, total_series=TOTAL_SERIES,
-              media=media, year=datetime.date.today().year, ver=VER, endpoint=CFG.get('form_endpoint', ''), metrika=CFG.get('metrika', ''),
+              media=media, year=datetime.date.today().year, ver=VER, endpoint=CFG.get('form_endpoint', ''), metrika=CFG.get('metrika', ''), avito=CFG.get('avito', ''),
               stats=C.STATS, trust=C.TRUST, devs=C.DEVELOPERS, words=C.WORDMARKS, projects=C.PROJECTS, articles=C.ARTICLES, stages=C.STAGES)
 
 
@@ -392,7 +392,7 @@ def render(tpl, path, prio=0.6, **ctx):
     fp = os.path.join(OUT, path.strip('/'), 'index.html') if not path.endswith('.html') else os.path.join(OUT, path.strip('/'))
     os.makedirs(os.path.dirname(fp), exist_ok=True)
     open(fp, 'w', encoding='utf-8').write(html_out)
-    if not path.endswith('404.html'):
+    if not path.endswith('404.html') and not ctx.get('noindex'):
         pages.append((path, prio))
 
 
@@ -558,6 +558,7 @@ render('privacy.html', '/privacy/', 0.1, title='Политика конфиде�
        crumbs=[H, ('Политика конфиденциальности', BASE + '/privacy/')])
 render('consent.html', '/consent/', 0.1, title='Согласие на обработку персональных данных — ADALIGHT', desc='Согласие на обработку персональных данных ООО «АДАЛАЙТ».',
        crumbs=[H, ('Согласие на обработку персональных данных', BASE + '/consent/')])
+render('thanks.html', '/thanks/', 0, title='Спасибо, заявка отправлена — ADALIGHT', desc='Заявка отправлена. Менеджер ADALIGHT свяжется с вами в рабочее время.', noindex=True)
 render('404.html', '/404.html', 0, title='Страница не найдена — ADALIGHT', desc='Страница не найдена.')
 
 # ---------------------------------------------------------------- статика
@@ -589,7 +590,7 @@ for path, prio in pages:
     sm.append(f'<url><loc>{SITE_URL}{path}</loc><lastmod>{today}</lastmod><priority>{prio:.1f}</priority></url>')
 sm.append('</urlset>')
 open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8').write('\n'.join(sm))
-open(os.path.join(OUT, 'robots.txt'), 'w', encoding='utf-8').write(f"User-agent: *\nAllow: /\nDisallow: {BASE}/spec/\n\nSitemap: {SITE_URL}/sitemap.xml\n")
+open(os.path.join(OUT, 'robots.txt'), 'w', encoding='utf-8').write(f"User-agent: *\nAllow: /\nDisallow: {BASE}/spec/\nDisallow: {BASE}/thanks/\n\nSitemap: {SITE_URL}/sitemap.xml\n")
 open(os.path.join(OUT, 'site.webmanifest'), 'w', encoding='utf-8').write(json.dumps({'name': 'ADALIGHT', 'short_name': 'ADALIGHT', 'start_url': BASE + '/', 'display': 'standalone',
     'background_color': '#0d0d0e', 'theme_color': '#0d0d0e', 'icons': [{'src': BASE + '/assets/icon-192.png', 'sizes': '192x192', 'type': 'image/png'}, {'src': BASE + '/assets/icon-512.png', 'sizes': '512x512', 'type': 'image/png'}]}, ensure_ascii=False))
 open(os.path.join(OUT, '.nojekyll'), 'w').write('')

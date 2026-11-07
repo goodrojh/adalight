@@ -25,6 +25,15 @@
 
   function goal(name) { try { if (C.metrika && w.ym) w.ym(C.metrika, 'reachGoal', name); } catch (e) {} }
   w.ADAgoal = goal;
+  /* страница «Спасибо»: цели «lead» и «lead_<форма>» — один раз на каждую заявку */
+  if (/\/thanks\/?$/.test(location.pathname)) {
+    var L = null; try { L = JSON.parse(sessionStorage.getItem('ada-lead') || 'null'); sessionStorage.removeItem('ada-lead'); } catch (e) {}
+    if (L) {
+      goal('lead'); goal('lead_' + L.goal);
+      try { w._apxl && w._apxl.sendEvent && w._apxl.sendEvent('lead'); } catch (e) {}
+      if (L.goal === 'spec') { var t = d.querySelector('[data-thx-title]'); if (t) t.textContent = 'Спасибо, спецификация отправлена'; }
+    }
+  }
 
   /* ---------- header: mega menu + drawer ---------- */
   var megaBtn = $('[data-mega]'), mega = $('#mega');
@@ -172,9 +181,10 @@
       if (!validate(form)) return;
       var data = collect(form), btn = $('[type=submit]', form);
       var label = form.getAttribute('data-lead') || 'Заявка с сайта';
-      var done = function (viaMail) {
-        form.classList.add('sent'); goal('lead'); goal('lead_' + (form.getAttribute('data-goal') || 'form'));
-        var m = $('.form-ok .via', form); if (m) m.hidden = !viaMail;
+      /* после успешной отправки — страница «Спасибо»; цели Метрики считаются уже на ней */
+      var done = function () {
+        try { sessionStorage.setItem('ada-lead', JSON.stringify({ goal: form.getAttribute('data-goal') || 'form', label: label })); } catch (e) {}
+        location.href = C.base + '/thanks/';
       };
       /* не удалось отправить: без открытия почтовой программы — телефон и WhatsApp */
       var failed = function () {
