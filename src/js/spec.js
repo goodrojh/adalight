@@ -47,7 +47,7 @@
         '<td class="c">' + x.qty + '</td><td class="r">' + (x.price ? fmt(x.price) : 'по запросу') + '</td><td class="r"><b>' + (x.price ? fmt(x.price * x.qty) : '—') + '</b></td></tr>';
     }).join('');
     var html = '<!doctype html><html lang="ru"><head><meta charset="utf-8"><title>Спецификация ' + no + ' — ADALIGHT</title>' +
-      '<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geologica:wght@500;600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">' +
+      '<link href="' + abs(base + '/assets/css/fonts.css') + '" rel="stylesheet">' +
       '<style>@page{size:A4;margin:14mm 12mm 16mm}*{box-sizing:border-box}body{margin:0;font:400 12px/1.45 Onest,Arial,sans-serif;color:#141416;-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
       '.top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:14px;border-bottom:3px solid #ffc603}.top img{height:34px}.co{text-align:right;font-size:10.5px;color:#5d5d63;line-height:1.55}.co b{color:#141416;font-size:12px}' +
       'h1{font:600 22px/1.2 Geologica,Arial,sans-serif;margin:22px 0 4px}.meta{display:flex;gap:28px;color:#5d5d63;margin-bottom:18px}.meta b{color:#141416;font-weight:600}' +

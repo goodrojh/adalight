@@ -580,6 +580,12 @@ def min_js(s):
     return s
 
 
+# шрифты — со своего домена (без Google Fonts)
+os.makedirs(os.path.join(OUT, 'assets', 'fonts'), exist_ok=True)
+for f in os.listdir(os.path.join(ROOT, 'src', 'fonts')):
+    if f.endswith('.woff2'):
+        shutil.copy2(os.path.join(ROOT, 'src', 'fonts', f), os.path.join(OUT, 'assets', 'fonts', f))
+open(os.path.join(OUT, 'assets', 'css', 'fonts.css'), 'w', encoding='utf-8').write(min_css(open(os.path.join(ROOT, 'src', 'fonts', 'fonts.css'), encoding='utf-8').read().replace('FONTBASE/', '../fonts/')))
 open(os.path.join(OUT, 'assets', 'css', 'main.css'), 'w', encoding='utf-8').write(min_css(open(os.path.join(ROOT, 'src', 'css', 'main.css'), encoding='utf-8').read()))
 for f in os.listdir(os.path.join(ROOT, 'src', 'js')):
     open(os.path.join(OUT, 'assets', 'js', f), 'w', encoding='utf-8').write(min_js(open(os.path.join(ROOT, 'src', 'js', f), encoding='utf-8').read()))

@@ -31,9 +31,16 @@ $form = mb_substr(trim((string)($in['form'] ?? 'Заявка с сайта')), 0
 // защита от ботов: скрытое поле website заполняют только роботы
 if (!empty($d['website'])) reply(200, 'ok');
 
+date_default_timezone_set('Europe/Moscow');
 $s = function ($k, $len = 2000) use ($d) { $v = $d[$k] ?? ''; if (is_array($v)) $v = implode(', ', $v); return mb_substr(trim((string)$v), 0, $len); };
 $phoneDigits = preg_replace('/\D/', '', $s('phone', 40));
-if (strlen($phoneDigits) < 10) reply(400, 'Проверьте телефон');
+$email = $s('email', 200);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $email = '';
+// нужен телефон или e-mail (форма запроса документации — только e-mail)
+if (strlen($phoneDigits) < 10 && !$email) reply(400, 'Проверьте телефон');
+if (strlen($phoneDigits) < 10) $phoneDigits = '';
+// 152-ФЗ: без согласия на обработку персональных данных заявку не принимаем
+if (empty($d['consent'])) reply(400, 'Нужно согласие на обработку персональных данных');
 
 // не больше 20 заявок с одного адреса за 10 минут
 $ipKey = sys_get_temp_dir() . '/ada_lead_' . md5($_SERVER['REMOTE_ADDR'] ?? '');
@@ -44,6 +51,7 @@ $hits[] = time(); @file_put_contents($ipKey, json_encode(array_values($hits)));
 // текст для менеджера
 $lines = [];
 foreach ([
+    'email' => 'E-mail', 'skus' => 'Серии / артикулы', 'docs' => 'Что нужно',
     'role' => 'Кто', 'object' => 'Тип объекта', 'stage' => 'Стадия проекта', 'topic' => 'Тема',
     'comment' => 'Комментарий', 'spec' => "Спецификация:\n", 'spec_link' => 'Открыть спецификацию на сайте',
 ] as $k => $title) {
@@ -55,12 +63,14 @@ if ($page && empty($d['spec_link'])) $lines[] = 'Страница: ' . $page;
 $ref = $s('referrer', 500);
 if ($ref) $lines[] = 'Пришёл с: ' . $ref;
 $utm = is_array($d['utm'] ?? null) ? $d['utm'] : [];
+$lines[] = 'Согласие на обработку ПД: дано ' . date('d.m.Y H:i') . ' (МСК), IP ' . ($_SERVER['REMOTE_ADDR'] ?? '?') . ', текст: ' . ($s('consent_doc', 200) ?: 'https://adalight.ru/consent/');
 
 $name = $s('name', 100);
 $lead = [
     'TITLE' => $form . ($name ? ' — ' . $name : ''),
     'NAME' => $name,
-    'PHONE' => [['VALUE' => '+' . $phoneDigits, 'VALUE_TYPE' => 'WORK']],
+    'PHONE' => $phoneDigits ? [['VALUE' => '+' . $phoneDigits, 'VALUE_TYPE' => 'WORK']] : [],
+    'EMAIL' => $email ? [['VALUE' => $email, 'VALUE_TYPE' => 'WORK']] : [],
     'COMMENTS' => implode('<br>', array_map(function ($l) { return nl2br(htmlspecialchars($l, ENT_QUOTES, 'UTF-8')); }, $lines)),
     'SOURCE_ID' => $cfg['source_id'] ?? 'WEB',
     'SOURCE_DESCRIPTION' => 'Сайт ADALIGHT: ' . $form,
@@ -110,7 +120,7 @@ if (!empty($cfg['webhook'])) {
 // запасной путь и копия: письмо на почту
 if (!empty($cfg['email']) && (!$sent || !empty($cfg['email_copy']))) {
     $subj = '=?UTF-8?B?' . base64_encode(($sent ? '' : '[не дошло до CRM] ') . $lead['TITLE']) . '?=';
-    $body = "Телефон: +{$phoneDigits}\nИмя: {$name}\n" . implode("\n", $lines) . ($err ? "\n\nОшибка CRM: {$err}" : '');
+    $body = ($phoneDigits ? "Телефон: +{$phoneDigits}\n" : '') . "Имя: {$name}\n" . implode("\n", $lines) . ($err ? "\n\nОшибка CRM: {$err}" : '');
     $from = $cfg['email_from'] ?? ('noreply@' . ($_SERVER['HTTP_HOST'] ?? 'adalight.ru'));
     if ($files) {
         $b = '=_ada_' . md5(uniqid('', true));

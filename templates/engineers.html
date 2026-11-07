@@ -23,13 +23,13 @@
    <ul class="check mt2"><li>IES-файлы фотометрии для расчёта</li><li>Паспорта и инструкции по монтажу</li><li>Габаритные чертежи</li><li>Сертификаты и декларации — для позиций поставки</li></ul>
   </div>
   <div class="card" style="padding:clamp(20px,3vw,36px)">
-   <form class="form" data-lead="Запрос документации для проектирования" data-goal="docs" novalidate>
+   <form class="form ym-disable-keys" data-lead="Запрос документации для проектирования" data-goal="docs" novalidate>
     <div class="form-body">
      <label class="field"><span>Серии / артикулы</span><textarea name="skus" placeholder="Например: TUBE A 12 Вт, S20 Grill, CLASS A 1523" required></textarea><em class="err">Укажите хотя бы одну позицию</em></label>
      <div class="field"><span>Что нужно</span><div class="seg">{% for d in ['IES','Паспорт','Чертёж','Сертификаты','Консультация'] %}<label><input type="checkbox" name="docs" value="{{ d }}" {% if loop.first %}checked{% endif %}><span>{{ d }}</span></label>{% endfor %}</div></div>
      <div class="row2"><label class="field"><span>Имя, компания</span><input name="name" autocomplete="organization"></label><label class="field"><span>E-mail *</span><input name="email" type="email" autocomplete="email" required><em class="err">Нужен e-mail, чтобы прислать файлы</em></label></div>
      <label class="field"><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
-     <label class="consent"><input type="checkbox" name="consent" required checked><span>Согласен на обработку персональных данных согласно <a href="{{ base }}/privacy/">политике</a></span></label>
+     <label class="consent"><input type="checkbox" name="consent" required><span>Даю <a href="{{ base }}/consent/" target="_blank">согласие на обработку персональных данных</a> и принимаю <a href="{{ base }}/privacy/" target="_blank">политику конфиденциальности</a></span></label>
      <button class="btn btn-dark btn-block" type="submit">Запросить материалы</button>
     </div>
     <div class="form-ok" role="status"><h3>Запрос сформирован</h3><p style="margin:0">Пришлём материалы на указанный e-mail.</p><p class="via" hidden style="margin:10px 0 0;font-size:14px">Мы открыли письмо в вашем почтовом клиенте — отправьте его, чтобы запрос дошёл.</p></div>

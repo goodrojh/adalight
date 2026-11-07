@@ -19,10 +19,9 @@
 <link rel="icon" href="/adalight/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/adalight/assets/apple-touch-icon.png">
 <link rel="manifest" href="/adalight/site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Onest:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/adalight/assets/css/main.css?v=2611071920">
+<link rel="preload" href="/adalight/assets/fonts/onest-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/adalight/assets/css/fonts.css?v=2611071946">
+<link rel="stylesheet" href="/adalight/assets/css/main.css?v=2611071946">
 <script>document.documentElement.classList.remove('no-js');window.ADA={base:"/adalight",endpoint:"",email:"info@adalight.ru",phone:"+7 (977) 109-39-10",phoneRaw:"+79771093910",metrika:"",wa:"79771093910"};</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "item": "https://goodrojh.github.io/adalight/", "name": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f", "position": 1}, {"@type": "ListItem", "item": "https://goodrojh.github.io/adalight/engineers/", "name": "\u041f\u0440\u043e\u0435\u043a\u0442\u0438\u0440\u043e\u0432\u0449\u0438\u043a\u0430\u043c", "position": 2}]}</script>
 </head>
@@ -113,13 +112,13 @@
    <ul class="check mt2"><li>IES-файлы фотометрии для расчёта</li><li>Паспорта и инструкции по монтажу</li><li>Габаритные чертежи</li><li>Сертификаты и декларации — для позиций поставки</li></ul>
   </div>
   <div class="card" style="padding:clamp(20px,3vw,36px)">
-   <form class="form" data-lead="Запрос документации для проектирования" data-goal="docs" novalidate>
+   <form class="form ym-disable-keys" data-lead="Запрос документации для проектирования" data-goal="docs" novalidate>
     <div class="form-body">
      <label class="field"><span>Серии / артикулы</span><textarea name="skus" placeholder="Например: TUBE A 12 Вт, S20 Grill, CLASS A 1523" required></textarea><em class="err">Укажите хотя бы одну позицию</em></label>
      <div class="field"><span>Что нужно</span><div class="seg"><label><input type="checkbox" name="docs" value="IES" checked><span>IES</span></label><label><input type="checkbox" name="docs" value="Паспорт" ><span>Паспорт</span></label><label><input type="checkbox" name="docs" value="Чертёж" ><span>Чертёж</span></label><label><input type="checkbox" name="docs" value="Сертификаты" ><span>Сертификаты</span></label><label><input type="checkbox" name="docs" value="Консультация" ><span>Консультация</span></label></div></div>
      <div class="row2"><label class="field"><span>Имя, компания</span><input name="name" autocomplete="organization"></label><label class="field"><span>E-mail *</span><input name="email" type="email" autocomplete="email" required><em class="err">Нужен e-mail, чтобы прислать файлы</em></label></div>
      <label class="field"><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
-     <label class="consent"><input type="checkbox" name="consent" required checked><span>Согласен на обработку персональных данных согласно <a href="/adalight/privacy/">политике</a></span></label>
+     <label class="consent"><input type="checkbox" name="consent" required><span>Даю <a href="/adalight/consent/" target="_blank">согласие на обработку персональных данных</a> и принимаю <a href="/adalight/privacy/" target="_blank">политику конфиденциальности</a></span></label>
      <button class="btn btn-dark btn-block" type="submit">Запросить материалы</button>
     </div>
     <div class="form-ok" role="status"><h3>Запрос сформирован</h3><p style="margin:0">Пришлём материалы на указанный e-mail.</p><p class="via" hidden style="margin:10px 0 0;font-size:14px">Мы открыли письмо в вашем почтовом клиенте — отправьте его, чтобы запрос дошёл.</p></div>
@@ -148,7 +147,7 @@
      <a href="https://max.ru/u/f9LHodD0cOJ5RzuLEG2Uw0h--uvGygACL2jgk0Tq8mXCcdXrnpS91p_lO-4" target="_blank" rel="noopener"><img src="/adalight/img/max-96.webp" alt="" width="22" height="22">MAX</a>
     </div>
    </div>
-   <div class="form-card"><form class="form" data-lead="Заявка на расчёт объекта" data-goal="engineer" novalidate >
+   <div class="form-card"><form class="form ym-disable-keys" data-lead="Заявка на расчёт объекта" data-goal="engineer" novalidate >
  <div class="form-body">
   <input type="hidden" name="topic" value="">
   <input type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
@@ -212,7 +211,7 @@
   <button class="modal-x" type="button" data-close aria-label="Закрыть"><svg><use href="#i-x"/></svg></button>
   <h2 id="mTitle">Расчёт объекта</h2>
   <p class="m-sub">Оставьте контакты — менеджер перезвонит, уточнит задачу и подготовит предложение.</p>
-  <form class="form" data-lead="Заявка из окна" data-goal="modal" novalidate >
+  <form class="form ym-disable-keys" data-lead="Заявка из окна" data-goal="modal" novalidate >
  <div class="form-body">
   <input type="hidden" name="topic" value="">
   <input type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
@@ -264,6 +263,6 @@
  <a href="/adalight/spec/"><svg><use href="#i-list"/></svg>Список <span class="badge" data-spec-count data-n="0" style="position:static">0</span></a>
  <a class="y" href="#lead" data-modal="Расчёт объекта">Расчёт объекта</a>
 </nav>
-<script src="/adalight/assets/js/main.js?v=2611071920" defer></script>
+<script src="/adalight/assets/js/main.js?v=2611071946" defer></script>
 </body>
 </html>

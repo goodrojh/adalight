@@ -132,6 +132,7 @@ toast('<span>Добавлено в спецификацию: <b>' + item.sku + '
 function collect(form) {
 var data = {}, fd = new FormData(form);
 fd.forEach(function (v, k) { if (v instanceof File) return; data[k] = data[k] ? data[k] + ', ' + v : v; });
+data.consent_doc = location.origin + C.base + '/consent/ (редакция от 07.11.2026)';
 data.page = location.href; data.utm = store.get('ada-utm', null); data.referrer = store.get('ada-ref', '');
 if (form.hasAttribute('data-with-spec')) {
 var a = Spec.all(), tot = 0, money = function (v) { return String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽'; };
@@ -401,6 +402,16 @@ var h = a.getAttribute('href') || '';
 if (h.indexOf('tel:') === 0) goal('click_phone'); else if (h.indexOf('mailto:') === 0) goal('click_email'); else if (h.indexOf('wa.me') > -1) goal('click_whatsapp');
 });
 })();
+/* карта Яндекса ставит свои cookie — грузим её после согласия на cookie или по кнопке «Показать карту» (152-ФЗ) */
+function adaMaps() {
+document.querySelectorAll('.map-frame.off').forEach(function (f) {
+var i = f.querySelector('iframe[data-src]'); if (!i) return;
+i.src = i.getAttribute('data-src'); i.removeAttribute('data-src'); f.classList.remove('off');
+});
+}
+window.ADAMaps = adaMaps;
+try { if (localStorage.getItem('ada-cookie') === 'all') adaMaps(); } catch (e) {}
+document.querySelectorAll('.map-show').forEach(function (b) { b.addEventListener('click', adaMaps); });
 /* карта: колесо и жесты — только после нажатия, чтобы прокрутка страницы не «залипала» */
 document.querySelectorAll('.map-frame').forEach(function(f){
 var b=f.querySelector('.map-lock');if(!b)return;
