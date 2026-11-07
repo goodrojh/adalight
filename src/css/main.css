@@ -512,7 +512,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
   .mbar{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(13,13,14,.94);backdrop-filter:blur(10px)}
   .mbar a{display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 8px;border-radius:12px;background:#1d1d20;color:#fff;text-decoration:none;font-size:14px;font-weight:600}
   .mbar a.y{background:var(--signal);color:#000}
-  .mbar svg{width:18px;height:18px}
+  .mbar svg{width:18px;height:18px;flex:none}
   body{padding-bottom:74px}
 }
 
