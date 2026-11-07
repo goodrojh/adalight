@@ -239,6 +239,8 @@ a.card:hover .arrow{background:var(--signal);border-color:var(--signal);color:#0
 
 /* product card */
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+/* карточки за пределами экрана не раскладываются и не рисуются, пока до них не долистали */
+[data-catalog] .pcard{content-visibility:auto;contain-intrinsic-size:auto 420px}
 .pcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:transform .3s var(--ease),box-shadow .3s}
 .pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 .pcard .ph{aspect-ratio:1;background:#f3f3f1;position:relative;overflow:hidden}

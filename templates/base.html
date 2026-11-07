@@ -49,7 +49,7 @@ _apxl.sendEvent = _apxl.sendEvent || function (args) { _apxl.q.push([args, locat
     if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
 })(document, window, "apxl-code");
 /* /Avito pixel */{% endif %}
-};try{if(localStorage.getItem("ada-cookie")==="all")window.ADAStats();}catch(e){}</script>{% endif %}
+};try{if(localStorage.getItem("ada-cookie")==="all"){if(document.prerendering)document.addEventListener("prerenderingchange",window.ADAStats,{once:true});else window.ADAStats();}}catch(e){}</script>{% endif %}
 {% if noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 </head>
 <body class="{{ body_class|default('') }}">

@@ -270,7 +270,17 @@ var main = $('.gmain img', gal), thumbs = $$('.gthumbs button', gal), cur = 0;
 var list = thumbs.length ? thumbs.map(function (b) { return b.getAttribute('data-lg'); }) : [main.getAttribute('data-lg')];
 thumbs.forEach(function (b, i) {
 b.addEventListener('click', function () {
-cur = i; main.src = b.getAttribute('data-src'); main.srcset = b.getAttribute('data-srcset') || '';
+cur = i;
+/* мгновенно: сразу показываем уже загруженную миниатюру, крупное фото подменяем, когда оно готово */
+var big = b.getAttribute('data-src'), bset = b.getAttribute('data-srcset') || '', tok = {};
+main._tok = tok;
+var pre = warm(b);
+if (pre.complete && pre.naturalWidth) { main.srcset = bset; main.src = big; }
+else {
+var th = b.querySelector('img'); if (th && th.complete) { main.srcset = ''; main.src = th.currentSrc || th.src; }
+var done = function () { if (main._tok === tok) { main.srcset = bset; main.src = big; } };
+if (pre.decode) pre.decode().then(done, done); else pre.onload = done;
+}
 /* маленькие картинки (из прайса) не растягиваем больше чем в 1,5 раза — иначе размытость */
 main.style.width = 'min(100%,' + Math.round(b.getAttribute('data-w') * 1.5) + 'px)'; main.style.height = 'min(100%,' + Math.round(b.getAttribute('data-h') * 1.5) + 'px)';
 thumbs.forEach(function (x) { x.setAttribute('aria-current', x === b); });
@@ -279,6 +289,16 @@ if (strip) { var sr = strip.getBoundingClientRect(), br = b.getBoundingClientRec
 });
 });
 var strip = $('.gthumbs', gal);
+/* прогрев: крупные фото галереи грузим заранее, пока человек смотрит страницу — переключение без ожидания */
+var warmed = {};
+function warm(btn) {
+var k = btn.getAttribute('data-src'); if (warmed[k]) return warmed[k];
+var im = new Image(); im.decoding = 'async'; im.sizes = main.sizes || '100vw';
+if (btn.getAttribute('data-srcset')) im.srcset = btn.getAttribute('data-srcset');
+im.src = k; warmed[k] = im; return im;
+}
+var warmAll = function () { thumbs.forEach(function (x, j) { setTimeout(function () { warm(x); }, j * 120); }); };
+if (thumbs.length > 1) { if (document.readyState === 'complete') setTimeout(warmAll, 300); else window.addEventListener('load', function () { setTimeout(warmAll, 300); }); }
 /* колесо мыши над лентой листает её вбок, пока есть куда */
 if (strip) strip.addEventListener('wheel', function (e) {
 var d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY, max = strip.scrollWidth - strip.clientWidth;
@@ -427,4 +447,30 @@ function set(o) { c.classList.toggle('open', o); b.setAttribute('aria-expanded',
 b.addEventListener('click', function (e) { e.stopPropagation(); set(!c.classList.contains('open')); });
 document.addEventListener('click', function (e) { if (!c.contains(e.target)) set(false); });
 document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && c.classList.contains('open')) { set(false); b.focus(); } });
+})();
+/* быстрые переходы: страница начинает грузиться, когда палец коснулся ссылки или курсор навёлся на неё.
+Chrome/Яндекс Браузер — Speculation Rules, остальные — <link rel=prefetch> */
+(function () {
+var base = (window.ADA && window.ADA.base) || '';
+var ok = function (a) {
+if (!a || !a.href || a.target === '_blank' || a.hasAttribute('download')) return false;
+if (a.origin !== location.origin || a.hash && a.pathname === location.pathname) return false;
+return !/\.(php|zip|pdf|xlsx|jpg|png|webp)$/i.test(a.pathname) && a.pathname.indexOf(base + '/thanks') !== 0;
+};
+if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+var s = document.createElement('script'); s.type = 'speculationrules';
+s.textContent = JSON.stringify({
+prefetch: [{ where: { and: [{ href_matches: base + '/*' }, { not: { href_matches: base + '/thanks/*' } }] }, eagerness: 'moderate' }]
+});
+document.head.appendChild(s);
+return;
+}
+var done = {};
+var go = function (e) {
+var a = e.target.closest && e.target.closest('a'); if (!ok(a)) return;
+var u = a.href.split('#')[0]; if (done[u]) return; done[u] = 1;
+var l = document.createElement('link'); l.rel = 'prefetch'; l.href = u; document.head.appendChild(l);
+};
+document.addEventListener('touchstart', go, { passive: true });
+document.addEventListener('mouseover', function (e) { var a = e.target.closest && e.target.closest('a'); if (!a) return; clearTimeout(a._pf); a._pf = setTimeout(function () { go(e); }, 65); a.addEventListener('mouseleave', function () { clearTimeout(a._pf); }, { once: true }); });
 })();

@@ -40,16 +40,18 @@ if (state.wmax && c.pmin && c.pmin > +state.wmax) return false;
 if (state.q) { var words = state.q.toLowerCase().split(/\s+/); if (!words.every(function (w) { return c.q.indexOf(w) > -1; })) return false; }
 return true;
 }
+var lastSort = 'default';
 function apply() {
-var vis = cards.filter(function (c) { return match(c); });
-cards.forEach(function (c) { c.el.hidden = vis.indexOf(c) < 0; });
-var sorted = cards.slice().sort(function (a, b) {
+var vis = cards.filter(function (c) { c.on = match(c); return c.on; });
+cards.forEach(function (c) { if (c.el.hidden !== !c.on) c.el.hidden = !c.on; });
+/* переставляем карточки только при смене сортировки — иначе лишняя перекладка всей сетки на каждую букву поиска */
+if (state.sort !== lastSort) { lastSort = state.sort; var sorted = cards.slice().sort(function (a, b) {
 if (state.sort === 'price') return (a.price || 1e9) - (b.price || 1e9);
 if (state.sort === 'price-d') return (b.price || 0) - (a.price || 0);
 if (state.sort === 'power') return a.pmin - b.pmin;
 return a.order - b.order;
 });
-sorted.forEach(function (c) { grid.appendChild(c.el); });
+var fr = d.createDocumentFragment(); sorted.forEach(function (c) { fr.appendChild(c.el); }); grid.appendChild(fr); }
 count.textContent = vis.length + ' ' + plural(vis.length, ['серия', 'серии', 'серий']) + ' · ' + (function (n) { return n + ' ' + plural(n, ['артикул', 'артикула', 'артикулов']); })(vis.reduce(function (s, c) { return s + (+c.el.dataset.skus || 0); }, 0));
 empty.hidden = vis.length > 0;
 $$('[data-f]', root).forEach(function (b) {
@@ -59,10 +61,9 @@ if (!match(c, k)) return false;
 if (ARR.indexOf(k) > -1) return c[k].indexOf(v) > -1;
 return c[k] === v;
 }).length;
-var sm = b.querySelector('small'); if (sm) sm.textContent = n;
-b.setAttribute('aria-pressed', state[k].indexOf(v) > -1);
-b.disabled = n === 0 && state[k].indexOf(v) < 0;
-b.style.opacity = b.disabled ? .4 : '';
+var sm = b.querySelector('small'); if (sm && sm.textContent !== String(n)) sm.textContent = n;
+var pr = String(state[k].indexOf(v) > -1); if (b.getAttribute('aria-pressed') !== pr) b.setAttribute('aria-pressed', pr);
+var dis = n === 0 && state[k].indexOf(v) < 0; if (b.disabled !== dis) { b.disabled = dis; b.style.opacity = dis ? .4 : ''; }
 });
 var fb = d.querySelector('[data-fcount]');
 if (fb) { var n = keys.reduce(function (s, k) { return s + state[k].length; }, 0) + (state.wmin ? 1 : 0) + (state.wmax ? 1 : 0); fb.textContent = n ? '(' + n + ')' : ''; }
