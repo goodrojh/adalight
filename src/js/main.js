@@ -143,7 +143,7 @@
   function collect(form) {
     var data = {}, fd = new FormData(form);
     fd.forEach(function (v, k) { if (v instanceof File) return; data[k] = data[k] ? data[k] + ', ' + v : v; });
-    data.consent_doc = location.origin + C.base + '/consent/ (редакция от 07.11.2026)';
+    data.consent_doc = location.origin + C.base + '/consent/ (редакция от 10.11.2026)';
     data.page = location.href; data.utm = store.get('ada-utm', null); data.referrer = store.get('ada-ref', '');
     if (form.hasAttribute('data-with-spec')) {
       var a = Spec.all(), tot = 0, money = function (v) { return String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽'; };
@@ -151,6 +151,7 @@
         var sum = (x.price || 0) * x.qty; tot += sum;
         return (i + 1) + '. ' + x.sku + (x.opt ? ' [' + x.opt + ']' : '') + ' — ' + x.qty + ' шт. × ' + (x.price ? money(x.price) + ' = ' + money(sum) : 'цена по запросу');
       }).join('\n') + (a.length ? '\nИтого по РРЦ: ' + money(tot) : '');
+      data.spec_total = Math.round(tot); data.spec_count = a.length;
       delete data.spec_text;
       if (window.ADASpecLink && a.length) data.spec_link = window.ADASpecLink();
     }

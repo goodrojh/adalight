@@ -117,6 +117,36 @@ if (!empty($cfg['webhook'])) {
     if (!$sent) $err = $err ?: ('Битрикс24 ответил ' . $code . ': ' . mb_substr((string)$res, 0, 300));
 }
 
+// копия в Google Таблицу (учёт заявок и эффективности рекламы). Сбой таблицы не мешает заявке.
+$sheetOk = false;
+if (!empty($cfg['gsheet_url'])) {
+    $row = [
+        'token' => (string)($cfg['gsheet_token'] ?? ''),
+        'form' => $form, 'name' => $name, 'phone' => $phoneDigits ? '+' . $phoneDigits : '', 'email' => $email,
+        'role' => $s('role', 100), 'object' => $s('object', 100), 'stage' => $s('stage', 100),
+        'comment' => trim($s('comment', 2000) . ($s('skus', 1000) ? "\nАртикулы: " . $s('skus', 1000) : '') . ($s('docs', 300) ? "\nНужно: " . $s('docs', 300) : '')),
+        'spec' => $s('spec', 5000), 'spec_total' => (int)($d['spec_total'] ?? 0), 'spec_count' => (int)($d['spec_count'] ?? 0), 'spec_link' => $s('spec_link', 3000),
+        'utm_source' => mb_substr((string)($utm['utm_source'] ?? ''), 0, 200), 'utm_medium' => mb_substr((string)($utm['utm_medium'] ?? ''), 0, 200),
+        'utm_campaign' => mb_substr((string)($utm['utm_campaign'] ?? ''), 0, 200), 'utm_content' => mb_substr((string)($utm['utm_content'] ?? ''), 0, 200),
+        'utm_term' => mb_substr((string)($utm['utm_term'] ?? ''), 0, 200),
+        'click_id' => !empty($utm['yclid']) ? 'yclid ' . mb_substr((string)$utm['yclid'], 0, 100) : (!empty($utm['gclid']) ? 'gclid ' . mb_substr((string)$utm['gclid'], 0, 100) : ''),
+        'landing' => mb_substr((string)($utm['landing'] ?? ''), 0, 300), 'page' => $page, 'referrer' => $ref,
+        'crm_id' => $leadId, 'crm_url' => $leadId && !empty($cfg['webhook']) ? preg_replace('#/rest/.*$#', '', $cfg['webhook']) . '/crm/lead/details/' . $leadId . '/' : '',
+    ];
+    // без согласования трансграничной передачи — в таблицу только аналитика, без контактов (см. lead-config.php)
+    if (empty($cfg['gsheet_personal'])) { foreach (['name', 'phone', 'email', 'comment', 'spec', 'spec_link'] as $k) $row[$k] = ''; $row['name'] = $leadId ? 'см. Битрикс24' : 'см. почту'; }
+    $ch = curl_init($cfg['gsheet_url']);
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 8, CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+        CURLOPT_POSTFIELDS => json_encode($row, JSON_UNESCAPED_UNICODE),
+    ]);
+    $res = curl_exec($ch); curl_close($ch);
+    $j = json_decode((string)$res, true);
+    $sheetOk = !empty($j['ok']);
+    if (!$sheetOk) $lines[] = 'Google Таблица: не записалось' . ($res ? ' (' . mb_substr(strip_tags((string)$res), 0, 120) . ')' : '');
+}
+
 // запасной путь и копия: письмо на почту
 if (!empty($cfg['email']) && (!$sent || !empty($cfg['email_copy']))) {
     $subj = '=?UTF-8?B?' . base64_encode(($sent ? '' : '[не дошло до CRM] ') . $lead['TITLE']) . '?=';
@@ -137,4 +167,4 @@ if (!empty($cfg['email']) && (!$sent || !empty($cfg['email_copy']))) {
     if (!$sent) $sent = $mailed;
 }
 
-$sent ? reply(200, 'ok') : reply(502, 'Не удалось отправить');
+($sent || $sheetOk) ? reply(200, 'ok') : reply(502, 'Не удалось отправить');
