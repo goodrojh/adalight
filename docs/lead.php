@@ -120,21 +120,24 @@ if (!empty($cfg['webhook'])) {
 // копия в Google Таблицу (учёт заявок и эффективности рекламы). Сбой таблицы не мешает заявке.
 $sheetOk = false;
 if (!empty($cfg['gsheet_url'])) {
+    // телефон в читаемом виде: +7 (977) 109-39-10
+    $ph = $phoneDigits;
+    if (strlen($ph) === 11 && ($ph[0] === '7' || $ph[0] === '8')) $ph = '+7 (' . substr($ph, 1, 3) . ') ' . substr($ph, 4, 3) . '-' . substr($ph, 7, 2) . '-' . substr($ph, 9, 2);
+    elseif ($ph) $ph = '+' . $ph;
+    // комментарий: текст клиента + всё полезное из формы одной ячейкой
+    $cm = [];
+    if ($s('comment', 2000) !== '') $cm[] = $s('comment', 2000);
+    foreach (['role' => 'Кто', 'object' => 'Объект', 'stage' => 'Стадия', 'topic' => 'Тема', 'skus' => 'Артикулы', 'docs' => 'Нужно'] as $k => $t) if ($s($k, 1000) !== '') $cm[] = $t . ': ' . $s($k, 1000);
+    if (!empty($d['spec_count'])) $cm[] = 'Спецификация: ' . (int)$d['spec_count'] . ' поз. на ' . number_format((int)($d['spec_total'] ?? 0), 0, '', ' ') . ' ₽' . ($s('spec_link', 3000) ? ' — ' . $s('spec_link', 3000) : '');
+    if ($leadId) $cm[] = 'Битрикс24: лид №' . $leadId;
     $row = [
         'token' => (string)($cfg['gsheet_token'] ?? ''),
-        'form' => $form, 'name' => $name, 'phone' => $phoneDigits ? '+' . $phoneDigits : '', 'email' => $email,
-        'role' => $s('role', 100), 'object' => $s('object', 100), 'stage' => $s('stage', 100),
-        'comment' => trim($s('comment', 2000) . ($s('skus', 1000) ? "\nАртикулы: " . $s('skus', 1000) : '') . ($s('docs', 300) ? "\nНужно: " . $s('docs', 300) : '')),
-        'spec' => $s('spec', 5000), 'spec_total' => (int)($d['spec_total'] ?? 0), 'spec_count' => (int)($d['spec_count'] ?? 0), 'spec_link' => $s('spec_link', 3000),
+        'name' => $name, 'phone' => $ph, 'email' => $email, 'form' => $form, 'comment' => implode("\n", $cm),
         'utm_source' => mb_substr((string)($utm['utm_source'] ?? ''), 0, 200), 'utm_medium' => mb_substr((string)($utm['utm_medium'] ?? ''), 0, 200),
         'utm_campaign' => mb_substr((string)($utm['utm_campaign'] ?? ''), 0, 200), 'utm_content' => mb_substr((string)($utm['utm_content'] ?? ''), 0, 200),
         'utm_term' => mb_substr((string)($utm['utm_term'] ?? ''), 0, 200),
-        'click_id' => !empty($utm['yclid']) ? 'yclid ' . mb_substr((string)$utm['yclid'], 0, 100) : (!empty($utm['gclid']) ? 'gclid ' . mb_substr((string)$utm['gclid'], 0, 100) : ''),
-        'landing' => mb_substr((string)($utm['landing'] ?? ''), 0, 300), 'page' => $page, 'referrer' => $ref,
-        'crm_id' => $leadId, 'crm_url' => $leadId && !empty($cfg['webhook']) ? preg_replace('#/rest/.*$#', '', $cfg['webhook']) . '/crm/lead/details/' . $leadId . '/' : '',
+        'page' => $page,
     ];
-    // без согласования трансграничной передачи — в таблицу только аналитика, без контактов (см. lead-config.php)
-    if (empty($cfg['gsheet_personal'])) { foreach (['name', 'phone', 'email', 'comment', 'spec', 'spec_link'] as $k) $row[$k] = ''; $row['name'] = $leadId ? 'см. Битрикс24' : 'см. почту'; }
     $ch = curl_init($cfg['gsheet_url']);
     curl_setopt_array($ch, [
         CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 8, CURLOPT_FOLLOWLOCATION => true,
