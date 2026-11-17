@@ -26,7 +26,7 @@
 <script>document.documentElement.classList.remove('no-js');window.ADA={base:"{{ base }}",endpoint:"{{ endpoint }}",email:"{{ S.email }}",phone:"{{ S.phone }}",phoneRaw:"{{ S.phone_raw }}",metrika:"{{ metrika }}",wa:"{{ S.wa }}"};</script>
 {% for ld in jsonld %}<script type="application/ld+json">{{ ld|tojson }}</script>
 {% endfor %}
-{% if metrika or avito %}<script>window.ADAStats=function(){if(window.ADAStats.on)return;window.ADAStats.on=1;
+{% if metrika or avito or untarget %}<script>window.ADAStats=function(){if(window.ADAStats.on)return;window.ADAStats.on=1;
 {% if metrika %}/* Yandex.Metrika counter */
 
     (function(m,e,t,r,i,k,a){
@@ -49,6 +49,12 @@ _apxl.sendEvent = _apxl.sendEvent || function (args) { _apxl.q.push([args, locat
     if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
 })(document, window, "apxl-code");
 /* /Avito pixel */{% endif %}
+{% if untarget %}/* UNTARGET.AI code */
+    (function(s,o){s[o]=s[o]||function(){(s[o].d=s[o].d||[]).push(arguments);}})(window,"UntargetJS");
+    UntargetJS('ts', 1*new Date());
+    UntargetJS('id', '{{ untarget }}');
+    (function(){var u=document.createElement('script');u.async=true;u.src='https://cdn.untarget.ai/untarget.min.o.js';document.head.appendChild(u);})();
+/* /UNTARGET.AI code */{% endif %}
 };try{if(localStorage.getItem("ada-cookie")==="all"){if(document.prerendering)document.addEventListener("prerenderingchange",window.ADAStats,{once:true});else window.ADAStats();}}catch(e){}</script>{% endif %}
 {% if noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 </head>
@@ -177,8 +183,8 @@ _apxl.sendEvent = _apxl.sendEvent || function (args) { _apxl.q.push([args, locat
  <a class="y" href="#lead" data-modal="Расчёт объекта">Расчёт объекта</a>
 </nav>
 
-{% if metrika or avito %}<div class="ckb" id="ckb" role="dialog" aria-label="Файлы cookie" hidden>
- <p>Мы используем cookie Яндекс Метрики и Авито, чтобы считать посещения и оценивать рекламу. Подробнее — в <a href="{{ base }}/privacy/#cookie">политике конфиденциальности</a>.</p>
+{% if metrika or avito or untarget %}<div class="ckb" id="ckb" role="dialog" aria-label="Файлы cookie" hidden>
+ <p>Мы используем cookie сервисов аналитики и рекламы (Яндекс Метрика, Авито, Untarget), чтобы считать посещения и оценивать рекламу. Подробнее — в <a href="{{ base }}/privacy/#cookie">политике конфиденциальности</a>.</p>
  <div class="ckb-act"><button class="btn" type="button" data-ck="all">Принять</button><button class="btn btn-ghost" type="button" data-ck="min">Только необходимые</button></div>
 </div>
 <script>(function(){var k;try{k=localStorage.getItem("ada-cookie")}catch(e){}var b=document.getElementById("ckb");if(!k)b.hidden=false;b.addEventListener("click",function(e){var v=e.target.getAttribute("data-ck");if(!v)return;try{localStorage.setItem("ada-cookie",v)}catch(x){}b.hidden=true;if(v==="all"){if(window.ADAStats)window.ADAStats();if(window.ADAMaps)window.ADAMaps();}});})();</script>

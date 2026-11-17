@@ -376,7 +376,7 @@ def faq_ld(items):
 
 
 COMMON = dict(base=BASE, site_url=SITE_URL + '', S=C.SITE, cats=cats, services=C.SERVICES, total_sku=TOTAL_SKU, total_series=TOTAL_SERIES,
-              media=media, year=datetime.date.today().year, ver=VER, endpoint=CFG.get('form_endpoint', ''), metrika=CFG.get('metrika', ''), avito=CFG.get('avito', ''),
+              media=media, year=datetime.date.today().year, ver=VER, endpoint=CFG.get('form_endpoint', ''), metrika=CFG.get('metrika', ''), avito=CFG.get('avito', ''), untarget=CFG.get('untarget', ''),
               stats=C.STATS, trust=C.TRUST, devs=C.DEVELOPERS, words=C.WORDMARKS, projects=C.PROJECTS, articles=C.ARTICLES, stages=C.STAGES)
 
 
